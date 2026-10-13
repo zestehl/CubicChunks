@@ -33,6 +33,7 @@ sourceSets {
         java.include 'io/github/opencubicchunks/cubicchunks/core/world/TestServerHeightMapSerialization.java'
         java.include 'io/github/opencubicchunks/cubicchunks/core/lighting/TestSurfaceHeightUpdates.java'
         java.include 'io/github/opencubicchunks/cubicchunks/core/asm/TestVerticalRenderDistanceOption.java'
+        java.include 'io/github/opencubicchunks/cubicchunks/core/util/world/TestCubeSplitTicks.java'
     }
 }
 repositories {

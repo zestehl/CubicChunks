@@ -51,7 +51,7 @@ import java.util.Set;
  * benefit that scheduled ticks are still stored in the same fields, so existing code that
  * relies on it will just work.
  */
-public class CubeSplitTickSet implements Set<NextTickListEntry> {
+public class CubeSplitTickSet extends AbstractSet<NextTickListEntry> {
 
     private final Map<CubePos, NextTickListEntryHashSet> byCube = new HashMap<>();
     private final NextTickListEntryHashSet all = new NextTickListEntryHashSet();
@@ -151,8 +151,14 @@ public class CubeSplitTickSet implements Set<NextTickListEntry> {
     }
 
     @Override public boolean removeAll(Collection<?> c) {
+        if (c == this) {
+            boolean changed = !isEmpty();
+            clear();
+            return changed;
+        }
         boolean ret = false;
-        for (Object entry : c) {
+        // A removal source can be one of our cube buckets; do not iterate it while changing it.
+        for (Object entry : c.toArray()) {
             if (remove(entry)) {
                 ret = true;
             }
@@ -216,7 +222,15 @@ public class CubeSplitTickSet implements Set<NextTickListEntry> {
                 @Override public NextTickListEntry next() {
                     return it.next().entry;
                 }
+
+                @Override public void remove() {
+                    it.remove();
+                }
             };
+        }
+
+        @Override public void clear() {
+            backingSet.clear();
         }
 
         @Override

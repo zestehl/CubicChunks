@@ -32,7 +32,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -62,30 +61,16 @@ public class CubeSplitTickList extends AbstractList<NextTickListEntry> {
         return all.contains(o);
     }
 
-    @SuppressWarnings("Duplicates") @Override public Iterator<NextTickListEntry> iterator() {
-        return new Iterator<NextTickListEntry>() {
-            private final Iterator<NextTickListEntry> it = all.iterator();
-            private NextTickListEntry lastEntry = null;
-
-            @Override public boolean hasNext() {
-                return it.hasNext();
-            }
-
-            @Override public NextTickListEntry next() {
-                return lastEntry = it.next();
-            }
-
-            @Override public void remove() {
-                it.remove();
-                removeByCube(lastEntry);
-            }
-        };
-    }
-
     private void removeByCube(NextTickListEntry e) {
         CubePos pos = CubePos.fromBlockCoords(e.position);
         List<NextTickListEntry> list = byCube.get(pos);
-        list.remove(e);
+        // Equal scheduled entries may have different timing/priority. Remove the actual stored occurrence.
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == e) {
+                list.remove(i);
+                break;
+            }
+        }
         if (list.isEmpty()) {
             byCube.remove(pos);
         }
@@ -106,15 +91,15 @@ public class CubeSplitTickList extends AbstractList<NextTickListEntry> {
     @Override public boolean add(NextTickListEntry e) {
         all.add(e);
         addByCube(e);
+        modCount++;
         return true;
     }
 
     @Override public boolean remove(Object o) {
-        boolean ret = all.remove(o);
-        if (ret) {
-            removeByCube((NextTickListEntry) o);
-        }
-        return ret;
+        int index = all.indexOf(o);
+        if (index < 0) return false;
+        remove(index);
+        return true;
     }
 
     @Override public boolean containsAll(Collection<?> c) {
@@ -124,6 +109,7 @@ public class CubeSplitTickList extends AbstractList<NextTickListEntry> {
     @Override public void clear() {
         all.clear();
         byCube.clear();
+        modCount++;
     }
 
     @Override public NextTickListEntry get(int index) {
@@ -134,17 +120,19 @@ public class CubeSplitTickList extends AbstractList<NextTickListEntry> {
         NextTickListEntry old = all.set(index, e);
         removeByCube(old);
         addByCube(e);
-        return null;
+        return old;
     }
 
     @Override public void add(int index, NextTickListEntry element) {
         all.add(index, element);
         addByCube(element);
+        modCount++;
     }
 
     @Override public NextTickListEntry remove(int index) {
         NextTickListEntry old = all.remove(index);
         removeByCube(old);
+        modCount++;
         return old;
     }
 
