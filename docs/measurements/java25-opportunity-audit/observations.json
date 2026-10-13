@@ -1,0 +1,219 @@
+{
+  "scope": "Isolated existing named-class contracts; no game/coremod/world or speedup qualification",
+  "capturedUtc": "2026-10-13T14:09:22.928970+00:00",
+  "sourceCommit": "6c935218a21bc04c66c77d4db8a6ba4d036516cd",
+  "sourceStatus": [
+    " M lab/README.md",
+    " M lab/skill/cubicchunks-lab/SKILL.md",
+    "?? docs/JAVA25-OPPORTUNITY-AUDIT.md",
+    "?? docs/measurements/java25-opportunity-audit/",
+    "?? tools/diagnostics/",
+    "?? tools/probe_java_opportunities.py"
+  ],
+  "probe": {
+    "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\tools\\diagnostics\\JavaOpportunityProbe.java",
+    "sha256": "a951e80b91203eabdf9ff426c594953c091b3024d07d730346474072f06d6707"
+  },
+  "compileCommand": [
+    "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\javac.exe",
+    "--release",
+    "8",
+    "-encoding",
+    "UTF-8",
+    "-cp",
+    "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main;C:\\Users\\trevo\\.gradle\\caches\\unimined\\net\\minecraft\\minecraft\\1.12.2\\MinecraftForge-FG3\\1.12.2-14.23.5.2860\\mcp-stable-39-1.12-searge-1.12.2-20200226.224830\\forge-1.12.2-14.23.5.2860-MinecraftForge-FG3+forge-1.12.2-14.23.5.2860+fixForge+asmFixes-mcp-at.jar;C:\\Users\\trevo\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\guava\\21.0\\3a3d111be1be1b745edfa7d91678a12d7ed38709\\guava-21.0.jar;C:\\Users\\trevo\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.logging.log4j\\log4j-api\\2.15.0\\4a5aa7e55a29391c6f66e0b259d5189aa11e45d0\\log4j-api-2.15.0.jar;C:\\Users\\trevo\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.logging.log4j\\log4j-core\\2.15.0\\ba55c13d7ac2fd44df9cc8074455719a33f375b9\\log4j-core-2.15.0.jar",
+    "-d",
+    "E:\\WorldGenOverhaul\\.local\\cubic-lab\\java25-opportunity-audit-03\\probe-classes",
+    "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\tools\\diagnostics\\JavaOpportunityProbe.java"
+  ],
+  "libraries": [
+    {
+      "path": "C:\\Users\\trevo\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\guava\\21.0\\3a3d111be1be1b745edfa7d91678a12d7ed38709\\guava-21.0.jar",
+      "sha256": "972139718abc8a4893fa78cba8cf7b2c903f35c97aaf44fa3031b0669948b480"
+    },
+    {
+      "path": "C:\\Users\\trevo\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.logging.log4j\\log4j-api\\2.15.0\\4a5aa7e55a29391c6f66e0b259d5189aa11e45d0\\log4j-api-2.15.0.jar",
+      "sha256": "c8c33e7e8e05496dae69cf0caac8c3092cffd937a164526e92922d2d566d0a55"
+    },
+    {
+      "path": "C:\\Users\\trevo\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.logging.log4j\\log4j-core\\2.15.0\\ba55c13d7ac2fd44df9cc8074455719a33f375b9\\log4j-core-2.15.0.jar",
+      "sha256": "419a8512895971b7b4f4f33e620d361254e5c9552b904b0474b09ddd4a6a220b"
+    }
+  ],
+  "runs": [
+    {
+      "label": "forge-java8",
+      "command": [
+        "C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.492.9-hotspot\\bin\\java.exe",
+        "-cp",
+        "E:\\WorldGenOverhaul\\.local\\cubic-lab\\java25-opportunity-audit-03\\probe-classes;E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main;C:\\Users\\trevo\\.gradle\\caches\\unimined\\net\\minecraft\\minecraft\\1.12.2\\MinecraftForge-FG3\\1.12.2-14.23.5.2860\\mcp-stable-39-1.12-searge-1.12.2-20200226.224830\\forge-1.12.2-14.23.5.2860-MinecraftForge-FG3+forge-1.12.2-14.23.5.2860+fixForge+asmFixes-mcp-at.jar;C:\\Users\\trevo\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\guava\\21.0\\3a3d111be1be1b745edfa7d91678a12d7ed38709\\guava-21.0.jar;C:\\Users\\trevo\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.logging.log4j\\log4j-api\\2.15.0\\4a5aa7e55a29391c6f66e0b259d5189aa11e45d0\\log4j-api-2.15.0.jar;C:\\Users\\trevo\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.logging.log4j\\log4j-core\\2.15.0\\ba55c13d7ac2fd44df9cc8074455719a33f375b9\\log4j-core-2.15.0.jar",
+        "JavaOpportunityProbe"
+      ],
+      "minecraft": {
+        "path": "C:\\Users\\trevo\\.gradle\\caches\\unimined\\net\\minecraft\\minecraft\\1.12.2\\MinecraftForge-FG3\\1.12.2-14.23.5.2860\\mcp-stable-39-1.12-searge-1.12.2-20200226.224830\\forge-1.12.2-14.23.5.2860-MinecraftForge-FG3+forge-1.12.2-14.23.5.2860+fixForge+asmFixes-mcp-at.jar",
+        "sha256": "7ef9016633da3da72cadc2e4d312e944080a455c4ce5b4d7c64b193cc686000d"
+      },
+      "compiledClasses": [
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\util\\world\\CubeSplitTickSet$1.class",
+          "sha256": "a8ff86d2e465298c2287261d34fa4b7074bd469f21dd2b661fb64059b6e41d46"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\util\\world\\CubeSplitTickSet$EqualsHashCodeWrapper.class",
+          "sha256": "cb8899dc48f8f8d527574ac568944f566989f95203368f5565a71c66069f7bb4"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\util\\world\\CubeSplitTickSet$NextTickListEntryHashSet$1.class",
+          "sha256": "6843af870f3c509eeb3f8d6f563d26c5327f8f8f25e947fb3cd7ee010c087b21"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\util\\world\\CubeSplitTickSet$NextTickListEntryHashSet.class",
+          "sha256": "1d5271925876c2dbda8e409d71422f949addb533132ef384c17f86a3a9638f92"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\util\\world\\CubeSplitTickSet.class",
+          "sha256": "f9bedefbbf3e69081e3cb6c8c0c44ac0d44e4a9d2dd174e4f77fdd7bf069962d"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\util\\world\\CubeSplitTickList$1.class",
+          "sha256": "cc5edbb1a12d71f84589bf6ca882ada3b4c737d64b4be07a8adf61545db2b985"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\util\\world\\CubeSplitTickList.class",
+          "sha256": "49faa6b3f1bec9e8cf01aa4b24498ec00bb4812fc2276a3e9261ef104cd33b3f"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\lighting\\phosphor\\PooledLightUpdateQueue$1.class",
+          "sha256": "6638e87cc663d3dec7ef6f6327c9e5c86a593a5e19d0ddd3af0b20f463e39041"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\lighting\\phosphor\\PooledLightUpdateQueue$LightUpdateQueueIterator.class",
+          "sha256": "3e04b7360b5f8c770aa2f4a942bc7ea03fbed142d09984c05aeb6b1715572016"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\lighting\\phosphor\\PooledLightUpdateQueue$Pool.class",
+          "sha256": "fdb6b22710402631527e671e0c21693c6c583ddf4cb6938f8faef3ca4f992ed7"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\lighting\\phosphor\\PooledLightUpdateQueue$Segment.class",
+          "sha256": "baeb5e5282c2d5a185b478b3715b583f5103de4d33a518cb65e6c1562f764c2c"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\lighting\\phosphor\\PooledLightUpdateQueue.class",
+          "sha256": "1fdcc61c4f114a72161f1c0297d2d9c3c875e5967324cd1b96a4f36abc000a9b"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\world\\ServerHeightMap.class",
+          "sha256": "bc8e488510ecee65c058e8bf9d2a6e97175fbe5a53ffd080967fe5039a8efad1"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\api\\world\\storage\\ICubicStorage.class",
+          "sha256": "7c50d67a2dc4e9387afe609a1073ab4c0e80a7cf20f3392b1de79265bc682b14"
+        }
+      ],
+      "observations": {
+        "javaVersion": "1.8.0_492",
+        "scheduledSetClear": "java.lang.UnsupportedOperationException",
+        "scheduledSetIteratorRemove": "java.lang.UnsupportedOperationException",
+        "scheduledListSetReturnsPrevious": "false",
+        "scheduledListReplacementStored": "true",
+        "batchReadMissingColumn": "java.lang.NullPointerException",
+        "batchReadMissingCube": "java.lang.NullPointerException",
+        "newLightingQueueSize": "0",
+        "newLightingQueueEmpty": "false",
+        "nbtIntArrayRetainsInput": "true",
+        "nbtCompoundIntArrayRetainsInput": "true",
+        "heightmapReuseMatchesEmptyPayload": "false",
+        "heightmapEmptyPayloadBytes": "2560",
+        "heightmapReusedPayloadBytes": "2572",
+        "heightmapLowestCacheAfterRead": "32",
+        "heightmapLowestCacheBeforeRead": "32"
+      }
+    },
+    {
+      "label": "cleanroom-java25",
+      "command": [
+        "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\java.exe",
+        "-cp",
+        "E:\\WorldGenOverhaul\\.local\\cubic-lab\\java25-opportunity-audit-03\\probe-classes;E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\classes\\java\\main;C:\\Users\\trevo\\.gradle\\caches\\unimined\\net\\minecraft\\minecraft\\1.12.2\\Cleanroom-FG3\\0.6.13-alpha\\mcp-stable-39-1.12-searge-1.12.2-20260220.202731\\forge-0.6.13-alpha-Cleanroom-FG3+cleanroom-0.6.13-alpha+fixForge+asmFixes-mcp-at.jar;C:\\Users\\trevo\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\guava\\21.0\\3a3d111be1be1b745edfa7d91678a12d7ed38709\\guava-21.0.jar;C:\\Users\\trevo\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.logging.log4j\\log4j-api\\2.15.0\\4a5aa7e55a29391c6f66e0b259d5189aa11e45d0\\log4j-api-2.15.0.jar;C:\\Users\\trevo\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.logging.log4j\\log4j-core\\2.15.0\\ba55c13d7ac2fd44df9cc8074455719a33f375b9\\log4j-core-2.15.0.jar",
+        "JavaOpportunityProbe"
+      ],
+      "minecraft": {
+        "path": "C:\\Users\\trevo\\.gradle\\caches\\unimined\\net\\minecraft\\minecraft\\1.12.2\\Cleanroom-FG3\\0.6.13-alpha\\mcp-stable-39-1.12-searge-1.12.2-20260220.202731\\forge-0.6.13-alpha-Cleanroom-FG3+cleanroom-0.6.13-alpha+fixForge+asmFixes-mcp-at.jar",
+        "sha256": "c0ab97b399e10ece8ff4d94bbbefd38bae46d2b8074b3c914c59920ad00b92ee"
+      },
+      "compiledClasses": [
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\util\\world\\CubeSplitTickSet$1.class",
+          "sha256": "0397cdc6e0707b8c002d100f115147861e9463cbabce12ed0b507ac40aa81798"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\util\\world\\CubeSplitTickSet$EqualsHashCodeWrapper.class",
+          "sha256": "83addf5052dd016f6e29f158007a770b59249cdc7020c73e5d525a1a61906314"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\util\\world\\CubeSplitTickSet$NextTickListEntryHashSet$1.class",
+          "sha256": "8627acef8ffb550529ca7de19fd6997beb2092fa3f936c6a54e0aa01a75fc279"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\util\\world\\CubeSplitTickSet$NextTickListEntryHashSet.class",
+          "sha256": "69467fd656b07f0de93262475131671e9a59bc249d2259820a557718ad8a84cf"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\util\\world\\CubeSplitTickSet.class",
+          "sha256": "b8628ff1bc008e569d339ec16ed0b81f94106bd1bf0f22633dc9c279d5698abf"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\util\\world\\CubeSplitTickList$1.class",
+          "sha256": "1cef68783da951c1fb24274a71997949bbb75df09ec912b01ec26e18b6900913"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\util\\world\\CubeSplitTickList.class",
+          "sha256": "9f6fd975922452c14936404313b31cf204599d5a5219aeb08a4a2e3831d3598d"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\lighting\\phosphor\\PooledLightUpdateQueue$LightUpdateQueueIterator.class",
+          "sha256": "140178b0bf109d66388a15d9c785ab51300aa705725d1d67039082173a4e64a3"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\lighting\\phosphor\\PooledLightUpdateQueue$Pool.class",
+          "sha256": "75cd032958d5e68040e2f0651645519f0b0c182cf78b0f4b5ef857eab44f44a5"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\lighting\\phosphor\\PooledLightUpdateQueue$Segment.class",
+          "sha256": "a80ffb0231fc73cc003b75ae6f8a827140977b41d542a24ce148f179b1423ae4"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\lighting\\phosphor\\PooledLightUpdateQueue.class",
+          "sha256": "4bc4e6d2f8d95739409debe73992b628fcdf433819206881f9ee164fd8ee4e1e"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\core\\world\\ServerHeightMap.class",
+          "sha256": "3c73641866daf884013370768aa68a96e1c7f05d18f2421f775498107236a2b4"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\classes\\java\\main\\io\\github\\opencubicchunks\\cubicchunks\\api\\world\\storage\\ICubicStorage.class",
+          "sha256": "b44b970263883163290cd692da6e8d4598148e9925deb4efe79dddbae652d6d0"
+        }
+      ],
+      "observations": {
+        "javaVersion": "25.0.3",
+        "scheduledSetClear": "java.lang.UnsupportedOperationException",
+        "scheduledSetIteratorRemove": "java.lang.UnsupportedOperationException",
+        "scheduledListSetReturnsPrevious": "false",
+        "scheduledListReplacementStored": "true",
+        "batchReadMissingColumn": "java.lang.NullPointerException",
+        "batchReadMissingCube": "java.lang.NullPointerException",
+        "newLightingQueueSize": "0",
+        "newLightingQueueEmpty": "false",
+        "nbtIntArrayRetainsInput": "true",
+        "nbtCompoundIntArrayRetainsInput": "true",
+        "heightmapReuseMatchesEmptyPayload": "false",
+        "heightmapEmptyPayloadBytes": "2560",
+        "heightmapReusedPayloadBytes": "2572",
+        "heightmapLowestCacheAfterRead": "32",
+        "heightmapLowestCacheBeforeRead": "32"
+      }
+    }
+  ]
+}

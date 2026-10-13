@@ -1,0 +1,8 @@
+intx MaxVectorSize                            = 32                                     {C2 product} {default}
+int UseAVX                                   = 2                                    {ARCH product} {default}
+bool UseCompactObjectHeaders                  = false                          {product lp64_product} {default}
+bool UseCompressedClassPointers               = true                           {product lp64_product} {default}
+bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+bool UseG1GC                                  = true                                      {product} {ergonomic}
+bool UseZGC                                   = false                                     {product} {default}
+openjdk version "25.0.3" 2026-04-21 LTS
