@@ -65,7 +65,7 @@ def main():
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
-    plt.rcParams.update({'font.family': 'DejaVu Sans', 'svg.fonttype': 'none', 'font.size': 10})
+    plt.rcParams.update({'font.family': 'DejaVu Sans', 'svg.fonttype': 'none', 'svg.hashsalt': 'cubiclab.v1', 'font.size': 10})
     fig, axes = plt.subplots(1, 2, figsize=(13, 8), layout='constrained')
     fig.get_layout_engine().set(rect=(0, .16, 1, .84))
     labels = [row['phase'] + ' / ' + row['scenario'] for row in rows]
@@ -99,7 +99,8 @@ def main():
 
 def save(fig, directory, name):
     for suffix in ['png', 'svg']:
-        path = directory / (name + '.' + suffix); fig.savefig(path, dpi=160, bbox_inches='tight')
+        path = directory / (name + '.' + suffix)
+        fig.savefig(path, dpi=160, bbox_inches='tight', metadata={'Date': None} if suffix == 'svg' else None)
         if suffix == 'svg': path.write_text('\n'.join(line.rstrip() for line in path.read_text(encoding='utf-8').splitlines()) + '\n', encoding='utf-8')
 
 
