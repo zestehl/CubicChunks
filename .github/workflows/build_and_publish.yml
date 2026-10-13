@@ -1,11 +1,10 @@
-name: Java CI
+name: Legacy build and publish (manual)
 
 on:
-  push:
-    branches:
-      - 'MC_1.12'
+  workflow_dispatch:
 jobs:
   build:
+    if: github.ref == 'refs/heads/MC_1.12'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4

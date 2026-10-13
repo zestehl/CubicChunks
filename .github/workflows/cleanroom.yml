@@ -1,16 +1,6 @@
 name: Cleanroom and Forge port
 
 on:
-  push:
-    branches: ['riven/cleanroom-java25']
-  pull_request:
-    paths:
-      - 'cleanroom/**'
-      - 'src/**'
-      - 'CubicChunksAPI/src/**'
-      - 'lab/**'
-      - 'tools/*cubic_lab*.py'
-      - '.github/workflows/cleanroom.yml'
   workflow_dispatch:
 
 permissions:
