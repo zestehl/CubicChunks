@@ -133,6 +133,8 @@ def main():
              fontsize=8.7, color="#535B64")
     fig.savefig(output_dir / "hash-distribution.png", dpi=180, facecolor="white")
     fig.savefig(output_dir / "hash-distribution.svg", facecolor="white", metadata={"Date": None})
+    svg_path = output_dir / "hash-distribution.svg"
+    svg_path.write_text("\n".join(line.rstrip() for line in svg_path.read_text(encoding="utf-8").splitlines()) + "\n", encoding="utf-8")
     plt.close(fig)
 
     summary = {

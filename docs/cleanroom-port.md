@@ -82,5 +82,75 @@ configuration entry whose source is absent from CubicChunks. That entry
 is retained so this integration continues to load. Standalone CubicChunks
 without that bridge still has the known missing optional map mixin.
 
-Full native validation results and remaining limitations are recorded
-below after the first source-built artifacts are exercised.
+## Native validation
+
+The source-built fork passed fresh-world generation, save/stop and restart
+checks on Windows with Cleanroom 0.6.13-alpha / Temurin 25.0.3 and Forge
+14.23.5.2860 / Temurin 8u492. Each instance used Riven's pinned GregTechCEu,
+Susy-Core and demonstrated startup dependency closure (24 mod JARs in all).
+Neither third-party binaries nor existing player instances were modified.
+
+| Check | Cleanroom / Java 25 | Forge / Java 8 |
+| --- | --- | --- |
+| Source build and focused regressions | Pass | Pass |
+| Native generation and restart | Pass | Pass |
+| Writes at -128, -1, 256, 383; reject -129 and 384 | Pass | Pass |
+| 512 generated block states compared with the Riven model | Pass before/after restart | Pass before/after restart |
+| Block light at -120 and 272 | Source 15, neighbor 14 retained | Source 15, neighbor 14 retained |
+| Furnace inventories at -120 and 272 | Three diamonds each retained | Three diamonds each retained |
+| Independent saved-file fixture inspection | Pass; 4,638 saved cubes | Pass; 4,638 saved cubes |
+| Held-map height, transparency and water-shading fixtures | Pass | Pass |
+| Shutdown | Exit 0, no shutdown exception | Exit 0, no shutdown exception |
+
+The held-map checks exercise server-side sampling and Riven's external map
+bridge, not client rendering. The generation comparison samples one
+unmodified column. The saved-cube count describes these test worlds and
+is not a coverage, memory or performance guarantee.
+
+Tested runtime artifact SHA-256:
+
+```text
+Cleanroom c0fa34c71c1eb297c6043ef83ed3d59244fcb6126589ddce99a57832384f48ef
+Forge     45df5fbacf545dd0f0d0d9e1f9e958b2953c0feba866b6096c62a53dfe25cd2d
+```
+
+The [machine-readable record](measurements/native-validation.json) retains
+artifact/receipt/log hashes, commands, fixture results and comparisons
+with previous profile logs. Existing recipe, advancement and Pyrotech
+configuration errors remain; passing these probes does not mean the
+reduced content profile has no errors.
+
+One initial Cleanroom run is retained as a failed probe: its old test
+expected vanilla stone below zero, but Riven's current generator places
+its configured geology there. All its height, lighting and inventory
+checks passed before that assertion. The corrected probe compares the
+full 512-block column with the current model; the table uses a new world.
+
+Native reproduction in the Riven workspace uses its current experimental
+Riven artifacts and configured loader JVMs. For example:
+
+```powershell
+python tools/experiment_cubic.py prepare --name cubic-fork-cleanroom-next --loader cleanroom --scope kernel --generator riven-cubic --cubic-jar dev/CubicChunks-cleanroom/cleanroom/build/cleanroom/libs/CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar --cubic-source-checkout dev/CubicChunks-cleanroom
+python tools/experiment_cubic.py run --name cubic-fork-cleanroom-next --phase write
+python tools/experiment_cubic.py run --name cubic-fork-cleanroom-next --phase read
+.local/venv/Scripts/python.exe tools/inspect_cubic_world.py .local/instances/cubic-fork-cleanroom-next/riven-dev --output .local/experiments/cubic-chunks/cubic-fork-cleanroom-next-saved.json
+```
+
+Wait for each process to exit successfully before starting its next phase.
+Use a new name and the Forge artifact with `--loader forge` for the
+fallback. Map checks require another fresh instance with `--map-probe`,
+then `--phase map`. The collector in this fork reads the named validation
+instances without changing them:
+
+```text
+python tools/collect_riven_validation.py --riven-workspace E:/WorldGenOverhaul
+```
+
+Still unqualified: client launch/rendering, network play, OptiFine and
+Bukkit hybrid integrations, the full upstream LaunchWrapper test suite,
+long-running load/unload and concurrent native I/O stress, complete addon
+compatibility, terrain/content/progression parity and native performance.
+Optional OptiFine/Bukkit and wildcard-selector remap warnings remain
+visible. The prior synchronous load-event recursion limitation remains.
+The port keeps native world mutation on its existing owner thread; it
+does not introduce concurrent chunk generation or virtual-thread I/O.

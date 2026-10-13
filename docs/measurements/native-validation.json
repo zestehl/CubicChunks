@@ -1,0 +1,1709 @@
+{
+  "schema": "cubicchunks.riven-native-validation.v1",
+  "passed": true,
+  "minecraft": "1.12.2",
+  "candidateSourceCommit": "62237c2b4e69532e05004a38533a919c47d36a69",
+  "evidencePathBase": "Riven workspace supplied through --riven-workspace",
+  "environment": "Native Windows 11 server processes; Cleanroom Java 25 and Forge Java 8",
+  "errorNormalization": [
+    "Strip ANSI escapes and leading timestamp",
+    "Replace object identity suffixes and instance root paths",
+    "Compare ERROR line multisets separately for fresh and restarted worlds"
+  ],
+  "limits": [
+    "No client launch, rendering, network play or visual acceptance",
+    "No native throughput or performance claim; durations include startup and shutdown",
+    "No full modpack parity, progression balance or GregTech machine qualification",
+    "No claim of concurrent native world mutation or complete async event compatibility",
+    "Native diagnostics use fresh disposable worlds; existing player instances were not used"
+  ],
+  "loaders": {
+    "cleanroom": {
+      "loaderVersion": "0.6.13-alpha",
+      "lifecycleInstance": "cubic-fork-cleanroom-02",
+      "artifacts": {
+        "receipt": {
+          "path": ".local/instances/cubic-fork-cleanroom-02/riven-instance.json",
+          "bytes": 24089,
+          "sha256": "963dfae85847f9d6d91cec69aed6d08ab414edf3e081b6a5fe99c3f2e50627bf"
+        },
+        "cubicChunks": {
+          "path": ".local/instances/cubic-fork-cleanroom-02/mods/CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar",
+          "bytes": 918258,
+          "sha256": "c0fa34c71c1eb297c6043ef83ed3d59244fcb6126589ddce99a57832384f48ef"
+        },
+        "riven": {
+          "path": ".local/instances/cubic-fork-cleanroom-02/mods/riven.jar",
+          "bytes": 329079,
+          "sha256": "a9c80c491751eb4c13896f498f08c96a513d30d91fb2fdc8d81190fe0b497350"
+        },
+        "cubicChunksClassVersions": [
+          69
+        ],
+        "rivenProbeClassSha256": "1765e30927ce7a2751d89c424cfefda35742ac4bd8fa73990c2c66e72e65c3d9",
+        "sourceCommit": "62237c2b4e69532e05004a38533a919c47d36a69",
+        "sourceDirtyAtPreparation": false,
+        "sourceStatusAtPreparation": [],
+        "installedJarCount": 24,
+        "allInstalledModHashesMatchReceipt": true
+      },
+      "unrelatedDependencyHashesMatchPriorProfile": true,
+      "priorReceipt": {
+        "path": ".local/instances/preparation-workers-cubic-cleanroom/riven-instance.json",
+        "bytes": 22958,
+        "sha256": "bbb379baef8384222b4af01210c683ac99f01abcf2d39f7a65900cf73cd8fef2"
+      },
+      "write": {
+        "result": {
+          "path": ".local/instances/cubic-fork-cleanroom-02/cubic-write-result.json",
+          "bytes": 1563,
+          "sha256": "c2d5513338b382a8b1e68d46e1dbe5fea1a0e2181e6de9f1fb71f55adbad426a"
+        },
+        "process": {
+          "path": ".local/instances/cubic-fork-cleanroom-02/cubic-write-process.json",
+          "bytes": 284,
+          "sha256": "79a6c0af15b034d548e780ccd53a71fb33be9bc18f37172bc87c499ba88dc9ea"
+        },
+        "log": {
+          "path": ".local/instances/cubic-fork-cleanroom-02/cubic-write-console.log",
+          "bytes": 776372,
+          "sha256": "aa95faee2c7629455304402e09c2c9c4938f3cc6774ac22a9e951e7aea728b66"
+        },
+        "javaCommand": [
+          "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\java.exe",
+          "-Xms1G",
+          "-Xmx6G",
+          "-Djava.awt.headless=true",
+          "-Driven.traceWorldgen=true",
+          "-jar",
+          "cleanroom-0.6.13-alpha.jar",
+          "nogui"
+        ],
+        "reportedJvm": "OpenJDK 64-Bit Server VM, version 25.0.3, running on Windows 11:amd64:10.0, installed at C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot",
+        "serverCommands": [
+          "riven_cubic_probe write",
+          "say RIVEN_CUBIC_PROBE y=-128",
+          "setblock 0 -128 0 minecraft:diamond_block",
+          "testforblock 0 -128 0 minecraft:diamond_block",
+          "say RIVEN_CUBIC_PROBE y=-1",
+          "setblock 0 -1 0 minecraft:emerald_block",
+          "testforblock 0 -1 0 minecraft:emerald_block",
+          "say RIVEN_CUBIC_PROBE y=256",
+          "setblock 0 256 0 minecraft:gold_block",
+          "testforblock 0 256 0 minecraft:gold_block",
+          "say RIVEN_CUBIC_PROBE y=383",
+          "setblock 0 383 0 minecraft:lapis_block",
+          "testforblock 0 383 0 minecraft:lapis_block",
+          "say RIVEN_CUBIC_OUTSIDE y=-129",
+          "setblock 0 -129 0 minecraft:diamond_block",
+          "say RIVEN_CUBIC_OUTSIDE y=384",
+          "setblock 0 384 0 minecraft:diamond_block",
+          "save-all",
+          "say RIVEN_CUBIC_PROBE_COMPLETE",
+          "stop"
+        ],
+        "passed": true,
+        "ready": true,
+        "exitCode": 0,
+        "timedOut": false,
+        "shutdownException": false,
+        "missingMapMixin": false,
+        "elapsedSecondsIncludingStartupAndShutdown": 33.96,
+        "configurationSha256AtRun": "c6da8fa85d0126dd8dd4fed7f5f5aa355cdd493bacfef976c9b45bc6917d2c45",
+        "serverPropertiesSha256AtRun": "5113f121610b450b938e51eae91166dce8e32f405f63e75a149799d4ab5a811a",
+        "errors": {
+          "baselineLog": {
+            "path": ".local/instances/preparation-workers-cubic-cleanroom/cubic-habitats-console.log",
+            "bytes": 775072,
+            "sha256": "1aeb4893ce1b6c8fe42e523e71ecefff1eef067b103144af274225fec93f7287"
+          },
+          "actualErrorLines": 186,
+          "baselineErrorLines": 186,
+          "newNormalizedErrors": {},
+          "removedNormalizedErrors": {},
+          "currentLoggerCounts": {
+            "AE2:S": 12,
+            "FML": 1,
+            "GregTech": 14,
+            "minecraft/AdvancementManager": 158,
+            "pyrotech.ModuleTechBloomery": 1
+          }
+        },
+        "nativeChecks": {
+          "minY": -128,
+          "maxYExclusive": 384,
+          "blockFixtureHeights": [
+            -128,
+            -1,
+            256,
+            383
+          ],
+          "rejectedWriteHeights": [
+            -129,
+            384
+          ],
+          "lightFixtureHeights": [
+            -120,
+            272
+          ],
+          "sourceLight": 15,
+          "adjacentLight": 14,
+          "furnaceHeights": [
+            -120,
+            272
+          ],
+          "diamondsPerFurnace": 3,
+          "modelColumn": {
+            "x": 1,
+            "z": 1,
+            "minY": -128,
+            "maxYExclusive": 384,
+            "blockComparisons": 512,
+            "countEvidence": "Probe source loop and native generation PASS marker"
+          },
+          "markers": [
+            "RIVEN_CUBIC_BOUNDS min=-128 maxExclusive=384",
+            "RIVEN_CUBIC_OUTSIDE PASS",
+            "RIVEN_CUBIC_GENERATION PASS",
+            "RIVEN_CUBIC_RESULT phase=write PASS",
+            "RIVEN_CUBIC_BLOCK y=-128 PASS",
+            "RIVEN_CUBIC_BLOCK y=-1 PASS",
+            "RIVEN_CUBIC_BLOCK y=256 PASS",
+            "RIVEN_CUBIC_BLOCK y=383 PASS",
+            "RIVEN_CUBIC_LIGHT y=-120 source=15 neighbor=14 PASS",
+            "RIVEN_CUBIC_LIGHT y=272 source=15 neighbor=14 PASS",
+            "RIVEN_CUBIC_TILE y=-120 PASS",
+            "RIVEN_CUBIC_TILE y=272 PASS"
+          ]
+        }
+      },
+      "read": {
+        "result": {
+          "path": ".local/instances/cubic-fork-cleanroom-02/cubic-read-result.json",
+          "bytes": 1193,
+          "sha256": "17ed8d80622516f2a19a4633f33d5c1ebd77c1270b8511ef57357ef1c728a4c0"
+        },
+        "process": {
+          "path": ".local/instances/cubic-fork-cleanroom-02/cubic-read-process.json",
+          "bytes": 284,
+          "sha256": "ab5b5fac4e537aabdb6e208fea5eeca55a10be494b865c23e27744ef557cd266"
+        },
+        "log": {
+          "path": ".local/instances/cubic-fork-cleanroom-02/cubic-read-console.log",
+          "bytes": 778317,
+          "sha256": "46fe83c1941ef28614b7921617628b2810c4ebf718618895113784c0ec01307f"
+        },
+        "javaCommand": [
+          "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\java.exe",
+          "-Xms1G",
+          "-Xmx6G",
+          "-Djava.awt.headless=true",
+          "-Driven.traceWorldgen=true",
+          "-jar",
+          "cleanroom-0.6.13-alpha.jar",
+          "nogui"
+        ],
+        "reportedJvm": "OpenJDK 64-Bit Server VM, version 25.0.3, running on Windows 11:amd64:10.0, installed at C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot",
+        "serverCommands": [
+          "riven_cubic_probe read",
+          "say RIVEN_CUBIC_PROBE y=-128",
+          "testforblock 0 -128 0 minecraft:diamond_block",
+          "say RIVEN_CUBIC_PROBE y=-1",
+          "testforblock 0 -1 0 minecraft:emerald_block",
+          "say RIVEN_CUBIC_PROBE y=256",
+          "testforblock 0 256 0 minecraft:gold_block",
+          "say RIVEN_CUBIC_PROBE y=383",
+          "testforblock 0 383 0 minecraft:lapis_block",
+          "save-all",
+          "say RIVEN_CUBIC_PROBE_COMPLETE",
+          "stop"
+        ],
+        "passed": true,
+        "ready": true,
+        "exitCode": 0,
+        "timedOut": false,
+        "shutdownException": false,
+        "missingMapMixin": false,
+        "elapsedSecondsIncludingStartupAndShutdown": 31.95,
+        "configurationSha256AtRun": "c6da8fa85d0126dd8dd4fed7f5f5aa355cdd493bacfef976c9b45bc6917d2c45",
+        "serverPropertiesSha256AtRun": "00828b24e0a75728fca1791b84ce8e371aac94cec257f92e11dab716a5d835fc",
+        "errors": {
+          "baselineLog": {
+            "path": ".local/instances/preparation-workers-cubic-cleanroom/cubic-habitats-read-console.log",
+            "bytes": 777991,
+            "sha256": "f48b9da232238226fef6c830e0949018b39ff39c81477cc117f21966f6873155"
+          },
+          "actualErrorLines": 199,
+          "baselineErrorLines": 199,
+          "newNormalizedErrors": {},
+          "removedNormalizedErrors": {},
+          "currentLoggerCounts": {
+            "AE2:S": 12,
+            "FML": 1,
+            "GregTech": 14,
+            "minecraft/AdvancementManager": 158,
+            "pyrotech.ModuleTechBloomery": 14
+          }
+        },
+        "nativeChecks": {
+          "minY": -128,
+          "maxYExclusive": 384,
+          "blockFixtureHeights": [
+            -128,
+            -1,
+            256,
+            383
+          ],
+          "rejectedWriteHeights": [
+            -129,
+            384
+          ],
+          "lightFixtureHeights": [
+            -120,
+            272
+          ],
+          "sourceLight": 15,
+          "adjacentLight": 14,
+          "furnaceHeights": [
+            -120,
+            272
+          ],
+          "diamondsPerFurnace": 3,
+          "modelColumn": {
+            "x": 1,
+            "z": 1,
+            "minY": -128,
+            "maxYExclusive": 384,
+            "blockComparisons": 512,
+            "countEvidence": "Probe source loop and native generation PASS marker"
+          },
+          "markers": [
+            "RIVEN_CUBIC_BOUNDS min=-128 maxExclusive=384",
+            "RIVEN_CUBIC_OUTSIDE PASS",
+            "RIVEN_CUBIC_GENERATION PASS",
+            "RIVEN_CUBIC_RESULT phase=read PASS",
+            "RIVEN_CUBIC_BLOCK y=-128 PASS",
+            "RIVEN_CUBIC_BLOCK y=-1 PASS",
+            "RIVEN_CUBIC_BLOCK y=256 PASS",
+            "RIVEN_CUBIC_BLOCK y=383 PASS",
+            "RIVEN_CUBIC_LIGHT y=-120 source=15 neighbor=14 PASS",
+            "RIVEN_CUBIC_LIGHT y=272 source=15 neighbor=14 PASS",
+            "RIVEN_CUBIC_TILE y=-120 PASS",
+            "RIVEN_CUBIC_TILE y=272 PASS"
+          ]
+        }
+      },
+      "savedData": {
+        "inspection": {
+          "path": ".local/experiments/cubic-chunks/cubic-fork-cleanroom-02-saved.json",
+          "bytes": 3253,
+          "sha256": "0619e8c5d0011ffa3b9d83b9b22d2ce0bf22ef7f3a9521ed285d4ce245e55682"
+        },
+        "metrics": {
+          "generator": "riven_cubic",
+          "seed": 8675309,
+          "min_y": -128,
+          "max_y_exclusive": 384,
+          "storage": "cubicchunks:anvil3d",
+          "saved_cubes": 4638,
+          "cube_y_counts": {
+            "-8": 3,
+            "-7": 1,
+            "-6": 1,
+            "-5": 1,
+            "-4": 1,
+            "-3": 1,
+            "-2": 1,
+            "-1": 266,
+            "0": 444,
+            "1": 698,
+            "2": 722,
+            "3": 722,
+            "4": 722,
+            "5": 722,
+            "6": 296,
+            "7": 17,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 3,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 3
+          },
+          "nonair_y_bounds": [
+            -128,
+            383
+          ],
+          "block_counts": {
+            "minecraft:air": 7045142,
+            "minecraft:bedrock": 767,
+            "minecraft:diamond_block": 1,
+            "minecraft:emerald_block": 1,
+            "minecraft:furnace": 2,
+            "minecraft:glowstone": 2,
+            "minecraft:gold_block": 1,
+            "minecraft:gravel": 546048,
+            "minecraft:lapis_block": 1,
+            "minecraft:water": 7657668,
+            "susy:susy_stone_smooth": 3514143
+          },
+          "fixtures": {
+            "-128": {
+              "block": "minecraft:diamond_block",
+              "block_light": 0
+            },
+            "-1": {
+              "block": "minecraft:emerald_block",
+              "block_light": 0
+            },
+            "256": {
+              "block": "minecraft:gold_block",
+              "block_light": 0
+            },
+            "383": {
+              "block": "minecraft:lapis_block",
+              "block_light": 0
+            }
+          },
+          "lights": {
+            "-120": {
+              "source": {
+                "block": "minecraft:glowstone",
+                "block_light": 15
+              },
+              "neighbor": {
+                "block": "minecraft:air",
+                "block_light": 14
+              }
+            },
+            "272": {
+              "source": {
+                "block": "minecraft:glowstone",
+                "block_light": 15
+              },
+              "neighbor": {
+                "block": "minecraft:air",
+                "block_light": 14
+              }
+            }
+          },
+          "tiles": [
+            {
+              "id": "minecraft:furnace",
+              "y": -120,
+              "items": [
+                {
+                  "id": "minecraft:diamond",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "id": "minecraft:furnace",
+              "y": 272,
+              "items": [
+                {
+                  "id": "minecraft:diamond",
+                  "count": 3
+                }
+              ]
+            }
+          ],
+          "saved_fixture_checks_passed": true,
+          "registered_susy_deposits": true,
+          "registered_susy_host_rock": true,
+          "loaded_mod_ids": [
+            "FML",
+            "appliedenergistics2",
+            "athenaeum",
+            "baubles",
+            "cleanmix",
+            "cleanroom",
+            "codechickenlib",
+            "configanytime",
+            "cubicchunks",
+            "cubicchunkscore",
+            "dropt",
+            "forge",
+            "ftblib",
+            "fugue",
+            "gcym",
+            "geckolib3",
+            "gregtech",
+            "gregtechfoodoption",
+            "groovyscript",
+            "immersiverailroading",
+            "kirino_ecs",
+            "kirino_engine",
+            "kirino_gl",
+            "mcp",
+            "minecraft",
+            "mixinbooter",
+            "modularui",
+            "opencomputers",
+            "opencomputers|core",
+            "placeholdername",
+            "pyrotech",
+            "riven",
+            "riven_cubic_probe",
+            "scalar",
+            "supercritical",
+            "sussypatches",
+            "susy",
+            "trackapi",
+            "universalmodcore"
+          ]
+        },
+        "retainedWorldFiles": [
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/level.dat",
+            "bytes": 43007,
+            "sha256": "85ebeebb75193c25473d176fb224880679ca5874cc27020617bc7d8b05856b71"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/data/cubicChunksData.dat",
+            "bytes": 140,
+            "sha256": "1b604319a14a031583f6dbbe504731e39e4bec48bd90faf34c02f9926b0e28cd"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region2d/-1.-1.2dr",
+            "bytes": 6144,
+            "sha256": "5c3f672c896b8ba5c76c9f1ef1d171b917028da7d033529b9726fb3e345d0828"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region2d/-1.-2.2dr",
+            "bytes": 152576,
+            "sha256": "72cfcd1425b06a6781ea0636bb8aa792ede40f329fffa7fffd8b6031da1f570e"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region2d/-1.-3.2dr",
+            "bytes": 47104,
+            "sha256": "c71cb6ed7b32e7d2cbbdf0cb8df3538f419d20e570fd2bfccf761dd5ff4abc2a"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region2d/-1.0.2dr",
+            "bytes": 5120,
+            "sha256": "6d8a2259f5aecce53ba34963bfaa868fa9e4ddaf46fec18ed097fd1a2181ed08"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region2d/0.-1.2dr",
+            "bytes": 86016,
+            "sha256": "c4d517ba0fe26e7c5d646a47657c6da58e760ec1d77a6bdc6e0e9e12299ff783"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region2d/0.-2.2dr",
+            "bytes": 235520,
+            "sha256": "652807c09682190b2cc91dd08ff2a5f2849f94858acb23ea20d95dc8faece2c3"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region2d/0.-3.2dr",
+            "bytes": 85504,
+            "sha256": "b3e4852a8373887aa5a274a5dea010951c6351dbc350330d5ff87cb13d52fd29"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region2d/0.0.2dr",
+            "bytes": 4608,
+            "sha256": "95d5a37c92a2a65a642b6b9afd2d4b794810d0295dce2c7eff57903cc75ad74e"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region2d/1.-1.2dr",
+            "bytes": 5120,
+            "sha256": "7283b99758de1e7f26a55745afac61640b659b90c56ed0c22719e95b5c4a02bf"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/-1.-1.-3.3dr",
+            "bytes": 47104,
+            "sha256": "ec419a902fcb18bdbbcdcf4bf92a4c69dfbebebe4c96f15f9e6c7698c21ca855"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/-1.-1.-4.3dr",
+            "bytes": 18432,
+            "sha256": "0a0e7a9e3d96459c7bd8a8e4f3ed74b77e2ccc07cc867aa1d7a6b6c2d8d84127"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/-1.-1.0.3dr",
+            "bytes": 17408,
+            "sha256": "d730b401ebcefe87860c2358da3258f87a2fd6efe05d3f0d184d65d0703e5ad0"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/-1.0.-1.3dr",
+            "bytes": 25600,
+            "sha256": "836b78e7f5f5318850bdcfba5884005081eb38bce174418e2ee4535d406bc11b"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/-1.0.-2.3dr",
+            "bytes": 19456,
+            "sha256": "10135b35d258d3140703a2c0896ea4635a08a1e08a2457d0688126fddba730d7"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/-1.0.-3.3dr",
+            "bytes": 214016,
+            "sha256": "eb388836c45183ea9b79d2137db35f4b61ed0ef168342a088e65def9114723ed"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/-1.0.-4.3dr",
+            "bytes": 256512,
+            "sha256": "9f384fc9c795a307c6ddae527ff6c947d12271fac4408f859265c50c9cf23cfe"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/-1.0.-5.3dr",
+            "bytes": 275456,
+            "sha256": "5635b20f1a524d44601073691a5c509d57ddac089d78803c52c2dd1582d70e05"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/-1.0.0.3dr",
+            "bytes": 19456,
+            "sha256": "bc9ce8af1262f8da18e6d2ca8f9df973acc8b389ed3395cd304844374110f9b0"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/-1.1.0.3dr",
+            "bytes": 17408,
+            "sha256": "5b34a67b08cb8d81d7d9bb133f10d280c664aa74e4b2f7bd14e288f52e12a77e"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/-2.-1.-3.3dr",
+            "bytes": 24576,
+            "sha256": "2d84de6a0816f50ef0a543343625182120e48cf65fbe6671347d23eb13bfe074"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/-2.0.-3.3dr",
+            "bytes": 67072,
+            "sha256": "e58e64fa50d1c38c3f22ef21ec241be07eb5880d80a3f9adb1960a7dc7617ff1"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/-2.0.-5.3dr",
+            "bytes": 22528,
+            "sha256": "b83c2db67cf885ad59388acb738b735fd75062ecafe817ef10db1c3510c48e88"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/0.-1.-1.3dr",
+            "bytes": 22528,
+            "sha256": "687924fcb19a28bfd462a21bbdfdf2cf9ac3d9b9305ae86ff437e8b420f50350"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/0.-1.-2.3dr",
+            "bytes": 35328,
+            "sha256": "d393a32dc25a6e9bbe962d81e42938d00784c9bd8f454f18aa9e234d0ac3f04f"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/0.-1.-3.3dr",
+            "bytes": 29696,
+            "sha256": "3aa2869922ea89ea75db020bb752336dee385226691cdeb3c1b38a9d1e159ac5"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/0.-1.-4.3dr",
+            "bytes": 29184,
+            "sha256": "7409f6ec101d6ec4bec810d5ec754ea73e6d766597ac782d08b41f2e5f12cec3"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/0.-1.0.3dr",
+            "bytes": 20992,
+            "sha256": "c8826b65e811565d181cf55c0249d93b8d313b0ece47d2e76631b14a0be73ad3"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/0.0.-1.3dr",
+            "bytes": 135168,
+            "sha256": "90b6aba2ac4016d2a62f141c9b256bf9b219235a22a8b3785fd5967fdcdde6ef"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/0.0.-2.3dr",
+            "bytes": 157184,
+            "sha256": "b4250e6d234357ece1c30273021197b84547c664ca4280b0110c4652be8c37b5"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/0.0.-3.3dr",
+            "bytes": 125440,
+            "sha256": "019b98f8bcf08c85b6e05740240cbc8ebc895db86e27bc92a67b650ae30133bf"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/0.0.-4.3dr",
+            "bytes": 308224,
+            "sha256": "fe29d3d3470e2a5e5e283768a5b3799a0b78c49d081ec8bca13d003cc7b8bdc0"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/0.0.-5.3dr",
+            "bytes": 374784,
+            "sha256": "ea1ecbbf99bb50e11600d97417b54cd7a24fe20fad8249a7d2302151c443b2a0"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/0.0.-6.3dr",
+            "bytes": 111616,
+            "sha256": "b3126ff144d7b12bc898fab2d4be1d65c68ec69d12170cb18d6cfeec4e6631cf"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/0.0.0.3dr",
+            "bytes": 26624,
+            "sha256": "2cafba65c279172e250047f747df70f915648644e6be0083ed8d8ad35820f30c"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/0.1.-1.3dr",
+            "bytes": 17408,
+            "sha256": "13088b4de0700781f0b77e24a312ce83c65e396551d063592342772bc00324aa"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/0.1.0.3dr",
+            "bytes": 20992,
+            "sha256": "1ed1a6e0bea1dc7bb678b30c961bcc0aac21cb3d94e85cb139b5d16c9a1ea39f"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/1.-1.-1.3dr",
+            "bytes": 31744,
+            "sha256": "927253002e22d1360a5021cfb419ae9dd584f1a05a92b248f44ddc2f3626eb1b"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/1.-1.-2.3dr",
+            "bytes": 30720,
+            "sha256": "4a96694632b9cf1d14151174e570a69ab3bfb7216e73ba7d8de2ed7b69da50b9"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/1.-1.-3.3dr",
+            "bytes": 29696,
+            "sha256": "37b6ebe51b3fb3f3575564ac136dc4d4d67a4ebe98133023b8e2c9980d9a353b"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/1.0.-1.3dr",
+            "bytes": 165888,
+            "sha256": "e2eb3f2c1a4c9e0282bcd98355cbf1be00223ddb1cd3c27373dea4cb594121d5"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/1.0.-2.3dr",
+            "bytes": 106496,
+            "sha256": "2cddd261e1ffca2efb7aeae76b47d2b152a8a38ed25e839c3cecef771ea84937"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/1.0.-3.3dr",
+            "bytes": 110080,
+            "sha256": "549d65f380975a61e5a482508ec1bec866a644a17d146b29f1af4939f27e06f4"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/1.0.-5.3dr",
+            "bytes": 44544,
+            "sha256": "aafd8061f8933af81a3c697ba034a948453beb3379c4abb2d74b099d544dfaf8"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/1.0.-6.3dr",
+            "bytes": 38400,
+            "sha256": "cb2ae35ee2255392ce97fd89ddea29cd0519384be4c70326f18c1a76361a0a77"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/2.-1.-1.3dr",
+            "bytes": 17408,
+            "sha256": "a28acdb216e5276446b418aa4cd53b5de067e0759777a0b0ae0f86f233a536bc"
+          },
+          {
+            "path": ".local/instances/cubic-fork-cleanroom-02/riven-dev/region3d/2.0.-1.3dr",
+            "bytes": 23040,
+            "sha256": "71af2014a471122cd4513791b570e2a1a379349f08a083dba2c70e237f3cce5a"
+          }
+        ],
+        "scope": "Collected prior independent NBT/region inspection; reader rejects external overflow entries"
+      },
+      "mapArtifacts": {
+        "receipt": {
+          "path": ".local/instances/cubic-fork-cleanroom-map-01/riven-instance.json",
+          "bytes": 24416,
+          "sha256": "f6a3d52f0dbe4722c56566c4baa6cfd48c427c7b965feb144b5d330cc7f5ce9f"
+        },
+        "cubicChunks": {
+          "path": ".local/instances/cubic-fork-cleanroom-map-01/mods/CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar",
+          "bytes": 918258,
+          "sha256": "c0fa34c71c1eb297c6043ef83ed3d59244fcb6126589ddce99a57832384f48ef"
+        },
+        "riven": {
+          "path": ".local/instances/cubic-fork-cleanroom-map-01/mods/riven.jar",
+          "bytes": 329079,
+          "sha256": "a9c80c491751eb4c13896f498f08c96a513d30d91fb2fdc8d81190fe0b497350"
+        },
+        "cubicChunksClassVersions": [
+          69
+        ],
+        "rivenProbeClassSha256": "1765e30927ce7a2751d89c424cfefda35742ac4bd8fa73990c2c66e72e65c3d9",
+        "sourceCommit": "62237c2b4e69532e05004a38533a919c47d36a69",
+        "sourceDirtyAtPreparation": true,
+        "sourceStatusAtPreparation": [
+          " M .gitattributes",
+          " M cleanroom/build.gradle",
+          "M  cleanroom/gradlew",
+          " M cleanroom/tools/plot_hash_distribution.py",
+          " M docs/measurements/hash-distribution/hash-distribution.svg",
+          " M docs/measurements/hash-distribution/result.json"
+        ],
+        "installedJarCount": 24,
+        "allInstalledModHashesMatchReceipt": true
+      },
+      "map": {
+        "result": {
+          "path": ".local/instances/cubic-fork-cleanroom-map-01/cubic-map-result.json",
+          "bytes": 729,
+          "sha256": "256a00a2002caa7066f36ad6c5a2863068f47dd4df7707d30bd524d2991550c0"
+        },
+        "process": {
+          "path": ".local/instances/cubic-fork-cleanroom-map-01/cubic-map-process.json",
+          "bytes": 319,
+          "sha256": "910956b8c162beb8da30e12bbc45e8fed3db1a451e70eda3489dd8aa927eae57"
+        },
+        "log": {
+          "path": ".local/instances/cubic-fork-cleanroom-map-01/cubic-map-console.log",
+          "bytes": 774898,
+          "sha256": "15ec29b4288889984406271249c36281c292a2c901de065d17e4a5531f20d17b"
+        },
+        "javaCommand": [
+          "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\java.exe",
+          "-Xms1G",
+          "-Xmx6G",
+          "-Djava.awt.headless=true",
+          "-Driven.cubicMapProbe=true",
+          "-Driven.traceWorldgen=true",
+          "-jar",
+          "cleanroom-0.6.13-alpha.jar",
+          "nogui"
+        ],
+        "reportedJvm": "OpenJDK 64-Bit Server VM, version 25.0.3, running on Windows 11:amd64:10.0, installed at C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot",
+        "serverCommands": [
+          "riven_cubic_map_probe",
+          "save-all",
+          "stop"
+        ],
+        "passed": true,
+        "ready": true,
+        "exitCode": 0,
+        "timedOut": false,
+        "shutdownException": false,
+        "missingMapMixin": false,
+        "elapsedSecondsIncludingStartupAndShutdown": 43.51,
+        "configurationSha256AtRun": "c6da8fa85d0126dd8dd4fed7f5f5aa355cdd493bacfef976c9b45bc6917d2c45",
+        "serverPropertiesSha256AtRun": "b9224821f7a557d77cdaaeec945dcd2281c90ecc6ab660ff36e7f1d2e8f5c617",
+        "errors": {
+          "baselineLog": {
+            "path": ".local/instances/preparation-workers-cubic-cleanroom/cubic-habitats-console.log",
+            "bytes": 775072,
+            "sha256": "1aeb4893ce1b6c8fe42e523e71ecefff1eef067b103144af274225fec93f7287"
+          },
+          "actualErrorLines": 186,
+          "baselineErrorLines": 186,
+          "newNormalizedErrors": {},
+          "removedNormalizedErrors": {},
+          "currentLoggerCounts": {
+            "AE2:S": 12,
+            "FML": 1,
+            "GregTech": 14,
+            "minecraft/AdvancementManager": 158,
+            "pyrotech.ModuleTechBloomery": 1
+          }
+        },
+        "nativeChecks": {
+          "surfaceColors": [
+            {
+              "surfaceY": -64,
+              "map": "map_0",
+              "columnHeight": -63,
+              "actualColor": 30,
+              "expectedColor": 30
+            },
+            {
+              "surfaceY": 63,
+              "map": "map_1",
+              "columnHeight": 64,
+              "actualColor": 30,
+              "expectedColor": 30
+            },
+            {
+              "surfaceY": 300,
+              "map": "map_2",
+              "columnHeight": 301,
+              "actualColor": 30,
+              "expectedColor": 30
+            }
+          ],
+          "edgeCasePackedColors": {
+            "transparent-negative": 121,
+            "transparent-zero": 122,
+            "water-negative-deep": 48,
+            "water-positive-deep": 48,
+            "water-negative-shallow": 50,
+            "water-positive-shallow": 50,
+            "floor": 44
+          },
+          "fixtureCount": 10,
+          "scope": "Server-side held-map sampling with a FakePlayer; no client rendering or network test"
+        }
+      }
+    },
+    "forge": {
+      "loaderVersion": "14.23.5.2860",
+      "lifecycleInstance": "cubic-fork-forge-01",
+      "artifacts": {
+        "receipt": {
+          "path": ".local/instances/cubic-fork-forge-01/riven-instance.json",
+          "bytes": 24063,
+          "sha256": "4b27450a44aabd15bd6f7ecc65cfb71b7fe7aebca4149c2777f83263cf484433"
+        },
+        "cubicChunks": {
+          "path": ".local/instances/cubic-fork-forge-01/mods/CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-forge.jar",
+          "bytes": 918352,
+          "sha256": "45df5fbacf545dd0f0d0d9e1f9e958b2953c0feba866b6096c62a53dfe25cd2d"
+        },
+        "riven": {
+          "path": ".local/instances/cubic-fork-forge-01/mods/riven.jar",
+          "bytes": 330001,
+          "sha256": "4de7dd3b344d34f6b508f7cb85c00ff39000302019575919b4c10f601f603133"
+        },
+        "cubicChunksClassVersions": [
+          52
+        ],
+        "rivenProbeClassSha256": "31fbb42d2a2e5cd4df090b616281a83142334400c985857e4e7a505dee7cbcc9",
+        "sourceCommit": "62237c2b4e69532e05004a38533a919c47d36a69",
+        "sourceDirtyAtPreparation": false,
+        "sourceStatusAtPreparation": [],
+        "installedJarCount": 24,
+        "allInstalledModHashesMatchReceipt": true
+      },
+      "unrelatedDependencyHashesMatchPriorProfile": true,
+      "priorReceipt": {
+        "path": ".local/instances/preparation-workers-cubic-forge/riven-instance.json",
+        "bytes": 22964,
+        "sha256": "63d8cfb6da9ece3a1ef7f0dd031081b96dce201899b9a1637894d20b9dccb4dd"
+      },
+      "write": {
+        "result": {
+          "path": ".local/instances/cubic-fork-forge-01/cubic-write-result.json",
+          "bytes": 1555,
+          "sha256": "2cdbd8d885e4c61c9d73fac52fad130b692491f9a94123a2451e621c74c2ece5"
+        },
+        "process": {
+          "path": ".local/instances/cubic-fork-forge-01/cubic-write-process.json",
+          "bytes": 287,
+          "sha256": "cf2d10e50d9138e74c7b3c2e5b50d3548d5d9b57bddd376c935db7bd1e09535c"
+        },
+        "log": {
+          "path": ".local/instances/cubic-fork-forge-01/cubic-write-console.log",
+          "bytes": 792495,
+          "sha256": "251958f1fcb814350ab597d6aeda319722fc30d09c25b5c99b21c0baed79e930"
+        },
+        "javaCommand": [
+          "C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.492.9-hotspot\\bin\\java.exe",
+          "-Xms1G",
+          "-Xmx6G",
+          "-Djava.awt.headless=true",
+          "-Driven.traceWorldgen=true",
+          "-jar",
+          "forge-1.12.2-14.23.5.2860.jar",
+          "nogui"
+        ],
+        "reportedJvm": "OpenJDK 64-Bit Server VM, version 1.8.0_492, running on Windows 11:amd64:10.0, installed at C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.492.9-hotspot\\jre",
+        "serverCommands": [
+          "riven_cubic_probe write",
+          "say RIVEN_CUBIC_PROBE y=-128",
+          "setblock 0 -128 0 minecraft:diamond_block",
+          "testforblock 0 -128 0 minecraft:diamond_block",
+          "say RIVEN_CUBIC_PROBE y=-1",
+          "setblock 0 -1 0 minecraft:emerald_block",
+          "testforblock 0 -1 0 minecraft:emerald_block",
+          "say RIVEN_CUBIC_PROBE y=256",
+          "setblock 0 256 0 minecraft:gold_block",
+          "testforblock 0 256 0 minecraft:gold_block",
+          "say RIVEN_CUBIC_PROBE y=383",
+          "setblock 0 383 0 minecraft:lapis_block",
+          "testforblock 0 383 0 minecraft:lapis_block",
+          "say RIVEN_CUBIC_OUTSIDE y=-129",
+          "setblock 0 -129 0 minecraft:diamond_block",
+          "say RIVEN_CUBIC_OUTSIDE y=384",
+          "setblock 0 384 0 minecraft:diamond_block",
+          "save-all",
+          "say RIVEN_CUBIC_PROBE_COMPLETE",
+          "stop"
+        ],
+        "passed": true,
+        "ready": true,
+        "exitCode": 0,
+        "timedOut": false,
+        "shutdownException": false,
+        "missingMapMixin": false,
+        "elapsedSecondsIncludingStartupAndShutdown": 51.97,
+        "configurationSha256AtRun": "c6da8fa85d0126dd8dd4fed7f5f5aa355cdd493bacfef976c9b45bc6917d2c45",
+        "serverPropertiesSha256AtRun": "856c0cd63c124029aaa5894dc0ce350c9effc7d3dcf3a0de11247682d91dead4",
+        "errors": {
+          "baselineLog": {
+            "path": ".local/instances/preparation-workers-cubic-forge/cubic-habitats-console.log",
+            "bytes": 791317,
+            "sha256": "8cf2f7e5ae5c1e18a090f70fc9e6dfcf304160b630cd9df073af7be10e14b1d1"
+          },
+          "actualErrorLines": 186,
+          "baselineErrorLines": 186,
+          "newNormalizedErrors": {},
+          "removedNormalizedErrors": {},
+          "currentLoggerCounts": {
+            "AE2:S": 12,
+            "FML": 1,
+            "GregTech": 14,
+            "minecraft/AdvancementManager": 158,
+            "pyrotech.ModuleTechBloomery": 1
+          }
+        },
+        "nativeChecks": {
+          "minY": -128,
+          "maxYExclusive": 384,
+          "blockFixtureHeights": [
+            -128,
+            -1,
+            256,
+            383
+          ],
+          "rejectedWriteHeights": [
+            -129,
+            384
+          ],
+          "lightFixtureHeights": [
+            -120,
+            272
+          ],
+          "sourceLight": 15,
+          "adjacentLight": 14,
+          "furnaceHeights": [
+            -120,
+            272
+          ],
+          "diamondsPerFurnace": 3,
+          "modelColumn": {
+            "x": 1,
+            "z": 1,
+            "minY": -128,
+            "maxYExclusive": 384,
+            "blockComparisons": 512,
+            "countEvidence": "Probe source loop and native generation PASS marker"
+          },
+          "markers": [
+            "RIVEN_CUBIC_BOUNDS min=-128 maxExclusive=384",
+            "RIVEN_CUBIC_OUTSIDE PASS",
+            "RIVEN_CUBIC_GENERATION PASS",
+            "RIVEN_CUBIC_RESULT phase=write PASS",
+            "RIVEN_CUBIC_BLOCK y=-128 PASS",
+            "RIVEN_CUBIC_BLOCK y=-1 PASS",
+            "RIVEN_CUBIC_BLOCK y=256 PASS",
+            "RIVEN_CUBIC_BLOCK y=383 PASS",
+            "RIVEN_CUBIC_LIGHT y=-120 source=15 neighbor=14 PASS",
+            "RIVEN_CUBIC_LIGHT y=272 source=15 neighbor=14 PASS",
+            "RIVEN_CUBIC_TILE y=-120 PASS",
+            "RIVEN_CUBIC_TILE y=272 PASS"
+          ]
+        }
+      },
+      "read": {
+        "result": {
+          "path": ".local/instances/cubic-fork-forge-01/cubic-read-result.json",
+          "bytes": 1185,
+          "sha256": "eec398d95f31cec1145b1764f9cf8e1da4fc17c5751b59a714fa693e8408b9b2"
+        },
+        "process": {
+          "path": ".local/instances/cubic-fork-forge-01/cubic-read-process.json",
+          "bytes": 288,
+          "sha256": "e5c34322579e8742dca4a4bf9131fbef661f2181c3e2d47c86c142664fb36927"
+        },
+        "log": {
+          "path": ".local/instances/cubic-fork-forge-01/cubic-read-console.log",
+          "bytes": 793759,
+          "sha256": "e806392e954602f4637735787e985ab2ce624d4f9044c9183006e608e0a4b904"
+        },
+        "javaCommand": [
+          "C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.492.9-hotspot\\bin\\java.exe",
+          "-Xms1G",
+          "-Xmx6G",
+          "-Djava.awt.headless=true",
+          "-Driven.traceWorldgen=true",
+          "-jar",
+          "forge-1.12.2-14.23.5.2860.jar",
+          "nogui"
+        ],
+        "reportedJvm": "OpenJDK 64-Bit Server VM, version 1.8.0_492, running on Windows 11:amd64:10.0, installed at C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.492.9-hotspot\\jre",
+        "serverCommands": [
+          "riven_cubic_probe read",
+          "say RIVEN_CUBIC_PROBE y=-128",
+          "testforblock 0 -128 0 minecraft:diamond_block",
+          "say RIVEN_CUBIC_PROBE y=-1",
+          "testforblock 0 -1 0 minecraft:emerald_block",
+          "say RIVEN_CUBIC_PROBE y=256",
+          "testforblock 0 256 0 minecraft:gold_block",
+          "say RIVEN_CUBIC_PROBE y=383",
+          "testforblock 0 383 0 minecraft:lapis_block",
+          "save-all",
+          "say RIVEN_CUBIC_PROBE_COMPLETE",
+          "stop"
+        ],
+        "passed": true,
+        "ready": true,
+        "exitCode": 0,
+        "timedOut": false,
+        "shutdownException": false,
+        "missingMapMixin": false,
+        "elapsedSecondsIncludingStartupAndShutdown": 39.09,
+        "configurationSha256AtRun": "c6da8fa85d0126dd8dd4fed7f5f5aa355cdd493bacfef976c9b45bc6917d2c45",
+        "serverPropertiesSha256AtRun": "7cbf6a85b1a560b5961f22f709ff660ae132deb0cd8c3277ff46cc7ec924135e",
+        "errors": {
+          "baselineLog": {
+            "path": ".local/instances/preparation-workers-cubic-forge/cubic-habitats-read-console.log",
+            "bytes": 793727,
+            "sha256": "7ac981f43f79ade06ba5887a80b4bb0c6355729eb06ebef50d31b4c57d90f274"
+          },
+          "actualErrorLines": 199,
+          "baselineErrorLines": 199,
+          "newNormalizedErrors": {},
+          "removedNormalizedErrors": {},
+          "currentLoggerCounts": {
+            "AE2:S": 12,
+            "FML": 1,
+            "GregTech": 14,
+            "minecraft/AdvancementManager": 158,
+            "pyrotech.ModuleTechBloomery": 14
+          }
+        },
+        "nativeChecks": {
+          "minY": -128,
+          "maxYExclusive": 384,
+          "blockFixtureHeights": [
+            -128,
+            -1,
+            256,
+            383
+          ],
+          "rejectedWriteHeights": [
+            -129,
+            384
+          ],
+          "lightFixtureHeights": [
+            -120,
+            272
+          ],
+          "sourceLight": 15,
+          "adjacentLight": 14,
+          "furnaceHeights": [
+            -120,
+            272
+          ],
+          "diamondsPerFurnace": 3,
+          "modelColumn": {
+            "x": 1,
+            "z": 1,
+            "minY": -128,
+            "maxYExclusive": 384,
+            "blockComparisons": 512,
+            "countEvidence": "Probe source loop and native generation PASS marker"
+          },
+          "markers": [
+            "RIVEN_CUBIC_BOUNDS min=-128 maxExclusive=384",
+            "RIVEN_CUBIC_OUTSIDE PASS",
+            "RIVEN_CUBIC_GENERATION PASS",
+            "RIVEN_CUBIC_RESULT phase=read PASS",
+            "RIVEN_CUBIC_BLOCK y=-128 PASS",
+            "RIVEN_CUBIC_BLOCK y=-1 PASS",
+            "RIVEN_CUBIC_BLOCK y=256 PASS",
+            "RIVEN_CUBIC_BLOCK y=383 PASS",
+            "RIVEN_CUBIC_LIGHT y=-120 source=15 neighbor=14 PASS",
+            "RIVEN_CUBIC_LIGHT y=272 source=15 neighbor=14 PASS",
+            "RIVEN_CUBIC_TILE y=-120 PASS",
+            "RIVEN_CUBIC_TILE y=272 PASS"
+          ]
+        }
+      },
+      "savedData": {
+        "inspection": {
+          "path": ".local/experiments/cubic-chunks/cubic-fork-forge-01-saved.json",
+          "bytes": 3126,
+          "sha256": "114fd95039dc44dbb9d6a3412ac51fa3369e810c8535a2c9d8ef5d7752e1d69f"
+        },
+        "metrics": {
+          "generator": "riven_cubic",
+          "seed": 8675309,
+          "min_y": -128,
+          "max_y_exclusive": 384,
+          "storage": "cubicchunks:anvil3d",
+          "saved_cubes": 4638,
+          "cube_y_counts": {
+            "-8": 3,
+            "-7": 1,
+            "-6": 1,
+            "-5": 1,
+            "-4": 1,
+            "-3": 1,
+            "-2": 1,
+            "-1": 266,
+            "0": 444,
+            "1": 698,
+            "2": 722,
+            "3": 722,
+            "4": 722,
+            "5": 722,
+            "6": 296,
+            "7": 17,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 3,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 3
+          },
+          "nonair_y_bounds": [
+            -128,
+            383
+          ],
+          "block_counts": {
+            "minecraft:air": 7045142,
+            "minecraft:bedrock": 767,
+            "minecraft:diamond_block": 1,
+            "minecraft:emerald_block": 1,
+            "minecraft:furnace": 2,
+            "minecraft:glowstone": 2,
+            "minecraft:gold_block": 1,
+            "minecraft:gravel": 546048,
+            "minecraft:lapis_block": 1,
+            "minecraft:water": 7657668,
+            "susy:susy_stone_smooth": 3514143
+          },
+          "fixtures": {
+            "-128": {
+              "block": "minecraft:diamond_block",
+              "block_light": 0
+            },
+            "-1": {
+              "block": "minecraft:emerald_block",
+              "block_light": 0
+            },
+            "256": {
+              "block": "minecraft:gold_block",
+              "block_light": 0
+            },
+            "383": {
+              "block": "minecraft:lapis_block",
+              "block_light": 0
+            }
+          },
+          "lights": {
+            "-120": {
+              "source": {
+                "block": "minecraft:glowstone",
+                "block_light": 15
+              },
+              "neighbor": {
+                "block": "minecraft:air",
+                "block_light": 14
+              }
+            },
+            "272": {
+              "source": {
+                "block": "minecraft:glowstone",
+                "block_light": 15
+              },
+              "neighbor": {
+                "block": "minecraft:air",
+                "block_light": 14
+              }
+            }
+          },
+          "tiles": [
+            {
+              "id": "minecraft:furnace",
+              "y": -120,
+              "items": [
+                {
+                  "id": "minecraft:diamond",
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "id": "minecraft:furnace",
+              "y": 272,
+              "items": [
+                {
+                  "id": "minecraft:diamond",
+                  "count": 3
+                }
+              ]
+            }
+          ],
+          "saved_fixture_checks_passed": true,
+          "registered_susy_deposits": true,
+          "registered_susy_host_rock": true,
+          "loaded_mod_ids": [
+            "FML",
+            "appliedenergistics2",
+            "athenaeum",
+            "baubles",
+            "codechickenlib",
+            "configanytime",
+            "cubicchunks",
+            "cubicchunkscore",
+            "dropt",
+            "forge",
+            "ftblib",
+            "gcym",
+            "geckolib3",
+            "gregtech",
+            "gregtechfoodoption",
+            "groovyscript",
+            "immersiverailroading",
+            "mcp",
+            "minecraft",
+            "mixinbooter",
+            "modularui",
+            "opencomputers",
+            "opencomputers|core",
+            "placeholdername",
+            "pyrotech",
+            "riven",
+            "riven_cubic_probe",
+            "supercritical",
+            "sussypatches",
+            "susy",
+            "trackapi",
+            "universalmodcore"
+          ]
+        },
+        "retainedWorldFiles": [
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/level.dat",
+            "bytes": 42901,
+            "sha256": "5c1c9ffefe960dfeead609554954327447c6eb5994c29ff5a2edc8a469e44429"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/data/cubicChunksData.dat",
+            "bytes": 140,
+            "sha256": "1afba03ae5e5956ae02647d3ce8693180a80cb5fb923ebda8b292dabaa46f707"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region2d/-1.-1.2dr",
+            "bytes": 6144,
+            "sha256": "6e63205111799f52d10d8f03d0ba26612dc856241ca8117488c706b963829ec0"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region2d/-1.-2.2dr",
+            "bytes": 152576,
+            "sha256": "ff82365235ebfc3dbf62fbef76f999bee7b6b1723a1fb1351eae5ca174ff335f"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region2d/-1.-3.2dr",
+            "bytes": 47104,
+            "sha256": "0dbe906d8c47358b6a93f28449cc50478b2acb77441c685f69f018239ee21d49"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region2d/-1.0.2dr",
+            "bytes": 5120,
+            "sha256": "50b02be603020bc7bdf9c9e7293ddf26b83a404026380d27fca8a31f7577ab2f"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region2d/0.-1.2dr",
+            "bytes": 86016,
+            "sha256": "a7c6d3f89a9de630952713c4820b331b87217565671e20d33735e7d2c211d213"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region2d/0.-2.2dr",
+            "bytes": 235520,
+            "sha256": "d0c6347ec07a093b991f300154604b605c8bf672c7eb81bb5c5fc748a7578289"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region2d/0.-3.2dr",
+            "bytes": 85504,
+            "sha256": "fad6cd748d9e40217fd075f45e2b0133296df467ccf1cc1d31753ab3992c5f72"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region2d/0.0.2dr",
+            "bytes": 4608,
+            "sha256": "45693942d84282b3ba3ac6253d8bc363b80e3fba0785b4f22a49dfa8c99e3794"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region2d/1.-1.2dr",
+            "bytes": 5120,
+            "sha256": "12bb0f1c4f149ebdf18f2f1a374cfc3acd0fe5e4364cf201a0a959907e59d141"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/-1.-1.-3.3dr",
+            "bytes": 47104,
+            "sha256": "569e7d4b6e341da3a0820f7483ec4edd196eab8e81daf8977084fde12fcf9fa6"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/-1.-1.-4.3dr",
+            "bytes": 18432,
+            "sha256": "c06ffdd6f19bf43febe430e4bf859d148c70e5595636bcd005811f389ac2f974"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/-1.-1.0.3dr",
+            "bytes": 17408,
+            "sha256": "6f5034924c7bfa89c752e4874e2839fa00b2a3e5c6a25d677433ab00fc88b10c"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/-1.0.-1.3dr",
+            "bytes": 25600,
+            "sha256": "777fd77cac646f261ba1884e52c6b69330811d626dafbb218f99ae0bc783698a"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/-1.0.-2.3dr",
+            "bytes": 19456,
+            "sha256": "ea3898f3e6f76b286589c16d4fff83fabd633cc8eba6c70adb058cee96870568"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/-1.0.-3.3dr",
+            "bytes": 214016,
+            "sha256": "8a5399493cbc7d83b5fbf5acbae522216f7eced82d10b66d3fa19403d3b0fe12"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/-1.0.-4.3dr",
+            "bytes": 256512,
+            "sha256": "976f536bdd086824b1dd90870c54f47c4ed16545c4713bcca80a639d8676a0e0"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/-1.0.-5.3dr",
+            "bytes": 275456,
+            "sha256": "b048cad515325920b0c196b812338b22dd74ca01422319f177f4601169fe53dd"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/-1.0.0.3dr",
+            "bytes": 19456,
+            "sha256": "aac2d29ebf9a4713b1d961015a883d21f4f6e52b5bac25aa97a5fb844a0029bc"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/-1.1.0.3dr",
+            "bytes": 17408,
+            "sha256": "5b543955789c9e01eb416007d291ff95bfc18c5a8454055992202f40e2704037"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/-2.-1.-3.3dr",
+            "bytes": 24576,
+            "sha256": "02c00c61a70a0ef408021e7739a0d037533333c1e010546406e13a9fe5b5a767"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/-2.0.-3.3dr",
+            "bytes": 67072,
+            "sha256": "b85ae90e02468dbcb05acae9beb14abcda04589ece0a7edcc78534af1d8cadc6"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/-2.0.-5.3dr",
+            "bytes": 22528,
+            "sha256": "0b8ae2827e5a9eaa8edb644c6c45c1dc460d9674105312aedf4e97c0f10ff671"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/0.-1.-1.3dr",
+            "bytes": 22528,
+            "sha256": "d82ac6f5e5083903fa44dda91406ced907723ed03a4e4882d1e165a9cc211a17"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/0.-1.-2.3dr",
+            "bytes": 35328,
+            "sha256": "2e3e20c99b854050c98d3a7cc0b303b75a85b79c2e4c6e99597bc39fd9b104bf"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/0.-1.-3.3dr",
+            "bytes": 29696,
+            "sha256": "2ab248976337696c453ba9676214b01285cc7132aeabbdb3dd92f578dcd49b9a"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/0.-1.-4.3dr",
+            "bytes": 29184,
+            "sha256": "9f2b0873e45fa43ed7e1f0f00bc7a7b5674892eb28d7c94595ca2a100d799a84"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/0.-1.0.3dr",
+            "bytes": 20992,
+            "sha256": "985bbad30ad030383d12ab98d72519ff63eaa9ea8df124876cff223dbd63a123"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/0.0.-1.3dr",
+            "bytes": 135168,
+            "sha256": "848e3f575a795b6bb4af91e3ee66127c9f0036a949430fa9b6eb62fac7c3b82a"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/0.0.-2.3dr",
+            "bytes": 157184,
+            "sha256": "966b753846822748b7ae1973849b86c38ec96feb7b03e09e874ce8795ae92495"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/0.0.-3.3dr",
+            "bytes": 125440,
+            "sha256": "5a46f74870f53f617c26a5e8f98537e4acd2fe48751850704ddf9a76adf55dca"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/0.0.-4.3dr",
+            "bytes": 308224,
+            "sha256": "ce2ae61fed65dbfcbb254c46cc66ba4a2061949447ecbeaa4b9bb0943bfe6d09"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/0.0.-5.3dr",
+            "bytes": 374784,
+            "sha256": "b19adfb0cbefecd90c8cf0b688b5906cc0ab0821674402092d1411625dea7fc1"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/0.0.-6.3dr",
+            "bytes": 111616,
+            "sha256": "7710e2db6f45a655885cad8e2e2719cc80345fd9b50104ed74391b4d75a000f7"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/0.0.0.3dr",
+            "bytes": 26624,
+            "sha256": "ecef34719bb87013ff49bd18afbb4ee4f26f386f56452960fbae33907a5ef270"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/0.1.-1.3dr",
+            "bytes": 17408,
+            "sha256": "b2b424b2fdd06291c610a77b0fb353629d66f7bd9a239ab86c90fdb4307dc47f"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/0.1.0.3dr",
+            "bytes": 20992,
+            "sha256": "a001087cd9074de2df3c96f366bd4bfaad333ea15239a0477d8ca291bcee8ce1"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/1.-1.-1.3dr",
+            "bytes": 31744,
+            "sha256": "f78ffba979101404e462bc8b2507aac69160a288bcaf2c56f2f767ad39d87c2f"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/1.-1.-2.3dr",
+            "bytes": 30720,
+            "sha256": "7b2192c6c12a0a57b74119aaa6cf90c20e8c250b906c13c38b934a6baf9222d3"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/1.-1.-3.3dr",
+            "bytes": 29696,
+            "sha256": "cba332fb34f69317bded43b966452a4a78fa5b1f9ebc210b08de4bd6645de263"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/1.0.-1.3dr",
+            "bytes": 165888,
+            "sha256": "1223a3b1595471b8dba171e10494cd5ab9e58cf26421a09113bcabac239d5c53"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/1.0.-2.3dr",
+            "bytes": 106496,
+            "sha256": "b386976fc18b610b50ceb472021a48b072f0816312794adb4a47d990c2f4137b"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/1.0.-3.3dr",
+            "bytes": 110080,
+            "sha256": "cfcdbe6e690fef1eb74ddbcf8eb8e345ef6922764a64a73bf5f87cc2e9b0ac6d"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/1.0.-5.3dr",
+            "bytes": 44544,
+            "sha256": "3fc875970b9bb760750055759da08f7d8ca19f653b8014a1afce2c521117fd06"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/1.0.-6.3dr",
+            "bytes": 38400,
+            "sha256": "4b3c92c07322f22a00ca029c9995e9251bf5f52699845cad64a6bd98c84a6022"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/2.-1.-1.3dr",
+            "bytes": 17408,
+            "sha256": "c859b16f67cdad3a6c4c6a5c715175ac33bc2b9c592b9a0ef5ef58a1bb51afb4"
+          },
+          {
+            "path": ".local/instances/cubic-fork-forge-01/riven-dev/region3d/2.0.-1.3dr",
+            "bytes": 23040,
+            "sha256": "3a37fd476f755234974b8f7ac585d57a3fe401b1ef3c4af4a3e61a73bcf0a037"
+          }
+        ],
+        "scope": "Collected prior independent NBT/region inspection; reader rejects external overflow entries"
+      },
+      "mapArtifacts": {
+        "receipt": {
+          "path": ".local/instances/cubic-fork-forge-map-01/riven-instance.json",
+          "bytes": 24390,
+          "sha256": "c19a7534ca870435d0c73c59aa6d17f6f6203f482c922e5a116512944ba6f2f3"
+        },
+        "cubicChunks": {
+          "path": ".local/instances/cubic-fork-forge-map-01/mods/CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-forge.jar",
+          "bytes": 918352,
+          "sha256": "45df5fbacf545dd0f0d0d9e1f9e958b2953c0feba866b6096c62a53dfe25cd2d"
+        },
+        "riven": {
+          "path": ".local/instances/cubic-fork-forge-map-01/mods/riven.jar",
+          "bytes": 330001,
+          "sha256": "4de7dd3b344d34f6b508f7cb85c00ff39000302019575919b4c10f601f603133"
+        },
+        "cubicChunksClassVersions": [
+          52
+        ],
+        "rivenProbeClassSha256": "31fbb42d2a2e5cd4df090b616281a83142334400c985857e4e7a505dee7cbcc9",
+        "sourceCommit": "62237c2b4e69532e05004a38533a919c47d36a69",
+        "sourceDirtyAtPreparation": true,
+        "sourceStatusAtPreparation": [
+          " M .gitattributes",
+          " M cleanroom/build.gradle",
+          "M  cleanroom/gradlew",
+          " M cleanroom/tools/plot_hash_distribution.py",
+          " M docs/measurements/hash-distribution/hash-distribution.svg",
+          " M docs/measurements/hash-distribution/result.json"
+        ],
+        "installedJarCount": 24,
+        "allInstalledModHashesMatchReceipt": true
+      },
+      "map": {
+        "result": {
+          "path": ".local/instances/cubic-fork-forge-map-01/cubic-map-result.json",
+          "bytes": 721,
+          "sha256": "234c0dafa390d2dd34adbd0b35650d2c824bf920c9f695d895b19ed16c85ebe8"
+        },
+        "process": {
+          "path": ".local/instances/cubic-fork-forge-map-01/cubic-map-process.json",
+          "bytes": 323,
+          "sha256": "1b8498f1bcc5b0a2bde56e188bd87de715296da638cde15d65aa2426a7033271"
+        },
+        "log": {
+          "path": ".local/instances/cubic-fork-forge-map-01/cubic-map-console.log",
+          "bytes": 791217,
+          "sha256": "f261ba790adf1d952597d0a43773e958ffc1b59e4c7341fd4e33317eb23de97b"
+        },
+        "javaCommand": [
+          "C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.492.9-hotspot\\bin\\java.exe",
+          "-Xms1G",
+          "-Xmx6G",
+          "-Djava.awt.headless=true",
+          "-Driven.cubicMapProbe=true",
+          "-Driven.traceWorldgen=true",
+          "-jar",
+          "forge-1.12.2-14.23.5.2860.jar",
+          "nogui"
+        ],
+        "reportedJvm": "OpenJDK 64-Bit Server VM, version 1.8.0_492, running on Windows 11:amd64:10.0, installed at C:\\Program Files\\Eclipse Adoptium\\jdk-8.0.492.9-hotspot\\jre",
+        "serverCommands": [
+          "riven_cubic_map_probe",
+          "save-all",
+          "stop"
+        ],
+        "passed": true,
+        "ready": true,
+        "exitCode": 0,
+        "timedOut": false,
+        "shutdownException": false,
+        "missingMapMixin": false,
+        "elapsedSecondsIncludingStartupAndShutdown": 51.98,
+        "configurationSha256AtRun": "c6da8fa85d0126dd8dd4fed7f5f5aa355cdd493bacfef976c9b45bc6917d2c45",
+        "serverPropertiesSha256AtRun": "1764fd8e6e0bbc9eb61fe75b382b6d57757d559f351f3097936e1a45e9fa4a82",
+        "errors": {
+          "baselineLog": {
+            "path": ".local/instances/preparation-workers-cubic-forge/cubic-habitats-console.log",
+            "bytes": 791317,
+            "sha256": "8cf2f7e5ae5c1e18a090f70fc9e6dfcf304160b630cd9df073af7be10e14b1d1"
+          },
+          "actualErrorLines": 186,
+          "baselineErrorLines": 186,
+          "newNormalizedErrors": {},
+          "removedNormalizedErrors": {},
+          "currentLoggerCounts": {
+            "AE2:S": 12,
+            "FML": 1,
+            "GregTech": 14,
+            "minecraft/AdvancementManager": 158,
+            "pyrotech.ModuleTechBloomery": 1
+          }
+        },
+        "nativeChecks": {
+          "surfaceColors": [
+            {
+              "surfaceY": -64,
+              "map": "map_0",
+              "columnHeight": -63,
+              "actualColor": 30,
+              "expectedColor": 30
+            },
+            {
+              "surfaceY": 63,
+              "map": "map_1",
+              "columnHeight": 64,
+              "actualColor": 30,
+              "expectedColor": 30
+            },
+            {
+              "surfaceY": 300,
+              "map": "map_2",
+              "columnHeight": 301,
+              "actualColor": 30,
+              "expectedColor": 30
+            }
+          ],
+          "edgeCasePackedColors": {
+            "transparent-negative": 121,
+            "transparent-zero": 122,
+            "water-negative-deep": 48,
+            "water-positive-deep": 48,
+            "water-negative-shallow": 50,
+            "water-positive-shallow": 50,
+            "floor": 44
+          },
+          "fixtureCount": 10,
+          "scope": "Server-side held-map sampling with a FakePlayer; no client rendering or network test"
+        }
+      }
+    }
+  },
+  "excludedRuns": [
+    {
+      "instance": "cubic-fork-cleanroom-01",
+      "result": {
+        "path": ".local/instances/cubic-fork-cleanroom-01/cubic-write-result.json",
+        "bytes": 1566,
+        "sha256": "504e3d8e9ed88448bdafda0be34421bf6809b7810a8f594cbf040ddcfec5b482"
+      },
+      "log": {
+        "path": ".local/instances/cubic-fork-cleanroom-01/cubic-write-console.log",
+        "bytes": 776299,
+        "sha256": "988f350601934c4182db8c2a68981ed04fefcb787ed3a689a45773b041c25565"
+      },
+      "passed": false,
+      "observedFailure": "RIVEN_CUBIC_FAIL generated negative stone",
+      "reason": "The old Riven probe expected the initial flat vanilla-stone fixture after Riven terrain had changed.",
+      "correction": "Compare every block in the 512-block (1,y,1) column to the current Riven model; rerun in fresh instances.",
+      "scope": "Excluded from successful native qualification; retained without rewriting its evidence."
+    }
+  ],
+  "probeAndInspectionSources": [
+    {
+      "path": "experiments/cubic/src/main/java/supersymmetry/riven/experiment/CubicProbe.java",
+      "bytes": 7132,
+      "sha256": "1626ce7db3f18891aabdd841570f62a93a378be27d9e659583cdf250b9ee2af1"
+    },
+    {
+      "path": "experiments/cubic/src/main/java/supersymmetry/riven/experiment/CubicMapProbe.java",
+      "bytes": 6854,
+      "sha256": "97a09fd5270bab6bcc181892d58bd30a972d0c4676b4251400d96bfa3c9d2fd3"
+    },
+    {
+      "path": "tools/experiment_cubic.py",
+      "bytes": 14327,
+      "sha256": "151b9274cb6ac66a0c08d0d907c4ed75d8aab68e0b359dfb62fcd46be919bef8"
+    },
+    {
+      "path": "tools/inspect_cubic_world.py",
+      "bytes": 5953,
+      "sha256": "84042067bfce0b769ffed29b826a4987e6639c8bed7bfa7649634c144a9924dd"
+    }
+  ],
+  "summary": {
+    "successfulNativeProcesses": 6,
+    "savedCubesPerLoader": 4638,
+    "modelBlockComparisonsPerLifecyclePhase": 512,
+    "mapFixturesPerLoader": 10,
+    "newNormalizedErrorLines": 0,
+    "existingErrorLinesPerFreshRun": 186,
+    "existingErrorLinesPerRestart": 199,
+    "candidateArtifactHashesIdenticalAcrossLifecycleAndMapRuns": true
+  }
+}

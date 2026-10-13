@@ -50,7 +50,6 @@ configurations {
     embeddedLibraries
     implementation.extendsFrom(embeddedLibraries)
     modImplementation
-    implementation.extendsFrom(modImplementation)
 }
 dependencies {
     buildSupportCompileOnly 'com.google.code.findbugs:jsr305:3.0.2'
@@ -73,7 +72,6 @@ unimined.minecraft {
         minecraftForge { loader forge_version }
     }
     defaultRemapJar = false
-    mods { remap(configurations.modImplementation) }
     remap(tasks.named('jar').get()) {
         mixinRemap { enableBaseMixin() }
     }

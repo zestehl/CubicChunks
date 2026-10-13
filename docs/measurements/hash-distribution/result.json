@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-13T01:47:58.129290+00:00",
+  "generated_utc": "2026-10-13T01:53:41.206895+00:00",
   "scope": "Measured synthetic coordinate hash distribution; no native runtime or wall-clock speedup claim.",
   "captures_match": true,
   "world_hash_contribution": 0,
@@ -10,7 +10,7 @@
     "src\\test\\java\\io\\github\\opencubicchunks\\cubicchunks\\core\\server\\chunkio\\async\\forge\\QueuedCubeHashDiagnostic.java": "1dc8ae908be77b0330393efc5e012888edf9463bff625387367477921ca2dae0",
     "tools\\measure_queued_cube_hash.py": "96a22ef9eb6b55058badea0231f1ac0d467f184ba69c6952a656ff5ead51ccfe"
   },
-  "plot_script_sha256": "6936e1c06088a89df9bac52a4b8b3450867c3f1a6e6df6239f7f0a65fe206689",
+  "plot_script_sha256": "ae9a4b9ed51370bf14e939cadfd8cddc07207cff219a6a54a9acda18476478c4",
   "csv_sha256": {
     "hash-distribution-java25.csv": "d6f62ac0638720b3ac41ba598753c15b4bd07302e32a815ada0d3a2e0ae3901e",
     "hash-distribution-java8.csv": "d6f62ac0638720b3ac41ba598753c15b4bd07302e32a815ada0d3a2e0ae3901e"
