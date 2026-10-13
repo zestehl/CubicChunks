@@ -11,4 +11,3 @@ Tick windows include world/lab work. Async latency includes queueing and tick di
 ![Server tick durations](server-timing-tails.png)
 
 ![Client frame intervals](client-timing-tails.png)
-

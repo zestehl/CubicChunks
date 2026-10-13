@@ -258,6 +258,8 @@ def main():
         f'{recording_note} Descriptive evidence, not a controlled speedup study.\n\n'
         '![Server tick durations](server-timing-tails.png)\n\n'
         '![Client frame intervals](client-timing-tails.png)\n\n' + extra_figures, encoding='utf-8')
+    readme = output / 'README.md'
+    readme.write_text(readme.read_text(encoding='utf-8').rstrip() + '\n', encoding='utf-8')
     with zipfile.ZipFile(output / 'performance-graphs.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in sorted(output.iterdir()):
             if path.suffix != '.zip': archive.write(path, path.name)
