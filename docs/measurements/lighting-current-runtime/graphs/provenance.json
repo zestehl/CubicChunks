@@ -1,0 +1,75 @@
+{
+  "source": {
+    "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\docs\\measurements\\lighting-current-runtime\\results.json",
+    "sha256": "5e23c2d1b978d0adef9bd0eee57fec47b072424e65224dc27b80660ae5d819e7"
+  },
+  "plotter": {
+    "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\tools\\plot_cubic_lab_results.py",
+    "sha256": "936b543079c44265d08353f5af60018a84b59c3c81aae5da7b21653626e7056a"
+  },
+  "environment": {
+    "name": "lighting-pass-02",
+    "runtimeVersion": "0.7.0-alpha",
+    "height": {
+      "minY": -128,
+      "maxYExclusive": 384,
+      "verticalCubesPerColumn": 32
+    },
+    "cubicJar": {
+      "filename": "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar",
+      "sha256": "969c2521a1db44a3aaa1cbb83ed47ea03c8d2810ac9246dc51642b2361de27b6"
+    },
+    "labJar": {
+      "filename": "cubicchunks-lab-0.1.0-cleanroom.jar",
+      "sha256": "2f01ffa68e75f5cd44aef3e248f9c1bd841decbed514dd49ae092986f1396535"
+    },
+    "riven": {
+      "artifact": "build\\cleanroom-cubic-experiment\\libs\\riven-0.1.0-dev-cleanroom.jar",
+      "sha256": "a51d288766795186e46a08e9ddf3e50a75d9d316fdebbba52bb7a262d89852ae"
+    }
+  },
+  "observedRuntimeVersions": [
+    {
+      "server": "0.7.0-alpha",
+      "client": "0.7.0-alpha"
+    },
+    {
+      "server": "0.7.0-alpha",
+      "client": "0.7.0-alpha"
+    }
+  ],
+  "figures": [
+    {
+      "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\lighting-pass-02\\graph-export-04\\server-timing-tails.png",
+      "sha256": "e104643723cb0506e733cb2199356df9ef3fd5840ae2202c75e1298808f49206"
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\lighting-pass-02\\graph-export-04\\server-timing-tails.svg",
+      "sha256": "9d9e4a7db5a818e511ab476504e9b4f1abd8710f7e953945538a48b72534be55"
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\lighting-pass-02\\graph-export-04\\client-timing-tails.png",
+      "sha256": "3b2bc3387241bb1ce74832be6853191e8e1eabd6c2784d328d32427b63948361"
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\lighting-pass-02\\graph-export-04\\client-timing-tails.svg",
+      "sha256": "5fb5bb1a503aeb60bc359bfd866c0caacacee617ce9e4ec61b33927059ec7802"
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\lighting-pass-02\\graph-export-04\\cube-reload-latency.png",
+      "sha256": "1b9e62d37789a1cee6fdd9f2997e597075dfbcd9296337d9f6d707161b964cfa"
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\lighting-pass-02\\graph-export-04\\cube-reload-latency.svg",
+      "sha256": "6338526d997d4f61b619ebc96d2c6035b17ac5290de2b6dd7de69369cb2b646a"
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\lighting-pass-02\\graph-export-04\\cube-save-costs.png",
+      "sha256": "23763a5f03f80fc3a748848f5b110a35bda8b5f53fa87c0e80772d813f89bd01"
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\lighting-pass-02\\graph-export-04\\cube-save-costs.svg",
+      "sha256": "6e96e37d2793e86d6a32d4e035b7d845fae714354906507b14f44820e848cf26"
+    }
+  ]
+}

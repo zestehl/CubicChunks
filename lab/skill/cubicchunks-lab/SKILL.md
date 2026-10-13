@@ -45,6 +45,7 @@ Paths below are relative to the fork. Invoke tools with the workspace interprete
 | Operate an interactive client/server | `server --name <name>` and `client --name <name>` in separately owned sessions; `/cubiclab` commands are listed in the current lab guide |
 | Export current client inputs | `export --name <name>`; produces the Prism ZIP without worlds, accounts or measurement outputs |
 | Export measurements and real captures | `tools/report_cubic_lab.py --lab-directory <lab> --output <new-output>` |
+| Plot detailed timings from an existing complete report | `tools/plot_cubic_lab_results.py --report <results.json> --output <new-output>`; exports server/client tails, separate sync/async latency and save/flush graphs, exact data and a ZIP without launching or building |
 | Inspect stopped-world storage | `tools/inspect_cubic_lab_world.py <world> --output <json>` |
 | Analyze recorded profiles | `tools/profile_cubic_lab.py --lab-directory <lab> --output <new-output>`; it supplies exact scenario windows to the existing JFR analyzer |
 | Check preliminary JVM/API contract findings | Read `docs/JAVA25-OPPORTUNITY-AUDIT.md`, then `tools/probe_java_opportunities.py --output <new-output>` after both main builds. This uses actual named classes in ordinary JVMs; it is not an in-game test or a speedup measurement. |
@@ -78,6 +79,8 @@ A native benchmark requires a real joined client, rendered frames and zero cover
 Inspect storage only after the server stops. The independent reader validates RegionLib coordinates and marker persistence against the world's saved registry and rejects unsupported overflow entries. Retain its limitations. Use the actual world path from the instance properties if it has changed from `riven-dev`.
 
 Share the measured report, CSV/JSON, graphs, relevant real captures and profile references with the requesting agent or user. Interpret the current result schema and guide:
+
+Validate handoff delivery separately from local file integrity. Do not prefix a Windows drive path with `/` or present a local path as a web download. Use supported attachments or verified HTTPS links for web/mobile access; compare downloaded artifact hashes before declaring those links working.
 
 - Tick observations include lab and world work. Resident timings measure batches; async timings include queueing and callback dispatch; save submission and blocking flush are separate. Inspect maximums and autosave/GC event counts as well as percentiles.
 - Render-event work is not exclusive GPU time. Frame intervals include caps and host scheduling. Packet byte counts describe serialized uncompressed `PacketCubes` bodies, not wire throughput.

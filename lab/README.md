@@ -106,6 +106,16 @@ The reporter requires both phases to pass, rendered frames and zero GUI-covered 
 
 The profiling command reuses `analyze_cubic_profile.py`, exports all four JFR recordings and supplies each side's own scenario UTC windows. Startup/shutdown remains a separate full-recording scope. Execution sample counts are not CPU utilization; sampled allocation weights are not retained heap; recorded file-I/O events are subject to JFR thresholds. Raw event exports stay with the local instance, while the compact JSON/CSV analysis can be shared with the graphs.
 
+To produce separate server/client tail graphs and detailed reload/save figures from an existing complete report, use a new output directory:
+
+```powershell
+.local/venv/Scripts/python.exe -B dev/CubicChunks-cleanroom/tools/plot_cubic_lab_results.py --report dev/CubicChunks-cleanroom/docs/measurements/candidate-01/results.json --output dev/CubicChunks-cleanroom/docs/measurements/candidate-01/graphs
+```
+
+This builds nothing and launches no game. It exports four PNG/SVG figures, exact graph data with sample counts/run IDs, source hashes and a ZIP bundle. The single-tick lighting correctness probe is excluded from performance plots. Server/frame graphs show p95, p99 and maxima; reload panels keep synchronous call time separate from async queue/dispatch latency; save panels distinguish submission totals, per-cube calls and final blocking flush. Independent panel scales and units are explicit.
+
+For chat handoffs, check delivery as well as file integrity. A Windows path starts with `E:/...`, not `/E:/...`; a local path is not a hosted download URL. Use supported image/file attachments or verified HTTPS links for web/mobile access. The published repository can provide previews and direct downloads without a build. Verify fetched bytes against the retained PNG/ZIP hashes before sharing those links.
+
 ## Cleanroom 0.7 compatibility overlays
 
 The demonstrated kernel closure is retained, including GregTechCEu, Susy-Core, SussyPatches, GroovyScript, Pyrotech, Athenaeum, Dropt, Fugue and their other pinned dependencies. No third-party JAR is patched and no content registration is disabled. Three narrowly scoped lab integrations allow that closure to start on the newly released loader:

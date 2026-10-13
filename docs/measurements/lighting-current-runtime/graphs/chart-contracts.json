@@ -1,0 +1,50 @@
+{
+  "schema": "cubiclab.graph-contracts.v1",
+  "surface": "Standalone scientific PNG/SVG figures and a downloadable ZIP",
+  "palette": {
+    "policy": "single-root preferred",
+    "blue": "#2f6690",
+    "neutral": "#262626"
+  },
+  "charts": [
+    {
+      "file": "server-timing-tails",
+      "family": "comparison",
+      "variant": "p95 bars with p99/max markers",
+      "question": "Which workload windows exceed the server tick budget or contain long tails?",
+      "grain": "10 scenario windows, excluding single-tick correctness probes",
+      "units": "ms per tick",
+      "referenceMs": 50
+    },
+    {
+      "file": "client-timing-tails",
+      "family": "comparison",
+      "variant": "p95 bars with p99/max markers",
+      "question": "How do client frame interval tails vary by workload?",
+      "grain": "same windows; exact per-window frame counts are shown",
+      "units": "ms per frame interval",
+      "referenceMs": 8.333333333333334
+    },
+    {
+      "file": "cube-reload-latency",
+      "family": "comparison",
+      "variant": "separate quantile bars with explicit independent scales",
+      "question": "What do owner-thread read calls and queued async completion latency look like?",
+      "grain": "512 requests per separate cohort; different timing boundaries",
+      "units": "ms"
+    },
+    {
+      "file": "cube-save-costs",
+      "family": "comparison",
+      "variant": "stage call totals and per-cube quantile bars",
+      "question": "How much measured time is spent submitting saves and blocking on the final flush?",
+      "grain": "1024 cube submission calls plus one final column/global request and one flush",
+      "units": "ms totals; microseconds per cube"
+    }
+  ],
+  "limits": [
+    "One host/run with JFR active, no matched before/after speedup claim.",
+    "Only summary quantiles are retained; no histogram or timeline is reconstructed.",
+    "Rendering qualification remains separate from frame/packet checks."
+  ]
+}

@@ -1,0 +1,30 @@
+phase,scenario,run_id,side,timer,sample_grain,operations,diagnostic_only,count,storedCount,droppedCount,totalNanos,meanMs,p50Ms,p95Ms,p99Ms,maxMs
+write,idle,b01e9303-3c0c-423d-a73f-50c077338e93,server,serverTicks,server tick,0,False,100,100,0,87271100,0.872711,0.7777,1.2875,1.7276,3.2768
+write,idle,b01e9303-3c0c-423d-a73f-50c077338e93,client,frameIntervals,client frame interval,0,False,599,599,0,4986472400,8.324661769616027,8.3332,11.5041,12.5239,15.869
+write,generate,e4ea4ee4-22ba-4351-b2a4-1f8160a0e59d,server,serverTicks,server tick,1024,False,128,128,0,268850200,2.1003921875,1.3809,4.6099,6.4641,10.9856
+write,generate,e4ea4ee4-22ba-4351-b2a4-1f8160a0e59d,client,frameIntervals,client frame interval,1024,False,768,768,0,6396979400,8.329400260416667,8.3335,11.607,12.5459,13.3677
+write,generate,e4ea4ee4-22ba-4351-b2a4-1f8160a0e59d,server,operationDurations,one synchronous cube generation request,1024,False,1024,1024,0,180831300,0.17659306640625,0.0731,0.3266,2.2652,9.8059
+write,lighting-snapshot,e8341cc1-526a-49b7-9fdb-328465498440,server,serverTicks,server tick,2,True,1,1,0,3060800,3.0608,3.0608,3.0608,3.0608,3.0608
+write,lighting-snapshot,e8341cc1-526a-49b7-9fdb-328465498440,client,frameIntervals,client frame interval,2,True,5,5,0,39525400,7.90508,8.3361,8.3658,8.3658,8.3658
+write,lighting-snapshot,e8341cc1-526a-49b7-9fdb-328465498440,server,operationDurations,one cube-to-NBT correctness probe,2,True,2,2,0,2147400,1.0737,0.0158,2.1316,2.1316,2.1316
+write,resident,411d07d0-1d84-4049-8a27-a5ad0ea8b358,server,serverTicks,server tick,1000000,False,100,100,0,81196400,0.811964,0.7396,1.3578,1.6971,1.9303
+write,resident,411d07d0-1d84-4049-8a27-a5ad0ea8b358,client,frameIntervals,client frame interval,1000000,False,599,599,0,4985783300,8.323511352253757,8.3335,11.0584,12.0144,13.8265
+write,resident,411d07d0-1d84-4049-8a27-a5ad0ea8b358,server,operationDurations,one batch of 10000 loaded-cube lookups,1000000,False,100,100,0,22942800,0.229428,0.1869,0.4248,0.7399,0.8791
+write,save,64c5263d-1917-4b2f-bd47-8446df52b496,server,serverTicks,server tick,1024,False,128,128,0,238327700,1.86193515625,0.779,1.0771,1.864,133.1907
+write,save,64c5263d-1917-4b2f-bd47-8446df52b496,client,frameIntervals,client frame interval,1024,False,784,784,0,6531292700,8.330730484693877,8.3333,11.1607,11.8658,12.4431
+write,save,64c5263d-1917-4b2f-bd47-8446df52b496,server,operationDurations,one cube submission; excludes final column/global request,1024,False,1024,1024,0,32049900,0.03129873046875,0.0258,0.0493,0.0687,0.2422
+write,horizontal,9d17ba2c-cc64-44b5-9a14-cbbb13727f14,server,serverTicks,server tick,6,False,240,240,0,2352802200,9.803342500000001,0.5388,66.3565,89.2696,131.9357
+write,horizontal,9d17ba2c-cc64-44b5-9a14-cbbb13727f14,client,frameIntervals,client frame interval,6,False,1440,1440,0,11999804800,8.333197777777778,8.3335,11.3606,14.8737,30.4534
+write,vertical,ffcc9a2e-e752-475b-ae29-77385c5602e4,server,serverTicks,server tick,6,False,240,240,0,1531157400,6.3798225,0.7632,56.5653,67.6615,81.3602
+write,vertical,ffcc9a2e-e752-475b-ae29-77385c5602e4,client,frameIntervals,client frame interval,6,False,1429,1429,0,11994032400,8.393304688593423,8.3333,11.2357,13.9478,55.3964
+read,idle,93663e9a-e53f-4013-8c3b-8901dffb28ef,server,serverTicks,server tick,0,False,100,100,0,136678000,1.3667799999999999,1.1692,2.213,5.414,7.0794
+read,idle,93663e9a-e53f-4013-8c3b-8901dffb28ef,client,frameIntervals,client frame interval,0,False,597,597,0,4969160000,8.323551088777219,8.3337,10.5846,13.5808,28.2457
+read,load-sync,59ee47e2-6962-44e2-ba5d-23f6ea11c536,server,serverTicks,server tick,512,False,64,64,0,153378200,2.396534375,1.9306,3.0011,17.386,17.386
+read,load-sync,59ee47e2-6962-44e2-ba5d-23f6ea11c536,client,frameIntervals,client frame interval,512,False,381,381,0,3172284500,8.326206036745408,8.3365,10.2565,11.3825,12.6948
+read,load-sync,59ee47e2-6962-44e2-ba5d-23f6ea11c536,server,operationDurations,one owner-thread cube read call,512,False,512,512,0,87970800,0.17181796875,0.099,0.2983,0.5093,14.8019
+read,load-async,2e4d0fd4-44aa-49e4-a77a-426855e27790,server,serverTicks,server tick,512,False,49,49,0,100873600,2.0586448979591836,0.9924,1.9366,42.0807,42.0807
+read,load-async,2e4d0fd4-44aa-49e4-a77a-426855e27790,client,frameIntervals,client frame interval,512,False,291,291,0,2423280400,8.327424054982819,8.3321,10.4361,11.0704,11.4039
+read,load-async,2e4d0fd4-44aa-49e4-a77a-426855e27790,server,operationDurations,one async request-to-callback interval; includes queueing/dispatch,512,False,512,512,0,37376207500,73.0004052734375,51.9235,101.3504,107.7221,107.7769
+read,resident,5339ba04-a90d-4873-8354-2480dd9c9294,server,serverTicks,server tick,1000000,False,100,100,0,86590000,0.8659,0.7157,1.4558,2.2818,2.4075
+read,resident,5339ba04-a90d-4873-8354-2480dd9c9294,client,frameIntervals,client frame interval,1000000,False,597,597,0,4972227200,8.328688777219432,8.3341,10.0089,10.564,13.4154
+read,resident,5339ba04-a90d-4873-8354-2480dd9c9294,server,operationDurations,one batch of 10000 loaded-cube lookups,1000000,False,100,100,0,19589400,0.195894,0.1466,0.4634,0.7969,0.8426

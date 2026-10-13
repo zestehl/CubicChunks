@@ -31,6 +31,8 @@ The save maximum remains relevant despite its small p95. Horizontal and vertical
 
 Full data is in [metrics.csv](metrics.csv). [JFR summary](jfr/summary.json), [hotspots](jfr/hotspots.csv), [subsystem samples](jfr/subsystems.csv) and [recorded events](jfr/recorded-events.csv) use exact per-side scenario windows and keep startup/shutdown separate. Execution samples are not exclusive CPU time; allocation weights are not retained memory; file-I/O events have recording thresholds.
 
+The [detailed graph bundle](graphs/performance-graphs.zip) contains separate server/client tail figures and reload/save views as PNG/SVG, plus [exact chart data](graphs/graph-data.csv) and source hashes. [Server ticks](graphs/server-timing-tails.png) and [client frames](graphs/client-timing-tails.png) include maxima as well as p95/p99. [Reload latency](graphs/cube-reload-latency.png) keeps synchronous call time separate from queued async completion; [save costs](graphs/cube-save-costs.png) distinguish submission, per-cube calls and blocking flush.
+
 Horizontal server streaming has 155 Riven and 36 CubicChunks attributed execution samples out of 243; vertical has 84 Riven and 18 CubicChunks out of 151. Those windows contain three and two recorded GC collections respectively. The save window has zero recorded collections despite its 133.19 ms maximum tick. These observations keep generation, lighting/storage work and GC distinct; they do not isolate this patch's effect.
 
 ![Measured server ticks and client frames](frame-and-tick-durations.png)
