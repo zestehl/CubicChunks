@@ -2,6 +2,8 @@
 
 An optional in-game measurement mod and isolated native environment for Minecraft 1.12.2. It exercises the fork at Riven's allocated height: **−128 inclusive to 384 exclusive, 32 cubes per column**. Riven supplies the experimental world type and generator; this lab measures CubicChunks loading, retention, streaming and storage. It does not implement Riven's future terrain or qualify the complete Supersymmetry pack.
 
+Agents can use the repository-owned [cubicchunks-lab skill](skill/cubicchunks-lab/SKILL.md). On the Riven development machine it is linked into the shared Codex skills directory and can be invoked as `$cubicchunks-lab`. Keep operation guidance in this document and executable behavior in the existing tools; update the skill's routing when agent operations change.
+
 The native runtime is **Cleanroom 0.7.0-alpha / Java 25**, verified against the [official latest release](https://github.com/CleanroomMC/Cleanroom/releases/tag/0.7.0-alpha). Preparation queries the release API and refuses to proceed if a newer release needs review. The development API remains Cleanroom **0.6.13-alpha**, whose Unimined userdev artifact is available; the 0.7.0 userdev artifact returned 404 on both official Maven endpoints when checked on October 13, 2026. The active Riven profile remains pinned to 0.6.13-alpha. Forge 14.23.5.2860 / Java 8 is separately built and checked; this environment's native performance run uses Cleanroom.
 
 ## Build and prepare

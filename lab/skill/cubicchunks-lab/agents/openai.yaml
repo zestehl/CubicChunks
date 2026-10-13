@@ -1,0 +1,4 @@
+interface:
+  display_name: "CubicChunks Lab"
+  short_description: "Operate and extend the Riven in-game cube lab"
+  default_prompt: "Use $cubicchunks-lab to run an isolated Riven client/server workload and export its measured evidence."
