@@ -1,0 +1,4 @@
+movement,new_visible_cubes,new_visible_columns,visible_cubes,visible_columns
+one_cube_horizontal,49,7,343,49
+one_cube_vertical,49,0,343,49
+horizontal_lab_teleport,343,49,343,49

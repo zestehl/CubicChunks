@@ -74,6 +74,10 @@ Commands can be entered in chat with `/` or in the server console without it:
 
 After save, stop both JVMs and start them again with the player at spawn. Run `load-sync`, then `load-async`, then `resident`. The two load scenarios use separate cohorts and reject already resident targets. `release` removes only fixture tickets owned by this lab, using normal CubicChunks ticket APIs. `quit` releases the fixture tickets and closes connected lab clients; stop the server normally afterward. No force-unload mutation is used.
 
+## Horizontal streaming investigation
+
+The [horizontal generation audit](../docs/measurements/horizontal-generation-audit/README.md) traces watcher selection, missing-column generation through I/O callbacks, cube lighting and Riven preparation reuse. It separates the older native streaming measurements from current source/binary observations and a synthetic cache-order diagnostic. `tools/investigate_horizontal_streaming.py --riven-jar <frozen.jar> --output <new-directory>` reproduces this evidence without a game launch or mod build; it compiles only the small isolated cache caller and runs it against the selected Riven binary. Use the maintained native suite for actual cache-miss/timing qualification of a changed implementation.
+
 ## Storage reliability and pacing checks
 
 Use opt-in `run --phase write --scenarios generate,save-burst,autosave,storage-failure`, followed by a fresh-JVM `run --phase read --scenarios load-sync,load-async`. Default scenarios remain unchanged. Preparation of the dirty marker fixture finishes before the client start message and server measurement window. `savePacingChecks` retains the backlog trace, coordinate quota and soft time budget; the quota includes skipped/clean coordinates. `storageFailureChecks` retains failure/recovery counts and revision checks. The fault directory is under that scenario's result directory and never replaces the world's regions.

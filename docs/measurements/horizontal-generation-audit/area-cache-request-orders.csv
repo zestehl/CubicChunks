@@ -1,0 +1,16 @@
+capacity,pattern,distinct_chunk_areas,cube_levels,requests,area_preparations,cache_hits,retained_areas
+8,columns_then_level_sweeps,49,7,392,392,0,8
+8,columns_then_column_groups,49,7,392,98,294,8
+8,column_then_its_cubes,49,7,392,49,343,8
+16,columns_then_level_sweeps,49,7,392,392,0,16
+16,columns_then_column_groups,49,7,392,98,294,16
+16,column_then_its_cubes,49,7,392,49,343,16
+32,columns_then_level_sweeps,49,7,392,392,0,32
+32,columns_then_column_groups,49,7,392,98,294,32
+32,column_then_its_cubes,49,7,392,49,343,32
+49,columns_then_level_sweeps,49,7,392,49,343,49
+49,columns_then_column_groups,49,7,392,49,343,49
+49,column_then_its_cubes,49,7,392,49,343,49
+64,columns_then_level_sweeps,49,7,392,49,343,49
+64,columns_then_column_groups,49,7,392,49,343,49
+64,column_then_its_cubes,49,7,392,49,343,49
