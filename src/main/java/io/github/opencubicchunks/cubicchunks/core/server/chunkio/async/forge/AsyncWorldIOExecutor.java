@@ -41,7 +41,6 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -335,25 +334,8 @@ public class AsyncWorldIOExecutor {
      * Run a synchronous tick, finishing the loading process for load tasks that are ready
      */
     public static void tick() {
-        Iterator<AsyncCubeIOProvider> cubeItr = cubeTasks.values().iterator();
-        while (cubeItr.hasNext()) {
-            AsyncCubeIOProvider task = cubeItr.next();
-            if (task.isFinished()) {
-                task.runSynchronousPart();
-
-                cubeItr.remove();
-            }
-        }
-
-        Iterator<AsyncColumnIOProvider> columnIter = columnTasks.values().iterator();
-        while (columnIter.hasNext()) {
-            AsyncColumnIOProvider task = columnIter.next();
-            if (task.isFinished()) {
-                task.runSynchronousPart();
-
-                columnIter.remove();
-            }
-        }
+        AsyncTaskCompletion.drain(cubeTasks);
+        AsyncTaskCompletion.drain(columnTasks);
     }
 
     /**

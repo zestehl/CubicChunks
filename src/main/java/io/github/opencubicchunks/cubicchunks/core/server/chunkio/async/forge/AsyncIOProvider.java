@@ -37,6 +37,16 @@ abstract class AsyncIOProvider<T> implements Runnable {
 
     private final ConcurrentLinkedQueue<Consumer<T>> callbacks = new ConcurrentLinkedQueue<>();
     volatile boolean finished = false;
+    private boolean completionClaimed;
+
+    /** Server-thread guard against completing this queued task again from a reentrant tick. */
+    final boolean claimCompletion() {
+        if (completionClaimed) {
+            return false;
+        }
+        completionClaimed = true;
+        return true;
+    }
 
     /**
      * Add a callback to this access group, to be executed when the load finishes
@@ -62,12 +72,24 @@ abstract class AsyncIOProvider<T> implements Runnable {
      */
     void runCallbacks() {
         T value = this.get();
-        for (Consumer<T> callback : this.callbacks) // Sponge: Runnable -> Consumer<Cube>
-        {
-            callback.accept(value);
+        RuntimeException failure = null;
+        Consumer<T> callback;
+        // Claim each callback before invoking it: callbacks can reenter completion or fail.
+        while ((callback = this.callbacks.poll()) != null) {
+            try {
+                callback.accept(value);
+            } catch (RuntimeException error) {
+                // Other consumers include ownership cleanup and must still be notified.
+                if (failure == null) {
+                    failure = error;
+                } else if (failure != error) {
+                    failure.addSuppressed(error);
+                }
+            }
         }
-
-        this.callbacks.clear();
+        if (failure != null) {
+            throw failure;
+        }
     }
 
     /**
