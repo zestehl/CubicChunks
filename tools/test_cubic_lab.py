@@ -9,6 +9,44 @@ import zipfile
 import cubic_lab as lab
 
 class LabControlTest(unittest.TestCase):
+    def test_preparation_sets_all_test_distances_and_preserves_world_height(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); server = root / 'server'; client = root / 'client'
+            for directory in [server, client]: (directory / 'config').mkdir(parents=True)
+            (server / 'server.properties').write_text('level-name=fresh-test\nview-distance=3\n', encoding='utf-8')
+            (server / 'config/cubicchunks.cfg').write_text('general {\n    I:defaultMinHeight=-128\n    I:defaultMaxHeight=384\n}\n', encoding='utf-8')
+            lab.configure_view_distance(server)
+            (client / 'config/cubicchunks.cfg').write_bytes((server / 'config/cubicchunks.cfg').read_bytes())
+            (client / 'options.txt').write_text(lab.client_options(), encoding='utf-8')
+            manifest = {'server': str(server), 'client': str(client), 'viewDistance': lab.view_distance_profile()}
+            lab.validate_view_distance_inputs(manifest)
+            self.assertIn('I:defaultMinHeight=-128', (server / 'config/cubicchunks.cfg').read_text())
+            self.assertIn('I:defaultMaxHeight=384', (server / 'config/cubicchunks.cfg').read_text())
+            # The manifest cannot conceal a drifted client preference.
+            (client / 'options.txt').write_text('renderDistance:3\n', encoding='utf-8')
+            with self.assertRaises(RuntimeError): lab.validate_view_distance_inputs(manifest)
+
+    def test_old_distance_lab_cannot_be_launched_as_current_profile(self):
+        with self.assertRaisesRegex(RuntimeError, 'prepare a new instance'):
+            lab.validate_view_distance_inputs({'viewDistance': {'horizontal': 3, 'vertical': 3, 'clientRender': 3}})
+
+    def test_duplicate_view_settings_are_rejected(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); (root / 'server.properties').write_text('view-distance=12\nview-distance=3\n', encoding='utf-8')
+            with self.assertRaisesRegex(RuntimeError, 'ambiguous'):
+                lab.validate_view_distance_inputs({'server': str(root), 'client': str(root), 'viewDistance': lab.view_distance_profile()})
+
+    def test_native_capture_rejects_effective_distance_fallback(self):
+        manifest = {'viewDistance': lab.view_distance_profile()}
+        server = {'horizontalViewDistance': 12, 'verticalViewDistance': 12}
+        client = {'renderDistance': 12, 'verticalViewDistance': 12}
+        lab.validate_view_distance_capture(manifest, server, client)
+        for record, field in [(server, 'horizontalViewDistance'), (server, 'verticalViewDistance'),
+                              (client, 'renderDistance'), (client, 'verticalViewDistance')]:
+            record[field] = 3
+            with self.assertRaises(RuntimeError): lab.validate_view_distance_capture(manifest, server, client)
+            record[field] = 12
+
     def test_changed_prepared_runtime_is_rejected_before_launch(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary); directory = root / '.local/cubic-lab/check'
@@ -36,6 +74,7 @@ class LabControlTest(unittest.TestCase):
         self.assertTrue(lab.needs_070_compat('0.7.0'))
         self.assertTrue(lab.needs_070_compat('0.7.0-alpha'))
         self.assertTrue(lab.needs_070_compat('0.7.1-alpha'))
+        self.assertTrue(lab.needs_070_compat('0.7.2-alpha'))
         self.assertFalse(lab.needs_070_compat('0.6.13-alpha'))
         self.assertFalse(lab.needs_070_compat('0.8.0'))
 

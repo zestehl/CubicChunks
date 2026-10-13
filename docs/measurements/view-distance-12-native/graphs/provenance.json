@@ -1,0 +1,68 @@
+{
+  "source": {
+    "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\docs\\measurements\\view-distance-12-native\\results.json",
+    "sha256": "48f8188663972dc737892af5bacfcce6ca43b75d746950f8294513df4057f18b"
+  },
+  "plotter": {
+    "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\tools\\plot_cubic_lab_results.py",
+    "sha256": "0f760890b491b5058e1a6c9d8660bd319af5ea8760e41d2292444ab3677f3385"
+  },
+  "environment": {
+    "name": "view12-01",
+    "runtimeVersion": "0.7.2-alpha",
+    "height": {
+      "minY": -128,
+      "maxYExclusive": 384,
+      "verticalCubesPerColumn": 32
+    },
+    "cubicJar": {
+      "filename": "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar",
+      "sha256": "a1af3e5b53c3a54fdcadd3bb1e52d136ecdadf4bbf6377665e3c1ba53ad8aa28"
+    },
+    "labJar": {
+      "filename": "cubicchunks-lab-0.1.0-cleanroom.jar",
+      "sha256": "0b03070c689e1b269f925e73bac67f96af6e73c38bb7183b2768b4d57a113b2d"
+    },
+    "riven": {
+      "artifact": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\storage-pass-inputs\\riven.jar",
+      "sha256": "f2fc8f705b835107d36af5adeb8b4fb67c938d65794f3a6b52d815d2f4fbbd86",
+      "selection": "Explicit frozen lab input; active Riven build artifact unchanged"
+    }
+  },
+  "observedRuntimeVersions": [
+    {
+      "server": "0.7.2-alpha",
+      "client": "0.7.2-alpha"
+    },
+    {
+      "server": "0.7.2-alpha",
+      "client": "0.7.2-alpha"
+    }
+  ],
+  "observedViewDistances": [
+    {
+      "serverHorizontal": 12,
+      "serverVertical": 12,
+      "clientRender": 12,
+      "clientVertical": 12
+    }
+  ],
+  "figures": [
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\docs\\measurements\\view-distance-12-native\\graphs\\server-timing-tails.png",
+      "sha256": "bd3ff73a0ed0b49f64defbcc0f67b3d840d4bfecdf602deb5e719bebf2c4056f"
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\docs\\measurements\\view-distance-12-native\\graphs\\server-timing-tails.svg",
+      "sha256": "4e30488acd25bb873eb606fdb5d7da63724a16da3647ef8b73a71f539cf557b8"
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\docs\\measurements\\view-distance-12-native\\graphs\\client-timing-tails.png",
+      "sha256": "660950746e9e1bd40a871e5e2d8228e4777a9f77a01131d1d9a0d57cbeb7fdeb"
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\docs\\measurements\\view-distance-12-native\\graphs\\client-timing-tails.svg",
+      "sha256": "e65032667328b9c88b102613e91ae233c9e9cace3d79e2d22f1fd821e8ee7529"
+    }
+  ]
+}

@@ -76,7 +76,7 @@ def save(fig, output, name):
     return files
 
 
-def duration_chart(scenarios, side, output, context):
+def duration_chart(scenarios, side, output, context, recording_note):
     # The one-tick snapshot scenario is a correctness probe, not a timing distribution.
     items = [s for s in scenarios if s['server']['serverTicks']['count'] > 1]
     timer = 'serverTicks' if side == 'server' else 'frameIntervals'
@@ -114,7 +114,7 @@ def duration_chart(scenarios, side, output, context):
     header(fig, ('Server tick durations' if side == 'server' else 'Client frame intervals') + ' by workload', context)
     note = ('Ticks include Riven/world work and bounded lab work. The 50 ms line is the 20 TPS budget.' if side == 'server'
             else 'Frame intervals include the 120 FPS cap and host scheduling; they are not exclusive GPU time.')
-    fig.text(.025, .09, note + '\nOne host/run with JFR active. The one-tick lighting snapshot probe is excluded. Source: results.json.', fontsize=10, va='top')
+    fig.text(.025, .09, note + '\n' + recording_note + ' One-tick correctness probes are excluded. Source: results.json.', fontsize=10, va='top')
     return save(fig, output, side + '-timing-tails')
 
 
@@ -192,10 +192,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--report', type=Path, required=True, help='Existing report_cubic_lab.py results.json')
     parser.add_argument('--output', type=Path, required=True, help='New directory for figures and their source data')
+    parser.add_argument('--timings-only', action='store_true', help='Export server/client timing tails for a validated scenario subset')
     args = parser.parse_args(); report_path = args.report.resolve(); output = args.output.resolve()
     report, scenarios = read_report(report_path)
     environment = report['environment']; lookup = {(s['phase'], s['scenario']): s for s in scenarios}
-    for key in [('read', 'load-sync'), ('read', 'load-async'), ('write', 'save')]:
+    for key in ([] if args.timings_only else [('read', 'load-sync'), ('read', 'load-async'), ('write', 'save')]):
         if key not in lookup:
             raise ValueError('Detailed figures need the complete default suite, including ' + '/'.join(key))
     output.mkdir(parents=True, exist_ok=False)
@@ -205,6 +206,9 @@ def main():
     if versions.get('client') and versions['client'] != runtime:
         runtime = 'server ' + runtime + ', client ' + versions['client']
     context = f"{environment['name']}  |  {date}  |  Cleanroom {runtime} / Java 25  |  native client + dedicated server"
+    observed_distances = sorted({(s['server']['horizontalViewDistance'], s['server']['verticalViewDistance'],
+                                 s['client']['renderDistance'], s['client']['verticalViewDistance']) for s in scenarios})
+    context += '  |  server X/Z,Y ' + '; '.join(f'{h},{v}' for h, v, _, _ in observed_distances)
     plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 11, 'text.color': INK, 'axes.labelcolor': INK,
                          'xtick.color': INK, 'ytick.color': INK, 'svg.fonttype': 'none', 'svg.hashsalt': 'cubiclab.performance.v1'})
     contract = {'schema': 'cubiclab.graph-contracts.v1', 'surface': 'Standalone scientific PNG/SVG figures and a downloadable ZIP',
@@ -222,31 +226,38 @@ def main():
                     {'file': 'cube-save-costs', 'family': 'comparison', 'variant': 'stage call totals and per-cube quantile bars',
                      'question': 'How much measured time is spent submitting saves and blocking on the final flush?',
                      'grain': '1024 cube submission calls plus one final column/global request and one flush', 'units': 'ms totals; microseconds per cube'}],
-                'limits': ['One host/run with JFR active, no matched before/after speedup claim.',
+                'limits': ['One host/run, no matched before/after speedup claim; actual recording count retained below.',
                            'Only summary quantiles are retained; no histogram or timeline is reconstructed.',
                            'Rendering qualification remains separate from frame/packet checks.']}
+    if args.timings_only: contract['charts'] = contract['charts'][:2]
+    jfr_count = sum(item['path'].endswith('.jfr') for run in report['runs'] for item in run.get('recordings_and_logs', []))
+    contract['retainedJfrRecordings'] = jfr_count
+    recording_note = f'One host/run; {jfr_count} JFR recordings retained.'
     (output / 'chart-contracts.json').write_text(json.dumps(contract, indent=2) + '\n', encoding='utf-8')
-    files = duration_chart(scenarios, 'server', output, context) + duration_chart(scenarios, 'client', output, context)
-    files += reload_chart(lookup, output, context) + save_chart(lookup, output, context)
+    files = duration_chart(scenarios, 'server', output, context, recording_note) + duration_chart(scenarios, 'client', output, context, recording_note)
+    if not args.timings_only: files += reload_chart(lookup, output, context) + save_chart(lookup, output, context)
     export_table(scenarios, output)
     provenance = {'source': fingerprint(report_path), 'plotter': fingerprint(Path(__file__)),
                   'environment': {key: environment[key] for key in ['name', 'runtimeVersion', 'height', 'cubicJar', 'labJar', 'riven']},
                   'observedRuntimeVersions': [run.get('observedRuntimeVersions') for run in report['runs']],
+                  'observedViewDistances': [{'serverHorizontal': h, 'serverVertical': v, 'clientRender': c, 'clientVertical': cv}
+                                            for h, v, c, cv in observed_distances],
                   'figures': [fingerprint(path) for path in files]}
     (output / 'provenance.json').write_text(json.dumps(provenance, indent=2) + '\n', encoding='utf-8')
+    subset_flag = ' --timings-only' if args.timings_only else ''
+    extra_figures = '' if args.timings_only else ('![Stored-cube reload latency](cube-reload-latency.png)\n\n'
+                                                 '![Cube save submission and flush](cube-save-costs.png)\n')
     (output / 'README.md').write_text('# Native performance graphs\n\n' + context + '\n\n'
-        'Reproduce these figures with `tools/plot_cubic_lab_results.py --report <retained-results.json> --output <new-directory>`. '
+        f'Reproduce these figures with `tools/plot_cubic_lab_results.py --report <retained-results.json> --output <new-directory>{subset_flag}`. '
         'This command builds nothing and launches no game.\n\n'
         'PNG files provide previews; SVG files preserve editable vector text. `graph-data.csv` retains exact timing fields, sample counts and run IDs. '
         'The snapshot correctness probe remains in the CSV but is excluded from the timing plots. '
         'Source/plotter hashes and exact mod inputs are in `provenance.json`.\n\n'
         'Tick windows include world/lab work. Async latency includes queueing and tick dispatch; sync timers measure a different boundary. '
         'Save-call totals and flush time are not whole-workload duration or disk throughput. '
-        'One host/run with active JFR is descriptive evidence, not a controlled speedup study.\n\n'
+        f'{recording_note} Descriptive evidence, not a controlled speedup study.\n\n'
         '![Server tick durations](server-timing-tails.png)\n\n'
-        '![Client frame intervals](client-timing-tails.png)\n\n'
-        '![Stored-cube reload latency](cube-reload-latency.png)\n\n'
-        '![Cube save submission and flush](cube-save-costs.png)\n', encoding='utf-8')
+        '![Client frame intervals](client-timing-tails.png)\n\n' + extra_figures, encoding='utf-8')
     with zipfile.ZipFile(output / 'performance-graphs.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in sorted(output.iterdir()):
             if path.suffix != '.zip': archive.write(path, path.name)

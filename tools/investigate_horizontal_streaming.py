@@ -9,6 +9,7 @@ import json
 import os
 from pathlib import Path
 import subprocess
+from cubic_lab import VIEW_DISTANCE
 
 FORK = Path(__file__).resolve().parents[1]
 
@@ -31,7 +32,7 @@ def main():
     binary = args.riven_jar.resolve(strict=True); source = FORK / 'tools/diagnostics/RivenAreaCacheDiagnostic.java'
     compile_command = [javac, '--release', '8', '-encoding', 'UTF-8', '-cp', str(binary), '-d', str(classes), str(source)]
     subprocess.run(compile_command, check=True)
-    command = [java, '-cp', os.pathsep.join([str(classes), str(binary)]), 'supersymmetry.riven.tools.RivenAreaCacheDiagnostic']
+    command = [java, '-cp', os.pathsep.join([str(classes), str(binary)]), 'supersymmetry.riven.tools.RivenAreaCacheDiagnostic', str(VIEW_DISTANCE)]
     completed = subprocess.run(command, check=True, capture_output=True, text=True)
     cache_rows = list(csv.DictReader(io.StringIO(completed.stdout)))
     (output / 'area-cache-request-orders.csv').write_text(completed.stdout, encoding='utf-8')
@@ -51,16 +52,19 @@ def main():
                                  'packets': server['packets'], 'execution': scope['execution'], 'gc': scope['gc']})
 
     # Exact inclusive boxes used by CuboidalCubeSelector. This is geometry, not generated-cube telemetry.
+    diameter = VIEW_DISTANCE * 2 + 1
     def visible(center):
         x, y, z = center
-        return {(a, b, c) for a in range(x - 3, x + 4) for b in range(y - 3, y + 4) for c in range(z - 3, z + 4)}
+        return {(a, b, c) for a in range(x - VIEW_DISTANCE, x + VIEW_DISTANCE + 1)
+                for b in range(y - VIEW_DISTANCE, y + VIEW_DISTANCE + 1)
+                for c in range(z - VIEW_DISTANCE, z + VIEW_DISTANCE + 1)}
     old = visible((0, 0, 0)); old_columns = {(x, z) for x, y, z in old}
     geometry = []
     for name, position in [('one_cube_horizontal', (1, 0, 0)), ('one_cube_vertical', (0, 1, 0)),
                            ('horizontal_lab_teleport', (16, 0, 0))]:
         new = visible(position); new_columns = {(x, z) for x, y, z in new}
-        geometry.append({'movement': name, 'new_visible_cubes': len(new - old),
-                         'new_visible_columns': len(new_columns - old_columns), 'visible_cubes': 343, 'visible_columns': 49})
+        geometry.append({'movement': name, 'view_distance': VIEW_DISTANCE, 'new_visible_cubes': len(new - old),
+                         'new_visible_columns': len(new_columns - old_columns), 'visible_cubes': diameter ** 3, 'visible_columns': diameter ** 2})
     with (output / 'visibility-geometry.csv').open('w', newline='', encoding='utf-8') as stream:
         writer = csv.DictWriter(stream, geometry[0]); writer.writeheader(); writer.writerows(geometry)
 
@@ -85,6 +89,7 @@ def main():
                 'historicalReport': fingerprint(report_file), 'historicalProfile': fingerprint(profile_file),
                 'historicalRuntime': report['environment']['runtimeVersion'],
                 'historicalRiven': report['environment']['riven'], 'observations': observations,
+                'diagnosticViewDistance': VIEW_DISTANCE,
                 'visibilityGeometry': geometry,
                 'limits': ['Historical streaming run predates storage pacing and the frozen Riven preparation-worker binary.',
                            'Cache diagnostic uses the real selected cache with synthetic values/orders; no native cache-miss telemetry or timings.',
@@ -111,13 +116,13 @@ def main():
         axes[1].plot([int(row['capacity']) for row in rows], [int(row['area_preparations']) for row in rows],
                      marker='o', color=color, label=label)
     axes[1].axvline(32, color='#777', linestyle='--'); axes[1].set_xlabel('Retained prepared-area capacity')
-    axes[1].set_ylabel('Area loader invocations'); axes[1].set_title('Synthetic orders: 49 areas, 7 cube levels', loc='left')
+    axes[1].set_ylabel('Area loader invocations'); axes[1].set_title(f'Synthetic orders: {diameter ** 2} areas, {diameter} cube levels', loc='left')
     axes[1].set_ylim(bottom=0); axes[1].legend(frameon=False, fontsize=8)
     for axis in axes:
         axis.spines[['top', 'right']].set_visible(False); axis.grid(alpha=.2); axis.set_axisbelow(True)
     fig.suptitle('Horizontal streaming: measured tails and a cache-reuse hypothesis', x=.02, ha='left')
-    fig.text(.02, .035, 'Left: retained Cleanroom 0.7.0-alpha run, 240 ticks/route, earlier Riven binary; bars=p95, diamonds=max, line=50 ms.\n'
-             'Right: selected Riven binary cache with synthetic request order; line=32 areas. This is not native miss telemetry or a speedup.\n'
+    fig.text(.02, .035, 'Left: retained Cleanroom 0.7.0-alpha run at distance 3, 240 ticks/route; bars=p95, diamonds=max, line=50 ms.\n'
+             f'Right: selected Riven binary cache, distance {VIEW_DISTANCE} synthetic request order; line=32 areas. No native miss telemetry or speedup.\n'
              'The two panels have independent units and evidence scopes; current production behavior was not modified.', fontsize=9)
     for suffix in ['png', 'svg']:
         path = output / ('horizontal-investigation.' + suffix)

@@ -1,0 +1,3700 @@
+{
+  "schema": "cubiclab.horizontal-source-audit.v1",
+  "capturedUtc": "2026-10-13T19:29:52.041379+00:00",
+  "sourceRevision": "f414bf1f28a58154930e9a5bcc1c29d9e1dbb624",
+  "source": [
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\src\\main\\java\\io\\github\\opencubicchunks\\cubicchunks\\core\\server\\PlayerCubeMap.java",
+      "sha256": "8546059c1815eda34afdeccb48bffadaeb1be50f29a03261d78bd8a5c7748983",
+      "bytes": 48197
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\src\\main\\java\\io\\github\\opencubicchunks\\cubicchunks\\core\\server\\CubeWatcher.java",
+      "sha256": "341f400cc76dcaa9ade6d92a24a6c155469104a655729b1cffb112b3b8a12244",
+      "bytes": 17420
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\src\\main\\java\\io\\github\\opencubicchunks\\cubicchunks\\core\\server\\CubeProviderServer.java",
+      "sha256": "edda261e6ae281a5a0f85f25db1a84ad93b7670831204c8f950a9583f0f0f19e",
+      "bytes": 33694
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\src\\main\\java\\io\\github\\opencubicchunks\\cubicchunks\\core\\server\\chunkio\\async\\forge\\AsyncWorldIOExecutor.java",
+      "sha256": "ae9a6e8dfceffa2736403ac37fd07a998e1070295d8bc609114da27ac841b07e",
+      "bytes": 16685
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\src\\main\\java\\io\\github\\opencubicchunks\\cubicchunks\\core\\server\\chunkio\\async\\forge\\AsyncTaskCompletion.java",
+      "sha256": "f6c2ad3b7861c3871df91ec717d603a9a239040504ad9d30b8244dfaeaf0565a",
+      "bytes": 3424
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\src\\main\\java\\io\\github\\opencubicchunks\\cubicchunks\\core\\visibility\\CuboidalCubeSelector.java",
+      "sha256": "2bf099790644062b7916d55233af691a0390428bba6a8734ce01edc234b4ae9d",
+      "bytes": 6992
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\CubicChunksAPI\\src\\main\\java\\io\\github\\opencubicchunks\\cubicchunks\\api\\worldgen\\ICubeGenerator.java",
+      "sha256": "3cf4a0a15c3ca11f65a26cfc203f1dafe708dffc854f90ec7472fe8fdc9c168a",
+      "bytes": 12749
+    }
+  ],
+  "rivenSource": [
+    {
+      "path": "E:\\WorldGenOverhaul\\experiments\\cubic\\src\\main\\java\\supersymmetry\\riven\\experiment\\CubicProbeWorldType.java",
+      "sha256": "f90ded6312ae369410eeb187b48691889d8a095fbc6f42f94fc9160b0048f16e",
+      "bytes": 6255
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\src\\main\\java\\supersymmetry\\riven\\world\\RivenBiomeProvider.java",
+      "sha256": "5ea8f9cbf357f007dbdfcfacc5c2d9aad5fe180c0291473a4a084631eb8d1f05",
+      "bytes": 4638
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\src\\main\\java\\supersymmetry\\riven\\model\\preparation\\TerrainPreparation.java",
+      "sha256": "433655a9ba5739728a4d2b686c6463e590419bdc501619591ff8cd3b1bcc53cf",
+      "bytes": 4238
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\src\\main\\java\\supersymmetry\\riven\\model\\preparation\\PreparationService.java",
+      "sha256": "32f1d4f25aea0379fdfefafbce428e576110e9ba446ea3a0b692e0d6de0242dd",
+      "bytes": 6491
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\src\\main\\java\\supersymmetry\\riven\\model\\preparation\\SessionPreparationCache.java",
+      "sha256": "39f439a08e6a11bb038fbce9bbb389f6b711c8f6e7b5e8c94269df3e7eb5fbe2",
+      "bytes": 5814
+    }
+  ],
+  "frozenRiven": {
+    "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\storage-pass-inputs\\riven.jar",
+    "sha256": "f2fc8f705b835107d36af5adeb8b4fb67c938d65794f3a6b52d815d2f4fbbd86",
+    "bytes": 548694
+  },
+  "cacheProbe": {
+    "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\tools\\diagnostics\\RivenAreaCacheDiagnostic.java",
+    "sha256": "1ae5b55c0b9117f7559cb6061eadf741cc355d02b9ef0691acbcd8cd303b56e5",
+    "bytes": 2559
+  },
+  "compileCommand": [
+    "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\javac.exe",
+    "--release",
+    "8",
+    "-encoding",
+    "UTF-8",
+    "-cp",
+    "E:\\WorldGenOverhaul\\.local\\cubic-lab\\storage-pass-inputs\\riven.jar",
+    "-d",
+    "E:\\WorldGenOverhaul\\.local\\cubic-lab\\view-distance-12-diagnostics-cache-probe",
+    "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\tools\\diagnostics\\RivenAreaCacheDiagnostic.java"
+  ],
+  "command": [
+    "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\java.exe",
+    "-cp",
+    "E:\\WorldGenOverhaul\\.local\\cubic-lab\\view-distance-12-diagnostics-cache-probe;E:\\WorldGenOverhaul\\.local\\cubic-lab\\storage-pass-inputs\\riven.jar",
+    "supersymmetry.riven.tools.RivenAreaCacheDiagnostic",
+    "12"
+  ],
+  "historicalReport": {
+    "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\docs\\measurements\\lighting-current-runtime\\results.json",
+    "sha256": "5e23c2d1b978d0adef9bd0eee57fec47b072424e65224dc27b80660ae5d819e7",
+    "bytes": 296539
+  },
+  "historicalProfile": {
+    "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\docs\\measurements\\lighting-current-runtime\\jfr\\summary.json",
+    "sha256": "fe6f1f90fa508eeec91b73e0fe5710a0246c8afd2361daf5e679b259b80b543e",
+    "bytes": 4628254
+  },
+  "historicalRuntime": "0.7.0-alpha",
+  "historicalRiven": {
+    "artifact": "build\\cleanroom-cubic-experiment\\libs\\riven-0.1.0-dev-cleanroom.jar",
+    "sha256": "a51d288766795186e46a08e9ddf3e50a75d9d316fdebbba52bb7a262d89852ae"
+  },
+  "observations": [
+    {
+      "scenario": "horizontal",
+      "ticks": {
+        "count": 240,
+        "storedCount": 240,
+        "droppedCount": 0,
+        "totalNanos": 2352802200,
+        "meanMs": 9.803342500000001,
+        "p50Ms": 0.5388,
+        "p95Ms": 66.3565,
+        "p99Ms": 89.2696,
+        "maxMs": 131.9357
+      },
+      "operations": 6,
+      "cubeDataSaveEvents": 0,
+      "packets": {
+        "packetCount": 29,
+        "serializedPayloadBytes": 12094982,
+        "cubeCount": 2058,
+        "serializationNanos": 2957300,
+        "applyCount": 0,
+        "applyNanos": 0,
+        "byteScope": "PacketCubes payload before transport compression, excludes channel framing"
+      },
+      "execution": {
+        "count": 243,
+        "missing_stacks": 0,
+        "truncated_stacks": 0,
+        "subsystems": [
+          {
+            "name": "Riven",
+            "count": 155,
+            "share_percent": 63.78600823045267
+          },
+          {
+            "name": "vanilla",
+            "count": 49,
+            "share_percent": 20.16460905349794
+          },
+          {
+            "name": "CubicChunks",
+            "count": 36,
+            "share_percent": 14.814814814814815
+          },
+          {
+            "name": "GregTech",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "other",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          }
+        ],
+        "leaf_methods": [
+          {
+            "name": "java.util.HashMap$TreeNode.find",
+            "count": 17,
+            "share_percent": 6.995884773662551
+          },
+          {
+            "name": "net.minecraft.world.chunk.NibbleArray.func_177480_a",
+            "count": 10,
+            "share_percent": 4.11522633744856
+          },
+          {
+            "name": "java.util.HashMap.getNode",
+            "count": 9,
+            "share_percent": 3.7037037037037037
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatRequirements.evaluate",
+            "count": 9,
+            "share_percent": 3.7037037037037037
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185891_c",
+            "count": 8,
+            "share_percent": 3.292181069958848
+          },
+          {
+            "name": "java.lang.Double.isFinite",
+            "count": 8,
+            "share_percent": 3.292181069958848
+          },
+          {
+            "name": "java.util.HashMap$TreeNode.removeTreeNode",
+            "count": 7,
+            "share_percent": 2.880658436213992
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.fetchNeighborDataFromCursor",
+            "count": 7,
+            "share_percent": 2.880658436213992
+          },
+          {
+            "name": "java.util.HashMap.removeNode",
+            "count": 7,
+            "share_percent": 2.880658436213992
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.FirstLightProcessor.diffuseSkylight",
+            "count": 6,
+            "share_percent": 2.4691358024691357
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185906_d",
+            "count": 6,
+            "share_percent": 2.4691358024691357
+          },
+          {
+            "name": "java.lang.AbstractStringBuilder.append",
+            "count": 6,
+            "share_percent": 2.4691358024691357
+          },
+          {
+            "name": "java.util.concurrent.locks.LockSupport.unpark",
+            "count": 6,
+            "share_percent": 2.4691358024691357
+          },
+          {
+            "name": "java.util.Collections$UnmodifiableCollection.isEmpty",
+            "count": 6,
+            "share_percent": 2.4691358024691357
+          },
+          {
+            "name": "java.util.HashMap$TreeNode.balanceDeletion",
+            "count": 5,
+            "share_percent": 2.05761316872428
+          },
+          {
+            "name": "java.util.Collections$UnmodifiableMap.get",
+            "count": 5,
+            "share_percent": 2.05761316872428
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatCondition.expectation",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel.reference",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "java.util.HashMap$TreeNode.balanceInsertion",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.getLightValue",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "supersymmetry.riven.model.PhysiographicRegions.sample",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "java.lang.Long.equals",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "java.util.regex.Pattern$BmpCharPropertyGreedy.match",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "java.util.HashMap.putVal",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185904_a",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.processLightUpdatesForTypeInner",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "java.util.TreeMap.getEntry",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "jdk.internal.math.DoubleToDecimal.toDecimal",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionalGeology.neighborhood",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "jdk.internal.math.DoubleToDecimal.toChars1",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.StagingHeightMap.getTopBlockY",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.world.chunk.BlockStateContainer.func_186015_a",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.getLightOpacity",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.LightingManager.checkLightFor",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "java.util.regex.Pattern.lambda$union$0",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatModel.sample",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "java.util.regex.Pattern$LastNode.match",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "java.lang.StringBuilder.append",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "java.lang.Double.toString",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel$Column.surface",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "java.util.EnumMap.get",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionalGeology.sample",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "java.util.regex.Pattern.compile",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.ReferenceRelief$$Lambda.0x0000000085175f08.apply",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.setOpacityWithSegmentsFor",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.world.LandscapeBlocks.material",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PooledLightUpdateQueue.add",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.PlayerCubeMap.func_72685_d",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.netty.buffer.AbstractByteBuf.writeBytes",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.onOpacityChange",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraftforge.fml.common.eventhandler.EventBus.post",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.storage.DerivedWorldInfo.func_76071_n",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.cube.Cube.getBlockState",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.reference",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.util.regex.Pattern.sequence",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatProfile.from",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel$Column.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "sun.reflect.generics.repository.ClassRepository.getSuperInterfaces",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.util.ArrayList.grow",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.lang.String.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.PlayerCubeMap.getColumnWatcher",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.player.EntityPlayerMP.func_175398_C",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.World.getCubeFromCubeCoords",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.lang.Thread.afterSleep",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.util.HashMap.resize",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.trim",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.lang.invoke.DirectMethodHandle.allocateInstance",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel$Column.density",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalArchitecture$Column.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.player.InventoryPlayer.func_70301_a",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.LightingEngineHelpers.posToState",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.api.util.XYZMap.get",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.util.stream.Sink$ChainedReference.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.util.regex.Pattern.expr",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.util.Collections$UnmodifiableCollection$1.hasNext",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.util.regex.Pattern.range",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "jdk.internal.math.ToDecimal.removeTrailingZeroes",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.netty.buffer.AbstractByteBuf.readByte",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PooledLightUpdateQueue$Segment.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.BiomeCatalog.eligible",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "com.google.common.collect.Maps.newHashMap",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.lang.System$1.blockedOn",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.lang.Thread.sleepNanos",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.util.Arrays.copyOf",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.lang.Class.reflectionData",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.ai.attributes.AttributeMap.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.util.concurrent.atomic.LongAdder.add",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.util.HashMap$TreeNode.putTreeVal",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.World.func_175679_n",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.netty.buffer.AbstractByteBuf.ensureAccessible",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.util.regex.Pattern.atom",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "java.util.stream.StreamSupport.stream",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          }
+        ],
+        "first_tracked_methods": [
+          {
+            "name": "supersymmetry.riven.model.HabitatCondition.expectation",
+            "count": 22,
+            "share_percent": 9.053497942386832
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatAttribute.validateCategory",
+            "count": 20,
+            "share_percent": 8.23045267489712
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel.reference",
+            "count": 16,
+            "share_percent": 6.584362139917696
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatModel.sample",
+            "count": 12,
+            "share_percent": 4.938271604938271
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.trim",
+            "count": 11,
+            "share_percent": 4.526748971193416
+          },
+          {
+            "name": "net.minecraft.world.chunk.NibbleArray.func_177480_a",
+            "count": 10,
+            "share_percent": 4.11522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.PhysiographicRegions.sample",
+            "count": 10,
+            "share_percent": 4.11522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatRequirements.evaluate",
+            "count": 9,
+            "share_percent": 3.7037037037037037
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185891_c",
+            "count": 8,
+            "share_percent": 3.292181069958848
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.densityAt",
+            "count": 8,
+            "share_percent": 3.292181069958848
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel.trim",
+            "count": 7,
+            "share_percent": 2.880658436213992
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.fetchNeighborDataFromCursor",
+            "count": 7,
+            "share_percent": 2.880658436213992
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatProfile.fact",
+            "count": 7,
+            "share_percent": 2.880658436213992
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.FirstLightProcessor.diffuseSkylight",
+            "count": 6,
+            "share_percent": 2.4691358024691357
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185906_d",
+            "count": 6,
+            "share_percent": 2.4691358024691357
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.releaseLock",
+            "count": 6,
+            "share_percent": 2.4691358024691357
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.reference",
+            "count": 5,
+            "share_percent": 2.05761316872428
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.columnForSurface",
+            "count": 5,
+            "share_percent": 2.05761316872428
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.getLightValue",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel.column",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185904_a",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.processLightUpdatesForTypeInner",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatCondition.matches",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionalGeology.neighborhood",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.StagingHeightMap.getTopBlockY",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.world.chunk.BlockStateContainer.func_186015_a",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.getLightOpacity",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.network.PacketBuffer.writeBytes",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.LightingManager.checkLightFor",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.world.storage.ThreadedFileIOBase.func_75736_b",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel$Column.surface",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionalGeology.sample",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "supersymmetry.riven.model.ReferenceRelief$$Lambda.0x0000000085175f08.apply",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.setOpacityWithSegmentsFor",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.world.LandscapeBlocks.material",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PooledLightUpdateQueue.add",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.PlayerCubeMap.func_72685_d",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.onOpacityChange",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.server.MinecraftServer.func_71217_p",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.storage.DerivedWorldInfo.func_76071_n",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.cube.Cube.getBlockState",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatProfile.from",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel$Column.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionDefinition.rejectionReasons",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.PlayerCubeMap.getColumnWatcher",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.player.EntityPlayerMP.func_175398_C",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.World.getCubeFromCubeCoords",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.visibility.CuboidalCubeSelector.findChanged",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel$Column.density",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalArchitecture$Column.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.player.InventoryPlayer.func_70301_a",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.LightingEngineHelpers.posToState",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.api.util.XYZMap.get",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "gregtech.api.pipenet.tickable.TickableWorldPipeNetEventHandler.onChunkLoad",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatSample.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.network.PacketBuffer.readByte",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PooledLightUpdateQueue$Segment.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.BiomeCatalog.eligible",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.util.ClassInheritanceMultiMap.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "(no tracked subsystem frame)",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.ai.attributes.AttributeMap.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.World.func_175679_n",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.network.PacketBuffer.writeByte",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "gregtech.api.pipenet.tickable.TickableWorldPipeNetEventHandler.getPipeNetsForWorld",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          }
+        ],
+        "inclusive_tracked_methods": [
+          {
+            "name": "supersymmetry.riven.model.preparation.PreparationService.lambda$calculate$0",
+            "count": 145,
+            "share_percent": 59.67078189300412
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainPreparation.lambda$area$1",
+            "count": 145,
+            "share_percent": 59.67078189300412
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainPreparation$$Lambda.0x0000000085180400.accept",
+            "count": 145,
+            "share_percent": 59.67078189300412
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.PreparationService$$Lambda.0x0000000085180640.run",
+            "count": 145,
+            "share_percent": 59.67078189300412
+          },
+          {
+            "name": "net.minecraft.server.MinecraftServer.func_71217_p",
+            "count": 94,
+            "share_percent": 38.68312757201646
+          },
+          {
+            "name": "net.minecraft.server.MinecraftServer.run",
+            "count": 94,
+            "share_percent": 38.68312757201646
+          },
+          {
+            "name": "net.minecraft.server.dedicated.DedicatedServer.func_71190_q",
+            "count": 93,
+            "share_percent": 38.27160493827161
+          },
+          {
+            "name": "net.minecraft.server.MinecraftServer.func_71190_q",
+            "count": 93,
+            "share_percent": 38.27160493827161
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatModel.sample",
+            "count": 90,
+            "share_percent": 37.03703703703704
+          },
+          {
+            "name": "net.minecraft.world.WorldServer.func_72835_b",
+            "count": 85,
+            "share_percent": 34.97942386831276
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.PlayerCubeMap.func_72693_b",
+            "count": 84,
+            "share_percent": 34.5679012345679
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.getCube",
+            "count": 51,
+            "share_percent": 20.987654320987655
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel.reference",
+            "count": 50,
+            "share_percent": 20.5761316872428
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeWatcher.providePlayerCube",
+            "count": 50,
+            "share_percent": 20.5761316872428
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.postCubeLoadAttempt",
+            "count": 50,
+            "share_percent": 20.5761316872428
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel$Column.surface",
+            "count": 49,
+            "share_percent": 20.16460905349794
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatSample.<init>",
+            "count": 42,
+            "share_percent": 17.28395061728395
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatRequirements.evaluate",
+            "count": 41,
+            "share_percent": 16.872427983539094
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.FirstLightProcessor.diffuseSkylight",
+            "count": 32,
+            "share_percent": 13.168724279835391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.LightingManager.doFirstLight",
+            "count": 32,
+            "share_percent": 13.168724279835391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.calculateDiffuseSkylight",
+            "count": 32,
+            "share_percent": 13.168724279835391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.processLightUpdates",
+            "count": 30,
+            "share_percent": 12.345679012345679
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.processLightUpdatesForTypeInner",
+            "count": 30,
+            "share_percent": 12.345679012345679
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.processLightUpdatesForType",
+            "count": 30,
+            "share_percent": 12.345679012345679
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.LightingManager.processUpdates",
+            "count": 30,
+            "share_percent": 12.345679012345679
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.ILightingManager.onSendCubes",
+            "count": 30,
+            "share_percent": 12.345679012345679
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.columnForSurface",
+            "count": 26,
+            "share_percent": 10.699588477366255
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatCondition.expectation",
+            "count": 22,
+            "share_percent": 9.053497942386832
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatProfile.from",
+            "count": 21,
+            "share_percent": 8.641975308641975
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatAttribute.validateCategory",
+            "count": 20,
+            "share_percent": 8.23045267489712
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatProfile.<init>",
+            "count": 20,
+            "share_percent": 8.23045267489712
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.calculateNewLightFromCursor",
+            "count": 16,
+            "share_percent": 6.584362139917696
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel$Column.<init>",
+            "count": 15,
+            "share_percent": 6.172839506172839
+          },
+          {
+            "name": "supersymmetry.riven.model.PhysiographicRegions.sample",
+            "count": 15,
+            "share_percent": 6.172839506172839
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.reference",
+            "count": 15,
+            "share_percent": 6.172839506172839
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.generateCube",
+            "count": 14,
+            "share_percent": 5.761316872427984
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.fetchNeighborDataFromCursor",
+            "count": 12,
+            "share_percent": 4.938271604938271
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.trim",
+            "count": 11,
+            "share_percent": 4.526748971193416
+          },
+          {
+            "name": "supersymmetry.riven.experiment.CubicProbeWorldType$Generator.generateCube",
+            "count": 10,
+            "share_percent": 4.11522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.api.worldgen.ICubeGenerator.tryGenerateCube",
+            "count": 10,
+            "share_percent": 4.11522633744856
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.getLightValue",
+            "count": 10,
+            "share_percent": 4.11522633744856
+          },
+          {
+            "name": "net.minecraft.world.chunk.NibbleArray.func_177480_a",
+            "count": 10,
+            "share_percent": 4.11522633744856
+          },
+          {
+            "name": "net.minecraft.world.chunk.storage.ExtendedBlockStorage.func_76670_c",
+            "count": 10,
+            "share_percent": 4.11522633744856
+          },
+          {
+            "name": "net.minecraft.world.chunk.NibbleArray.func_76582_a",
+            "count": 10,
+            "share_percent": 4.11522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel.column",
+            "count": 9,
+            "share_percent": 3.7037037037037037
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainMaterials.at",
+            "count": 9,
+            "share_percent": 3.7037037037037037
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.SessionPreparationCache.get",
+            "count": 9,
+            "share_percent": 3.7037037037037037
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainPreparation$$Lambda.0x0000000085182690.get",
+            "count": 9,
+            "share_percent": 3.7037037037037037
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainPreparation.lambda$volume$0",
+            "count": 9,
+            "share_percent": 3.7037037037037037
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainPreparation.lambda$volume$1",
+            "count": 9,
+            "share_percent": 3.7037037037037037
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainPreparation.volume",
+            "count": 9,
+            "share_percent": 3.7037037037037037
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainPreparation$$Lambda.0x00000000851828c0.accept",
+            "count": 9,
+            "share_percent": 3.7037037037037037
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.PreparationService.calculate",
+            "count": 9,
+            "share_percent": 3.7037037037037037
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.LightingManager.checkLightFor",
+            "count": 9,
+            "share_percent": 3.7037037037037037
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185891_c",
+            "count": 8,
+            "share_percent": 3.292181069958848
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel$Column.density",
+            "count": 8,
+            "share_percent": 3.292181069958848
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.densityAt",
+            "count": 8,
+            "share_percent": 3.292181069958848
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel$Column.density",
+            "count": 7,
+            "share_percent": 2.880658436213992
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel.trim",
+            "count": 7,
+            "share_percent": 2.880658436213992
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatProfile.fact",
+            "count": 7,
+            "share_percent": 2.880658436213992
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.scheduleLightUpdate",
+            "count": 7,
+            "share_percent": 2.880658436213992
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.StagingHeightMap.getTopBlockY",
+            "count": 6,
+            "share_percent": 2.4691358024691357
+          },
+          {
+            "name": "net.minecraft.world.chunk.Chunk.getTopYWithStaging",
+            "count": 6,
+            "share_percent": 2.4691358024691357
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185906_d",
+            "count": 6,
+            "share_percent": 2.4691358024691357
+          },
+          {
+            "name": "net.minecraft.block.Block.getLightValue",
+            "count": 6,
+            "share_percent": 2.4691358024691357
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.releaseLock",
+            "count": 6,
+            "share_percent": 2.4691358024691357
+          },
+          {
+            "name": "supersymmetry.riven.model.ReferenceRelief.column",
+            "count": 5,
+            "share_percent": 2.05761316872428
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.getCursorCachedLight",
+            "count": 5,
+            "share_percent": 2.05761316872428
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.cube.Cube.getCachedLightFor",
+            "count": 5,
+            "share_percent": 2.05761316872428
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.getCachedLightFor",
+            "count": 5,
+            "share_percent": 2.05761316872428
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionalGeology.sample",
+            "count": 5,
+            "share_percent": 2.05761316872428
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel$Column.<init>",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.cube.Cube.trackSurface",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.StagingHeightMap.computeHeightMap",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.getPosOpacity",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.getLightOpacity",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer$$Lambda.0x0000000085182d10.apply",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.lambda$generateCube$0",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.cube.Cube.<init>",
+            "count": 4,
+            "share_percent": 1.646090534979424
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.cube.Cube.getBlockState",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.FirstLightProcessor.diffuseSkylightInBlockColumn",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185904_a",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.spreadLightFromCursor",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "net.minecraft.network.NetworkManager.func_74428_b",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "net.minecraft.entity.player.EntityPlayerMP.func_71127_g",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "net.minecraft.network.NetHandlerPlayServer.func_73660_a",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "net.minecraft.network.NetworkSystem.func_151269_c",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatCondition.matches",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionalGeology.neighborhood",
+            "count": 3,
+            "share_percent": 1.2345679012345678
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.onOpacityChange",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.canSeeSky",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.getCursorLuminosity",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.FirstLightProcessor.needsSkylightUpdate",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.world.chunk.BlockStateContainer.func_186016_a",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.world.chunk.BlockStateContainer.func_186015_a",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.world.chunk.storage.ExtendedBlockStorage.func_177485_a",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PooledLightUpdateQueue.add",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.PlayerCubeMap.func_72685_d",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.network.NetHandlerPlayServer.func_147347_a",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.network.play.client.CPacketPlayer.func_148833_a",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.util.Util.func_181617_a",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.server.management.PlayerList.func_72358_d",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.network.PacketThreadUtil$1.run",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.network.play.client.CPacketPlayer$PositionRotation.func_148833_a",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.network.PacketBuffer.writeBytes",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.entity.EntityLivingBase.func_70071_h_",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.entity.player.EntityPlayer.func_70071_h_",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.cube.Cube.setLightFor",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.world.chunk.Chunk.redirect$zzd000$cubicchunks$setIsModifiedFromSetLightFor_Field",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.world.World.getCubeFromCubeCoords",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.world.World.getCubeFromBlockCoords",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.world.chunk.Chunk.func_177431_a",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.world.storage.ThreadedFileIOBase.func_75736_b",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.world.storage.ThreadedFileIOBase.run",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "net.minecraft.block.Block.getLightOpacity",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.network.PacketDispatcher.sendTo",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "supersymmetry.riven.model.ReferenceRelief$$Lambda.0x0000000085175f08.apply",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.ErosionModel.expose",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.setOpacityWithSegmentsFor",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.setOpacityWithSegments",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.world.LandscapeBlocks.material",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.network.WorldEncoder$$Lambda.0x0000000085252e90.accept",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.network.PacketCubes.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.network.WorldEncoder.encodeCubes",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.network.WorldEncoder.lambda$encodeCubes$3",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.World.updateWeatherBody",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.World.func_72979_l",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.storage.DerivedWorldInfo.func_76071_n",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.WorldProvider.updateWeather",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.World.func_72835_b",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.WorldServer.func_72979_l",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.World.func_72875_a",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.Entity.func_70030_z",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.EntityLivingBase.func_70030_z",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.World.func_180495_p",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.Entity.func_70071_h_",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.Entity.func_180799_ab",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionCatalog.classify",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionDefinition.rejectionReasons",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeWatcher.isWaitingForColumn",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.PlayerCubeMap.getColumnWatcher",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.World.func_72870_g",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.WorldServer.func_72866_a",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.player.EntityPlayerMP.func_175398_C",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.player.EntityPlayerMP.func_70071_h_",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.World.func_72866_a",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.WorldServer.func_72939_s",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.World.func_72939_s",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.WorldServer.func_184147_l",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.PlayerCubeMap.updatePlayer",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.visibility.CuboidalCubeSelector.findChanged",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalArchitecture$Column.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalArchitecture.column",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.player.InventoryPlayer.func_70301_a",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.LightingEngineHelpers.posToState",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.api.util.XYZMap.get",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.enqueueBrightening",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.getLoadedCube",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer$$Lambda.0x0000000085238918.accept",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncIOProvider.runCallbacks",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.postProcessColumn",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer$$Lambda.0x00000000851ae5a8.accept",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncColumnIOProvider.runSynchronousPart",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncWorldIOExecutor.tick",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.loadChunk",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncWorldIOExecutor.syncColumnLoad",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.func_186028_c",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.lambda$loadChunk$0",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.chunk.Chunk.handler$zzd000$cubicchunks$onChunkLoad_CubicChunks",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.lambda$asyncGetColumn$0",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncWorldIOExecutor.onWorldTick",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncTaskCompletion.drain",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "gregtech.api.pipenet.tickable.TickableWorldPipeNetEventHandler$$Lambda.0x00000000847bdc98.accept",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncTaskCompletion.complete",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.server.management.PlayerChunkMapEntry$1.run",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncWorldIOExecutor$$Lambda.0x00000000846c3240.accept",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncIOProvider$CallbackWithIdentity.accept",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "gregtech.api.pipenet.tickable.TickableWorldPipeNetEventHandler.onChunkLoad",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.getColumn",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.chunk.Chunk.func_76631_c",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.network.PacketBuffer.func_150792_a",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.network.PacketBuffer.readByte",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.network.NettyVarint21FrameDecoder.decode",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PooledLightUpdateQueue$Segment.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PooledLightUpdateQueue$Pool.acquire",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.BiomeCatalog.eligible",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "supersymmetry.riven.model.BiomeCatalog.selectDefinition",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.util.ClassInheritanceMultiMap.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.EntityContainer.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.ai.attributes.AttributeMap.<init>",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.EntityLivingBase.func_110148_a",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.player.EntityPlayer.func_70636_d",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.EntityLivingBase.func_110140_aT",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.entity.EntityLivingBase.func_110138_aP",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.network.PacketCubes.toBytes",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.world.World.func_175679_n",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.PlayerCubeMap$$Lambda.0x0000000085254e10.accept",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.ColumnWatcher.func_187280_d",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "net.minecraft.network.PacketBuffer.writeByte",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.network.PacketHeightMapUpdate.toBytes",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "gregtech.api.pipenet.tickable.TickableWorldPipeNetEventHandler$$Lambda.0x00000000847bd828.accept",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "gregtech.api.pipenet.tickable.TickableWorldPipeNetEventHandler.getPipeNetsForWorld",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "gregtech.api.pipenet.tickable.TickableWorldPipeNetEventHandler.onWorldTick",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          }
+        ],
+        "threads": [
+          {
+            "name": "Server thread",
+            "count": 94,
+            "share_percent": 38.68312757201646
+          },
+          {
+            "name": "Riven-preparation-1",
+            "count": 88,
+            "share_percent": 36.21399176954733
+          },
+          {
+            "name": "Riven-preparation-2",
+            "count": 57,
+            "share_percent": 23.45679012345679
+          },
+          {
+            "name": "File IO Thread",
+            "count": 2,
+            "share_percent": 0.823045267489712
+          },
+          {
+            "name": "Netty Server IO #2",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          },
+          {
+            "name": "Netty Server IO #0",
+            "count": 1,
+            "share_percent": 0.411522633744856
+          }
+        ]
+      },
+      "gc": {
+        "collection_count": 3,
+        "reported_sum_of_pauses_ns": 71421000,
+        "reported_longest_pause_ns": 25764100,
+        "top_level_pause_count": 3,
+        "top_level_pause_duration_ns": 71421000,
+        "causes": [
+          {
+            "name": "G1 Evacuation Pause",
+            "count": 3,
+            "share_percent": 100.0
+          }
+        ],
+        "collectors": [
+          {
+            "name": "G1New",
+            "count": 3,
+            "share_percent": 100.0
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "vertical",
+      "ticks": {
+        "count": 240,
+        "storedCount": 240,
+        "droppedCount": 0,
+        "totalNanos": 1531157400,
+        "meanMs": 6.3798225,
+        "p50Ms": 0.7632,
+        "p95Ms": 56.5653,
+        "p99Ms": 67.6615,
+        "maxMs": 81.3602
+      },
+      "operations": 6,
+      "cubeDataSaveEvents": 0,
+      "packets": {
+        "packetCount": 26,
+        "serializedPayloadBytes": 10816673,
+        "cubeCount": 1862,
+        "serializationNanos": 30710200,
+        "applyCount": 0,
+        "applyNanos": 0,
+        "byteScope": "PacketCubes payload before transport compression, excludes channel framing"
+      },
+      "execution": {
+        "count": 151,
+        "missing_stacks": 0,
+        "truncated_stacks": 0,
+        "subsystems": [
+          {
+            "name": "Riven",
+            "count": 84,
+            "share_percent": 55.629139072847686
+          },
+          {
+            "name": "vanilla",
+            "count": 46,
+            "share_percent": 30.4635761589404
+          },
+          {
+            "name": "CubicChunks",
+            "count": 18,
+            "share_percent": 11.920529801324504
+          },
+          {
+            "name": "other",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          }
+        ],
+        "leaf_methods": [
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185891_c",
+            "count": 19,
+            "share_percent": 12.582781456953642
+          },
+          {
+            "name": "java.util.HashMap$TreeNode.find",
+            "count": 7,
+            "share_percent": 4.635761589403973
+          },
+          {
+            "name": "java.lang.Double.isFinite",
+            "count": 7,
+            "share_percent": 4.635761589403973
+          },
+          {
+            "name": "java.util.HashMap.getNode",
+            "count": 6,
+            "share_percent": 3.9735099337748343
+          },
+          {
+            "name": "java.lang.Long.equals",
+            "count": 6,
+            "share_percent": 3.9735099337748343
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatRequirements.evaluate",
+            "count": 6,
+            "share_percent": 3.9735099337748343
+          },
+          {
+            "name": "java.util.HashMap$TreeNode.balanceDeletion",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185904_a",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "net.minecraft.world.chunk.NibbleArray.func_177480_a",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "java.util.Collections$UnmodifiableCollection.isEmpty",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel$Column.density",
+            "count": 4,
+            "share_percent": 2.6490066225165565
+          },
+          {
+            "name": "java.util.HashMap.removeNode",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185906_d",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "java.util.concurrent.locks.LockSupport.unpark",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "java.util.HashMap$TreeNode.balanceInsertion",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "java.util.regex.Pattern$CharPropertyGreedy.study",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.processLightUpdatesForTypeInner",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionalGeology.neighborhood",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "net.minecraft.util.math.BlockPos$2$1.computeNext",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.column.CubeMap.binarySearch",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.setNoSegmentsTransparent",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.StagingHeightMap.getTopBlockY",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatCondition.expectation",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "java.util.HashMap.hash",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalArchitecture.paleo",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.regex.Pattern.closure",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "jdk.internal.math.DoubleToDecimal.toDecimal",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.Collections$UnmodifiableMap.get",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatProfile.from",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.regex.Pattern.compile",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.lang.invoke.DirectMethodHandle.allocateInstance",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.regex.Pattern.atom",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.World.func_72918_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.BitSet.set",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionalGeology.sample",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalArchitecture$Column.<init>",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.world.LandscapeBlocks.material",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.setOpacityWithSegments",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.TreeMap.successor",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.regex.Pattern$CharProperty.study",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.lang.Class.reflectionData",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "sun.nio.ch.SelectionKeyImpl.translateAndSetReadyOps",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.lang.String.hashCode",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.lab.CubicLab.tick",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.Comparator.thenComparing",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.util.BitArray.func_188142_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.ArrayList.grow",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.getLightValue",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraftforge.fml.common.eventhandler.EventBus.post",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "codechicken.lib.internal.CCLLog.onTickEnd",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.concurrent.ConcurrentHashMap$Traverser.advance",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.util.math.AxisAlignedBB.func_72317_d",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.chunk.Chunk.getEBS_CubicChunks",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.reference",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.api.util.XYZMap.get",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.profiler.Profiler.func_76318_c",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.netty.buffer.AbstractByteBuf.ensureWritable0",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "jdk.jfr.internal.periodic.PeriodicEvents.doPeriodic",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.HashMap$TreeNode.rotateRight",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalArchitecture$Column.geology",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.HashMap$TreeNode.removeTreeNode",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.regex.Pattern.lambda$union$0",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.regex.Pattern.<init>",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.lang.Double.toString",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.lang.FdLibm$Sin.__kernel_sin",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.TreeMap.getEntry",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.HashMap.putVal",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.LinkedHashMap.afterNodeRemoval",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.block.Block.getLightValue",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "java.util.concurrent.ConcurrentHashMap.get",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "scala.collection.mutable.StringBuilder.<init>",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.netty.channel.nio.NioIoHandler.run",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          }
+        ],
+        "first_tracked_methods": [
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185891_c",
+            "count": 19,
+            "share_percent": 12.582781456953642
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatAttribute.validateCategory",
+            "count": 12,
+            "share_percent": 7.947019867549669
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatModel.sample",
+            "count": 7,
+            "share_percent": 4.635761589403973
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.densityAt",
+            "count": 7,
+            "share_percent": 4.635761589403973
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel.reference",
+            "count": 6,
+            "share_percent": 3.9735099337748343
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatRequirements.evaluate",
+            "count": 6,
+            "share_percent": 3.9735099337748343
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.trim",
+            "count": 6,
+            "share_percent": 3.9735099337748343
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel.column",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatCondition.expectation",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185904_a",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "net.minecraft.world.chunk.NibbleArray.func_177480_a",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "supersymmetry.riven.model.PhysiographicRegions.sample",
+            "count": 4,
+            "share_percent": 2.6490066225165565
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel.trim",
+            "count": 4,
+            "share_percent": 2.6490066225165565
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel$Column.density",
+            "count": 4,
+            "share_percent": 2.6490066225165565
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185906_d",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "(no tracked subsystem frame)",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.releaseLock",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.reference",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.processLightUpdatesForTypeInner",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionalGeology.neighborhood",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "net.minecraft.util.math.BlockPos$2$1.computeNext",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.column.CubeMap.binarySearch",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.setNoSegmentsTransparent",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.StagingHeightMap.getTopBlockY",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "net.minecraft.server.MinecraftServer.func_71217_p",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalArchitecture.paleo",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatProfile.fact",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatProfile.from",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.World.func_72918_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.BiomeCatalog.selectDefinition",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.ColumnWatcher.heightChanged",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.BiomeCatalog.eligible",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionalGeology.sample",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalArchitecture$Column.<init>",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.world.LandscapeBlocks.material",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.setOpacityWithSegments",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.SessionPreparationCache.get",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.stats.StatBase.hashCode",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.lab.CubicLab.tick",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.network.PacketCubes.<init>",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.util.BitArray.func_188142_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatSample.<init>",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.columnForSurface",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.getLightValue",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncTaskCompletion.drain",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.util.math.AxisAlignedBB.func_72317_d",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.chunk.Chunk.getEBS_CubicChunks",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.api.util.XYZMap.get",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.profiler.Profiler.func_76318_c",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.network.PacketBuffer.writeByte",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalArchitecture$Column.geology",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalDeformation.sample",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatCondition.matches",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.block.Block.getLightValue",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.AsyncBatchingCubeIO.loadCubeNbt",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.entity.EntityLivingBase.func_70071_h_",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          }
+        ],
+        "inclusive_tracked_methods": [
+          {
+            "name": "net.minecraft.server.MinecraftServer.func_71217_p",
+            "count": 76,
+            "share_percent": 50.33112582781457
+          },
+          {
+            "name": "net.minecraft.server.MinecraftServer.run",
+            "count": 76,
+            "share_percent": 50.33112582781457
+          },
+          {
+            "name": "net.minecraft.server.MinecraftServer.func_71190_q",
+            "count": 73,
+            "share_percent": 48.34437086092715
+          },
+          {
+            "name": "net.minecraft.server.dedicated.DedicatedServer.func_71190_q",
+            "count": 73,
+            "share_percent": 48.34437086092715
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainPreparation.lambda$area$1",
+            "count": 71,
+            "share_percent": 47.019867549668874
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.PreparationService.lambda$calculate$0",
+            "count": 71,
+            "share_percent": 47.019867549668874
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.PreparationService$$Lambda.0x0000000085180640.run",
+            "count": 71,
+            "share_percent": 47.019867549668874
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainPreparation$$Lambda.0x0000000085180400.accept",
+            "count": 71,
+            "share_percent": 47.019867549668874
+          },
+          {
+            "name": "net.minecraft.world.WorldServer.func_72835_b",
+            "count": 66,
+            "share_percent": 43.70860927152318
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.PlayerCubeMap.func_72693_b",
+            "count": 65,
+            "share_percent": 43.04635761589404
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.getCube",
+            "count": 47,
+            "share_percent": 31.125827814569536
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeWatcher.providePlayerCube",
+            "count": 47,
+            "share_percent": 31.125827814569536
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.postCubeLoadAttempt",
+            "count": 46,
+            "share_percent": 30.4635761589404
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatModel.sample",
+            "count": 40,
+            "share_percent": 26.490066225165563
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel.reference",
+            "count": 27,
+            "share_percent": 17.880794701986755
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel$Column.surface",
+            "count": 26,
+            "share_percent": 17.218543046357617
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185891_c",
+            "count": 19,
+            "share_percent": 12.582781456953642
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.FirstLightProcessor.diffuseSkylight",
+            "count": 19,
+            "share_percent": 12.582781456953642
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.LightingManager.doFirstLight",
+            "count": 19,
+            "share_percent": 12.582781456953642
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.calculateDiffuseSkylight",
+            "count": 19,
+            "share_percent": 12.582781456953642
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.generateCube",
+            "count": 18,
+            "share_percent": 11.920529801324504
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.columnForSurface",
+            "count": 16,
+            "share_percent": 10.596026490066226
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.StagingHeightMap.getTopBlockY",
+            "count": 16,
+            "share_percent": 10.596026490066226
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.LightingManager.processUpdates",
+            "count": 16,
+            "share_percent": 10.596026490066226
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.processLightUpdatesForType",
+            "count": 16,
+            "share_percent": 10.596026490066226
+          },
+          {
+            "name": "net.minecraft.world.chunk.Chunk.getTopYWithStaging",
+            "count": 16,
+            "share_percent": 10.596026490066226
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.processLightUpdates",
+            "count": 16,
+            "share_percent": 10.596026490066226
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.processLightUpdatesForTypeInner",
+            "count": 16,
+            "share_percent": 10.596026490066226
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.ILightingManager.onSendCubes",
+            "count": 15,
+            "share_percent": 9.933774834437086
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatSample.<init>",
+            "count": 14,
+            "share_percent": 9.271523178807946
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.StagingHeightMap.computeHeightMap",
+            "count": 14,
+            "share_percent": 9.271523178807946
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel$Column.<init>",
+            "count": 13,
+            "share_percent": 8.609271523178808
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.reference",
+            "count": 13,
+            "share_percent": 8.609271523178808
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatProfile.from",
+            "count": 13,
+            "share_percent": 8.609271523178808
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatRequirements.evaluate",
+            "count": 13,
+            "share_percent": 8.609271523178808
+          },
+          {
+            "name": "supersymmetry.riven.experiment.CubicProbeWorldType$Generator.generateCube",
+            "count": 13,
+            "share_percent": 8.609271523178808
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.api.worldgen.ICubeGenerator.tryGenerateCube",
+            "count": 13,
+            "share_percent": 8.609271523178808
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatProfile.<init>",
+            "count": 12,
+            "share_percent": 7.947019867549669
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatAttribute.validateCategory",
+            "count": 12,
+            "share_percent": 7.947019867549669
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.SessionPreparationCache.get",
+            "count": 12,
+            "share_percent": 7.947019867549669
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainPreparation.volume",
+            "count": 12,
+            "share_percent": 7.947019867549669
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainMaterials.at",
+            "count": 11,
+            "share_percent": 7.28476821192053
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainPreparation$$Lambda.0x0000000085182690.get",
+            "count": 11,
+            "share_percent": 7.28476821192053
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainPreparation.lambda$volume$0",
+            "count": 11,
+            "share_percent": 7.28476821192053
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainPreparation.lambda$volume$1",
+            "count": 11,
+            "share_percent": 7.28476821192053
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.TerrainPreparation$$Lambda.0x00000000851828c0.accept",
+            "count": 11,
+            "share_percent": 7.28476821192053
+          },
+          {
+            "name": "supersymmetry.riven.model.preparation.PreparationService.calculate",
+            "count": 11,
+            "share_percent": 7.28476821192053
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel$Column.density",
+            "count": 10,
+            "share_percent": 6.622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.cube.Cube.trackSurface",
+            "count": 9,
+            "share_percent": 5.960264900662252
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.calculateNewLightFromCursor",
+            "count": 8,
+            "share_percent": 5.298013245033113
+          },
+          {
+            "name": "supersymmetry.riven.model.ReferenceRelief.column",
+            "count": 7,
+            "share_percent": 4.635761589403973
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel$Column.density",
+            "count": 7,
+            "share_percent": 4.635761589403973
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.densityAt",
+            "count": 7,
+            "share_percent": 4.635761589403973
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel.column",
+            "count": 6,
+            "share_percent": 3.9735099337748343
+          },
+          {
+            "name": "supersymmetry.riven.model.PhysiographicRegions.sample",
+            "count": 6,
+            "share_percent": 3.9735099337748343
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.canSeeSky",
+            "count": 6,
+            "share_percent": 3.9735099337748343
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.getCursorLuminosity",
+            "count": 6,
+            "share_percent": 3.9735099337748343
+          },
+          {
+            "name": "supersymmetry.riven.model.UnmodifiedTerrainModel.trim",
+            "count": 6,
+            "share_percent": 3.9735099337748343
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatCondition.expectation",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185904_a",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer$$Lambda.0x0000000085182d10.apply",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.lambda$generateCube$0",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.cube.Cube.<init>",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "net.minecraft.world.chunk.NibbleArray.func_177480_a",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "net.minecraft.world.chunk.storage.ExtendedBlockStorage.func_76670_c",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "net.minecraft.world.chunk.NibbleArray.func_76582_a",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.getLightValue",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.getCursorCachedLight",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.cube.Cube.getCachedLightFor",
+            "count": 5,
+            "share_percent": 3.3112582781456954
+          },
+          {
+            "name": "net.minecraft.block.Block.getLightValue",
+            "count": 4,
+            "share_percent": 2.6490066225165565
+          },
+          {
+            "name": "net.minecraft.network.NetworkManager.func_74428_b",
+            "count": 4,
+            "share_percent": 2.6490066225165565
+          },
+          {
+            "name": "net.minecraft.entity.player.EntityPlayerMP.func_71127_g",
+            "count": 4,
+            "share_percent": 2.6490066225165565
+          },
+          {
+            "name": "net.minecraft.network.NetworkSystem.func_151269_c",
+            "count": 4,
+            "share_percent": 2.6490066225165565
+          },
+          {
+            "name": "net.minecraft.entity.player.EntityPlayer.func_70071_h_",
+            "count": 4,
+            "share_percent": 2.6490066225165565
+          },
+          {
+            "name": "net.minecraft.network.NetHandlerPlayServer.func_73660_a",
+            "count": 4,
+            "share_percent": 2.6490066225165565
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel.trim",
+            "count": 4,
+            "share_percent": 2.6490066225165565
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalArchitecture$Column.<init>",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalArchitecture.column",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionalGeology.sample",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.func_185906_d",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "net.minecraft.entity.EntityLivingBase.func_70071_h_",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.onOpacityChange",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.network.PacketCubes.<init>",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.releaseLock",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.LightingManager.checkLightFor",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.scheduleLightUpdate",
+            "count": 3,
+            "share_percent": 1.9867549668874172
+          },
+          {
+            "name": "supersymmetry.riven.model.RegionalGeology.neighborhood",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "supersymmetry.riven.model.BiomeCatalog.selectDefinition",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "net.minecraft.util.math.BlockPos$2$1.computeNext",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.column.CubeMap.binarySearch",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.column.CubeMap.cubes",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.network.WorldEncoder.lambda$encodeCubes$4",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.network.WorldEncoder$$Lambda.0x00000000852530d0.accept",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.network.WorldEncoder.encodeCubes",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.IColumnInternal.writeHeightmapDataForClient",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.setNoSegments",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.setNoSegmentsTransparent",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalArchitecture.paleo",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatProfile.fact",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.getCachedLightFor",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.fetchNeighborDataFromCursor",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.LandscapeModel$Column.<init>",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.World.func_72918_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.entity.Entity.func_70071_h_",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.entity.Entity.func_70072_I",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.entity.Entity.func_70030_z",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.entity.EntityLivingBase.func_70030_z",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.CommonEventHandler$$Lambda.0x000000008502ae68.accept",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.getPosOpacity",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.ILightingManager.onTick",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.CommonEventHandler.onWorldServerTick",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.WorldServer.tickCubicWorld",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.block.state.BlockStateContainer$StateImplementation.getLightOpacity",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.block.Block.getLightOpacity",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.ColumnWatcher.heightChanged",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.SurfaceHeightUpdates.forCube",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.PlayerCubeMap.heightUpdated",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.LightingManager.onTrackCubeSurface",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.LightingManager$$Lambda.0x000000008518caf0.heightUpdated",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.BiomeClassifier.classify",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.BiomeCatalog.eligible",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.BiomeCatalog.select",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.world.LandscapeBlocks.material",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.ServerHeightMap.setOpacityWithSegments",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.entity.EntityLivingBase.func_70636_d",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.entity.player.EntityPlayer.func_70636_d",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.chunk.Chunk.func_177414_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.chunk.Chunk.handler$zzd000$cubicchunks$getEntitiesWithinAABBForEntity_CubicChunks",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.entity.EntityLivingBase.func_85033_bc",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.World.func_175674_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.stats.StatisticsManager.func_150871_b",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.stats.StatisticsManager.func_77444_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.entity.player.EntityPlayerMP.func_71064_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.stats.StatBase.hashCode",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.entity.player.EntityPlayer.func_71029_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.lab.CubicLab$$Lambda.0x0000000084a3e518.accept",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.lab.CubicLab.tick",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.chunk.BlockStateContainer.func_186016_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.chunk.BlockStateContainer.func_186015_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.chunk.storage.ExtendedBlockStorage.func_177485_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.util.BitArray.func_188142_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncWorldIOExecutor.onWorldTick",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncTaskCompletion.drain",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncWorldIOExecutor$$Lambda.0x00000000846c3240.accept",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncWorldIOExecutor.tick",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.network.NetHandlerPlayServer.func_147347_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.network.play.client.CPacketPlayer.func_148833_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.util.math.AxisAlignedBB.func_72317_d",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.network.play.client.CPacketPlayer$Position.func_148833_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.util.Util.func_181617_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.network.PacketThreadUtil$1.run",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.entity.Entity.func_70091_d",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.chunk.Chunk.func_177431_a",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.world.cube.Cube.setLightFor",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.chunk.Chunk.redirect$zzd000$cubicchunks$setLightFor_CubicChunks_EBSGetRedirect",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.chunk.Chunk.getEBS_CubicChunks",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.getCube",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.lighting.phosphor.PhosphorLightEngine.nextItem",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.api.util.XYZMap.get",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.CubeProviderServer.getLoadedCube",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.profiler.Profiler.func_76318_c",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.WorldServer.func_147456_g",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.World.getPersistentChunkIterable",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.network.PacketBuffer.func_150787_b",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.network.NetworkManager$4.run",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.network.NettyCompressionEncoder.encode",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.network.PacketBuffer.writeByte",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "net.minecraft.world.chunk.Chunk.getLoadedCubes",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.ReferenceRelief$$Lambda.0x0000000085175f08.apply",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalArchitecture$Column.geology",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.ErosionModel.expose",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.GeologicalDeformation.sample",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "supersymmetry.riven.model.HabitatCondition.matches",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncWorldIOExecutor.syncCubeLoad",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.AsyncCubeIOProvider.run",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.ICubeIO.loadCubeAsyncPart",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "io.github.opencubicchunks.cubicchunks.core.server.chunkio.AsyncBatchingCubeIO.loadCubeNbt",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          }
+        ],
+        "threads": [
+          {
+            "name": "Server thread",
+            "count": 76,
+            "share_percent": 50.33112582781457
+          },
+          {
+            "name": "Riven-preparation-1",
+            "count": 49,
+            "share_percent": 32.450331125827816
+          },
+          {
+            "name": "Riven-preparation-2",
+            "count": 22,
+            "share_percent": 14.56953642384106
+          },
+          {
+            "name": "Netty Server IO #2",
+            "count": 2,
+            "share_percent": 1.3245033112582782
+          },
+          {
+            "name": "JFR Periodic Tasks",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          },
+          {
+            "name": "Netty Server IO #0",
+            "count": 1,
+            "share_percent": 0.6622516556291391
+          }
+        ]
+      },
+      "gc": {
+        "collection_count": 2,
+        "reported_sum_of_pauses_ns": 31243300,
+        "reported_longest_pause_ns": 25418300,
+        "top_level_pause_count": 3,
+        "top_level_pause_duration_ns": 31243300,
+        "causes": [
+          {
+            "name": "G1 Humongous Allocation",
+            "count": 2,
+            "share_percent": 100.0
+          }
+        ],
+        "collectors": [
+          {
+            "name": "G1New",
+            "count": 1,
+            "share_percent": 50.0
+          },
+          {
+            "name": "G1Old",
+            "count": 1,
+            "share_percent": 50.0
+          }
+        ]
+      }
+    }
+  ],
+  "diagnosticViewDistance": 12,
+  "visibilityGeometry": [
+    {
+      "movement": "one_cube_horizontal",
+      "view_distance": 12,
+      "new_visible_cubes": 625,
+      "new_visible_columns": 25,
+      "visible_cubes": 15625,
+      "visible_columns": 625
+    },
+    {
+      "movement": "one_cube_vertical",
+      "view_distance": 12,
+      "new_visible_cubes": 625,
+      "new_visible_columns": 0,
+      "visible_cubes": 15625,
+      "visible_columns": 625
+    },
+    {
+      "movement": "horizontal_lab_teleport",
+      "view_distance": 12,
+      "new_visible_cubes": 10000,
+      "new_visible_columns": 400,
+      "visible_cubes": 15625,
+      "visible_columns": 625
+    }
+  ],
+  "limits": [
+    "Historical streaming run predates storage pacing and the frozen Riven preparation-worker binary.",
+    "Cache diagnostic uses the real selected cache with synthetic values/orders; no native cache-miss telemetry or timings.",
+    "Visibility geometry describes requests, not actual cube generations or costs; vertical lab route has different displacement and prior-area reuse.",
+    "JFR stack-path samples are not exclusive CPU time; no new game run, production patch or build."
+  ]
+}

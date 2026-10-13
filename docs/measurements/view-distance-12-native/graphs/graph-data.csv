@@ -1,0 +1,9 @@
+phase,scenario,run_id,side,timer,sample_grain,operations,diagnostic_only,count,storedCount,droppedCount,totalNanos,meanMs,p50Ms,p95Ms,p99Ms,maxMs
+write,idle,163e88a9-4fd4-42a3-bdcf-d7b9e90b59b5,server,serverTicks,server tick,0,False,100,100,0,5879071800,58.790718,57.0252,72.0473,77.5768,84.245
+write,idle,163e88a9-4fd4-42a3-bdcf-d7b9e90b59b5,client,frameIntervals,client frame interval,0,False,718,718,0,5976956600,8.324452089136491,8.3349,11.18,12.4001,17.4522
+write,horizontal,a1f89bbd-a353-4471-87a0-2c18e345e23c,server,serverTicks,server tick,6,False,240,240,0,20024268300,83.43445125,61.4995,80.1008,804.5626,1363.1661
+write,horizontal,a1f89bbd-a353-4471-87a0-2c18e345e23c,client,frameIntervals,client frame interval,6,False,2411,2411,0,20089635100,8.332490709249274,8.332,12.3722,15.6043,25.327
+write,vertical,414f9489-b16a-44a6-846e-77c4244eb825,server,serverTicks,server tick,6,False,240,240,0,14542638300,60.59432625,58.4487,73.2092,85.3951,124.9958
+write,vertical,414f9489-b16a-44a6-846e-77c4244eb825,client,frameIntervals,client frame interval,6,False,1741,1741,0,14715113000,8.452103963239518,8.3373,11.4272,18.3429,45.0445
+read,idle,b1591eff-1bdb-446e-8e65-e319100f6e44,server,serverTicks,server tick,0,False,100,100,0,6131318600,61.313185999999995,60.4602,70.8814,77.4743,82.2067
+read,idle,b1591eff-1bdb-446e-8e65-e319100f6e44,client,frameIntervals,client frame interval,0,False,746,746,0,6246750600,8.373660321715818,8.3357,11.9467,19.1048,29.4085

@@ -1,0 +1,35 @@
+{
+  "schema": "cubiclab.graph-contracts.v1",
+  "surface": "Standalone scientific PNG/SVG figures and a downloadable ZIP",
+  "palette": {
+    "policy": "single-root preferred",
+    "blue": "#2f6690",
+    "neutral": "#262626"
+  },
+  "charts": [
+    {
+      "file": "server-timing-tails",
+      "family": "comparison",
+      "variant": "p95 bars with p99/max markers",
+      "question": "Which workload windows exceed the server tick budget or contain long tails?",
+      "grain": "4 scenario windows, excluding single-tick correctness probes",
+      "units": "ms per tick",
+      "referenceMs": 50
+    },
+    {
+      "file": "client-timing-tails",
+      "family": "comparison",
+      "variant": "p95 bars with p99/max markers",
+      "question": "How do client frame interval tails vary by workload?",
+      "grain": "same windows; exact per-window frame counts are shown",
+      "units": "ms per frame interval",
+      "referenceMs": 8.333333333333334
+    }
+  ],
+  "limits": [
+    "One host/run, no matched before/after speedup claim; actual recording count retained below.",
+    "Only summary quantiles are retained; no histogram or timeline is reconstructed.",
+    "Rendering qualification remains separate from frame/packet checks."
+  ],
+  "retainedJfrRecordings": 0
+}

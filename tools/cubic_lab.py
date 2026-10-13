@@ -24,6 +24,56 @@ import zipfile
 
 FORK = Path(__file__).resolve().parents[1]
 PLAYER = 'CubicLab'
+VIEW_DISTANCE = 12
+
+
+def view_distance_profile():
+    return {'horizontal': VIEW_DISTANCE, 'vertical': VIEW_DISTANCE, 'clientRender': VIEW_DISTANCE}
+
+
+def configure_view_distance(server):
+    """Apply the shared test distance only to a newly owned preparation directory."""
+    properties = server / 'server.properties'
+    text = re.sub(r'^view-distance=.*\n?', '', properties.read_text(), flags=re.M)
+    properties.write_text(text + f'view-distance={VIEW_DISTANCE}\n', encoding='utf-8')
+    config = server / 'config/cubicchunks.cfg'
+    text = config.read_text()
+    setting = f'    I:verticalCubeLoadDistance={VIEW_DISTANCE}'
+    if re.search(r'^\s*I:verticalCubeLoadDistance=.*$', text, flags=re.M):
+        text = re.sub(r'^\s*I:verticalCubeLoadDistance=.*$', setting, text, flags=re.M)
+    else:
+        text, count = re.subn(r'general\s*\{', 'general {\n' + setting, text, count=1)
+        if count != 1: raise RuntimeError('Prepared CubicChunks config has no general category')
+    config.write_text(text, encoding='utf-8')
+
+
+def client_options():
+    return (f'renderDistance:{VIEW_DISTANCE}\nmaxFps:120\nenableVsync:false\nfancyGraphics:false\n'
+            'renderClouds:false\nfullscreen:false\npauseOnLostFocus:false\nshowSubtitles:false\n')
+
+
+def validate_view_distance_inputs(manifest):
+    if manifest.get('viewDistance') != view_distance_profile():
+        raise RuntimeError('Native testing requires view distance 12; preserve this older lab and prepare a new instance')
+    server, client = Path(manifest['server']), Path(manifest['client'])
+    checks = [(server / 'server.properties', r'^view-distance=(\d+)\s*$'),
+              (client / 'options.txt', r'^renderDistance:(\d+)\s*$')]
+    checks += [(directory / 'config/cubicchunks.cfg', r'^\s*I:verticalCubeLoadDistance=(\d+)\s*$')
+               for directory in [server, client]]
+    for path, pattern in checks:
+        values = re.findall(pattern, path.read_text(), flags=re.M)
+        if values != [str(VIEW_DISTANCE)]:
+            raise RuntimeError('Test view distance changed or is ambiguous in ' + str(path) + '; prepare a new revision')
+
+
+def validate_view_distance_capture(manifest, server, client):
+    expected = manifest.get('viewDistance')
+    if expected != view_distance_profile(): raise RuntimeError('Missing current view-distance profile')
+    observed = {'horizontal': server.get('horizontalViewDistance'), 'vertical': server.get('verticalViewDistance'),
+                'clientRender': client.get('renderDistance')}
+    if observed != expected or client.get('verticalViewDistance') != VIEW_DISTANCE:
+        raise RuntimeError('Measured view distances differ from required 12: ' + str(observed)
+                           + '; client vertical=' + str(client.get('verticalViewDistance')))
 
 
 def write_json(path, data):
@@ -89,7 +139,7 @@ def runtime_assets(release, product_version, expected_hashes=None):
 
 
 def needs_070_compat(version):
-    return version in ('0.7.0', '0.7.0-alpha', '0.7.1-alpha')
+    return version in ('0.7.0', '0.7.0-alpha', '0.7.1-alpha', '0.7.2-alpha')
 
 
 def settings(root):
@@ -209,8 +259,7 @@ def prepare_client(server, target, base_zip, root, java, release):
                 for member in archive.namelist():
                     if member.lower().endswith(('.dll', '.so', '.dylib')):
                         (natives / Path(member).name).write_bytes(archive.read(member))
-    (target / 'options.txt').write_text('renderDistance:3\nmaxFps:120\nenableVsync:false\nfancyGraphics:false\n'
-        'renderClouds:false\nfullscreen:false\npauseOnLostFocus:false\nshowSubtitles:false\n', encoding='utf-8')
+    (target / 'options.txt').write_text(client_options(), encoding='utf-8')
     result = {'schema': 1, 'java': java, 'release': release['tag_name'], 'libraries': libraries,
               'minecraft': str(jar), 'minecraft_sha1': main_jar['sha1'], 'assets': str(assets), 'assetIndex': index['id'],
               'natives': str(natives), 'system': system, 'architecture': architecture,
@@ -282,11 +331,14 @@ def prepare(args):
     text = props.read_text()
     overrides = {'server-ip': '127.0.0.1', 'server-port': str(args.port), 'online-mode': 'false',
         'gamemode': '3', 'difficulty': '0', 'spawn-monsters': 'false', 'spawn-animals': 'false', 'max-players': '4',
-        'allow-flight': 'true', 'enable-rcon': 'false', 'view-distance': '3'}
+        'allow-flight': 'true', 'enable-rcon': 'false'}
     for key, value in overrides.items():
         text = re.sub(r'^' + re.escape(key) + r'=.*\n?', '', text, flags=re.M)
         text += key + '=' + value + '\n'
     props.write_text(text, encoding='utf-8')
+    configure_view_distance(server)
+    receipt['testViewDistance'] = view_distance_profile()
+    dev.write_json(receipt_path, receipt)
     player_uuid = str(uuid.UUID(bytes=hashlib.md5(('OfflinePlayer:' + PLAYER).encode()).digest(), version=3))
     write_json(server / 'ops.json', [{'uuid': player_uuid, 'name': PLAYER, 'level': 2, 'bypassesPlayerLimit': False}])
     target.mkdir(parents=True)
@@ -325,6 +377,7 @@ def prepare(args):
         'vanillaVerticalRenderDistance': args.vanilla_vertical_render_distance,
         'generatedLibraryHashes': {'server': {}, 'client': {}},
         'height': {'minY': -128, 'maxYExclusive': 384, 'verticalCubesPerColumn': 32},
+        'viewDistance': view_distance_profile(),
         'compatibility': (['Lab-only field-access ABI bridge forwards Fugue 0.24.4 calls to ImagineBreaker 3.2, preserving target class initialization.',
             'Lab-only independently authored BlockStateContainer.Builder restores the missing Forge fluid API class through the loader transformer API; existing runtime classes are preserved.',
             'Lab-only ObjectHolderRef mixin initializes the declaring class before registry field injection, preventing later static initializers from clearing injected values.'] if needs_070_compat(product_version) else []),
@@ -439,6 +492,8 @@ def load_lab(args):
             if actual != expected_mod_hashes(manifest, side): raise RuntimeError('Prepared ' + side + ' mod set changed; create a new lab revision before benchmarking')
     if 'generatedLibraryHashes' in manifest and record_generated_libraries(manifest) != manifest['generatedLibraryHashes']:
         raise RuntimeError('Generated mod library set changed; create a new lab revision before benchmarking')
+    if getattr(args, 'command', None) in ['prime', 'run', 'server', 'client']:
+        validate_view_distance_inputs(manifest)
     return target, manifest
 
 
@@ -574,6 +629,7 @@ def run(args):
             await_line(server_messages, 'CUBICLAB_CLIENT_RESULT runId=' + run_id, processes, 30)
             server_data = json.loads((server_dir / 'cubiclab-results' / run_id / 'server.json').read_text())
             client_data = json.loads((client_dir / 'cubiclab-results' / run_id / 'client.json').read_text())
+            validate_view_distance_capture(manifest, server_data, client_data)
             if not client_data['frameIntervals']['count']: raise RuntimeError('No real rendered frames captured')
             if client_data['framesWithGui']: raise RuntimeError('A GUI covered the world during measurement; preserve this run and resolve first-use setup')
             if scenario in ('horizontal', 'vertical') and not client_data['packets']['cubeCount']:

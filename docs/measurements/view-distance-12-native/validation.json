@@ -1,0 +1,182 @@
+{
+  "schema": "cubiclab.view-distance-validation.v1",
+  "parentSourceRevision": "f414bf1f28a58154930e9a5bcc1c29d9e1dbb624",
+  "configuredViewDistance": {
+    "horizontal": 12,
+    "vertical": 12,
+    "clientRender": 12
+  },
+  "runtime": "0.7.2-alpha",
+  "source": [
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\tools\\cubic_lab.py",
+      "sha256": "b350bbc09d68b952820003a8e7c7b33fa337b3e5179818e00b2e90178b08aa51",
+      "bytes": 42879
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\tools\\test_cubic_lab.py",
+      "sha256": "003a57447c74aa92e2c30d75706c2e983798f12937d6a85780f8d7ab56523dcc",
+      "bytes": 8926
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\tools\\report_cubic_lab.py",
+      "sha256": "ee3a87e685acead781078ad3909b50dde03af31a9c631a911c11f20f6f23200e",
+      "bytes": 10366
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\tools\\plot_cubic_lab_results.py",
+      "sha256": "0f760890b491b5058e1a6c9d8660bd319af5ea8760e41d2292444ab3677f3385",
+      "bytes": 18516
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\tools\\investigate_horizontal_streaming.py",
+      "sha256": "cd5fae268c21dda3d2eff81c089bf175a2ba736411523935a5379f6fb59122bc",
+      "bytes": 10054
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\tools\\diagnostics\\RivenAreaCacheDiagnostic.java",
+      "sha256": "1ae5b55c0b9117f7559cb6061eadf741cc355d02b9ef0691acbcd8cd303b56e5",
+      "bytes": 2559
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\lab\\runtime.properties",
+      "sha256": "c64bd0f7b57e37de761a9b6783eb39d528607488a633f83ab34301296ba82f8a",
+      "bytes": 499
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\lab\\README.md",
+      "sha256": "c0ea379b844d922da981a68debc6e535fdc8f206bcef060eb4c2f62b4cd590ae",
+      "bytes": 24193
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\lab\\skill\\cubicchunks-lab\\SKILL.md",
+      "sha256": "1c275888fa2d01250d0f75b1685f9a7b5cf3156b83bb80eb0cb8c81fa3269879",
+      "bytes": 16016
+    }
+  ],
+  "rootWorkspacePolicy": [
+    {
+      "path": "E:\\WorldGenOverhaul\\AGENTS.md",
+      "sha256": "b830de577a9baab2f48c7c5d7ea56d12cdb3bdd7c8d145586bbcb1b664bc3bd1",
+      "bytes": 4800
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\tools\\dev.py",
+      "sha256": "fc430f14667e18c95c2c18dd1649d5544534c4df37ea9b8abc84fe18bc219d9b",
+      "bytes": 30672
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\tools\\experiment_cubic.py",
+      "sha256": "c2c1f701a7969551cd90ad1a185afdd7e53036a1d08a3a15a7678d7a771493ff",
+      "bytes": 16162
+    }
+  ],
+  "reusedArtifactsMatchPreviousValidation": true,
+  "cubicJar": {
+    "filename": "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar",
+    "sha256": "a1af3e5b53c3a54fdcadd3bb1e52d136ecdadf4bbf6377665e3c1ba53ad8aa28"
+  },
+  "labJar": {
+    "filename": "cubicchunks-lab-0.1.0-cleanroom.jar",
+    "sha256": "0b03070c689e1b269f925e73bac67f96af6e73c38bb7183b2768b4d57a113b2d"
+  },
+  "riven": {
+    "artifact": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\storage-pass-inputs\\riven.jar",
+    "sha256": "f2fc8f705b835107d36af5adeb8b4fb67c938d65794f3a6b52d815d2f4fbbd86",
+    "selection": "Explicit frozen lab input; active Riven build artifact unchanged"
+  },
+  "runtimeArtifacts": {
+    "server": {
+      "path": "E:\\WorldGenOverhaul\\.local\\instances\\cubic-lab-view12-01\\libraries\\com\\cleanroommc\\cleanroom\\0.7.2-alpha\\cleanroom-0.7.2-alpha-universal.jar",
+      "sha256": "3bf39d7f1db6798ff43a20e5fef924455cab2ea042cb1ea3ed01e08abb0f3a4e",
+      "version": "0.7.2-alpha"
+    },
+    "client": {
+      "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\cleanroommc\\cleanroom\\0.7.2-alpha\\cleanroom-0.7.2-alpha-universal.jar",
+      "sha256": "3bf39d7f1db6798ff43a20e5fef924455cab2ea042cb1ea3ed01e08abb0f3a4e",
+      "version": "0.7.2-alpha"
+    }
+  },
+  "pythonChecks": {
+    "tests": 22,
+    "failures": 0
+  },
+  "sharedSkillValidator": "passed",
+  "modBuildsRun": false,
+  "githubBuildDispatched": false,
+  "native": [
+    {
+      "phase": "write",
+      "passed": true,
+      "clientExitCode": 0,
+      "serverExitCode": 0,
+      "scenarios": [
+        {
+          "scenario": "idle",
+          "runId": "163e88a9-4fd4-42a3-bdcf-d7b9e90b59b5",
+          "observedDistances": [
+            12,
+            12,
+            12,
+            12
+          ],
+          "framesWithGui": 0,
+          "frameCount": 718
+        },
+        {
+          "scenario": "horizontal",
+          "runId": "a1f89bbd-a353-4471-87a0-2c18e345e23c",
+          "observedDistances": [
+            12,
+            12,
+            12,
+            12
+          ],
+          "framesWithGui": 0,
+          "frameCount": 2411
+        },
+        {
+          "scenario": "vertical",
+          "runId": "414f9489-b16a-44a6-846e-77c4244eb825",
+          "observedDistances": [
+            12,
+            12,
+            12,
+            12
+          ],
+          "framesWithGui": 0,
+          "frameCount": 1741
+        }
+      ]
+    },
+    {
+      "phase": "read",
+      "passed": true,
+      "clientExitCode": 0,
+      "serverExitCode": 0,
+      "scenarios": [
+        {
+          "scenario": "idle",
+          "runId": "b1591eff-1bdb-446e-8e65-e319100f6e44",
+          "observedDistances": [
+            12,
+            12,
+            12,
+            12
+          ],
+          "framesWithGui": 0,
+          "frameCount": 746
+        }
+      ]
+    }
+  ],
+  "visualInspection": {
+    "horizontal": "Visible ocean patches with incomplete terrain coverage at route endpoint.",
+    "vertical": "Upper endpoint capture is sky; no claim of full-height scene acceptance."
+  },
+  "limits": [
+    "Configuration/streaming observations, not full visible-volume completion or storage-marker qualification.",
+    "No JFR recorded; native costs cannot be attributed exclusively to a method.",
+    "One host/run, changed runtime/workload relative to retained distance-3 evidence; no isolated scaling or speedup claim."
+  ]
+}

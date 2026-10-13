@@ -1,0 +1,36 @@
+{
+  "tag_name": "0.7.2-alpha",
+  "published_at": "2026-10-13T19:03:22Z",
+  "html_url": "https://github.com/CleanroomMC/Cleanroom/releases/tag/0.7.2-alpha",
+  "assets": [
+    {
+      "name": "cleanroom-0.7.2-alpha-installer.jar",
+      "digest": "sha256:81d98071ed3a8b8599edd48e2966942cb18cb19a53c3f01a5d9321beeaf15e29",
+      "size": 54690000,
+      "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.2-alpha/cleanroom-0.7.2-alpha-installer.jar"
+    },
+    {
+      "name": "cleanroom-0.7.2-alpha-universal.jar",
+      "digest": "sha256:3bf39d7f1db6798ff43a20e5fef924455cab2ea042cb1ea3ed01e08abb0f3a4e",
+      "size": 52155092,
+      "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.2-alpha/cleanroom-0.7.2-alpha-universal.jar"
+    },
+    {
+      "name": "cleanroom-0.7.2-alpha.zip",
+      "digest": "sha256:0774845d7c9fceca77dba71f9abad7e89d5f1708ff813b3a4cb10e854ea3f7b3",
+      "size": 13202,
+      "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.2-alpha/cleanroom-0.7.2-alpha.zip"
+    }
+  ],
+  "notes": [
+    "SDL window and icon errors become non-fatal.",
+    "Fixes item capability equality, mending, bed orientation, placement context and biome-size hooks.",
+    "Updates OSHI and CleanroomGradle; native inputs remain separate from the active 0.6.13 development API.",
+    "Existing lab-only 0.7 ABI overlays selected; real client/server startup and four captures passed on 0.7.2."
+  ],
+  "originalApiResponse": {
+    "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\view12-runtime-review.json",
+    "sha256": "a620d0fee5d5332fcdaee0630694590b8cd5fb781781e88686423c0dcb51eef0",
+    "bytes": 9600
+  }
+}

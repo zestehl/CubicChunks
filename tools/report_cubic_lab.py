@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import re
 import shutil
+from cubic_lab import validate_view_distance_capture
 
 
 def fingerprint(path):
@@ -28,10 +29,13 @@ def main():
         if not data['passed']: raise ValueError('Incomplete native suite: ' + phase)
         for scenario in data['scenarios']:
             server, client = scenario['server'], scenario['client']
+            if manifest.get('viewDistance'): validate_view_distance_capture(manifest, server, client)
             if client['framesWithGui'] or not client['frameIntervals']['count']:
                 raise ValueError('Client capture is not an unobstructed world view')
             row = {'phase': phase, 'scenario': scenario['scenario'], 'run_id': scenario['runId'],
                 'operations': server['operations'], 'server_tick_count': server['serverTicks']['count'],
+                'horizontal_view_distance': server['horizontalViewDistance'], 'vertical_view_distance': server['verticalViewDistance'],
+                'client_render_distance': client['renderDistance'], 'client_vertical_distance': client['verticalViewDistance'],
                 'server_tick_mean_ms': server['serverTicks']['meanMs'], 'server_tick_p95_ms': server['serverTicks']['p95Ms'],
                 'server_tick_p99_ms': server['serverTicks']['p99Ms'], 'server_tick_max_ms': server['serverTicks']['maxMs'],
                 'frame_count': client['frameIntervals']['count'], 'frame_mean_ms': client['frameIntervals']['meanMs'],
@@ -107,8 +111,9 @@ def main():
     axis.set_title('Observed client cube loads by cube Y', loc='left'); axis.set_xlabel('Cube Y (each cube spans 16 blocks)')
     axis.set_ylabel('Load events during route'); axis.set_ylim(bottom=0); axis.grid(alpha=.2); axis.legend(frameon=False)
     axis.spines[['top', 'right']].set_visible(False)
-    vertical_distance = streaming[0]['server']['verticalViewDistance']
-    fig.text(.01, -.015, 'Six spectator waypoints per route. Counts are events, not unique cubes or retained heap. Effective server view distance: X/Z 3, vertical ' + str(vertical_distance) + '.', fontsize=9)
+    distances = sorted({(scenario['server']['horizontalViewDistance'], scenario['server']['verticalViewDistance']) for scenario in streaming})
+    distance_label = '; '.join(f'X/Z {horizontal}, vertical {vertical}' for horizontal, vertical in distances)
+    fig.text(.01, -.015, 'Six spectator waypoints per route. Counts are events, not unique cubes or retained heap. Effective server view distance: ' + distance_label + '.', fontsize=9)
     save(fig, output, 'cube-height-loads'); plt.close(fig)
     print(json.dumps({'scenarios': len(rows), 'output': str(output)}))
 
