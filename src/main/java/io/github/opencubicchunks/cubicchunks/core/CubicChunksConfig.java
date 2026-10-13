@@ -190,8 +190,8 @@ public class CubicChunksConfig {
     public static int defaultMaxHeight = 1 << 30;
 
     @Config.LangKey("cubicchunks.config.worldgen_watchdog_time_limit")
-    @Config.Comment("Maximum amount of time (milliseconds) generating a single chunk can take in vanilla compatibility generator before forcing a "
-            + "crash.")
+    @Config.Comment("Time (milliseconds) in vanilla compatibility generation before logging one diagnostic report. "
+            + "The watchdog does not stop or interrupt world generation.")
     public static int worldgenWatchdogTimeLimit = 10000;
 
     @Config.LangKey("cubicchunks.config.allow_vanilla_clients")

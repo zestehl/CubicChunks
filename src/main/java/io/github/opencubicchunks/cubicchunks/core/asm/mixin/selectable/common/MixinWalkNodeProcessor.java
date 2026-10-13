@@ -78,7 +78,7 @@ public abstract class MixinWalkNodeProcessor extends NodeProcessor {
         return worldIn.collidesWithAnyBlock(aabb);
     }
 
-    @ModifyVariable(method = "getPathNodeType", at = @At("HEAD"))
+    @ModifyVariable(method = "getPathNodeType(Lnet/minecraft/world/IBlockAccess;IIILnet/minecraft/entity/EntityLiving;IIIZZ)Lnet/minecraft/pathfinding/PathNodeType;", at = @At("HEAD"))
     private IBlockAccess getPathNodeTypeFromOwnBlockAccess(IBlockAccess world) {
         return this.blockaccess;
     }

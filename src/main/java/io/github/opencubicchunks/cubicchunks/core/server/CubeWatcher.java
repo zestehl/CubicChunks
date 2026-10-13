@@ -109,7 +109,7 @@ public class CubeWatcher implements ITicket, ICubeWatcher, BucketSorterEntry {
     }
 
     void removeScheduledAddPlayer(EntityPlayerMP player) {
-        playersToAdd.rem(player); // TODO: why does rem() and remove() exist separately?
+        playersToAdd.remove(player);
     }
 
     void addScheduledPlayers() {

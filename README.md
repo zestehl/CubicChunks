@@ -1,5 +1,16 @@
 # Cubic Chunks Minecraft Mod
 
+This fork develops Minecraft 1.12.2 support for Cleanroom 0.6.13-alpha and
+JDK 25 for Riven, with Forge 14.23.5.2860 / Java 8 as a separate fallback.
+See [the port and validation notes](docs/cleanroom-port.md) and use the
+dedicated `cleanroom/` Gradle project. The original ForgeGradle build remains
+available at the repository root. This is development work, not a qualified
+release or a claim of compatibility with every CubicChunks addon.
+
+The fork starts from [OpenCubicChunks/CubicChunks](https://github.com/OpenCubicChunks/CubicChunks)
+commit `53847757c7998f3541fccc8c9b5d23dd23e4077d`. Upstream authorship, license
+headers, and the original project information below are retained.
+
 This MinecraftForge mod extends Minecraft height and depth. The only limitation is size of 32-bit integer.
 
 [![Build Status](https://travis-ci.org/OpenCubicChunks/CubicChunks.svg?branch=MC_1.12)](https://travis-ci.org/OpenCubicChunks/CubicChunks)

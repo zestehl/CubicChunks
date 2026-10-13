@@ -1,0 +1,9 @@
+workload,implementation,keys,distinct_hashes,largest_equal_hash_group,buckets,occupied_buckets,largest_bucket
+vertical_z_zero,upstream,16384,1,16384,32768,1,16384
+vertical_z_zero,coordinate_mix,16384,16384,1,32768,12243,6
+horizontal_y_zero,upstream,16384,1,16384,32768,1,16384
+horizontal_y_zero,coordinate_mix,16384,16384,1,32768,13280,5
+origin_plane,upstream,16384,128,128,32768,128,128
+origin_plane,coordinate_mix,16384,16384,1,32768,13039,5
+volume_32,upstream,32768,6208,63,32768,5733,69
+volume_32,coordinate_mix,32768,32768,1,32768,20601,7

@@ -48,7 +48,14 @@ class QueuedCube {
 
     @Override
     public int hashCode() {
-        return (x * 31 + y * 23 * z * 29) ^ world.hashCode();
+        return hashCoordinates(x, y, z) ^ world.hashCode();
+    }
+
+    static int hashCoordinates(int x, int y, int z) {
+        // Mix coordinates independently so axis-aligned loads do not share one hash.
+        int hash = x * 0x9E3779B9;
+        hash = (Integer.rotateLeft(hash, 13) ^ y) * 0x9E3779B9;
+        return (Integer.rotateLeft(hash, 13) ^ z) * 0x9E3779B9;
     }
 
     @Override

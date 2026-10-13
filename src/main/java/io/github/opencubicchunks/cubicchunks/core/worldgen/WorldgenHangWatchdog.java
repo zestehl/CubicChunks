@@ -28,9 +28,6 @@ import io.github.opencubicchunks.cubicchunks.core.CubicChunks;
 import io.github.opencubicchunks.cubicchunks.core.CubicChunksConfig;
 import io.github.opencubicchunks.cubicchunks.core.util.CompatHandler;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.WeakHashMap;
@@ -44,7 +41,7 @@ public class WorldgenHangWatchdog {
 
     private static final Thread thread = init();
 
-    private final WeakHashMap<Thread, Entry> entries = new WeakHashMap<>();
+    private final WeakHashMap<Thread, WorldgenWatchdogEntry> entries = new WeakHashMap<>();
 
     private static volatile String crashInfo = null;
 
@@ -62,9 +59,9 @@ public class WorldgenHangWatchdog {
         synchronized (INSTANCE.entries) {
             INSTANCE.entries.compute(Thread.currentThread(), (t, old) -> {
                 if (old == null) {
-                    return new Entry();
+                    return new WorldgenWatchdogEntry(System.nanoTime());
                 }
-                old.count++;
+                old.enter();
                 return old;
             });
         }
@@ -72,13 +69,9 @@ public class WorldgenHangWatchdog {
 
     public static void endWorldGen() {
         synchronized (INSTANCE.entries) {
-            Entry e = INSTANCE.entries.get(Thread.currentThread());
-            if (e != null) {
-                if (e.count <= 0) {
-                    INSTANCE.entries.remove(Thread.currentThread());
-                } else {
-                    e.count--;
-                }
+            WorldgenWatchdogEntry e = INSTANCE.entries.get(Thread.currentThread());
+            if (e != null && e.leave()) {
+                INSTANCE.entries.remove(Thread.currentThread());
             }
         }
     }
@@ -91,7 +84,6 @@ public class WorldgenHangWatchdog {
         return t;
     }
 
-    @SuppressWarnings("deprecation")
     private void run() {
         if (!ENABLED) {
             return;
@@ -103,25 +95,29 @@ public class WorldgenHangWatchdog {
                 e.printStackTrace();
             }
             synchronized (entries) {
-                for (Iterator<Map.Entry<Thread, Entry>> iterator = entries.entrySet().iterator(); iterator.hasNext(); ) {
-                    Map.Entry<Thread, Entry> entry = iterator.next();
+                for (Map.Entry<Thread, WorldgenWatchdogEntry> entry : entries.entrySet()) {
                     Thread t = entry.getKey();
-                    Entry e = entry.getValue();
+                    WorldgenWatchdogEntry e = entry.getValue();
+                    if (e.isReported()) {
+                        continue;
+                    }
 
-                    e.samples.add(t.getStackTrace());
+                    e.sample(t.getStackTrace());
 
                     long currentTime = System.nanoTime();
 
-                    long dt = currentTime - e.startTime;
+                    long dt = e.elapsedNanos(currentTime);
 
-                    if (dt > TimeUnit.MILLISECONDS.toNanos(CubicChunksConfig.worldgenWatchdogTimeLimit)) {
+                    if (e.claimReport(currentTime, TimeUnit.MILLISECONDS.toNanos(CubicChunksConfig.worldgenWatchdogTimeLimit))) {
                         StringBuilder sb = new StringBuilder();
                         sb.append("World generation taking ").append(dt / (double) TimeUnit.SECONDS.toNanos(1))
-                                .append(" seconds, should be less than 50ms. Stopping the server.\n");
+                                .append(" seconds, exceeding the configured watchdog limit.\n")
+                                .append("Diagnostic only: the generation thread has not been stopped or interrupted.\n");
 
-                        sb.append("Samples collected during world generation:\n");
+                        sb.append("Most recent world generation samples (at most ")
+                                .append(WorldgenWatchdogEntry.MAX_SAMPLES).append("):\n");
                         int i = 1;
-                        for (StackTraceElement[] stacktrace : e.samples) {
+                        for (StackTraceElement[] stacktrace : e.samples()) {
                             sb.append("--------------------------------------------\n");
 
                             Set<String> likelyModsInvolved = CompatHandler.getModsForStacktrace(stacktrace);
@@ -135,23 +131,11 @@ public class WorldgenHangWatchdog {
                         }
                         String msg = sb.toString();
                         crashInfo = msg;
-                        CubicChunks.LOGGER.fatal(msg);
-                        t.stop();
-                        iterator.remove();
+                        CubicChunks.LOGGER.error(msg);
                     }
                 }
             }
         }
     }
 
-    private static class Entry {
-
-        long startTime;
-        int count;
-        List<StackTraceElement[]> samples = new ArrayList<>();
-
-        Entry() {
-            startTime = System.nanoTime();
-        }
-    }
 }

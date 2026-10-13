@@ -99,8 +99,8 @@ import javax.annotation.ParametersAreNonnullByDefault;
 // we can't implement them directly as that causes FG6+ to reobfuscate IColumn#getHeightValue(int, int)
 // into vanilla SRG name, which breaks API and mixins
 @Implements({
-        @Interface(iface = IColumn.class, prefix = "chunk$"),
-        @Interface(iface = IColumnInternal.class, prefix = "chunk_internal$")
+        @Interface(iface = IColumn.class, prefix = "chunk$", remap = Interface.Remap.ONLY_PREFIXED),
+        @Interface(iface = IColumnInternal.class, prefix = "chunk_internal$", remap = Interface.Remap.ONLY_PREFIXED)
 })
 public abstract class MixinChunk_Cubes {
 

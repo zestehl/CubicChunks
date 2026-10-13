@@ -1,0 +1,138 @@
+{
+  "generated_utc": "2026-10-13T01:47:58.129290+00:00",
+  "scope": "Measured synthetic coordinate hash distribution; no native runtime or wall-clock speedup claim.",
+  "captures_match": true,
+  "world_hash_contribution": 0,
+  "synthetic_bucket_count": 32768,
+  "source_sha256": {
+    "src\\main\\java\\io\\github\\opencubicchunks\\cubicchunks\\core\\server\\chunkio\\async\\forge\\QueuedCube.java": "ea4c27441dcacae387c137075266d5bda35ee61f2140ec62e087387514b97e02",
+    "src\\test\\java\\io\\github\\opencubicchunks\\cubicchunks\\core\\server\\chunkio\\async\\forge\\TestQueuedCubeHash.java": "82f0e8bc80c7c2972c20498c5b59af9c45190d5a99ee14a531c78b9ce3544eb5",
+    "src\\test\\java\\io\\github\\opencubicchunks\\cubicchunks\\core\\server\\chunkio\\async\\forge\\QueuedCubeHashDiagnostic.java": "1dc8ae908be77b0330393efc5e012888edf9463bff625387367477921ca2dae0",
+    "tools\\measure_queued_cube_hash.py": "96a22ef9eb6b55058badea0231f1ac0d467f184ba69c6952a656ff5ead51ccfe"
+  },
+  "plot_script_sha256": "6936e1c06088a89df9bac52a4b8b3450867c3f1a6e6df6239f7f0a65fe206689",
+  "csv_sha256": {
+    "hash-distribution-java25.csv": "d6f62ac0638720b3ac41ba598753c15b4bd07302e32a815ada0d3a2e0ae3901e",
+    "hash-distribution-java8.csv": "d6f62ac0638720b3ac41ba598753c15b4bd07302e32a815ada0d3a2e0ae3901e"
+  },
+  "runtimes": [
+    {
+      "profile": "cleanroom-0.6.13-alpha",
+      "java_version": "openjdk version \"25.0.3\" 2026-04-21 LTS",
+      "mapped_api_sha256": "c0ab97b399e10ece8ff4d94bbbefd38bae46d2b8074b3c914c59920ad00b92ee"
+    },
+    {
+      "profile": "forge-1.12.2-14.23.5.2860",
+      "java_version": "openjdk version \"1.8.0_492\"",
+      "mapped_api_sha256": "7ef9016633da3da72cadc2e4d312e944080a455c4ce5b4d7c64b193cc686000d"
+    }
+  ],
+  "validation": {
+    "compiled_release": 8,
+    "compile_fixture": "MCP nullability annotation only",
+    "regression_tests": "passed on Java 25 and Java 8",
+    "original_expression_negative_control": "failed as expected"
+  },
+  "workloads": [
+    {
+      "id": "vertical_z_zero",
+      "coordinates": "x = 8; y = -8192..8191; z = 0",
+      "keys": 16384,
+      "upstream": {
+        "workload": "vertical_z_zero",
+        "implementation": "upstream",
+        "keys": 16384,
+        "distinct_hashes": 1,
+        "largest_equal_hash_group": 16384,
+        "buckets": 32768,
+        "occupied_buckets": 1,
+        "largest_bucket": 16384
+      },
+      "coordinate_mix": {
+        "workload": "vertical_z_zero",
+        "implementation": "coordinate_mix",
+        "keys": 16384,
+        "distinct_hashes": 16384,
+        "largest_equal_hash_group": 1,
+        "buckets": 32768,
+        "occupied_buckets": 12243,
+        "largest_bucket": 6
+      }
+    },
+    {
+      "id": "horizontal_y_zero",
+      "coordinates": "x = 8; y = 0; z = -8192..8191",
+      "keys": 16384,
+      "upstream": {
+        "workload": "horizontal_y_zero",
+        "implementation": "upstream",
+        "keys": 16384,
+        "distinct_hashes": 1,
+        "largest_equal_hash_group": 16384,
+        "buckets": 32768,
+        "occupied_buckets": 1,
+        "largest_bucket": 16384
+      },
+      "coordinate_mix": {
+        "workload": "horizontal_y_zero",
+        "implementation": "coordinate_mix",
+        "keys": 16384,
+        "distinct_hashes": 16384,
+        "largest_equal_hash_group": 1,
+        "buckets": 32768,
+        "occupied_buckets": 13280,
+        "largest_bucket": 5
+      }
+    },
+    {
+      "id": "origin_plane",
+      "coordinates": "x, z = -64..63; y = 0",
+      "keys": 16384,
+      "upstream": {
+        "workload": "origin_plane",
+        "implementation": "upstream",
+        "keys": 16384,
+        "distinct_hashes": 128,
+        "largest_equal_hash_group": 128,
+        "buckets": 32768,
+        "occupied_buckets": 128,
+        "largest_bucket": 128
+      },
+      "coordinate_mix": {
+        "workload": "origin_plane",
+        "implementation": "coordinate_mix",
+        "keys": 16384,
+        "distinct_hashes": 16384,
+        "largest_equal_hash_group": 1,
+        "buckets": 32768,
+        "occupied_buckets": 13039,
+        "largest_bucket": 5
+      }
+    },
+    {
+      "id": "volume_32",
+      "coordinates": "x, y, z = -16..15",
+      "keys": 32768,
+      "upstream": {
+        "workload": "volume_32",
+        "implementation": "upstream",
+        "keys": 32768,
+        "distinct_hashes": 6208,
+        "largest_equal_hash_group": 63,
+        "buckets": 32768,
+        "occupied_buckets": 5733,
+        "largest_bucket": 69
+      },
+      "coordinate_mix": {
+        "workload": "volume_32",
+        "implementation": "coordinate_mix",
+        "keys": 32768,
+        "distinct_hashes": 32768,
+        "largest_equal_hash_group": 1,
+        "buckets": 32768,
+        "occupied_buckets": 20601,
+        "largest_bucket": 7
+      }
+    }
+  ]
+}
