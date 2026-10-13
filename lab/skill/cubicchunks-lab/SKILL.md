@@ -47,8 +47,13 @@ Paths below are relative to the fork. Invoke tools with the workspace interprete
 | Export measurements and real captures | `tools/report_cubic_lab.py --lab-directory <lab> --output <new-output>` |
 | Inspect stopped-world storage | `tools/inspect_cubic_lab_world.py <world> --output <json>` |
 | Analyze recorded profiles | `tools/profile_cubic_lab.py --lab-directory <lab> --output <new-output>`; it supplies exact scenario windows to the existing JFR analyzer |
+| Check preliminary JVM/API contract findings | Read `docs/JAVA25-OPPORTUNITY-AUDIT.md`, then `tools/probe_java_opportunities.py --output <new-output>` after both main builds. This uses actual named classes in ordinary JVMs; it is not an in-game test or a speedup measurement. |
 
 CLI scenarios have prerequisites. Consult `LabJob.java` and the guide before using `--scenarios`: `generate` precedes `resident` and `save`; `save` precedes fresh-JVM `load-sync` and `load-async`, which use separate cohorts. Their current fixture spans Riven's allocated height and verifies every stored marker. A streaming-only selection does not establish storage correctness. If Riven's allocated bounds change, adapt the fixture, route, coverage checks, inspector and report together instead of silently trimming the height.
+
+For renderer/shader compatibility, use `prepare --client-profile celeritas` or `--client-profile celeritas-demonica` with a new name. Read `lab/profiles/client-renderers.json` and the guide for exact pins and current qualification. These are client-only external inputs; preserve the dedicated server and baseline. Demonica requires its accepted Celeritas hash. Keep lighting samples, section access, mesh invalidation and height coverage explicit; startup/packet receipt alone does not prove full-height rendering or active shader compatibility. Do not import, patch or maintain either renderer/shader mod as CubicChunks functionality.
+
+Read `docs/RENDERER-COMPATIBILITY.md` before launching these currently blocked combinations. `prepare --runtime-release 0.6.13-alpha` is an explicit supported-loader diagnostic option, not a change to the default/latest lab or active Riven profile. Preserve renderer/loader injection failures rather than suppressing required injections to report a pass. Reuse existing verified Java artifacts for these profile tests unless code changes require rebuilding.
 
 ## Own the run and preserve its inputs
 
@@ -84,6 +89,6 @@ Existing measured suites are historical evidence, not acceptance thresholds for 
 
 Keep executable operations in the repository's existing tools and optional mod. When adding scenarios, metrics, commands or loader support, update the command/packet handling, capture/schema, exporter/inspector or profiler consumers as applicable, and the lab guide in the same change. Update this skill's routing only when agent operations or essential constraints change; keep numerical baselines and release-specific details in the maintained guide and measurement artifacts.
 
-Validate both artifacts when shared Java code changes. Keep Cleanroom-only classes isolated from Forge. Run relevant focused checks and native coverage appropriate to the change; do not present CI as a graphical run. Use a fresh environment for changed binaries/configuration and retain exact evidence.
+Validate both artifacts when shared Java code changes. Keep Cleanroom-only classes isolated from Forge. Run relevant focused checks and native coverage appropriate to the change; do not present CI as a graphical run. The GitHub build workflow is manual: do not dispatch it merely because a commit was made. Reuse verified artifacts for documentation, profile or orchestration changes; rebuild when the candidate Java code/dependencies actually require it. Use a fresh environment for changed binaries/configuration and retain exact evidence.
 
 The canonical skill is `lab/skill/cubicchunks-lab`. This machine's shared `C:\Users\trevo\.codex\skills\cubicchunks-lab` is a directory junction to it, so repository changes reach the installed skill without maintaining a second copy. Other agents can load it as `$cubicchunks-lab` or follow the Riven `AGENTS.md` pointer. On a different machine, install or link the canonical folder under that agent's Codex skills directory and resolve workspace paths there.

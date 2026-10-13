@@ -1,0 +1,851 @@
+{
+  "schema": "cubiclab.renderer-compatibility.v1",
+  "scope": "Unmodified external client inputs; startup failures retained; no rendered-world or shader performance qualification",
+  "environments": [
+    {
+      "name": "renderer-pair-01",
+      "release": {
+        "tag_name": "0.7.0-alpha",
+        "published_at": "2026-10-13T11:14:27Z",
+        "html_url": "https://github.com/CleanroomMC/Cleanroom/releases/tag/0.7.0-alpha",
+        "assets": [
+          {
+            "url": "https://api.github.com/repos/CleanroomMC/Cleanroom/releases/assets/636785948",
+            "id": 636785948,
+            "node_id": "RA_kwDOI-HmMc4l9JUc",
+            "name": "cleanroom-0.7.0-installer.jar",
+            "label": "",
+            "uploader": {
+              "login": "github-actions[bot]",
+              "id": 41898282,
+              "node_id": "MDM6Qm90NDE4OTgyODI=",
+              "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+              "html_url": "https://github.com/apps/github-actions",
+              "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+              "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+              "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+              "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+              "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+              "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+              "type": "Bot",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "application/java-archive",
+            "state": "uploaded",
+            "size": 54720327,
+            "digest": "sha256:c8360bb9f33e84446a40e3118692f5bde116c236805441e8321564c1882b517d",
+            "download_count": 41,
+            "created_at": "2026-10-13T11:14:24Z",
+            "updated_at": "2026-10-13T11:14:27Z",
+            "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.0-alpha/cleanroom-0.7.0-installer.jar"
+          },
+          {
+            "url": "https://api.github.com/repos/CleanroomMC/Cleanroom/releases/assets/636785946",
+            "id": 636785946,
+            "node_id": "RA_kwDOI-HmMc4l9JUa",
+            "name": "cleanroom-0.7.0-universal.jar",
+            "label": "",
+            "uploader": {
+              "login": "github-actions[bot]",
+              "id": 41898282,
+              "node_id": "MDM6Qm90NDE4OTgyODI=",
+              "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+              "html_url": "https://github.com/apps/github-actions",
+              "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+              "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+              "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+              "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+              "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+              "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+              "type": "Bot",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "application/java-archive",
+            "state": "uploaded",
+            "size": 52185033,
+            "digest": "sha256:33a740e06b8c2ef4f51f0158f322eaeb4a8f692aa0475b843f1070fe1e07f247",
+            "download_count": 10,
+            "created_at": "2026-10-13T11:14:24Z",
+            "updated_at": "2026-10-13T11:14:27Z",
+            "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.0-alpha/cleanroom-0.7.0-universal.jar"
+          },
+          {
+            "url": "https://api.github.com/repos/CleanroomMC/Cleanroom/releases/assets/636785949",
+            "id": 636785949,
+            "node_id": "RA_kwDOI-HmMc4l9JUd",
+            "name": "cleanroom-0.7.0.zip",
+            "label": "",
+            "uploader": {
+              "login": "github-actions[bot]",
+              "id": 41898282,
+              "node_id": "MDM6Qm90NDE4OTgyODI=",
+              "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+              "html_url": "https://github.com/apps/github-actions",
+              "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+              "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+              "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+              "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+              "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+              "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+              "type": "Bot",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "application/zip",
+            "state": "uploaded",
+            "size": 13156,
+            "digest": "sha256:f3e564f2480fd92abc4a3210f3d3dddb3b2a05f30f17922922a0bcc7b5110b03",
+            "download_count": 132,
+            "created_at": "2026-10-13T11:14:24Z",
+            "updated_at": "2026-10-13T11:14:25Z",
+            "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.0-alpha/cleanroom-0.7.0.zip"
+          }
+        ]
+      },
+      "runtimeVersion": "0.7.0",
+      "runtimeSelection": null,
+      "clientProfile": {
+        "name": "celeritas-demonica",
+        "definitionSha256": "e9be8f6dd1a5b4652d08fede6f73e8d086b1219e8416832da2a77d47c5da5320",
+        "mods": [
+          {
+            "filename": "celeritas-forge-mc12.2-2.5.0-autobuild.9b661b70.jar",
+            "version": "2.5.0-autobuild.9b661b70",
+            "source": "https://git.taumc.org/embeddedt/celeritas",
+            "sourceCommit": "9b661b70ecaf84c39052e8fbc51c875ba37e739d",
+            "url": "https://maven.outlands.top/releases/org/embeddedt/celeritas-forge-mc12.2/2.5.0-autobuild.9b661b70/celeritas-forge-mc12.2-2.5.0-autobuild.9b661b70.jar",
+            "sha256": "5bf123a6da6190f6e061cd3fd069a2bddcbf6ebf57894381b6c888c06a94f982",
+            "reason": "Requested external terrain-renderer compatibility input; this exact unmodified upstream build is accepted by Demonica's runtime hash guard.",
+            "binaryProvenance": "Third-party upstream auto-build republished on Maven, explicitly pinned by Demonica. Celeritas upstream distributes source rather than official mod binaries.",
+            "license": "LGPL-3.0",
+            "slug": "celeritas",
+            "side": "client"
+          },
+          {
+            "filename": "Demonica-0.7.3.jar",
+            "version": "0.7.3",
+            "source": "https://github.com/ndellagrotte/Demonica",
+            "sourceCommit": "705f596e7800d3dca20a61dd74753d7586beabc1",
+            "release": "https://github.com/ndellagrotte/Demonica/releases/tag/v0.7.3",
+            "url": "https://github.com/ndellagrotte/Demonica/releases/download/v0.7.3/Demonica-0.7.3.jar",
+            "sha256": "0b13f26d02d2b6081b8d6b7c913d207485052f3b39a182f9069e978e581c4b1d",
+            "reason": "Requested external Iris/GLSM/shader compatibility input, alongside its accepted Celeritas build; no renderer/shader implementation is imported into CubicChunks.",
+            "requires": [
+              "celeritas"
+            ],
+            "license": "AGPL-3.0 with upstream bundled notices",
+            "slug": "demonica",
+            "side": "client"
+          }
+        ],
+        "ownership": "External unmodified runtime compatibility inputs; no source or responsibilities embedded into CubicChunks"
+      },
+      "serverModHashes": {
+        "+Fugue-0.24.4.jar": "438248925eb38d16b6b4bcbe6247339b2a745cfe586d4917985f7d925a5d8630",
+        "ae2-uel-v0.56.6.jar": "57e68134a5caead143856659aca8d711845ff90b3ffbcf48071f0a409d09f6a7",
+        "athenaeum-1.12.2-1.19.6.jar": "2aea9497d5414bfaefa05cc7c0162850f01dbb96b72ee3db36b5924573336271",
+        "Bubbles-2.4.10.jar": "8a54cb9abafb14ce66bbc61fbfe5846fdeb3a4cf6ca6ff3bbd6bfe7b16f595f2",
+        "CodeChickenLib-1.12.2-3.2.3.358-universal.jar": "5f8499f7ee2590e45110bbf296b2bf101aec15897e28d5e9759cf8f2387d8a74",
+        "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar": "903e1cd3f3e2c3af07e9e50de4177b17b70a8e9581e9c41ac3bb14d8e9b15ae8",
+        "cubicchunks-lab-0.1.0-cleanroom.jar": "9390e96e6933accf613252d701c9ac8463cf92d6a06de0b67aebf0e3cc6e3f56",
+        "dropt-1.12.2-1.19.4.jar": "21837ce855ad3304fa2aa2cc4d29fe5989cd61f09fa8fc1f9f4e53dedbacfd04",
+        "FTBLib-5.4.7.2.jar": "623fc574f0227fec6cc9e26c3879a605f9b4499c0078ff085291901a5495a6ac",
+        "geckolib-forge-1.12.2-3.0.31.jar": "b00bc9de4e3e94cea0455f8d58b295c1464272135e842bdf3170c2c955c871a5",
+        "GregicalityMultiblocks-1.2.11.jar": "dc250750b86c4d95bb68fe1681d48ce912efa1472ec0355c30e625d41a0591da",
+        "gregtech-1.12.2-2.8.10-beta.jar": "54744bb11ea4679df4b55846d8073e9bb2ef8c1c53aae8aee41cda3fc22d927e",
+        "gregtechfoodoption-1.12.2-1.12.10.jar": "2d57d4313f02bf05ef411f063b5ab93c988cdda2dfef1f0ff6789ae68aaa72ba",
+        "groovyscript-1.4.3.jar": "07617b7ce9170a857199bd61d730a0db3af2685cf83d31734a2d4b628fda7533",
+        "ImmersiveRailroading-1.12.2-forge-1.10.0.jar": "de5483f7d06642ca8de38bbb56852559cafe5bcbebe38f680c391fd766d36022",
+        "modularui-3.1.6.jar": "4c16829c70b322aab735e73f53608fcabbf1d14956d5365c0c2b911c4d4dca54",
+        "OpenComputers-MC1.12.2-1.8.9a+8ca336f.jar": "a5d0fc97a809314529b55cac5ef5484b960cb364fc7f944148bcc0ac8694238f",
+        "pyrotech-1.12.2-1.6.19.jar": "7ed4b889a8ae912e51726d5d20d4893486b8b02fd21cedadd92c204b898ad920",
+        "riven.jar": "07ebdb8ee3080a62ca26b3e95e694e98c2425f8ca14e2f07f7c2c55ce86ce431",
+        "Scalar Legacy-1.0.1.jar": "350d1c378f3b0ac8e7b3df0432482bbb5341c79d07df843c747be1d5fdc23cfe",
+        "Supercritical-0.2.7.jar": "a75383ebb268d561864abc81d5bef8000363ec059fb7d3f348364c4e56fc2559",
+        "SussyPatches-1.11.10.jar": "0f821e696b5d3d0f55ef9c3b2b6442c10ad22503155a2c7cdff8ba93f1cbc9c0",
+        "Susy-Core-0.2.1.jar": "6ed74994835b176d35e4cf215106d5f6d1864c4c24fe81faa94c16eea39991b8",
+        "TrackAPI-1.2.jar": "5fd930eb6afb769f3c806a5356fb09f842fd6679a5a04c53d3be934152c482bc",
+        "UniversalModCore-1.12.2-forge-1.2.2-3d12767.jar": "c2f71ad972320457cc37bacc999a46900964597df00ecc922f7649628560d823"
+      },
+      "clientModHashes": {
+        "+Fugue-0.24.4.jar": "438248925eb38d16b6b4bcbe6247339b2a745cfe586d4917985f7d925a5d8630",
+        "ae2-uel-v0.56.6.jar": "57e68134a5caead143856659aca8d711845ff90b3ffbcf48071f0a409d09f6a7",
+        "athenaeum-1.12.2-1.19.6.jar": "2aea9497d5414bfaefa05cc7c0162850f01dbb96b72ee3db36b5924573336271",
+        "Bubbles-2.4.10.jar": "8a54cb9abafb14ce66bbc61fbfe5846fdeb3a4cf6ca6ff3bbd6bfe7b16f595f2",
+        "celeritas-forge-mc12.2-2.5.0-autobuild.9b661b70.jar": "5bf123a6da6190f6e061cd3fd069a2bddcbf6ebf57894381b6c888c06a94f982",
+        "CodeChickenLib-1.12.2-3.2.3.358-universal.jar": "5f8499f7ee2590e45110bbf296b2bf101aec15897e28d5e9759cf8f2387d8a74",
+        "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar": "903e1cd3f3e2c3af07e9e50de4177b17b70a8e9581e9c41ac3bb14d8e9b15ae8",
+        "cubicchunks-lab-0.1.0-cleanroom.jar": "9390e96e6933accf613252d701c9ac8463cf92d6a06de0b67aebf0e3cc6e3f56",
+        "Demonica-0.7.3.jar": "0b13f26d02d2b6081b8d6b7c913d207485052f3b39a182f9069e978e581c4b1d",
+        "dropt-1.12.2-1.19.4.jar": "21837ce855ad3304fa2aa2cc4d29fe5989cd61f09fa8fc1f9f4e53dedbacfd04",
+        "FTBLib-5.4.7.2.jar": "623fc574f0227fec6cc9e26c3879a605f9b4499c0078ff085291901a5495a6ac",
+        "geckolib-forge-1.12.2-3.0.31.jar": "b00bc9de4e3e94cea0455f8d58b295c1464272135e842bdf3170c2c955c871a5",
+        "GregicalityMultiblocks-1.2.11.jar": "dc250750b86c4d95bb68fe1681d48ce912efa1472ec0355c30e625d41a0591da",
+        "gregtech-1.12.2-2.8.10-beta.jar": "54744bb11ea4679df4b55846d8073e9bb2ef8c1c53aae8aee41cda3fc22d927e",
+        "gregtechfoodoption-1.12.2-1.12.10.jar": "2d57d4313f02bf05ef411f063b5ab93c988cdda2dfef1f0ff6789ae68aaa72ba",
+        "groovyscript-1.4.3.jar": "07617b7ce9170a857199bd61d730a0db3af2685cf83d31734a2d4b628fda7533",
+        "ImmersiveRailroading-1.12.2-forge-1.10.0.jar": "de5483f7d06642ca8de38bbb56852559cafe5bcbebe38f680c391fd766d36022",
+        "modularui-3.1.6.jar": "4c16829c70b322aab735e73f53608fcabbf1d14956d5365c0c2b911c4d4dca54",
+        "OpenComputers-MC1.12.2-1.8.9a+8ca336f.jar": "a5d0fc97a809314529b55cac5ef5484b960cb364fc7f944148bcc0ac8694238f",
+        "pyrotech-1.12.2-1.6.19.jar": "7ed4b889a8ae912e51726d5d20d4893486b8b02fd21cedadd92c204b898ad920",
+        "riven.jar": "07ebdb8ee3080a62ca26b3e95e694e98c2425f8ca14e2f07f7c2c55ce86ce431",
+        "Scalar Legacy-1.0.1.jar": "350d1c378f3b0ac8e7b3df0432482bbb5341c79d07df843c747be1d5fdc23cfe",
+        "Supercritical-0.2.7.jar": "a75383ebb268d561864abc81d5bef8000363ec059fb7d3f348364c4e56fc2559",
+        "SussyPatches-1.11.10.jar": "0f821e696b5d3d0f55ef9c3b2b6442c10ad22503155a2c7cdff8ba93f1cbc9c0",
+        "Susy-Core-0.2.1.jar": "6ed74994835b176d35e4cf215106d5f6d1864c4c24fe81faa94c16eea39991b8",
+        "TrackAPI-1.2.jar": "5fd930eb6afb769f3c806a5356fb09f842fd6679a5a04c53d3be934152c482bc",
+        "UniversalModCore-1.12.2-forge-1.2.2-3d12767.jar": "c2f71ad972320457cc37bacc999a46900964597df00ecc922f7649628560d823"
+      },
+      "cubicJar": {
+        "filename": "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar",
+        "sha256": "903e1cd3f3e2c3af07e9e50de4177b17b70a8e9581e9c41ac3bb14d8e9b15ae8"
+      },
+      "labJar": {
+        "filename": "cubicchunks-lab-0.1.0-cleanroom.jar",
+        "sha256": "9390e96e6933accf613252d701c9ac8463cf92d6a06de0b67aebf0e3cc6e3f56"
+      },
+      "riven": {
+        "artifact": "build\\cleanroom-cubic-experiment\\libs\\riven-0.1.0-dev-cleanroom.jar",
+        "sha256": "07ebdb8ee3080a62ca26b3e95e694e98c2425f8ca14e2f07f7c2c55ce86ce431"
+      },
+      "java": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\java.exe",
+      "nativePrime": {
+        "purpose": "Generate dependency-owned first-use inputs and restart both native processes",
+        "passed": false
+      },
+      "worldJoined": false,
+      "measuredSuiteStarted": false,
+      "classification": "Demonica/S8TNLib GLFW context lookup unavailable on SDL3 runtime",
+      "relevantLogLines": [
+        "[10:32:01] [main/INFO]: celeritas-forge-mc12.2-2.5.0-autobuild.9b661b70.jar is the Celeritas build this Demonica was made for (upstream 9b661b70, SHA-256 5bf123a6)",
+        "java.lang.NoClassDefFoundError: org/lwjgl/glfw/GLFW"
+      ],
+      "evidence": [
+        {
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-pair-01\\runs\\prime\\server.log",
+          "bytes": 776724,
+          "sha256": "fa11c2f1b96ec31320cede6655dc316f984cd41657288b048ac5e3546246debf"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-pair-01\\runs\\prime\\client.log",
+          "bytes": 18356,
+          "sha256": "d7fa108de48967fb6a8402fff0a9893c7e21f7af96b2b7e284cf594743aae1d4"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-pair-01\\runs\\prime\\result.json",
+          "bytes": 119,
+          "sha256": "01211b0b767e89ce33ff24433d52581fad82d4f6875401cb18d73590feaba6e5"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-pair-01\\client\\crash-reports\\crash-2026-10-13_10.32.04-client.txt",
+          "bytes": 6290,
+          "sha256": "ed6dcff4736986a465f2784ea16e346ace21f5c958f3d36449ca0c91ef6f01c4"
+        }
+      ],
+      "prismImport": {
+        "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-pair-01\\CubicChunks-Lab-Prism.zip",
+        "sha256": "6be556a4929c8c04c94b85f679fbbcc7c5985840e1720a889b9a0e20a059de70",
+        "primed": false
+      }
+    },
+    {
+      "name": "renderer-pair-0613-01",
+      "release": {
+        "tag_name": "0.6.13-alpha",
+        "published_at": "2026-09-12T13:25:19Z",
+        "html_url": "https://github.com/CleanroomMC/Cleanroom/releases/tag/0.6.13-alpha",
+        "assets": [
+          {
+            "url": "https://api.github.com/repos/CleanroomMC/Cleanroom/releases/assets/559308060",
+            "id": 559308060,
+            "node_id": "RA_kwDOI-HmMc4hVl0c",
+            "name": "cleanroom-0.6.13-alpha-installer.jar",
+            "label": "",
+            "uploader": {
+              "login": "github-actions[bot]",
+              "id": 41898282,
+              "node_id": "MDM6Qm90NDE4OTgyODI=",
+              "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+              "html_url": "https://github.com/apps/github-actions",
+              "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+              "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+              "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+              "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+              "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+              "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+              "type": "Bot",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "raw",
+            "state": "uploaded",
+            "size": 6841136,
+            "digest": "sha256:063561f5acd49ea20defe03ed6d882041317c4558332f6de49112fc648214352",
+            "download_count": 2964,
+            "created_at": "2026-09-12T13:25:23Z",
+            "updated_at": "2026-09-12T13:25:24Z",
+            "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.6.13-alpha/cleanroom-0.6.13-alpha-installer.jar"
+          },
+          {
+            "url": "https://api.github.com/repos/CleanroomMC/Cleanroom/releases/assets/559308038",
+            "id": 559308038,
+            "node_id": "RA_kwDOI-HmMc4hVl0G",
+            "name": "cleanroom-0.6.13-alpha-sources.jar",
+            "label": "",
+            "uploader": {
+              "login": "github-actions[bot]",
+              "id": 41898282,
+              "node_id": "MDM6Qm90NDE4OTgyODI=",
+              "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+              "html_url": "https://github.com/apps/github-actions",
+              "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+              "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+              "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+              "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+              "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+              "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+              "type": "Bot",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "raw",
+            "state": "uploaded",
+            "size": 2256488,
+            "digest": "sha256:f610a266aa322f983b0e4b652848950ef023b71d08dbab309dfc73694ccf4a2d",
+            "download_count": 44,
+            "created_at": "2026-09-12T13:25:22Z",
+            "updated_at": "2026-09-12T13:25:23Z",
+            "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.6.13-alpha/cleanroom-0.6.13-alpha-sources.jar"
+          },
+          {
+            "url": "https://api.github.com/repos/CleanroomMC/Cleanroom/releases/assets/559308026",
+            "id": 559308026,
+            "node_id": "RA_kwDOI-HmMc4hVlz6",
+            "name": "cleanroom-0.6.13-alpha-universal.jar",
+            "label": "",
+            "uploader": {
+              "login": "github-actions[bot]",
+              "id": 41898282,
+              "node_id": "MDM6Qm90NDE4OTgyODI=",
+              "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+              "html_url": "https://github.com/apps/github-actions",
+              "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+              "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+              "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+              "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+              "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+              "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+              "type": "Bot",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "raw",
+            "state": "uploaded",
+            "size": 6505649,
+            "digest": "sha256:c6c7e45d1b9b378979bcc6fda56f6911341a317ee400bdde4318cd570789fa31",
+            "download_count": 161,
+            "created_at": "2026-09-12T13:25:21Z",
+            "updated_at": "2026-09-12T13:25:22Z",
+            "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.6.13-alpha/cleanroom-0.6.13-alpha-universal.jar"
+          },
+          {
+            "url": "https://api.github.com/repos/CleanroomMC/Cleanroom/releases/assets/559307988",
+            "id": 559307988,
+            "node_id": "RA_kwDOI-HmMc4hVlzU",
+            "name": "cleanroom-0.6.13-alpha.jar",
+            "label": "",
+            "uploader": {
+              "login": "github-actions[bot]",
+              "id": 41898282,
+              "node_id": "MDM6Qm90NDE4OTgyODI=",
+              "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+              "html_url": "https://github.com/apps/github-actions",
+              "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+              "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+              "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+              "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+              "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+              "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+              "type": "Bot",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "raw",
+            "state": "uploaded",
+            "size": 11448626,
+            "digest": "sha256:3afa3a2c134bad8586af0c0647bc2ee9fe80c53495aeda74c75ed55dd265ba24",
+            "download_count": 251,
+            "created_at": "2026-09-12T13:25:20Z",
+            "updated_at": "2026-09-12T13:25:21Z",
+            "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.6.13-alpha/cleanroom-0.6.13-alpha.jar"
+          },
+          {
+            "url": "https://api.github.com/repos/CleanroomMC/Cleanroom/releases/assets/559307979",
+            "id": 559307979,
+            "node_id": "RA_kwDOI-HmMc4hVlzL",
+            "name": "cleanroom-0.6.13-alpha.zip",
+            "label": "",
+            "uploader": {
+              "login": "github-actions[bot]",
+              "id": 41898282,
+              "node_id": "MDM6Qm90NDE4OTgyODI=",
+              "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+              "html_url": "https://github.com/apps/github-actions",
+              "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+              "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+              "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+              "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+              "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+              "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+              "type": "Bot",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "raw",
+            "state": "uploaded",
+            "size": 58135,
+            "digest": "sha256:a6de95ffa1f4c83eb5cf28e408bf49faacaca16ddedbd373bf184b7a96fb49ca",
+            "download_count": 7916,
+            "created_at": "2026-09-12T13:25:20Z",
+            "updated_at": "2026-09-12T13:25:20Z",
+            "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.6.13-alpha/cleanroom-0.6.13-alpha.zip"
+          }
+        ]
+      },
+      "runtimeVersion": "0.6.13-alpha",
+      "runtimeSelection": "Explicit supported-loader compatibility check; default latest-runtime profile is retained",
+      "clientProfile": {
+        "name": "celeritas-demonica",
+        "definitionSha256": "e9be8f6dd1a5b4652d08fede6f73e8d086b1219e8416832da2a77d47c5da5320",
+        "mods": [
+          {
+            "filename": "celeritas-forge-mc12.2-2.5.0-autobuild.9b661b70.jar",
+            "version": "2.5.0-autobuild.9b661b70",
+            "source": "https://git.taumc.org/embeddedt/celeritas",
+            "sourceCommit": "9b661b70ecaf84c39052e8fbc51c875ba37e739d",
+            "url": "https://maven.outlands.top/releases/org/embeddedt/celeritas-forge-mc12.2/2.5.0-autobuild.9b661b70/celeritas-forge-mc12.2-2.5.0-autobuild.9b661b70.jar",
+            "sha256": "5bf123a6da6190f6e061cd3fd069a2bddcbf6ebf57894381b6c888c06a94f982",
+            "reason": "Requested external terrain-renderer compatibility input; this exact unmodified upstream build is accepted by Demonica's runtime hash guard.",
+            "binaryProvenance": "Third-party upstream auto-build republished on Maven, explicitly pinned by Demonica. Celeritas upstream distributes source rather than official mod binaries.",
+            "license": "LGPL-3.0",
+            "slug": "celeritas",
+            "side": "client"
+          },
+          {
+            "filename": "Demonica-0.7.3.jar",
+            "version": "0.7.3",
+            "source": "https://github.com/ndellagrotte/Demonica",
+            "sourceCommit": "705f596e7800d3dca20a61dd74753d7586beabc1",
+            "release": "https://github.com/ndellagrotte/Demonica/releases/tag/v0.7.3",
+            "url": "https://github.com/ndellagrotte/Demonica/releases/download/v0.7.3/Demonica-0.7.3.jar",
+            "sha256": "0b13f26d02d2b6081b8d6b7c913d207485052f3b39a182f9069e978e581c4b1d",
+            "reason": "Requested external Iris/GLSM/shader compatibility input, alongside its accepted Celeritas build; no renderer/shader implementation is imported into CubicChunks.",
+            "requires": [
+              "celeritas"
+            ],
+            "license": "AGPL-3.0 with upstream bundled notices",
+            "slug": "demonica",
+            "side": "client"
+          }
+        ],
+        "ownership": "External unmodified runtime compatibility inputs; no source or responsibilities embedded into CubicChunks"
+      },
+      "serverModHashes": {
+        "+Fugue-0.24.4.jar": "438248925eb38d16b6b4bcbe6247339b2a745cfe586d4917985f7d925a5d8630",
+        "ae2-uel-v0.56.6.jar": "57e68134a5caead143856659aca8d711845ff90b3ffbcf48071f0a409d09f6a7",
+        "athenaeum-1.12.2-1.19.6.jar": "2aea9497d5414bfaefa05cc7c0162850f01dbb96b72ee3db36b5924573336271",
+        "Bubbles-2.4.10.jar": "8a54cb9abafb14ce66bbc61fbfe5846fdeb3a4cf6ca6ff3bbd6bfe7b16f595f2",
+        "CodeChickenLib-1.12.2-3.2.3.358-universal.jar": "5f8499f7ee2590e45110bbf296b2bf101aec15897e28d5e9759cf8f2387d8a74",
+        "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar": "903e1cd3f3e2c3af07e9e50de4177b17b70a8e9581e9c41ac3bb14d8e9b15ae8",
+        "cubicchunks-lab-0.1.0-cleanroom.jar": "9390e96e6933accf613252d701c9ac8463cf92d6a06de0b67aebf0e3cc6e3f56",
+        "dropt-1.12.2-1.19.4.jar": "21837ce855ad3304fa2aa2cc4d29fe5989cd61f09fa8fc1f9f4e53dedbacfd04",
+        "FTBLib-5.4.7.2.jar": "623fc574f0227fec6cc9e26c3879a605f9b4499c0078ff085291901a5495a6ac",
+        "geckolib-forge-1.12.2-3.0.31.jar": "b00bc9de4e3e94cea0455f8d58b295c1464272135e842bdf3170c2c955c871a5",
+        "GregicalityMultiblocks-1.2.11.jar": "dc250750b86c4d95bb68fe1681d48ce912efa1472ec0355c30e625d41a0591da",
+        "gregtech-1.12.2-2.8.10-beta.jar": "54744bb11ea4679df4b55846d8073e9bb2ef8c1c53aae8aee41cda3fc22d927e",
+        "gregtechfoodoption-1.12.2-1.12.10.jar": "2d57d4313f02bf05ef411f063b5ab93c988cdda2dfef1f0ff6789ae68aaa72ba",
+        "groovyscript-1.4.3.jar": "07617b7ce9170a857199bd61d730a0db3af2685cf83d31734a2d4b628fda7533",
+        "ImmersiveRailroading-1.12.2-forge-1.10.0.jar": "de5483f7d06642ca8de38bbb56852559cafe5bcbebe38f680c391fd766d36022",
+        "modularui-3.1.6.jar": "4c16829c70b322aab735e73f53608fcabbf1d14956d5365c0c2b911c4d4dca54",
+        "OpenComputers-MC1.12.2-1.8.9a+8ca336f.jar": "a5d0fc97a809314529b55cac5ef5484b960cb364fc7f944148bcc0ac8694238f",
+        "pyrotech-1.12.2-1.6.19.jar": "7ed4b889a8ae912e51726d5d20d4893486b8b02fd21cedadd92c204b898ad920",
+        "riven.jar": "07ebdb8ee3080a62ca26b3e95e694e98c2425f8ca14e2f07f7c2c55ce86ce431",
+        "Scalar Legacy-1.0.1.jar": "350d1c378f3b0ac8e7b3df0432482bbb5341c79d07df843c747be1d5fdc23cfe",
+        "Supercritical-0.2.7.jar": "a75383ebb268d561864abc81d5bef8000363ec059fb7d3f348364c4e56fc2559",
+        "SussyPatches-1.11.10.jar": "0f821e696b5d3d0f55ef9c3b2b6442c10ad22503155a2c7cdff8ba93f1cbc9c0",
+        "Susy-Core-0.2.1.jar": "6ed74994835b176d35e4cf215106d5f6d1864c4c24fe81faa94c16eea39991b8",
+        "TrackAPI-1.2.jar": "5fd930eb6afb769f3c806a5356fb09f842fd6679a5a04c53d3be934152c482bc",
+        "UniversalModCore-1.12.2-forge-1.2.2-3d12767.jar": "c2f71ad972320457cc37bacc999a46900964597df00ecc922f7649628560d823"
+      },
+      "clientModHashes": {
+        "+Fugue-0.24.4.jar": "438248925eb38d16b6b4bcbe6247339b2a745cfe586d4917985f7d925a5d8630",
+        "ae2-uel-v0.56.6.jar": "57e68134a5caead143856659aca8d711845ff90b3ffbcf48071f0a409d09f6a7",
+        "athenaeum-1.12.2-1.19.6.jar": "2aea9497d5414bfaefa05cc7c0162850f01dbb96b72ee3db36b5924573336271",
+        "Bubbles-2.4.10.jar": "8a54cb9abafb14ce66bbc61fbfe5846fdeb3a4cf6ca6ff3bbd6bfe7b16f595f2",
+        "celeritas-forge-mc12.2-2.5.0-autobuild.9b661b70.jar": "5bf123a6da6190f6e061cd3fd069a2bddcbf6ebf57894381b6c888c06a94f982",
+        "CodeChickenLib-1.12.2-3.2.3.358-universal.jar": "5f8499f7ee2590e45110bbf296b2bf101aec15897e28d5e9759cf8f2387d8a74",
+        "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar": "903e1cd3f3e2c3af07e9e50de4177b17b70a8e9581e9c41ac3bb14d8e9b15ae8",
+        "cubicchunks-lab-0.1.0-cleanroom.jar": "9390e96e6933accf613252d701c9ac8463cf92d6a06de0b67aebf0e3cc6e3f56",
+        "Demonica-0.7.3.jar": "0b13f26d02d2b6081b8d6b7c913d207485052f3b39a182f9069e978e581c4b1d",
+        "dropt-1.12.2-1.19.4.jar": "21837ce855ad3304fa2aa2cc4d29fe5989cd61f09fa8fc1f9f4e53dedbacfd04",
+        "FTBLib-5.4.7.2.jar": "623fc574f0227fec6cc9e26c3879a605f9b4499c0078ff085291901a5495a6ac",
+        "geckolib-forge-1.12.2-3.0.31.jar": "b00bc9de4e3e94cea0455f8d58b295c1464272135e842bdf3170c2c955c871a5",
+        "GregicalityMultiblocks-1.2.11.jar": "dc250750b86c4d95bb68fe1681d48ce912efa1472ec0355c30e625d41a0591da",
+        "gregtech-1.12.2-2.8.10-beta.jar": "54744bb11ea4679df4b55846d8073e9bb2ef8c1c53aae8aee41cda3fc22d927e",
+        "gregtechfoodoption-1.12.2-1.12.10.jar": "2d57d4313f02bf05ef411f063b5ab93c988cdda2dfef1f0ff6789ae68aaa72ba",
+        "groovyscript-1.4.3.jar": "07617b7ce9170a857199bd61d730a0db3af2685cf83d31734a2d4b628fda7533",
+        "ImmersiveRailroading-1.12.2-forge-1.10.0.jar": "de5483f7d06642ca8de38bbb56852559cafe5bcbebe38f680c391fd766d36022",
+        "modularui-3.1.6.jar": "4c16829c70b322aab735e73f53608fcabbf1d14956d5365c0c2b911c4d4dca54",
+        "OpenComputers-MC1.12.2-1.8.9a+8ca336f.jar": "a5d0fc97a809314529b55cac5ef5484b960cb364fc7f944148bcc0ac8694238f",
+        "pyrotech-1.12.2-1.6.19.jar": "7ed4b889a8ae912e51726d5d20d4893486b8b02fd21cedadd92c204b898ad920",
+        "riven.jar": "07ebdb8ee3080a62ca26b3e95e694e98c2425f8ca14e2f07f7c2c55ce86ce431",
+        "Scalar Legacy-1.0.1.jar": "350d1c378f3b0ac8e7b3df0432482bbb5341c79d07df843c747be1d5fdc23cfe",
+        "Supercritical-0.2.7.jar": "a75383ebb268d561864abc81d5bef8000363ec059fb7d3f348364c4e56fc2559",
+        "SussyPatches-1.11.10.jar": "0f821e696b5d3d0f55ef9c3b2b6442c10ad22503155a2c7cdff8ba93f1cbc9c0",
+        "Susy-Core-0.2.1.jar": "6ed74994835b176d35e4cf215106d5f6d1864c4c24fe81faa94c16eea39991b8",
+        "TrackAPI-1.2.jar": "5fd930eb6afb769f3c806a5356fb09f842fd6679a5a04c53d3be934152c482bc",
+        "UniversalModCore-1.12.2-forge-1.2.2-3d12767.jar": "c2f71ad972320457cc37bacc999a46900964597df00ecc922f7649628560d823"
+      },
+      "cubicJar": {
+        "filename": "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar",
+        "sha256": "903e1cd3f3e2c3af07e9e50de4177b17b70a8e9581e9c41ac3bb14d8e9b15ae8"
+      },
+      "labJar": {
+        "filename": "cubicchunks-lab-0.1.0-cleanroom.jar",
+        "sha256": "9390e96e6933accf613252d701c9ac8463cf92d6a06de0b67aebf0e3cc6e3f56"
+      },
+      "riven": {
+        "artifact": "build\\cleanroom-cubic-experiment\\libs\\riven-0.1.0-dev-cleanroom.jar",
+        "sha256": "07ebdb8ee3080a62ca26b3e95e694e98c2425f8ca14e2f07f7c2c55ce86ce431"
+      },
+      "java": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\java.exe",
+      "nativePrime": {
+        "purpose": "Generate dependency-owned first-use inputs and restart both native processes",
+        "passed": false
+      },
+      "worldJoined": false,
+      "measuredSuiteStarted": false,
+      "classification": "CubicChunks vertical-distance RenderGlobal redirect has zero successful targets with Celeritas",
+      "relevantLogLines": [
+        "[10:36:58] [main/INFO]: celeritas-forge-mc12.2-2.5.0-autobuild.9b661b70.jar is the Celeritas build this Demonica was made for (upstream 9b661b70, SHA-256 5bf123a6)",
+        "Caused by: org.spongepowered.asm.mixin.injection.throwables.InjectionError: Critical injection failure: Redirector onGetRenderDistance(Lnet/minecraft/client/renderer/RenderGlobal;)I in cubicchunks.mixins.selectable.json:client.vertviewdist.MixinRenderGlobal from mod cubicchunks failed injection check, (0/1) succeeded. Scanned 0 target(s). Using refmap cubicchunks.mixins.refmap.json",
+        "Caused by: org.spongepowered.asm.mixin.injection.throwables.InjectionError: Critical injection failure: Redirector onGetRenderDistance(Lnet/minecraft/client/renderer/RenderGlobal;)I in cubicchunks.mixins.selectable.json:client.vertviewdist.MixinRenderGlobal from mod cubicchunks failed injection check, (0/1) succeeded. Scanned 0 target(s). Using refmap cubicchunks.mixins.refmap.json"
+      ],
+      "evidence": [
+        {
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-pair-0613-01\\runs\\prime\\server.log",
+          "bytes": 773416,
+          "sha256": "1a3fa1120c254b32e14e08e2619d45be516800e058625cccbd547f3884ff53d4"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-pair-0613-01\\runs\\prime\\client.log",
+          "bytes": 63175,
+          "sha256": "2647a9fc9347f3f25b28a53c4a194e762e0067ccb1720719a08f9c8a1903405b"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-pair-0613-01\\runs\\prime\\result.json",
+          "bytes": 119,
+          "sha256": "01211b0b767e89ce33ff24433d52581fad82d4f6875401cb18d73590feaba6e5"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-pair-0613-01\\client\\crash-reports\\crash-2026-10-13_10.37.04-client.txt",
+          "bytes": 16850,
+          "sha256": "f1141b0de09f17b7770e896f9ab6e0a0b665bb8e37102be279da1612a7cd7c48"
+        }
+      ],
+      "prismImport": {
+        "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-pair-0613-01\\CubicChunks-Lab-Prism.zip",
+        "sha256": "d590c857fb988cbc5659f98b499de76151511ab0de1f1bcf551eb04cd12251f0",
+        "primed": false
+      }
+    },
+    {
+      "name": "renderer-celeritas-01",
+      "release": {
+        "tag_name": "0.7.0-alpha",
+        "published_at": "2026-10-13T11:14:27Z",
+        "html_url": "https://github.com/CleanroomMC/Cleanroom/releases/tag/0.7.0-alpha",
+        "assets": [
+          {
+            "url": "https://api.github.com/repos/CleanroomMC/Cleanroom/releases/assets/636785948",
+            "id": 636785948,
+            "node_id": "RA_kwDOI-HmMc4l9JUc",
+            "name": "cleanroom-0.7.0-installer.jar",
+            "label": "",
+            "uploader": {
+              "login": "github-actions[bot]",
+              "id": 41898282,
+              "node_id": "MDM6Qm90NDE4OTgyODI=",
+              "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+              "html_url": "https://github.com/apps/github-actions",
+              "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+              "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+              "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+              "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+              "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+              "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+              "type": "Bot",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "application/java-archive",
+            "state": "uploaded",
+            "size": 54720327,
+            "digest": "sha256:c8360bb9f33e84446a40e3118692f5bde116c236805441e8321564c1882b517d",
+            "download_count": 41,
+            "created_at": "2026-10-13T11:14:24Z",
+            "updated_at": "2026-10-13T11:14:27Z",
+            "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.0-alpha/cleanroom-0.7.0-installer.jar"
+          },
+          {
+            "url": "https://api.github.com/repos/CleanroomMC/Cleanroom/releases/assets/636785946",
+            "id": 636785946,
+            "node_id": "RA_kwDOI-HmMc4l9JUa",
+            "name": "cleanroom-0.7.0-universal.jar",
+            "label": "",
+            "uploader": {
+              "login": "github-actions[bot]",
+              "id": 41898282,
+              "node_id": "MDM6Qm90NDE4OTgyODI=",
+              "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+              "html_url": "https://github.com/apps/github-actions",
+              "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+              "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+              "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+              "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+              "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+              "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+              "type": "Bot",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "application/java-archive",
+            "state": "uploaded",
+            "size": 52185033,
+            "digest": "sha256:33a740e06b8c2ef4f51f0158f322eaeb4a8f692aa0475b843f1070fe1e07f247",
+            "download_count": 11,
+            "created_at": "2026-10-13T11:14:24Z",
+            "updated_at": "2026-10-13T11:14:27Z",
+            "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.0-alpha/cleanroom-0.7.0-universal.jar"
+          },
+          {
+            "url": "https://api.github.com/repos/CleanroomMC/Cleanroom/releases/assets/636785949",
+            "id": 636785949,
+            "node_id": "RA_kwDOI-HmMc4l9JUd",
+            "name": "cleanroom-0.7.0.zip",
+            "label": "",
+            "uploader": {
+              "login": "github-actions[bot]",
+              "id": 41898282,
+              "node_id": "MDM6Qm90NDE4OTgyODI=",
+              "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+              "html_url": "https://github.com/apps/github-actions",
+              "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+              "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+              "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+              "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+              "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+              "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+              "type": "Bot",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "application/zip",
+            "state": "uploaded",
+            "size": 13156,
+            "digest": "sha256:f3e564f2480fd92abc4a3210f3d3dddb3b2a05f30f17922922a0bcc7b5110b03",
+            "download_count": 138,
+            "created_at": "2026-10-13T11:14:24Z",
+            "updated_at": "2026-10-13T11:14:25Z",
+            "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.0-alpha/cleanroom-0.7.0.zip"
+          }
+        ]
+      },
+      "runtimeVersion": "0.7.0",
+      "runtimeSelection": "Reviewed latest release",
+      "clientProfile": {
+        "name": "celeritas",
+        "definitionSha256": "e9be8f6dd1a5b4652d08fede6f73e8d086b1219e8416832da2a77d47c5da5320",
+        "mods": [
+          {
+            "filename": "celeritas-forge-mc12.2-2.5.0-autobuild.9b661b70.jar",
+            "version": "2.5.0-autobuild.9b661b70",
+            "source": "https://git.taumc.org/embeddedt/celeritas",
+            "sourceCommit": "9b661b70ecaf84c39052e8fbc51c875ba37e739d",
+            "url": "https://maven.outlands.top/releases/org/embeddedt/celeritas-forge-mc12.2/2.5.0-autobuild.9b661b70/celeritas-forge-mc12.2-2.5.0-autobuild.9b661b70.jar",
+            "sha256": "5bf123a6da6190f6e061cd3fd069a2bddcbf6ebf57894381b6c888c06a94f982",
+            "reason": "Requested external terrain-renderer compatibility input; this exact unmodified upstream build is accepted by Demonica's runtime hash guard.",
+            "binaryProvenance": "Third-party upstream auto-build republished on Maven, explicitly pinned by Demonica. Celeritas upstream distributes source rather than official mod binaries.",
+            "license": "LGPL-3.0",
+            "slug": "celeritas",
+            "side": "client"
+          }
+        ],
+        "ownership": "External unmodified runtime compatibility inputs; no source or responsibilities embedded into CubicChunks"
+      },
+      "serverModHashes": {
+        "+Fugue-0.24.4.jar": "438248925eb38d16b6b4bcbe6247339b2a745cfe586d4917985f7d925a5d8630",
+        "ae2-uel-v0.56.6.jar": "57e68134a5caead143856659aca8d711845ff90b3ffbcf48071f0a409d09f6a7",
+        "athenaeum-1.12.2-1.19.6.jar": "2aea9497d5414bfaefa05cc7c0162850f01dbb96b72ee3db36b5924573336271",
+        "Bubbles-2.4.10.jar": "8a54cb9abafb14ce66bbc61fbfe5846fdeb3a4cf6ca6ff3bbd6bfe7b16f595f2",
+        "CodeChickenLib-1.12.2-3.2.3.358-universal.jar": "5f8499f7ee2590e45110bbf296b2bf101aec15897e28d5e9759cf8f2387d8a74",
+        "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar": "903e1cd3f3e2c3af07e9e50de4177b17b70a8e9581e9c41ac3bb14d8e9b15ae8",
+        "cubicchunks-lab-0.1.0-cleanroom.jar": "9390e96e6933accf613252d701c9ac8463cf92d6a06de0b67aebf0e3cc6e3f56",
+        "dropt-1.12.2-1.19.4.jar": "21837ce855ad3304fa2aa2cc4d29fe5989cd61f09fa8fc1f9f4e53dedbacfd04",
+        "FTBLib-5.4.7.2.jar": "623fc574f0227fec6cc9e26c3879a605f9b4499c0078ff085291901a5495a6ac",
+        "geckolib-forge-1.12.2-3.0.31.jar": "b00bc9de4e3e94cea0455f8d58b295c1464272135e842bdf3170c2c955c871a5",
+        "GregicalityMultiblocks-1.2.11.jar": "dc250750b86c4d95bb68fe1681d48ce912efa1472ec0355c30e625d41a0591da",
+        "gregtech-1.12.2-2.8.10-beta.jar": "54744bb11ea4679df4b55846d8073e9bb2ef8c1c53aae8aee41cda3fc22d927e",
+        "gregtechfoodoption-1.12.2-1.12.10.jar": "2d57d4313f02bf05ef411f063b5ab93c988cdda2dfef1f0ff6789ae68aaa72ba",
+        "groovyscript-1.4.3.jar": "07617b7ce9170a857199bd61d730a0db3af2685cf83d31734a2d4b628fda7533",
+        "ImmersiveRailroading-1.12.2-forge-1.10.0.jar": "de5483f7d06642ca8de38bbb56852559cafe5bcbebe38f680c391fd766d36022",
+        "modularui-3.1.6.jar": "4c16829c70b322aab735e73f53608fcabbf1d14956d5365c0c2b911c4d4dca54",
+        "OpenComputers-MC1.12.2-1.8.9a+8ca336f.jar": "a5d0fc97a809314529b55cac5ef5484b960cb364fc7f944148bcc0ac8694238f",
+        "pyrotech-1.12.2-1.6.19.jar": "7ed4b889a8ae912e51726d5d20d4893486b8b02fd21cedadd92c204b898ad920",
+        "riven.jar": "07ebdb8ee3080a62ca26b3e95e694e98c2425f8ca14e2f07f7c2c55ce86ce431",
+        "Scalar Legacy-1.0.1.jar": "350d1c378f3b0ac8e7b3df0432482bbb5341c79d07df843c747be1d5fdc23cfe",
+        "Supercritical-0.2.7.jar": "a75383ebb268d561864abc81d5bef8000363ec059fb7d3f348364c4e56fc2559",
+        "SussyPatches-1.11.10.jar": "0f821e696b5d3d0f55ef9c3b2b6442c10ad22503155a2c7cdff8ba93f1cbc9c0",
+        "Susy-Core-0.2.1.jar": "6ed74994835b176d35e4cf215106d5f6d1864c4c24fe81faa94c16eea39991b8",
+        "TrackAPI-1.2.jar": "5fd930eb6afb769f3c806a5356fb09f842fd6679a5a04c53d3be934152c482bc",
+        "UniversalModCore-1.12.2-forge-1.2.2-3d12767.jar": "c2f71ad972320457cc37bacc999a46900964597df00ecc922f7649628560d823"
+      },
+      "clientModHashes": {
+        "+Fugue-0.24.4.jar": "438248925eb38d16b6b4bcbe6247339b2a745cfe586d4917985f7d925a5d8630",
+        "ae2-uel-v0.56.6.jar": "57e68134a5caead143856659aca8d711845ff90b3ffbcf48071f0a409d09f6a7",
+        "athenaeum-1.12.2-1.19.6.jar": "2aea9497d5414bfaefa05cc7c0162850f01dbb96b72ee3db36b5924573336271",
+        "Bubbles-2.4.10.jar": "8a54cb9abafb14ce66bbc61fbfe5846fdeb3a4cf6ca6ff3bbd6bfe7b16f595f2",
+        "celeritas-forge-mc12.2-2.5.0-autobuild.9b661b70.jar": "5bf123a6da6190f6e061cd3fd069a2bddcbf6ebf57894381b6c888c06a94f982",
+        "CodeChickenLib-1.12.2-3.2.3.358-universal.jar": "5f8499f7ee2590e45110bbf296b2bf101aec15897e28d5e9759cf8f2387d8a74",
+        "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar": "903e1cd3f3e2c3af07e9e50de4177b17b70a8e9581e9c41ac3bb14d8e9b15ae8",
+        "cubicchunks-lab-0.1.0-cleanroom.jar": "9390e96e6933accf613252d701c9ac8463cf92d6a06de0b67aebf0e3cc6e3f56",
+        "dropt-1.12.2-1.19.4.jar": "21837ce855ad3304fa2aa2cc4d29fe5989cd61f09fa8fc1f9f4e53dedbacfd04",
+        "FTBLib-5.4.7.2.jar": "623fc574f0227fec6cc9e26c3879a605f9b4499c0078ff085291901a5495a6ac",
+        "geckolib-forge-1.12.2-3.0.31.jar": "b00bc9de4e3e94cea0455f8d58b295c1464272135e842bdf3170c2c955c871a5",
+        "GregicalityMultiblocks-1.2.11.jar": "dc250750b86c4d95bb68fe1681d48ce912efa1472ec0355c30e625d41a0591da",
+        "gregtech-1.12.2-2.8.10-beta.jar": "54744bb11ea4679df4b55846d8073e9bb2ef8c1c53aae8aee41cda3fc22d927e",
+        "gregtechfoodoption-1.12.2-1.12.10.jar": "2d57d4313f02bf05ef411f063b5ab93c988cdda2dfef1f0ff6789ae68aaa72ba",
+        "groovyscript-1.4.3.jar": "07617b7ce9170a857199bd61d730a0db3af2685cf83d31734a2d4b628fda7533",
+        "ImmersiveRailroading-1.12.2-forge-1.10.0.jar": "de5483f7d06642ca8de38bbb56852559cafe5bcbebe38f680c391fd766d36022",
+        "modularui-3.1.6.jar": "4c16829c70b322aab735e73f53608fcabbf1d14956d5365c0c2b911c4d4dca54",
+        "OpenComputers-MC1.12.2-1.8.9a+8ca336f.jar": "a5d0fc97a809314529b55cac5ef5484b960cb364fc7f944148bcc0ac8694238f",
+        "pyrotech-1.12.2-1.6.19.jar": "7ed4b889a8ae912e51726d5d20d4893486b8b02fd21cedadd92c204b898ad920",
+        "riven.jar": "07ebdb8ee3080a62ca26b3e95e694e98c2425f8ca14e2f07f7c2c55ce86ce431",
+        "Scalar Legacy-1.0.1.jar": "350d1c378f3b0ac8e7b3df0432482bbb5341c79d07df843c747be1d5fdc23cfe",
+        "Supercritical-0.2.7.jar": "a75383ebb268d561864abc81d5bef8000363ec059fb7d3f348364c4e56fc2559",
+        "SussyPatches-1.11.10.jar": "0f821e696b5d3d0f55ef9c3b2b6442c10ad22503155a2c7cdff8ba93f1cbc9c0",
+        "Susy-Core-0.2.1.jar": "6ed74994835b176d35e4cf215106d5f6d1864c4c24fe81faa94c16eea39991b8",
+        "TrackAPI-1.2.jar": "5fd930eb6afb769f3c806a5356fb09f842fd6679a5a04c53d3be934152c482bc",
+        "UniversalModCore-1.12.2-forge-1.2.2-3d12767.jar": "c2f71ad972320457cc37bacc999a46900964597df00ecc922f7649628560d823"
+      },
+      "cubicJar": {
+        "filename": "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar",
+        "sha256": "903e1cd3f3e2c3af07e9e50de4177b17b70a8e9581e9c41ac3bb14d8e9b15ae8"
+      },
+      "labJar": {
+        "filename": "cubicchunks-lab-0.1.0-cleanroom.jar",
+        "sha256": "9390e96e6933accf613252d701c9ac8463cf92d6a06de0b67aebf0e3cc6e3f56"
+      },
+      "riven": {
+        "artifact": "build\\cleanroom-cubic-experiment\\libs\\riven-0.1.0-dev-cleanroom.jar",
+        "sha256": "07ebdb8ee3080a62ca26b3e95e694e98c2425f8ca14e2f07f7c2c55ce86ce431"
+      },
+      "java": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\java.exe",
+      "nativePrime": {
+        "purpose": "Generate dependency-owned first-use inputs and restart both native processes",
+        "passed": false
+      },
+      "worldJoined": false,
+      "measuredSuiteStarted": false,
+      "classification": "CubicChunks vertical-distance RenderGlobal redirect has zero successful targets with Celeritas",
+      "relevantLogLines": [
+        "Caused by: org.spongepowered.asm.mixin.injection.throwables.InjectionError: Critical injection failure: Redirector onGetRenderDistance(Lnet/minecraft/client/renderer/RenderGlobal;)I in cubicchunks.mixins.selectable.json:client.vertviewdist.MixinRenderGlobal from mod cubicchunks failed injection check, (0/1) succeeded. Scanned 1 target(s). Using refmap cubicchunks.mixins.refmap.json",
+        "Caused by: org.spongepowered.asm.mixin.injection.throwables.InjectionError: Critical injection failure: Redirector onGetRenderDistance(Lnet/minecraft/client/renderer/RenderGlobal;)I in cubicchunks.mixins.selectable.json:client.vertviewdist.MixinRenderGlobal from mod cubicchunks failed injection check, (0/1) succeeded. Scanned 1 target(s). Using refmap cubicchunks.mixins.refmap.json"
+      ],
+      "evidence": [
+        {
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-celeritas-01\\runs\\prime\\server.log",
+          "bytes": 776609,
+          "sha256": "a989549b21140876e20e25a7fb4126b42249aee330566bffcfa374ace4b18fea"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-celeritas-01\\runs\\prime\\client.log",
+          "bytes": 46732,
+          "sha256": "94e965945346d4d6d2d26020dbef2b10309bd0d4c5ac14e4644c6f0aa275615a"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-celeritas-01\\runs\\prime\\result.json",
+          "bytes": 119,
+          "sha256": "01211b0b767e89ce33ff24433d52581fad82d4f6875401cb18d73590feaba6e5"
+        },
+        {
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-celeritas-01\\client\\crash-reports\\crash-2026-10-13_10.43.23-client.txt",
+          "bytes": 15543,
+          "sha256": "f6ce2e6126e7df3857237cdf1fd4960d82346b58ea27085cb8ad78a0c8f8c0f0"
+        }
+      ],
+      "prismImport": {
+        "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\renderer-celeritas-01\\CubicChunks-Lab-Prism.zip",
+        "sha256": "bbb7b271b0e062aca3beae9b36434990daae7f8903ee8fb561800eb8c68359d3",
+        "primed": false
+      }
+    }
+  ]
+}

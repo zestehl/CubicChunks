@@ -4,6 +4,8 @@ An optional in-game measurement mod and isolated native environment for Minecraf
 
 Agents can use the repository-owned [cubicchunks-lab skill](skill/cubicchunks-lab/SKILL.md). On the Riven development machine it is linked into the shared Codex skills directory and can be invoked as `$cubicchunks-lab`. Keep operation guidance in this document and executable behavior in the existing tools; update the skill's routing when agent operations change.
 
+The [preliminary Java 8–25 opportunity audit](../docs/JAVA25-OPPORTUNITY-AUDIT.md) includes a named-class diagnostic at `tools/probe_java_opportunities.py`. It observes collection, NBT and heightmap behavior in ordinary JVMs after both main builds; it does not launch Minecraft or replace native qualification. Its output directory must be new.
+
 The native runtime is **Cleanroom 0.7.0-alpha / Java 25**, verified against the [official latest release](https://github.com/CleanroomMC/Cleanroom/releases/tag/0.7.0-alpha). Preparation queries the release API and refuses to proceed if a newer release needs review. The development API remains Cleanroom **0.6.13-alpha**, whose Unimined userdev artifact is available; the 0.7.0 userdev artifact returned 404 on both official Maven endpoints when checked on October 13, 2026. The active Riven profile remains pinned to 0.6.13-alpha. Forge 14.23.5.2860 / Java 8 is separately built and checked; this environment's native performance run uses Cleanroom.
 
 ## Build and prepare
@@ -36,6 +38,16 @@ The first run automatically primes dependency-owned generated inputs in a separa
 Server files are under `.local/instances/cubic-lab-candidate-01`; the real client, manifest, import ZIP, process receipts, raw logs, JSON results and optional JFR recordings are under `.local/cubic-lab/candidate-01`. Both JVMs use the configured Java 25 and 6 GiB heap limits. The server binds only to `127.0.0.1`, with offline identity `CubicLab`, permission level 2 and a default port of 25590. The client opens a real 1280 × 720 window, uses the installed GPU and a 120 FPS cap. No account credentials are read.
 
 The manifest records loader release asset hashes, every mod hash, selected Java, height and client libraries. Modified/missing/extra JARs cause the runner to require a fresh lab. Startup-extracted nested library JARs must match bytes embedded in a retained mod; their owner and hash are recorded separately and checked after priming. Scalar's twelve Scala/Akka library JARs are such runtime inputs. Current generated configuration hashes are recorded with each new run and export. Asset hashes are checked before reuse. Changing the local CubicChunks JAR also changes the content-addressed remapping dependency, avoiding stale lab compilation.
+
+## External renderer compatibility profiles
+
+Use `prepare --client-profile celeritas` or `prepare --client-profile celeritas-demonica` with a new instance name. The default remains `baseline`. [The profile definition](profiles/client-renderers.json) pins the separately installed, unmodified client JARs, source commits, distribution URLs, hashes, licenses and reasons. Server and client mod hashes are checked separately; these mods are never added to the dedicated server or compiled into CubicChunks. The Prism export includes the selected client inputs.
+
+Demonica 0.7.3 accepts Celeritas commit `9b661b70` and checks its exact artifact hashes. The selected Maven binary is the upstream auto-build explicitly pinned by Demonica; Celeritas itself publishes source rather than official mod binaries. A newer Celeritas build is not an equivalent combined profile: Demonica's guard disables shaders on an unaccepted hash. Preserve that contract and keep any future upstream-only renderer experiment separate.
+
+Compatibility work covers CubicChunks' lighting data, section/height access and rebuild notifications at the interface to external meshing and shaders. Celeritas owns its renderer; Demonica owns its Iris/GLSM/shader pipeline. Do not copy their code into the format, patch their JARs, or take over their responsibilities. Native results must distinguish client startup, rendered ordinary-height terrain, negative/high-height coverage and shaders actually enabled.
+
+The [initial compatibility record](../docs/RENDERER-COMPATIBILITY.md) documents startup blockers in the current unchanged fork. These profiles are reproducible diagnostic environments, not qualified working renderer combinations. An explicit `--runtime-release 0.6.13-alpha` preparation override supports comparison with Demonica's documented loader; the default still checks the reviewed latest release. Retain the selected runtime in each manifest and do not compare different-loader timings as an isolated renderer speedup.
 
 ## Interactive use
 
@@ -100,4 +112,4 @@ The demonstrated kernel closure is retained, including GregTechCEu, Susy-Core, S
 
 These classes are isolated under `src/cleanroom070`, excluded from the Forge artifact and enabled in the native 0.7 environment with `-Dcubiclab.cleanroom070=true`. They qualify the tested kernel closure, not arbitrary mods or the complete historical ReflectionHackery API. Remove them only after validating the corresponding upstream/dependency fix. The production CubicChunks source is unchanged by this lab addition.
 
-CI builds the main fork and optional lab for both loaders, runs focused checks and validates Python control code. CI does not run a graphical client. The [first measured native suite](../docs/measurements/cubic-lab-v1/README.md) includes runtime receipts, caveats and captures.
+The manually dispatched GitHub workflow builds the main fork and optional lab for both loaders, runs focused checks and validates Python control code. Commits and pull-request updates do not automatically start these builds. Run relevant local checks when changing behavior and dispatch the full workflow for a chosen validation checkpoint. CI does not run a graphical client. The [first measured native suite](../docs/measurements/cubic-lab-v1/README.md) includes runtime receipts, caveats and captures.

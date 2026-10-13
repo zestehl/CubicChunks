@@ -65,6 +65,13 @@ def latest():
     return {key: release[key] for key in ['tag_name', 'published_at', 'html_url', 'assets']}
 
 
+def reviewed_release(tag):
+    request = urllib.request.Request('https://api.github.com/repos/CleanroomMC/Cleanroom/releases/tags/' + tag,
+                                     headers={'User-Agent': 'CubicChunks-development-lab'})
+    with urllib.request.urlopen(request, timeout=30) as response: release = json.load(response)
+    return {key: release[key] for key in ['tag_name', 'published_at', 'html_url', 'assets']}
+
+
 def settings(root):
     sys.path.insert(0, str(root / 'tools'))
     return importlib.import_module('dev'), importlib.import_module('experiment_cubic')
@@ -195,12 +202,20 @@ def prepare_client(server, target, base_zip, root, java, release):
 
 def prepare(args):
     root = args.riven_workspace; dev, experiment = settings(root)
-    release = latest(); version = release['tag_name']
+    client_profile = read_client_profile(args.client_profile)
     runtime_config = (FORK / 'lab/runtime.properties').read_text()
     pinned_tag = re.search(r'^release_tag=(.*)$', runtime_config, re.M)[1].strip()
     product_version = re.search(r'^runtime_version=(.*)$', runtime_config, re.M)[1].strip()
-    if version != pinned_tag:
-        raise RuntimeError(f'Latest release is {version}; review and update lab/runtime.properties before preparing')
+    if args.runtime_release:
+        if args.runtime_release != '0.6.13-alpha': raise RuntimeError('Only the reviewed 0.6.13-alpha compatibility runtime override is supported')
+        release = reviewed_release(args.runtime_release); product_version = args.runtime_release
+        runtime_selection = 'Explicit supported-loader compatibility check; default latest-runtime profile is retained'
+    else:
+        release = latest()
+        if release['tag_name'] != pinned_tag:
+            raise RuntimeError(f'Latest release is {release["tag_name"]}; review and update lab/runtime.properties before preparing')
+        runtime_selection = 'Reviewed latest release'
+    version = release['tag_name']
     installer_asset = next(a for a in release['assets'] if a['name'].endswith('-installer.jar'))
     fetch(installer_asset['browser_download_url'], root / '.local/downloads' / installer_asset['name'], installer_asset['digest'].split(':')[1], 'sha256')
     # Only this lab process uses the selected release; the active Riven profile stays pinned.
@@ -250,22 +265,46 @@ def prepare(args):
     base_zip = fetch(zip_asset['browser_download_url'], root / '.local/downloads' / zip_asset['name'],
                      zip_asset['digest'].split(':')[1], 'sha256')
     runtime = prepare_client(server, target / 'client', base_zip, root, dev.java('cleanroom'), release)
+    for addon in client_profile['mods']:
+        source = fetch(addon['url'], root / '.local/downloads/mods' / addon['filename'], addon['sha256'], 'sha256',
+                       candidates=[root / '.local/cubic-lab/renderer-research' / addon['filename']])
+        shutil.copy2(source, target / 'client/mods' / addon['filename'])
     export = target / 'CubicChunks-Lab-Prism.zip'
     manifest = {'schema': 1, 'name': args.name, 'server': str(server), 'client': str(target / 'client'),
         'port': args.port, 'release': release, 'runtimeVersion': product_version, 'releaseCheckedUtc': datetime.now(timezone.utc).isoformat(),
+        'runtimeSelection': runtime_selection,
         'java': dev.java('cleanroom'), 'cubicJar': {'filename': cubic.name, 'sha256': sha(cubic)},
         'labJar': {'filename': lab.name, 'sha256': sha(lab)}, 'riven': receipt['riven'],
         'modHashes': {path.name: sha(path) for path in sorted((server / 'mods').glob('*.jar'))},
+        'clientModHashes': {path.name: sha(path) for path in sorted((target / 'client/mods').glob('*.jar'))},
+        'clientProfile': client_profile,
         'generatedLibraryHashes': {'server': {}, 'client': {}},
         'height': {'minY': -128, 'maxYExclusive': 384, 'verticalCubesPerColumn': 32},
-        'compatibility': ['Lab-only field-access ABI bridge forwards Fugue 0.24.4 calls to ImagineBreaker 3.2, preserving target class initialization.',
+        'compatibility': (['Lab-only field-access ABI bridge forwards Fugue 0.24.4 calls to ImagineBreaker 3.2, preserving target class initialization.',
             'Lab-only independently authored BlockStateContainer.Builder restores the missing Forge fluid API class through the loader transformer API; existing runtime classes are preserved.',
-            'Lab-only ObjectHolderRef mixin initializes the declaring class before registry field injection, preventing later static initializers from clearing injected values.'],
+            'Lab-only ObjectHolderRef mixin initializes the declaring class before registry field injection, preventing later static initializers from clearing injected values.'] if product_version == '0.7.0' else []),
         'clientRuntime': runtime, 'prismImport': str(export)}
     package_client(target, manifest, base_zip)
     write_json(target / 'lab.json', manifest)
     print(json.dumps({'lab': str(target), 'prismImport': str(export), 'release': version,
         'libraries': len(runtime['libraries']), 'assetObjects': runtime['assetObjects']}, indent=2))
+
+
+def read_client_profile(name):
+    path = FORK / 'lab/profiles/client-renderers.json'
+    data = json.loads(path.read_text(encoding='utf-8'))
+    if name not in data['profiles']: raise RuntimeError('Unknown client profile: ' + name)
+    selected = data['profiles'][name]
+    mods = [dict(data['mods'][slug], slug=slug, side='client') for slug in selected]
+    for mod in mods:
+        if any(dependency not in selected for dependency in mod.get('requires', [])):
+            raise RuntimeError('Client profile is missing a dependency for ' + mod['slug'])
+    return {'name': name, 'definitionSha256': sha(path), 'mods': mods,
+            'ownership': 'External unmodified runtime compatibility inputs; no source or responsibilities embedded into CubicChunks'}
+
+
+def expected_mod_hashes(manifest, side):
+    return manifest.get('clientModHashes', manifest['modHashes']) if side == 'client' else manifest['modHashes']
 
 
 def package_client(target, manifest, base_zip):
@@ -281,7 +320,8 @@ def package_client(target, manifest, base_zip):
             if not name.endswith('/') and name != 'instance.cfg': output.writestr(name, base.read(name))
         output.writestr('instance.cfg', 'InstanceType=OneSix\nname=CubicChunks Lab ' + manifest['name']
             + '\nOverrideJava=true\nJavaPath=' + manifest['java'].replace('\\', '/')
-            + '\nOverrideMemory=true\nMinMemAlloc=1024\nMaxMemAlloc=6144\nOverrideJavaArgs=true\nJvmArgs=-Dcubiclab.cleanroom070=true\n')
+            + '\nOverrideMemory=true\nMinMemAlloc=1024\nMaxMemAlloc=6144\nOverrideJavaArgs=true\nJvmArgs='
+            + ('-Dcubiclab.cleanroom070=true' if manifest.get('runtimeVersion') == '0.7.0' else '') + '\n')
         for folder in ['mods', 'config', 'groovy', 'local', 'resources', 'resourcepacks']:
             for path in sorted((client / folder).rglob('*')):
                 if path.is_file(): output.write(path, 'minecraft/' + path.relative_to(client).as_posix())
@@ -348,7 +388,7 @@ def load_lab(args):
     if 'modHashes' in manifest:
         for side in ['server', 'client']:
             actual = {path.name: sha(path) for path in Path(manifest[side]).joinpath('mods').glob('*.jar')}
-            if actual != manifest['modHashes']: raise RuntimeError('Prepared mod set changed; create a new lab revision before benchmarking')
+            if actual != expected_mod_hashes(manifest, side): raise RuntimeError('Prepared ' + side + ' mod set changed; create a new lab revision before benchmarking')
     if 'generatedLibraryHashes' in manifest and record_generated_libraries(manifest) != manifest['generatedLibraryHashes']:
         raise RuntimeError('Generated mod library set changed; create a new lab revision before benchmarking')
     return target, manifest
@@ -437,6 +477,9 @@ def prime(args):
         manifest['generatedLibraryHashes'] = record_generated_libraries(manifest)
         write_json(target / 'lab.json', manifest)
         print('First-use client/server priming completed; generated inputs retained.', flush=True)
+    except Exception as error:
+        result['failure'] = str(error)
+        raise
     finally:
         if processes and processes[0].poll() is None:
             try: send(processes[0], 'stop'); processes[0].wait(timeout=45)
@@ -444,6 +487,7 @@ def prime(args):
         for process in reversed(processes):
             if process.poll() is None: process.terminate(); process.wait(timeout=15)
         props.write_text(original, encoding='utf-8')
+        result['processExitCodes'] = [process.returncode for process in processes]
         write_json(evidence / 'result.json', result)
     export_client(args)
 
@@ -521,6 +565,8 @@ def main():
     parser.add_argument('--riven-workspace', type=Path, default=FORK.parents[1])
     parser.add_argument('--name', required=True)
     parser.add_argument('--cubic-jar', type=Path)
+    parser.add_argument('--client-profile', default='baseline', help='Optional client-only renderer profile: baseline, celeritas, celeritas-demonica')
+    parser.add_argument('--runtime-release', help='Explicit compatibility runtime override: 0.6.13-alpha. Default preparation still verifies the reviewed latest release.')
     parser.add_argument('--port', type=int, default=25590)
     parser.add_argument('--phase', choices=['write', 'read'], default='write')
     parser.add_argument('--scenarios', help='Comma-separated scenario override; prerequisites still apply')
