@@ -128,7 +128,7 @@ public class ColumnWatcher extends PlayerChunkMapEntry implements XZAddressable,
             if (self().getPlayerList().isEmpty()) {
                 if (self().isLoading()) {
                     AsyncWorldIOExecutor.dropQueuedColumnLoad(
-                            playerCubeMap.getWorldServer(), getPos().x, getPos().z, (c) -> self().getLoadedRunnable().run());
+                            playerCubeMap.getWorldServer(), getPos().x, getPos().z, self().getLoadedRunnable());
                 }
                 this.playerCubeMap.removeEntry(this);
             }

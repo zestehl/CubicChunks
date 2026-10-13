@@ -41,6 +41,7 @@ import cubicchunks.regionlib.util.Utils;
 import io.github.opencubicchunks.cubicchunks.core.CubicChunks;
 import net.minecraft.util.Tuple;
 
+import java.io.EOFException;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.ByteBuffer;
@@ -220,8 +221,14 @@ public class ShadowPagingRegion<K extends IKey<K>> implements IRegion<K> {
 				//if deleting an entry, there's no need to change anything on disk! the only thing that needs
 				// to be changed is the headers.
 				if (value != null) {
+					RegionEntryLocation location = entryLocationsToUse.get(key);
+					if (location == null) {
+						// Reservation already reported this entry as unsupported. Leave it for the
+						// next storage provider after the supported entries have been committed.
+						continue;
+					}
 					int size = value.remaining();
-					int bytesOffset = entryLocationsToUse.get(key).getOffset() * this.sectorSize;
+					long bytesOffset = (long) location.getOffset() * this.sectorSize;
 
 					//build sequence of buffers for vectored IO
 					tempBuffers.clear();
@@ -341,9 +348,10 @@ public class ShadowPagingRegion<K extends IKey<K>> implements IRegion<K> {
 			readFully(file, buf, position);
 
 			int dataLength = buf.getInt(0);
-			if (dataLength > sectorCount * sectorSize) {
+			long maxDataLength = (long) sectorCount * sectorSize - Integer.BYTES;
+			if (dataLength < 0 || dataLength > maxDataLength) {
 				throw new CorruptedDataException(
-						"Expected data size max " + sectorCount * sectorSize + " but found " + dataLength);
+						"Expected data size between 0 and " + maxDataLength + " but found " + dataLength);
 			}
 
 			// read data
@@ -481,7 +489,14 @@ public class ShadowPagingRegion<K extends IKey<K>> implements IRegion<K> {
 
 	public static void readFully(FileChannel src, ByteBuffer data, long position) throws IOException {
 		while (data.hasRemaining()) {
-			src.read(data, position);
+			int read = src.read(data, position);
+			if (read < 0) {
+				throw new EOFException("Unexpected end of region at byte " + position + "; " + data.remaining() + " bytes remain");
+			}
+			if (read == 0) {
+				throw new IOException("Region read made no progress at byte " + position);
+			}
+			position += read;
 		}
 	}
 

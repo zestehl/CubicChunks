@@ -29,6 +29,8 @@ sourceSets {
         java.include 'io/github/opencubicchunks/cubicchunks/core/server/chunkio/async/forge/QueuedCubeHashDiagnostic.java'
         java.include 'io/github/opencubicchunks/cubicchunks/core/server/chunkio/async/forge/TestAsyncTaskCompletion.java'
         java.include 'io/github/opencubicchunks/cubicchunks/core/worldgen/TestWorldgenWatchdogEntry.java'
+        java.include 'io/github/opencubicchunks/cubicchunks/core/server/chunkio/region/TestShadowPagingRegion.java'
+        java.include 'io/github/opencubicchunks/cubicchunks/core/world/TestServerHeightMapSerialization.java'
     }
 }
 repositories {
@@ -123,6 +125,8 @@ jar {
 tasks.named('remapJar') { archiveClassifier = targetLoader }
 tasks.named('test') {
     useJUnit()
+    // Storage regressions exercise the actual named Minecraft Tuple class without booting a world.
+    classpath += sourceSets.main.compileClasspath
     javaLauncher = javaToolchains.launcherFor {
         languageVersion = JavaLanguageVersion.of(targetLoader == 'cleanroom' ? 25 : 8)
     }
@@ -134,6 +138,15 @@ tasks.register('queuedCubeHashDiagnostic', JavaExec) {
     dependsOn tasks.named('testClasses')
     classpath = sourceSets.test.runtimeClasspath
     mainClass = 'io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge.QueuedCubeHashDiagnostic'
+    javaLauncher = tasks.named('test').get().javaLauncher
+}
+
+tasks.register('heightMapAllocationDiagnostic', JavaExec) {
+    description = 'Compare heightmap serialization allocations with the previous buffer sizing.'
+    group = 'verification'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'io.github.opencubicchunks.cubicchunks.core.world.TestServerHeightMapSerialization'
     javaLauncher = tasks.named('test').get().javaLauncher
 }
 

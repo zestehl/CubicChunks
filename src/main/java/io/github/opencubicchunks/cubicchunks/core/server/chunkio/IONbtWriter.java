@@ -117,7 +117,7 @@ class IONbtWriter {
     }
 
     private static void writeBiomes(Chunk column, NBTTagCompound nbt) {// biomes
-        nbt.setByteArray("Biomes", column.getBiomeArray());
+        nbt.setByteArray("Biomes", column.getBiomeArray().clone());
     }
 
     private static void writeOpacityIndex(Chunk column, NBTTagCompound nbt) {// light index
@@ -206,10 +206,11 @@ class IONbtWriter {
             section.setByteArray("Add2", add2neid.getData());
         }
 
-        section.setByteArray("BlockLight", ebs.getBlockLight().getData());
+        // NBT byte arrays retain their input; pending saves must not share mutable world data.
+        section.setByteArray("BlockLight", ebs.getBlockLight().getData().clone());
 
         if (cube.getWorld().provider.hasSkyLight()) {
-            section.setByteArray("SkyLight", ebs.getSkyLight().getData());
+            section.setByteArray("SkyLight", ebs.getSkyLight().getData().clone());
         }
     }
 
@@ -274,7 +275,7 @@ class IONbtWriter {
     private static void writeBiomes(Cube cube, NBTTagCompound nbt) {// biomes
         byte[] biomes = cube.getBiomeArray();
         if (biomes != null)
-            nbt.setByteArray("Biomes3D", biomes);
+            nbt.setByteArray("Biomes3D", biomes.clone());
     }
 
     private static List<NextTickListEntry> getScheduledTicks(Cube cube) {

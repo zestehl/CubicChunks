@@ -189,7 +189,7 @@ public class CubeProviderServer extends ChunkProviderServer implements ICubeProv
         if (runnable == null) {
             return getColumn(columnX, columnZ, Requirement.LOAD);
         }
-        asyncGetColumn(columnX, columnZ, Requirement.LOAD, col -> runnable.run());
+        asyncGetColumn(columnX, columnZ, Requirement.LOAD, col -> runnable.run(), runnable);
         return null;
     }
 
@@ -314,7 +314,8 @@ public class CubeProviderServer extends ChunkProviderServer implements ICubeProv
         }
 
         if (cube == null) {
-            AsyncWorldIOExecutor.queueCubeLoad(worldServer, cubeIO, this, cubeX, cubeY, cubeZ, loaded -> {
+            AsyncWorldIOExecutor.queueCubeLoad(worldServer, cubeIO, this, cubeX, cubeY, cubeZ,
+                    AsyncWorldIOExecutor.withCallbackIdentity(callback, loaded -> {
                 Chunk col = getLoadedColumn(cubeX, cubeZ);
                 if (col != null) {
                     assert !col.isEmpty();
@@ -323,7 +324,9 @@ public class CubeProviderServer extends ChunkProviderServer implements ICubeProv
                     loaded = postCubeLoadAttempt(cubeX, cubeY, cubeZ, loaded, col, req, false);
                 }
                 callback.accept(loaded);
-            });
+            }));
+        } else {
+            callback.accept(postCubeLoadAttempt(cubeX, cubeY, cubeZ, cube, cube.getColumn(), req, false));
         }
     }
 
@@ -580,16 +583,21 @@ public class CubeProviderServer extends ChunkProviderServer implements ICubeProv
      * @see CubeProviderServer#getColumn(int, int, Requirement) for the synchronous variant of this method
      */
     public void asyncGetColumn(int columnX, int columnZ, Requirement req, Consumer<Chunk> callback) {
+        asyncGetColumn(columnX, columnZ, req, callback, callback);
+    }
+
+    private void asyncGetColumn(int columnX, int columnZ, Requirement req, Consumer<Chunk> callback, Object callbackIdentity) {
         Chunk column = getLoadedColumn(columnX, columnZ);
         if (column != null || req == Requirement.GET_CACHED) {
             callback.accept(column);
             return;
         }
 
-        AsyncWorldIOExecutor.queueColumnLoad(worldServer, cubeIO, columnX, columnZ, col -> {
+        AsyncWorldIOExecutor.queueColumnLoad(worldServer, cubeIO, columnX, columnZ,
+                AsyncWorldIOExecutor.withCallbackIdentity(callbackIdentity, col -> {
             col = postProcessColumn(columnX, columnZ, col, req, false);
             callback.accept(col);
-        }, col -> currentlyLoadingColumn = col);
+        }), col -> currentlyLoadingColumn = col);
     }
 
     @Nullable @Override

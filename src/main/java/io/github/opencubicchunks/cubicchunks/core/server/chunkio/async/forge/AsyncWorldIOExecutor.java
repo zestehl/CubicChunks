@@ -41,6 +41,8 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -72,7 +74,7 @@ public class AsyncWorldIOExecutor {
 
     // this keeps track of which columns need to be kept loaded for which currently being loaded cubes
     // this allows to avoid a column being unloaded while a cube that uses it is being loaded, which would lead to hard to debug errors
-    private static final Multimap<QueuedColumn, QueuedCube> loadingCubesColumnMap =
+    private static final Multimap<QueuedColumn, AsyncCubeIOProvider> loadingCubesColumnMap =
             Multimaps.newMultimap(new ConcurrentHashMap<>(), Sets::newConcurrentHashSet);
 
     static {
@@ -124,7 +126,7 @@ public class AsyncWorldIOExecutor {
             task.setColumn(column);
             task.run();
         }
-        task.runSynchronousPart();
+        AsyncTaskCompletion.complete(task);
         return task.get();
     }
 
@@ -148,7 +150,7 @@ public class AsyncWorldIOExecutor {
             task = new AsyncColumnIOProvider(key, loader, ((ICubicWorldInternal.Server) world).getCubeCache().getCubeGenerator(), setLoadingColumnCallback);
             task.run();
         }
-        task.runSynchronousPart();
+        AsyncTaskCompletion.complete(task);
         return task.get();
     }
 
@@ -192,6 +194,11 @@ public class AsyncWorldIOExecutor {
         }
     }
 
+    /** Preserve the caller's cancellation key when loading adds a postprocessing consumer. */
+    public static <T> Consumer<T> withCallbackIdentity(Object identity, Consumer<T> callback) {
+        return AsyncIOProvider.withCallbackIdentity(identity, callback);
+    }
+
     //Queue the Cube to be loaded, and call the runnable when isFinished
     // Sponge: Runnable -> Consumer<Cube>
 
@@ -214,12 +221,12 @@ public class AsyncWorldIOExecutor {
         QueuedColumn columnKey = new QueuedColumn(x, z, world);
         AsyncCubeIOProvider task = cubeTasks.get(key);
 
-        loadingCubesColumnMap.put(columnKey, key);
-
         if (task == null) {
             task = new AsyncCubeIOProvider(key, loader);
             task.addCallback(runnable); // Add before calling execute for thread safety
-            task.addCallback(c -> loadingCubesColumnMap.remove(columnKey, key));// add only the first time
+            AsyncCubeIOProvider pinnedTask = task;
+            loadingCubesColumnMap.put(columnKey, pinnedTask);
+            task.setCleanup(() -> loadingCubesColumnMap.remove(columnKey, pinnedTask));
             cubeTasks.put(key, task);
             cubeThreadPool.execute(task);
         } else {
@@ -278,11 +285,7 @@ public class AsyncWorldIOExecutor {
 
         task.removeCallback(runnable);
 
-        // TODO this is not threadsafe
-        if (!task.hasCallbacks()) {
-            cubeTasks.remove(key);
-            cubeThreadPool.remove(task);
-        }
+        AsyncTaskCompletion.cancelIfUnneeded(cubeTasks, key, task, cubeThreadPool);
     }
 
     /**
@@ -294,6 +297,15 @@ public class AsyncWorldIOExecutor {
      * @param runnable The runnable that should be dropped
      */
     public static void dropQueuedColumnLoad(World world, int x, int z, Consumer<Chunk> runnable) {
+        dropQueuedColumnLoad(world, x, z, (Object) runnable);
+    }
+
+    /** Cancel the vanilla asynchronous loadChunk request using its original Runnable. */
+    public static void dropQueuedColumnLoad(World world, int x, int z, Runnable runnable) {
+        dropQueuedColumnLoad(world, x, z, (Object) runnable);
+    }
+
+    private static void dropQueuedColumnLoad(World world, int x, int z, Object runnable) {
         QueuedColumn key = new QueuedColumn(x, z, world);
         AsyncColumnIOProvider task = columnTasks.get(key);
         if (task == null) {
@@ -304,7 +316,7 @@ public class AsyncWorldIOExecutor {
         task.removeCallback(runnable);
 
         if (!task.hasCallbacks()) {
-            columnTasks.remove(key);
+            columnTasks.remove(key, task);
             columnThreadPool.remove(task);
         }
 
@@ -314,7 +326,8 @@ public class AsyncWorldIOExecutor {
     public static void shutdownNowBlocking() {
         // best effort wait for up to 10 seconds each
         // shut down cubes first to avoid a cube executor getting stuck waiting for it's column
-        cubeThreadPool.shutdownNow();
+        List<AsyncCubeIOProvider> stoppingCubeTasks = new ArrayList<>(cubeTasks.values());
+        List<Runnable> neverStartedCubes = cubeThreadPool.shutdownNow();
         cubeTasks.clear();
         try {
             cubeThreadPool.awaitTermination(10, TimeUnit.SECONDS);
@@ -326,6 +339,9 @@ public class AsyncWorldIOExecutor {
             columnThreadPool.awaitTermination(10, TimeUnit.SECONDS);
         } catch (InterruptedException ignored) {
         }
+        AsyncTaskCompletion.cleanupStoppedTasks(stoppingCubeTasks, neverStartedCubes);
+        // Executors still span worlds. A reader that outlives this best-effort shutdown keeps
+        // its column pin; eventual cleanup and world-scoped shutdown remain separate work.
         // initialize for next use
         initExecutors();
     }

@@ -727,7 +727,14 @@ public class ServerHeightMap implements IHeightMap {
 
     public byte[] getData() {
         try {
-            ByteArrayOutputStream buf = new ByteArrayOutputStream();
+            // Each block column stores two heights, a segment count, and only its used segment entries.
+            int serializedSize = this.segments.length * (2 * Integer.BYTES + Short.BYTES);
+            for (int[] columnSegments : this.segments) {
+                if (columnSegments != null && columnSegments.length != 0) {
+                    serializedSize += (getLastSegmentIndex(columnSegments) + 1) * Integer.BYTES;
+                }
+            }
+            ByteArrayOutputStream buf = new ByteArrayOutputStream(serializedSize);
             DataOutputStream out = new DataOutputStream(buf);
             writeData(out);
             out.close();

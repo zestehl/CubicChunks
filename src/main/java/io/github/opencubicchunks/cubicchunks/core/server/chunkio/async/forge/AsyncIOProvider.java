@@ -21,6 +21,7 @@ package io.github.opencubicchunks.cubicchunks.core.server.chunkio.async.forge;
 
 import mcp.MethodsReturnNonnullByDefault;
 
+import java.util.Objects;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.function.Consumer;
 
@@ -38,6 +39,22 @@ abstract class AsyncIOProvider<T> implements Runnable {
     private final ConcurrentLinkedQueue<Consumer<T>> callbacks = new ConcurrentLinkedQueue<>();
     volatile boolean finished = false;
     private boolean completionClaimed;
+    private boolean completionStarted;
+    @Nullable private Runnable cleanup;
+
+    /** Resource ownership is independent of consumers waiting for a result. Server thread only. */
+    final void setCleanup(Runnable cleanup) {
+        this.cleanup = cleanup;
+    }
+
+    /** Release once, including when native completion fails before it reaches the consumers. */
+    final void cleanup() {
+        Runnable cleanup = this.cleanup;
+        this.cleanup = null;
+        if (cleanup != null) {
+            cleanup.run();
+        }
+    }
 
     /** Server-thread guard against completing this queued task again from a reentrant tick. */
     final boolean claimCompletion() {
@@ -46,6 +63,11 @@ abstract class AsyncIOProvider<T> implements Runnable {
         }
         completionClaimed = true;
         return true;
+    }
+
+    /** Once native publication starts, provider consumers must finish registering the loaded result. */
+    final void beginCompletion() {
+        this.completionStarted = true;
     }
 
     /**
@@ -58,12 +80,47 @@ abstract class AsyncIOProvider<T> implements Runnable {
     }
 
     /**
-     * Remove a callback. It will no longer be executed when the load finshes
+     * Remove a callback before native completion starts. Once publication begins, provider callbacks must finish.
      *
      * @param callback The callback to remove
      */
     void removeCallback(Consumer<T> callback) {
-        this.callbacks.remove(callback);
+        removeCallback((Object) callback);
+    }
+
+    void removeCallback(Object callback) {
+        if (completionStarted) {
+            return;
+        }
+        Object identity = callbackIdentity(callback);
+        for (Consumer<T> registered : callbacks) {
+            if (identity.equals(callbackIdentity(registered)) && callbacks.remove(registered)) {
+                return;
+            }
+        }
+    }
+
+    static <T> Consumer<T> withCallbackIdentity(Object identity, Consumer<T> callback) {
+        return new CallbackWithIdentity<>(callbackIdentity(Objects.requireNonNull(identity)), Objects.requireNonNull(callback));
+    }
+
+    private static Object callbackIdentity(Object callback) {
+        return callback instanceof CallbackWithIdentity ? ((CallbackWithIdentity<?>) callback).identity : callback;
+    }
+
+    /** Keep the original consumer or vanilla Runnable addressable through provider postprocessing. */
+    private static final class CallbackWithIdentity<T> implements Consumer<T> {
+        private final Object identity;
+        private final Consumer<T> callback;
+
+        CallbackWithIdentity(Object identity, Consumer<T> callback) {
+            this.identity = identity;
+            this.callback = callback;
+        }
+
+        @Override public void accept(T value) {
+            callback.accept(value);
+        }
     }
 
     /**
@@ -79,7 +136,7 @@ abstract class AsyncIOProvider<T> implements Runnable {
             try {
                 callback.accept(value);
             } catch (RuntimeException error) {
-                // Other consumers include ownership cleanup and must still be notified.
+                // A failed consumer must not prevent the other waiting consumers from being notified.
                 if (failure == null) {
                     failure = error;
                 } else if (failure != error) {
