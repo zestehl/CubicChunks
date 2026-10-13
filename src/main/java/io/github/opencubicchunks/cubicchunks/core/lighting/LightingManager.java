@@ -121,7 +121,8 @@ public class LightingManager implements ILightingManager {
 
     @Override public void writeToNbt(ICube cube, NBTTagCompound lightingInfo) {
         int[] lastHeightmap = cube.getColumn().getHeightMap();
-        lightingInfo.setIntArray("LastHeightMap", lastHeightmap);
+        // NBT retains the supplied array; compression must see the heightmap at save time.
+        lightingInfo.setIntArray("LastHeightMap", lastHeightmap.clone());
         LightingHooks.writeNeighborLightChecksToNBT(cube, lightingInfo);
     }
 
@@ -168,11 +169,8 @@ public class LightingManager implements ILightingManager {
 
     @Override public void onTrackCubeSurface(ICube cube) {
         if (!world.isRemote) {
-            BlockPos min = cube.getCoords().getMinBlockPos();
-            BlockPos max = cube.getCoords().getMaxBlockPos();
-            for (BlockPos.MutableBlockPos pos : BlockPos.getAllInBoxMutable(min, max.add(1, 1, 1))) {
-                ((PlayerCubeMap) ((WorldServer) world).getPlayerChunkMap()).heightUpdated(pos.getX(), pos.getZ());
-            }
+            PlayerCubeMap playerMap = (PlayerCubeMap) ((WorldServer) world).getPlayerChunkMap();
+            SurfaceHeightUpdates.forCube(cube.getCoords(), playerMap::heightUpdated);
             tryScheduleOnLoadHeightChangeRelight(cube);
         }
     }

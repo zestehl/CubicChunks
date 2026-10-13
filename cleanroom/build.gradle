@@ -31,6 +31,8 @@ sourceSets {
         java.include 'io/github/opencubicchunks/cubicchunks/core/worldgen/TestWorldgenWatchdogEntry.java'
         java.include 'io/github/opencubicchunks/cubicchunks/core/server/chunkio/region/TestShadowPagingRegion.java'
         java.include 'io/github/opencubicchunks/cubicchunks/core/world/TestServerHeightMapSerialization.java'
+        java.include 'io/github/opencubicchunks/cubicchunks/core/lighting/TestSurfaceHeightUpdates.java'
+        java.include 'io/github/opencubicchunks/cubicchunks/core/asm/TestVerticalRenderDistanceOption.java'
     }
 }
 repositories {
@@ -132,6 +134,9 @@ tasks.named('test') {
     }
     doFirst { logger.lifecycle("Focused regressions use Java ${javaLauncher.get().metadata.languageVersion}") }
 }
+
+// The focused lighting/config tests compile against the same named Minecraft and Mixin APIs as the mod.
+sourceSets.test.compileClasspath += sourceSets.main.compileClasspath
 tasks.register('queuedCubeHashDiagnostic', JavaExec) {
     description = 'Export synthetic queue-key hash distributions; this is not a runtime benchmark.'
     group = 'verification'

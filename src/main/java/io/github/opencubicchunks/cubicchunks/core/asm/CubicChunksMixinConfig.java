@@ -234,8 +234,9 @@ public class CubicChunksMixinConfig implements IMixinConfigPlugin {
                         + " You need to restart Minecraft to apply changes."),
         VERT_RENDER_DISTANCE(true,
                 new String[] {},
-                new String[] {"io.github.opencubicchunks.cubicchunks.core.asm.mixin.selectable.client.MixinEntityRenderer",
-                        "io.github.opencubicchunks.cubicchunks.core.asm.mixin.selectable.client.MixinRenderGlobal"},
+                new String[] {"io.github.opencubicchunks.cubicchunks.core.asm.mixin.selectable.client.vertviewdist.MixinEntityRenderer",
+                        "io.github.opencubicchunks.cubicchunks.core.asm.mixin.selectable.client.vertviewdist.MixinRenderGlobal",
+                        "io.github.opencubicchunks.cubicchunks.core.asm.mixin.selectable.client.vertviewdist.MixinRenderGlobalNoOptifine"},
                 "Enabling this option will make the vertical view distance slider affect clientside vertical render distance." +
                         " When disabled, only serverside load distance is affected.");
 
