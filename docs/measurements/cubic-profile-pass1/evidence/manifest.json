@@ -1,0 +1,151 @@
+{
+  "runs": [
+    {
+      "label": "cleanroom-baseline-write",
+      "artifact": "c0fa34c71c1eb297c6043ef83ed3d59244fcb6126589ddce99a57832384f48ef",
+      "passed": true,
+      "probe_sha256": "d319ef199824e2de8fecf16f26bf48c078242a255bdfa39a3862d276e323d7ae"
+    },
+    {
+      "label": "cleanroom-baseline-read",
+      "artifact": "c0fa34c71c1eb297c6043ef83ed3d59244fcb6126589ddce99a57832384f48ef",
+      "passed": true,
+      "probe_sha256": "4b652ac133c715bce841a16821949e8a0e688ac8310054d6344fcb99653bbe8d"
+    },
+    {
+      "label": "forge-baseline-write",
+      "artifact": "45df5fbacf545dd0f0d0d9e1f9e958b2953c0feba866b6096c62a53dfe25cd2d",
+      "passed": true,
+      "probe_sha256": "18164f49d795ce0261b9f85fc51618bdd5d51bfe016b0a78ef36fa24aa22e7d8"
+    },
+    {
+      "label": "forge-baseline-read",
+      "artifact": "45df5fbacf545dd0f0d0d9e1f9e958b2953c0feba866b6096c62a53dfe25cd2d",
+      "passed": true,
+      "probe_sha256": "250680d73685673aa85895f56665b16104101e3593839b0d8d820983904861da"
+    },
+    {
+      "label": "cleanroom-candidate-write",
+      "artifact": "903e1cd3f3e2c3af07e9e50de4177b17b70a8e9581e9c41ac3bb14d8e9b15ae8",
+      "passed": true,
+      "probe_sha256": "1c404b3d5fc49a1ff487e35fda44f6f762cd9ec00a3477c4ccd1a665c221455f"
+    },
+    {
+      "label": "cleanroom-candidate-read",
+      "artifact": "903e1cd3f3e2c3af07e9e50de4177b17b70a8e9581e9c41ac3bb14d8e9b15ae8",
+      "passed": true,
+      "probe_sha256": "21c8db567b0741a6449b063a0c4a6e4044f46640d7fda158d1f12cce3dfd190e"
+    },
+    {
+      "label": "forge-candidate-write",
+      "artifact": "2184c1b3030f467eb4df5aadf74bf27a5a9544341ca5940e5b7d539d0a5d3e3f",
+      "passed": true,
+      "probe_sha256": "823755b691dccee2209d1375a5d65276b24e66a023f8c6d1265d81ba96c9ea2b"
+    },
+    {
+      "label": "forge-candidate-read",
+      "artifact": "2184c1b3030f467eb4df5aadf74bf27a5a9544341ca5940e5b7d539d0a5d3e3f",
+      "passed": true,
+      "probe_sha256": "b4d60f251c8e51cd64dcfb38d36b57c32fec45a565dc21fffbe5f326a2069fd6"
+    }
+  ],
+  "comparisons": [
+    {
+      "scope": "cleanroom: baseline vs candidate saved world",
+      "fields_equal": {
+        "seed": true,
+        "saved_cubes": true,
+        "block_counts": true,
+        "fixtures": true,
+        "lights": true,
+        "tiles": true,
+        "cube_y_counts": true
+      }
+    },
+    {
+      "scope": "cleanroom: baseline vs candidate write errors",
+      "signatures_and_counts_equal": true,
+      "baseline_count": 186,
+      "candidate_count": 186
+    },
+    {
+      "scope": "cleanroom: baseline vs candidate read errors",
+      "signatures_and_counts_equal": true,
+      "baseline_count": 199,
+      "candidate_count": 199
+    },
+    {
+      "scope": "forge: baseline vs candidate saved world",
+      "fields_equal": {
+        "seed": true,
+        "saved_cubes": true,
+        "block_counts": true,
+        "fixtures": true,
+        "lights": true,
+        "tiles": true,
+        "cube_y_counts": true
+      }
+    },
+    {
+      "scope": "forge: baseline vs candidate write errors",
+      "signatures_and_counts_equal": true,
+      "baseline_count": 186,
+      "candidate_count": 186
+    },
+    {
+      "scope": "forge: baseline vs candidate read errors",
+      "signatures_and_counts_equal": true,
+      "baseline_count": 199,
+      "candidate_count": 199
+    },
+    {
+      "scope": "baseline: Cleanroom vs Forge saved world",
+      "fields_equal": {
+        "seed": true,
+        "saved_cubes": true,
+        "block_counts": true,
+        "fixtures": true,
+        "lights": true,
+        "tiles": true,
+        "cube_y_counts": true
+      }
+    },
+    {
+      "scope": "candidate: Cleanroom vs Forge saved world",
+      "fields_equal": {
+        "seed": true,
+        "saved_cubes": true,
+        "block_counts": true,
+        "fixtures": true,
+        "lights": true,
+        "tiles": true,
+        "cube_y_counts": true
+      }
+    }
+  ],
+  "error_normalization": "Replace each disposable instance root and Java object identity suffixes; preserve other message text and counts.",
+  "harness": [
+    {
+      "path": "E:\\WorldGenOverhaul\\tools\\experiment_cubic.py",
+      "bytes": 16047,
+      "sha256": "a5159bfd40fe6e1c6b31340f6d41f90f0fe8dcb6322984d43333b5e871813403"
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\experiments\\cubic\\src\\main\\java\\supersymmetry\\riven\\experiment\\CubicProfileProbe.java",
+      "bytes": 7103,
+      "sha256": "ed9f5c403f014c2a58e9637b8b45c278fa88e9623f6364e907d2ba1423522264"
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\experiments\\cubic\\src\\main\\java\\io\\github\\opencubicchunks\\cubicchunks\\core\\server\\chunkio\\CubicSnapshotProbe.java",
+      "bytes": 3038,
+      "sha256": "f8d308505e830935a843e56eeb5529743e9db6d9438ff5599b131a5ea0170c69"
+    }
+  ],
+  "limits": [
+    "One process per loader/variant/mode on one host; no controlled speedup claim.",
+    "Three batches are different coordinates and JIT states, not independent runs.",
+    "Save phases include all dirty loaded cubes and columns, including spawn.",
+    "Callback and snapshot native fixtures run after the timed phases.",
+    "Native async cancellation, client rendering and long-running stress remain unqualified."
+  ]
+}

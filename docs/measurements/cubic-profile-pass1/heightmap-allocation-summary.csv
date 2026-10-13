@@ -1,0 +1,13 @@
+run,java,fixture,mode,samples,serialized_bytes,median_bytes_per_call,minimum_bytes_per_call,maximum_bytes_per_call,median_ns_per_call,minimum_ns_per_call,maximum_ns_per_call
+cleanroom,25.0.3,empty,legacy_default32,3,2560,10968.0,10968.0,10968.0,11430.02,11219.5,11483.78
+cleanroom,25.0.3,empty,current_presized,3,2560,5256.0,5256.0,5256.0,10660.15,10600.42,10696.04
+cleanroom,25.0.3,irregular_caves,legacy_default32,3,2620,11032.0,11032.0,11032.0432,10710.94,10572.11,11136.92
+cleanroom,25.0.3,irregular_caves,current_presized,3,2620,5384.0,5384.0,5384.0,10361.43,10310.71,10844.78
+cleanroom,25.0.3,dense_caves,legacy_default32,3,27440,93240.0,93240.0,93240.0,97351.91,96713.28,97909.03
+cleanroom,25.0.3,dense_caves,current_presized,3,27440,55016.0,55016.0,55016.0,94216.22,93431.19,96186.96
+forge,1.8.0_492,empty,legacy_default32,3,2560,10944.0,10944.0,10944.0,37207.1,36994.33,38024.68
+forge,1.8.0_492,empty,current_presized,3,2560,5232.0,5232.0,5232.0,37064.49,37025.29,37281.22
+forge,1.8.0_492,irregular_caves,legacy_default32,3,2620,11008.0,11008.0,11008.0632,4924.25,4219.69,37866.65
+forge,1.8.0_492,irregular_caves,current_presized,3,2620,5360.0,5360.0,5360.0,26390.88,4473.59,37701.47
+forge,1.8.0_492,dense_caves,legacy_default32,3,27440,93216.0,93216.0,93216.0,45294.84,44884.36,45489.66
+forge,1.8.0_492,dense_caves,current_presized,3,27440,54992.0,54992.0,54992.0,42811.69,42316.74,46714.66

@@ -58,6 +58,12 @@ generated refmaps, public API naming, library checksums and packaging.
 The original LaunchWrapper-based upstream test suite is not part of this
 new test task and has not passed here.
 
+The subsequent [persistence and profiling pass](cubic-profile-pass1.md) adds
+region-file and heightmap-format regressions, canceled-load ownership and
+callback identity coverage, and native generation/save/restart checks for both
+loaders. It includes exported JFR diagnostics and measured heightmap allocation
+reductions, with the remaining runtime and performance limits recorded separately.
+
 ## Cube lookup hash
 
 The old queued-cube hash multiplied Y by Z. At Z=0, every Y for a fixed X

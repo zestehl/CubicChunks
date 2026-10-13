@@ -1,0 +1,590 @@
+{
+  "schema": "cubicchunks.heightmap-allocation-diagnostic.v1",
+  "runs": [
+    {
+      "label": "cleanroom",
+      "input": {
+        "file": "heightmap-cleanroom.log",
+        "bytes": 6657,
+        "sha256": "058bae6ad01bca697868546959724c0eecfcc3b8b931757376da522675534441"
+      },
+      "metadata": {
+        "diagnostic": "heightmap_serialization",
+        "java": "25.0.3",
+        "iterations": 10000,
+        "warmup": 5000,
+        "samples": 3
+      },
+      "observations": [
+        {
+          "fixture": "empty",
+          "mode": "legacy_default32",
+          "sample": 0,
+          "serialized_bytes": 2560,
+          "iterations": 10000,
+          "thread_allocated_bytes": 109680000,
+          "elapsed_ns": 114837800,
+          "allocated_bytes_per_call": 10968.0,
+          "elapsed_ns_per_call": 11483.78
+        },
+        {
+          "fixture": "empty",
+          "mode": "current_presized",
+          "sample": 0,
+          "serialized_bytes": 2560,
+          "iterations": 10000,
+          "thread_allocated_bytes": 52560000,
+          "elapsed_ns": 106601500,
+          "allocated_bytes_per_call": 5256.0,
+          "elapsed_ns_per_call": 10660.15
+        },
+        {
+          "fixture": "empty",
+          "mode": "current_presized",
+          "sample": 1,
+          "serialized_bytes": 2560,
+          "iterations": 10000,
+          "thread_allocated_bytes": 52560000,
+          "elapsed_ns": 106960400,
+          "allocated_bytes_per_call": 5256.0,
+          "elapsed_ns_per_call": 10696.04
+        },
+        {
+          "fixture": "empty",
+          "mode": "legacy_default32",
+          "sample": 1,
+          "serialized_bytes": 2560,
+          "iterations": 10000,
+          "thread_allocated_bytes": 109680000,
+          "elapsed_ns": 112195000,
+          "allocated_bytes_per_call": 10968.0,
+          "elapsed_ns_per_call": 11219.5
+        },
+        {
+          "fixture": "empty",
+          "mode": "legacy_default32",
+          "sample": 2,
+          "serialized_bytes": 2560,
+          "iterations": 10000,
+          "thread_allocated_bytes": 109680000,
+          "elapsed_ns": 114300200,
+          "allocated_bytes_per_call": 10968.0,
+          "elapsed_ns_per_call": 11430.02
+        },
+        {
+          "fixture": "empty",
+          "mode": "current_presized",
+          "sample": 2,
+          "serialized_bytes": 2560,
+          "iterations": 10000,
+          "thread_allocated_bytes": 52560000,
+          "elapsed_ns": 106004200,
+          "allocated_bytes_per_call": 5256.0,
+          "elapsed_ns_per_call": 10600.42
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "legacy_default32",
+          "sample": 0,
+          "serialized_bytes": 2620,
+          "iterations": 10000,
+          "thread_allocated_bytes": 110320000,
+          "elapsed_ns": 107109400,
+          "allocated_bytes_per_call": 11032.0,
+          "elapsed_ns_per_call": 10710.94
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "current_presized",
+          "sample": 0,
+          "serialized_bytes": 2620,
+          "iterations": 10000,
+          "thread_allocated_bytes": 53840000,
+          "elapsed_ns": 103614300,
+          "allocated_bytes_per_call": 5384.0,
+          "elapsed_ns_per_call": 10361.43
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "current_presized",
+          "sample": 1,
+          "serialized_bytes": 2620,
+          "iterations": 10000,
+          "thread_allocated_bytes": 53840000,
+          "elapsed_ns": 103107100,
+          "allocated_bytes_per_call": 5384.0,
+          "elapsed_ns_per_call": 10310.71
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "legacy_default32",
+          "sample": 1,
+          "serialized_bytes": 2620,
+          "iterations": 10000,
+          "thread_allocated_bytes": 110320000,
+          "elapsed_ns": 105721100,
+          "allocated_bytes_per_call": 11032.0,
+          "elapsed_ns_per_call": 10572.11
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "legacy_default32",
+          "sample": 2,
+          "serialized_bytes": 2620,
+          "iterations": 10000,
+          "thread_allocated_bytes": 110320432,
+          "elapsed_ns": 111369200,
+          "allocated_bytes_per_call": 11032.0432,
+          "elapsed_ns_per_call": 11136.92
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "current_presized",
+          "sample": 2,
+          "serialized_bytes": 2620,
+          "iterations": 10000,
+          "thread_allocated_bytes": 53840000,
+          "elapsed_ns": 108447800,
+          "allocated_bytes_per_call": 5384.0,
+          "elapsed_ns_per_call": 10844.78
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "legacy_default32",
+          "sample": 0,
+          "serialized_bytes": 27440,
+          "iterations": 10000,
+          "thread_allocated_bytes": 932400000,
+          "elapsed_ns": 967132800,
+          "allocated_bytes_per_call": 93240.0,
+          "elapsed_ns_per_call": 96713.28
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "current_presized",
+          "sample": 0,
+          "serialized_bytes": 27440,
+          "iterations": 10000,
+          "thread_allocated_bytes": 550160000,
+          "elapsed_ns": 961869600,
+          "allocated_bytes_per_call": 55016.0,
+          "elapsed_ns_per_call": 96186.96
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "current_presized",
+          "sample": 1,
+          "serialized_bytes": 27440,
+          "iterations": 10000,
+          "thread_allocated_bytes": 550160000,
+          "elapsed_ns": 942162200,
+          "allocated_bytes_per_call": 55016.0,
+          "elapsed_ns_per_call": 94216.22
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "legacy_default32",
+          "sample": 1,
+          "serialized_bytes": 27440,
+          "iterations": 10000,
+          "thread_allocated_bytes": 932400000,
+          "elapsed_ns": 979090300,
+          "allocated_bytes_per_call": 93240.0,
+          "elapsed_ns_per_call": 97909.03
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "legacy_default32",
+          "sample": 2,
+          "serialized_bytes": 27440,
+          "iterations": 10000,
+          "thread_allocated_bytes": 932400000,
+          "elapsed_ns": 973519100,
+          "allocated_bytes_per_call": 93240.0,
+          "elapsed_ns_per_call": 97351.91
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "current_presized",
+          "sample": 2,
+          "serialized_bytes": 27440,
+          "iterations": 10000,
+          "thread_allocated_bytes": 550160000,
+          "elapsed_ns": 934311900,
+          "allocated_bytes_per_call": 55016.0,
+          "elapsed_ns_per_call": 93431.19
+        }
+      ],
+      "summaries": [
+        {
+          "fixture": "empty",
+          "mode": "legacy_default32",
+          "samples": 3,
+          "serialized_bytes": 2560,
+          "median_bytes_per_call": 10968.0,
+          "minimum_bytes_per_call": 10968.0,
+          "maximum_bytes_per_call": 10968.0,
+          "median_ns_per_call": 11430.02,
+          "minimum_ns_per_call": 11219.5,
+          "maximum_ns_per_call": 11483.78
+        },
+        {
+          "fixture": "empty",
+          "mode": "current_presized",
+          "samples": 3,
+          "serialized_bytes": 2560,
+          "median_bytes_per_call": 5256.0,
+          "minimum_bytes_per_call": 5256.0,
+          "maximum_bytes_per_call": 5256.0,
+          "median_ns_per_call": 10660.15,
+          "minimum_ns_per_call": 10600.42,
+          "maximum_ns_per_call": 10696.04
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "legacy_default32",
+          "samples": 3,
+          "serialized_bytes": 2620,
+          "median_bytes_per_call": 11032.0,
+          "minimum_bytes_per_call": 11032.0,
+          "maximum_bytes_per_call": 11032.0432,
+          "median_ns_per_call": 10710.94,
+          "minimum_ns_per_call": 10572.11,
+          "maximum_ns_per_call": 11136.92
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "current_presized",
+          "samples": 3,
+          "serialized_bytes": 2620,
+          "median_bytes_per_call": 5384.0,
+          "minimum_bytes_per_call": 5384.0,
+          "maximum_bytes_per_call": 5384.0,
+          "median_ns_per_call": 10361.43,
+          "minimum_ns_per_call": 10310.71,
+          "maximum_ns_per_call": 10844.78
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "legacy_default32",
+          "samples": 3,
+          "serialized_bytes": 27440,
+          "median_bytes_per_call": 93240.0,
+          "minimum_bytes_per_call": 93240.0,
+          "maximum_bytes_per_call": 93240.0,
+          "median_ns_per_call": 97351.91,
+          "minimum_ns_per_call": 96713.28,
+          "maximum_ns_per_call": 97909.03
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "current_presized",
+          "samples": 3,
+          "serialized_bytes": 27440,
+          "median_bytes_per_call": 55016.0,
+          "minimum_bytes_per_call": 55016.0,
+          "maximum_bytes_per_call": 55016.0,
+          "median_ns_per_call": 94216.22,
+          "minimum_ns_per_call": 93431.19,
+          "maximum_ns_per_call": 96186.96
+        }
+      ]
+    },
+    {
+      "label": "forge",
+      "input": {
+        "file": "cubic-forge-build.log",
+        "bytes": 11802,
+        "sha256": "02ee4362008cb2e4c7cad5047eaee70609c2bfdf71ee4600b800d5a0afd756f8"
+      },
+      "metadata": {
+        "diagnostic": "heightmap_serialization",
+        "java": "1.8.0_492",
+        "iterations": 10000,
+        "warmup": 5000,
+        "samples": 3
+      },
+      "observations": [
+        {
+          "fixture": "empty",
+          "mode": "legacy_default32",
+          "sample": 0,
+          "serialized_bytes": 2560,
+          "iterations": 10000,
+          "thread_allocated_bytes": 109440000,
+          "elapsed_ns": 380246800,
+          "allocated_bytes_per_call": 10944.0,
+          "elapsed_ns_per_call": 38024.68
+        },
+        {
+          "fixture": "empty",
+          "mode": "current_presized",
+          "sample": 0,
+          "serialized_bytes": 2560,
+          "iterations": 10000,
+          "thread_allocated_bytes": 52320000,
+          "elapsed_ns": 372812200,
+          "allocated_bytes_per_call": 5232.0,
+          "elapsed_ns_per_call": 37281.22
+        },
+        {
+          "fixture": "empty",
+          "mode": "current_presized",
+          "sample": 1,
+          "serialized_bytes": 2560,
+          "iterations": 10000,
+          "thread_allocated_bytes": 52320000,
+          "elapsed_ns": 370252900,
+          "allocated_bytes_per_call": 5232.0,
+          "elapsed_ns_per_call": 37025.29
+        },
+        {
+          "fixture": "empty",
+          "mode": "legacy_default32",
+          "sample": 1,
+          "serialized_bytes": 2560,
+          "iterations": 10000,
+          "thread_allocated_bytes": 109440000,
+          "elapsed_ns": 369943300,
+          "allocated_bytes_per_call": 10944.0,
+          "elapsed_ns_per_call": 36994.33
+        },
+        {
+          "fixture": "empty",
+          "mode": "legacy_default32",
+          "sample": 2,
+          "serialized_bytes": 2560,
+          "iterations": 10000,
+          "thread_allocated_bytes": 109440000,
+          "elapsed_ns": 372071000,
+          "allocated_bytes_per_call": 10944.0,
+          "elapsed_ns_per_call": 37207.1
+        },
+        {
+          "fixture": "empty",
+          "mode": "current_presized",
+          "sample": 2,
+          "serialized_bytes": 2560,
+          "iterations": 10000,
+          "thread_allocated_bytes": 52320000,
+          "elapsed_ns": 370644900,
+          "allocated_bytes_per_call": 5232.0,
+          "elapsed_ns_per_call": 37064.49
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "legacy_default32",
+          "sample": 0,
+          "serialized_bytes": 2620,
+          "iterations": 10000,
+          "thread_allocated_bytes": 110080000,
+          "elapsed_ns": 378666500,
+          "allocated_bytes_per_call": 11008.0,
+          "elapsed_ns_per_call": 37866.65
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "current_presized",
+          "sample": 0,
+          "serialized_bytes": 2620,
+          "iterations": 10000,
+          "thread_allocated_bytes": 53600000,
+          "elapsed_ns": 377014700,
+          "allocated_bytes_per_call": 5360.0,
+          "elapsed_ns_per_call": 37701.47
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "current_presized",
+          "sample": 1,
+          "serialized_bytes": 2620,
+          "iterations": 10000,
+          "thread_allocated_bytes": 53600000,
+          "elapsed_ns": 263908800,
+          "allocated_bytes_per_call": 5360.0,
+          "elapsed_ns_per_call": 26390.88
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "legacy_default32",
+          "sample": 1,
+          "serialized_bytes": 2620,
+          "iterations": 10000,
+          "thread_allocated_bytes": 110080000,
+          "elapsed_ns": 42196900,
+          "allocated_bytes_per_call": 11008.0,
+          "elapsed_ns_per_call": 4219.69
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "legacy_default32",
+          "sample": 2,
+          "serialized_bytes": 2620,
+          "iterations": 10000,
+          "thread_allocated_bytes": 110080632,
+          "elapsed_ns": 49242500,
+          "allocated_bytes_per_call": 11008.0632,
+          "elapsed_ns_per_call": 4924.25
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "current_presized",
+          "sample": 2,
+          "serialized_bytes": 2620,
+          "iterations": 10000,
+          "thread_allocated_bytes": 53600000,
+          "elapsed_ns": 44735900,
+          "allocated_bytes_per_call": 5360.0,
+          "elapsed_ns_per_call": 4473.59
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "legacy_default32",
+          "sample": 0,
+          "serialized_bytes": 27440,
+          "iterations": 10000,
+          "thread_allocated_bytes": 932160000,
+          "elapsed_ns": 448843600,
+          "allocated_bytes_per_call": 93216.0,
+          "elapsed_ns_per_call": 44884.36
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "current_presized",
+          "sample": 0,
+          "serialized_bytes": 27440,
+          "iterations": 10000,
+          "thread_allocated_bytes": 549920000,
+          "elapsed_ns": 423167400,
+          "allocated_bytes_per_call": 54992.0,
+          "elapsed_ns_per_call": 42316.74
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "current_presized",
+          "sample": 1,
+          "serialized_bytes": 27440,
+          "iterations": 10000,
+          "thread_allocated_bytes": 549920000,
+          "elapsed_ns": 428116900,
+          "allocated_bytes_per_call": 54992.0,
+          "elapsed_ns_per_call": 42811.69
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "legacy_default32",
+          "sample": 1,
+          "serialized_bytes": 27440,
+          "iterations": 10000,
+          "thread_allocated_bytes": 932160000,
+          "elapsed_ns": 452948400,
+          "allocated_bytes_per_call": 93216.0,
+          "elapsed_ns_per_call": 45294.84
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "legacy_default32",
+          "sample": 2,
+          "serialized_bytes": 27440,
+          "iterations": 10000,
+          "thread_allocated_bytes": 932160000,
+          "elapsed_ns": 454896600,
+          "allocated_bytes_per_call": 93216.0,
+          "elapsed_ns_per_call": 45489.66
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "current_presized",
+          "sample": 2,
+          "serialized_bytes": 27440,
+          "iterations": 10000,
+          "thread_allocated_bytes": 549920000,
+          "elapsed_ns": 467146600,
+          "allocated_bytes_per_call": 54992.0,
+          "elapsed_ns_per_call": 46714.66
+        }
+      ],
+      "summaries": [
+        {
+          "fixture": "empty",
+          "mode": "legacy_default32",
+          "samples": 3,
+          "serialized_bytes": 2560,
+          "median_bytes_per_call": 10944.0,
+          "minimum_bytes_per_call": 10944.0,
+          "maximum_bytes_per_call": 10944.0,
+          "median_ns_per_call": 37207.1,
+          "minimum_ns_per_call": 36994.33,
+          "maximum_ns_per_call": 38024.68
+        },
+        {
+          "fixture": "empty",
+          "mode": "current_presized",
+          "samples": 3,
+          "serialized_bytes": 2560,
+          "median_bytes_per_call": 5232.0,
+          "minimum_bytes_per_call": 5232.0,
+          "maximum_bytes_per_call": 5232.0,
+          "median_ns_per_call": 37064.49,
+          "minimum_ns_per_call": 37025.29,
+          "maximum_ns_per_call": 37281.22
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "legacy_default32",
+          "samples": 3,
+          "serialized_bytes": 2620,
+          "median_bytes_per_call": 11008.0,
+          "minimum_bytes_per_call": 11008.0,
+          "maximum_bytes_per_call": 11008.0632,
+          "median_ns_per_call": 4924.25,
+          "minimum_ns_per_call": 4219.69,
+          "maximum_ns_per_call": 37866.65
+        },
+        {
+          "fixture": "irregular_caves",
+          "mode": "current_presized",
+          "samples": 3,
+          "serialized_bytes": 2620,
+          "median_bytes_per_call": 5360.0,
+          "minimum_bytes_per_call": 5360.0,
+          "maximum_bytes_per_call": 5360.0,
+          "median_ns_per_call": 26390.88,
+          "minimum_ns_per_call": 4473.59,
+          "maximum_ns_per_call": 37701.47
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "legacy_default32",
+          "samples": 3,
+          "serialized_bytes": 27440,
+          "median_bytes_per_call": 93216.0,
+          "minimum_bytes_per_call": 93216.0,
+          "maximum_bytes_per_call": 93216.0,
+          "median_ns_per_call": 45294.84,
+          "minimum_ns_per_call": 44884.36,
+          "maximum_ns_per_call": 45489.66
+        },
+        {
+          "fixture": "dense_caves",
+          "mode": "current_presized",
+          "samples": 3,
+          "serialized_bytes": 27440,
+          "median_bytes_per_call": 54992.0,
+          "minimum_bytes_per_call": 54992.0,
+          "maximum_bytes_per_call": 54992.0,
+          "median_ns_per_call": 42811.69,
+          "minimum_ns_per_call": 42316.74,
+          "maximum_ns_per_call": 46714.66
+        }
+      ]
+    }
+  ],
+  "scope": "Synthetic standalone mapped-API heightmap fixtures; no Minecraft server or player world.",
+  "semantics": "ThreadMXBean counter deltas divided by measured calls. Includes wrapper and result allocation. Not JFR sample weights, retained heap, or a controlled whole-server speedup. Three batches in one JVM per runtime; legacy uses unchanged writer through a MethodHandle.",
+  "analyzer": {
+    "file": "analyze_heightmap_allocation.py",
+    "bytes": 9537,
+    "sha256": "2c0b398e9aa0830003ec978e40c5bed74faa1957c8ffa4ec297f019025b36dad"
+  }
+}
