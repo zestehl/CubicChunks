@@ -1,0 +1,202 @@
+run,scope,category,metric,value
+write-server,full recording,gc,collection_count,39
+write-server,full recording,gc,reported_sum_of_pauses_ns,705491700
+write-server,full recording,gc,reported_longest_pause_ns,59775800
+write-server,full recording,gc,top_level_pause_count,45
+write-server,full recording,gc,top_level_pause_duration_ns,705491700
+write-server,full recording,jdk.FileRead,count,11
+write-server,full recording,jdk.FileRead,bytes,1811
+write-server,full recording,jdk.FileRead,duration_ns,103305891700
+write-server,full recording,jdk.FileRead,maximum_duration_ns,40813458800
+write-server,full recording,jdk.FileWrite,count,5
+write-server,full recording,jdk.FileWrite,bytes,1957
+write-server,full recording,jdk.FileWrite,duration_ns,44694700
+write-server,full recording,jdk.FileWrite,maximum_duration_ns,9295800
+write-server,full recording,jdk.ThreadPark,count,1200
+write-server,full recording,jdk.ThreadPark,duration_ns,1918840086500
+write-server,full recording,jdk.ThreadPark,maximum_duration_ns,62002320600
+write-server,idle,gc,collection_count,0
+write-server,idle,gc,reported_sum_of_pauses_ns,0
+write-server,idle,gc,reported_longest_pause_ns,0
+write-server,idle,gc,top_level_pause_count,0
+write-server,idle,gc,top_level_pause_duration_ns,0
+write-server,generate,gc,collection_count,1
+write-server,generate,gc,reported_sum_of_pauses_ns,25274000
+write-server,generate,gc,reported_longest_pause_ns,25274000
+write-server,generate,gc,top_level_pause_count,1
+write-server,generate,gc,top_level_pause_duration_ns,25274000
+write-server,generate,jdk.ThreadPark,count,65
+write-server,generate,jdk.ThreadPark,duration_ns,48615701800
+write-server,generate,jdk.ThreadPark,maximum_duration_ns,18163246900
+write-server,resident,gc,collection_count,0
+write-server,resident,gc,reported_sum_of_pauses_ns,0
+write-server,resident,gc,reported_longest_pause_ns,0
+write-server,resident,gc,top_level_pause_count,0
+write-server,resident,gc,top_level_pause_duration_ns,0
+write-server,resident,jdk.FileWrite,count,1
+write-server,resident,jdk.FileWrite,bytes,512
+write-server,resident,jdk.FileWrite,duration_ns,9065600
+write-server,resident,jdk.FileWrite,maximum_duration_ns,9065600
+write-server,resident,jdk.ThreadPark,count,103
+write-server,resident,jdk.ThreadPark,duration_ns,525609079000
+write-server,resident,jdk.ThreadPark,maximum_duration_ns,43360839800
+write-server,save,gc,collection_count,0
+write-server,save,gc,reported_sum_of_pauses_ns,0
+write-server,save,gc,reported_longest_pause_ns,0
+write-server,save,gc,top_level_pause_count,0
+write-server,save,gc,top_level_pause_duration_ns,0
+write-server,save,jdk.ThreadPark,count,731
+write-server,save,jdk.ThreadPark,duration_ns,860535863500
+write-server,save,jdk.ThreadPark,maximum_duration_ns,31394948600
+write-server,horizontal,gc,collection_count,2
+write-server,horizontal,gc,reported_sum_of_pauses_ns,50865100
+write-server,horizontal,gc,reported_longest_pause_ns,27503100
+write-server,horizontal,gc,top_level_pause_count,2
+write-server,horizontal,gc,top_level_pause_duration_ns,50865100
+write-server,horizontal,jdk.ThreadPark,count,78
+write-server,horizontal,jdk.ThreadPark,duration_ns,65936713700
+write-server,horizontal,jdk.ThreadPark,maximum_duration_ns,16148398700
+write-server,vertical,gc,collection_count,3
+write-server,vertical,gc,reported_sum_of_pauses_ns,48561100
+write-server,vertical,gc,reported_longest_pause_ns,23110000
+write-server,vertical,gc,top_level_pause_count,4
+write-server,vertical,gc,top_level_pause_duration_ns,48561100
+write-server,vertical,jdk.ThreadPark,count,48
+write-server,vertical,jdk.ThreadPark,duration_ns,34801435000
+write-server,vertical,jdk.ThreadPark,maximum_duration_ns,3999543500
+write-client,full recording,gc,collection_count,65
+write-client,full recording,gc,reported_sum_of_pauses_ns,1980680500
+write-client,full recording,gc,reported_longest_pause_ns,141374800
+write-client,full recording,gc,top_level_pause_count,69
+write-client,full recording,gc,top_level_pause_duration_ns,1980680500
+write-client,full recording,jdk.FileWrite,count,6
+write-client,full recording,jdk.FileWrite,bytes,9951
+write-client,full recording,jdk.FileWrite,duration_ns,99666200
+write-client,full recording,jdk.FileWrite,maximum_duration_ns,61482800
+write-client,full recording,jdk.FileRead,count,3
+write-client,full recording,jdk.FileRead,bytes,20747537
+write-client,full recording,jdk.FileRead,duration_ns,71028300
+write-client,full recording,jdk.FileRead,maximum_duration_ns,54367300
+write-client,full recording,jdk.JavaMonitorEnter,count,6
+write-client,full recording,jdk.JavaMonitorEnter,duration_ns,670449800
+write-client,full recording,jdk.JavaMonitorEnter,maximum_duration_ns,564942700
+write-client,full recording,jdk.ThreadPark,count,1886
+write-client,full recording,jdk.ThreadPark,duration_ns,1943222581600
+write-client,full recording,jdk.ThreadPark,maximum_duration_ns,33378796200
+write-client,idle,gc,collection_count,0
+write-client,idle,gc,reported_sum_of_pauses_ns,0
+write-client,idle,gc,reported_longest_pause_ns,0
+write-client,idle,gc,top_level_pause_count,0
+write-client,idle,gc,top_level_pause_duration_ns,0
+write-client,generate,gc,collection_count,0
+write-client,generate,gc,reported_sum_of_pauses_ns,0
+write-client,generate,gc,reported_longest_pause_ns,0
+write-client,generate,gc,top_level_pause_count,0
+write-client,generate,gc,top_level_pause_duration_ns,0
+write-client,resident,gc,collection_count,0
+write-client,resident,gc,reported_sum_of_pauses_ns,0
+write-client,resident,gc,reported_longest_pause_ns,0
+write-client,resident,gc,top_level_pause_count,0
+write-client,resident,gc,top_level_pause_duration_ns,0
+write-client,save,gc,collection_count,0
+write-client,save,gc,reported_sum_of_pauses_ns,0
+write-client,save,gc,reported_longest_pause_ns,0
+write-client,save,gc,top_level_pause_count,0
+write-client,save,gc,top_level_pause_duration_ns,0
+write-client,horizontal,gc,collection_count,0
+write-client,horizontal,gc,reported_sum_of_pauses_ns,0
+write-client,horizontal,gc,reported_longest_pause_ns,0
+write-client,horizontal,gc,top_level_pause_count,0
+write-client,horizontal,gc,top_level_pause_duration_ns,0
+write-client,horizontal,jdk.ThreadPark,count,846
+write-client,horizontal,jdk.ThreadPark,duration_ns,442004503300
+write-client,horizontal,jdk.ThreadPark,maximum_duration_ns,3906111100
+write-client,vertical,gc,collection_count,1
+write-client,vertical,gc,reported_sum_of_pauses_ns,5234200
+write-client,vertical,gc,reported_longest_pause_ns,5234200
+write-client,vertical,gc,top_level_pause_count,1
+write-client,vertical,gc,top_level_pause_duration_ns,5234200
+write-client,vertical,jdk.ThreadPark,count,774
+write-client,vertical,jdk.ThreadPark,duration_ns,388105434700
+write-client,vertical,jdk.ThreadPark,maximum_duration_ns,2035218100
+read-server,full recording,gc,collection_count,23
+read-server,full recording,gc,reported_sum_of_pauses_ns,379672300
+read-server,full recording,gc,reported_longest_pause_ns,61614600
+read-server,full recording,gc,top_level_pause_count,27
+read-server,full recording,gc,top_level_pause_duration_ns,379672300
+read-server,full recording,jdk.FileWrite,count,7
+read-server,full recording,jdk.FileWrite,bytes,10452
+read-server,full recording,jdk.FileWrite,duration_ns,41402200
+read-server,full recording,jdk.FileWrite,maximum_duration_ns,9425800
+read-server,full recording,jdk.FileRead,count,10
+read-server,full recording,jdk.FileRead,bytes,2110044
+read-server,full recording,jdk.FileRead,duration_ns,64897856700
+read-server,full recording,jdk.FileRead,maximum_duration_ns,38131695500
+read-server,full recording,jdk.ThreadPark,count,80
+read-server,full recording,jdk.ThreadPark,duration_ns,165966277600
+read-server,full recording,jdk.ThreadPark,maximum_duration_ns,44873197500
+read-server,idle,gc,collection_count,0
+read-server,idle,gc,reported_sum_of_pauses_ns,0
+read-server,idle,gc,reported_longest_pause_ns,0
+read-server,idle,gc,top_level_pause_count,0
+read-server,idle,gc,top_level_pause_duration_ns,0
+read-server,load-sync,gc,collection_count,0
+read-server,load-sync,gc,reported_sum_of_pauses_ns,0
+read-server,load-sync,gc,reported_longest_pause_ns,0
+read-server,load-sync,gc,top_level_pause_count,0
+read-server,load-sync,gc,top_level_pause_duration_ns,0
+read-server,load-async,gc,collection_count,0
+read-server,load-async,gc,reported_sum_of_pauses_ns,0
+read-server,load-async,gc,reported_longest_pause_ns,0
+read-server,load-async,gc,top_level_pause_count,0
+read-server,load-async,gc,top_level_pause_duration_ns,0
+read-server,load-async,jdk.ThreadPark,count,64
+read-server,load-async,jdk.ThreadPark,duration_ns,24691787000
+read-server,load-async,jdk.ThreadPark,maximum_duration_ns,10124333100
+read-server,resident,gc,collection_count,0
+read-server,resident,gc,reported_sum_of_pauses_ns,0
+read-server,resident,gc,reported_longest_pause_ns,0
+read-server,resident,gc,top_level_pause_count,0
+read-server,resident,gc,top_level_pause_duration_ns,0
+read-client,full recording,gc,collection_count,102
+read-client,full recording,gc,reported_sum_of_pauses_ns,3563726000
+read-client,full recording,gc,reported_longest_pause_ns,136034900
+read-client,full recording,gc,top_level_pause_count,111
+read-client,full recording,gc,top_level_pause_duration_ns,3563726000
+read-client,full recording,jdk.FileWrite,count,6
+read-client,full recording,jdk.FileWrite,bytes,14118
+read-client,full recording,jdk.FileWrite,duration_ns,45800400
+read-client,full recording,jdk.FileWrite,maximum_duration_ns,9335600
+read-client,full recording,jdk.FileRead,count,4
+read-client,full recording,jdk.FileRead,bytes,20749917
+read-client,full recording,jdk.FileRead,duration_ns,170714300
+read-client,full recording,jdk.FileRead,maximum_duration_ns,57065400
+read-client,full recording,jdk.JavaMonitorEnter,count,7
+read-client,full recording,jdk.JavaMonitorEnter,duration_ns,717076300
+read-client,full recording,jdk.JavaMonitorEnter,maximum_duration_ns,557219300
+read-client,full recording,jdk.ThreadPark,count,86
+read-client,full recording,jdk.ThreadPark,duration_ns,34483552100
+read-client,full recording,jdk.ThreadPark,maximum_duration_ns,3271050500
+read-client,idle,gc,collection_count,0
+read-client,idle,gc,reported_sum_of_pauses_ns,0
+read-client,idle,gc,reported_longest_pause_ns,0
+read-client,idle,gc,top_level_pause_count,0
+read-client,idle,gc,top_level_pause_duration_ns,0
+read-client,idle,jdk.JavaMonitorEnter,count,1
+read-client,idle,jdk.JavaMonitorEnter,duration_ns,13094900
+read-client,idle,jdk.JavaMonitorEnter,maximum_duration_ns,13094900
+read-client,load-sync,gc,collection_count,0
+read-client,load-sync,gc,reported_sum_of_pauses_ns,0
+read-client,load-sync,gc,reported_longest_pause_ns,0
+read-client,load-sync,gc,top_level_pause_count,0
+read-client,load-sync,gc,top_level_pause_duration_ns,0
+read-client,load-async,gc,collection_count,0
+read-client,load-async,gc,reported_sum_of_pauses_ns,0
+read-client,load-async,gc,reported_longest_pause_ns,0
+read-client,load-async,gc,top_level_pause_count,0
+read-client,load-async,gc,top_level_pause_duration_ns,0
+read-client,resident,gc,collection_count,0
+read-client,resident,gc,reported_sum_of_pauses_ns,0
+read-client,resident,gc,reported_longest_pause_ns,0
+read-client,resident,gc,top_level_pause_count,0
+read-client,resident,gc,top_level_pause_duration_ns,0

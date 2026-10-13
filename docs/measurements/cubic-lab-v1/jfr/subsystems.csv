@@ -1,0 +1,209 @@
+run,scope,event,subsystem,value,denominator,share_percent,unit
+write-server,full recording,execution,vanilla,555,1470,37.755102040816325,sample_count
+write-server,full recording,execution,Riven,543,1470,36.93877551020408,sample_count
+write-server,full recording,execution,CubicChunks,231,1470,15.714285714285714,sample_count
+write-server,full recording,execution,other,82,1470,5.578231292517007,sample_count
+write-server,full recording,execution,GregTech,55,1470,3.741496598639456,sample_count
+write-server,full recording,execution,RegionLib,4,1470,0.272108843537415,sample_count
+write-server,full recording,native,other,5030,5132,98.012470771629,sample_count
+write-server,full recording,native,vanilla,84,5132,1.636788776305534,sample_count
+write-server,full recording,native,CubicChunks,14,5132,0.2727981293842556,sample_count
+write-server,full recording,native,GregTech,3,5132,0.05845674201091192,sample_count
+write-server,full recording,native,RegionLib,1,5132,0.019485580670303974,sample_count
+write-server,full recording,allocation,Riven,14761344256,23198621704,63.63026409217574,sample_weight_bytes
+write-server,full recording,allocation,vanilla,5352367640,23198621704,23.071920859320375,sample_weight_bytes
+write-server,full recording,allocation,other,2131421704,23198621704,9.18770835265826,sample_weight_bytes
+write-server,full recording,allocation,CubicChunks,543850536,23198621704,2.3443226194176314,sample_weight_bytes
+write-server,full recording,allocation,GregTech,391035776,23198621704,1.6855991747672494,sample_weight_bytes
+write-server,full recording,allocation,RegionLib,18601792,23198621704,0.08018490166074221,sample_weight_bytes
+write-server,idle,execution,vanilla,4,5,80.0,sample_count
+write-server,idle,execution,CubicChunks,1,5,20.0,sample_count
+write-server,idle,native,other,241,241,100.0,sample_count
+write-server,generate,execution,Riven,10,20,50.0,sample_count
+write-server,generate,execution,vanilla,8,20,40.0,sample_count
+write-server,generate,execution,CubicChunks,2,20,10.0,sample_count
+write-server,generate,native,other,308,308,100.0,sample_count
+write-server,generate,allocation,Riven,266101960,290843344,91.49322667669507,sample_weight_bytes
+write-server,generate,allocation,vanilla,19622000,290843344,6.746587262454251,sample_weight_bytes
+write-server,generate,allocation,CubicChunks,5116680,290843344,1.759256350731547,sample_weight_bytes
+write-server,generate,allocation,other,2704,290843344,0.0009297101191354752,sample_weight_bytes
+write-server,resident,execution,vanilla,21,41,51.21951219512195,sample_count
+write-server,resident,execution,CubicChunks,16,41,39.02439024390244,sample_count
+write-server,resident,execution,other,3,41,7.317073170731708,sample_count
+write-server,resident,execution,RegionLib,1,41,2.4390243902439024,sample_count
+write-server,resident,native,other,232,240,96.66666666666667,sample_count
+write-server,resident,native,CubicChunks,4,240,1.6666666666666667,sample_count
+write-server,resident,native,vanilla,3,240,1.25,sample_count
+write-server,resident,native,RegionLib,1,240,0.4166666666666667,sample_count
+write-server,resident,allocation,vanilla,88142536,156549912,56.30315269675783,sample_weight_bytes
+write-server,resident,allocation,CubicChunks,56858320,156549912,36.31961160093147,sample_weight_bytes
+write-server,resident,allocation,RegionLib,7250416,156549912,4.631376605309111,sample_weight_bytes
+write-server,resident,allocation,other,4298640,156549912,2.7458590970016004,sample_weight_bytes
+write-server,save,execution,vanilla,7,13,53.84615384615385,sample_count
+write-server,save,execution,CubicChunks,3,13,23.076923076923077,sample_count
+write-server,save,execution,RegionLib,2,13,15.384615384615385,sample_count
+write-server,save,execution,other,1,13,7.6923076923076925,sample_count
+write-server,save,native,other,311,315,98.73015873015873,sample_count
+write-server,save,native,CubicChunks,4,315,1.2698412698412698,sample_count
+write-server,save,allocation,CubicChunks,19898840,25065456,79.38750446032181,sample_weight_bytes
+write-server,save,allocation,RegionLib,5158304,25065456,20.57933436359586,sample_weight_bytes
+write-server,save,allocation,vanilla,8312,25065456,0.03316117608233419,sample_weight_bytes
+write-server,horizontal,execution,Riven,124,216,57.407407407407405,sample_count
+write-server,horizontal,execution,CubicChunks,57,216,26.38888888888889,sample_count
+write-server,horizontal,execution,vanilla,34,216,15.74074074074074,sample_count
+write-server,horizontal,execution,other,1,216,0.46296296296296297,sample_count
+write-server,horizontal,native,other,580,580,100.0,sample_count
+write-server,horizontal,allocation,Riven,3966207424,4100926304,96.71491585038734,sample_weight_bytes
+write-server,horizontal,allocation,vanilla,93643272,4100926304,2.283466345363518,sample_weight_bytes
+write-server,horizontal,allocation,CubicChunks,41018184,4100926304,1.000217535242984,sample_weight_bytes
+write-server,horizontal,allocation,RegionLib,50056,4100926304,0.0012206022807865606,sample_weight_bytes
+write-server,horizontal,allocation,other,7368,4100926304,0.00017966672536429956,sample_weight_bytes
+write-server,vertical,execution,Riven,63,108,58.333333333333336,sample_count
+write-server,vertical,execution,vanilla,27,108,25.0,sample_count
+write-server,vertical,execution,CubicChunks,17,108,15.74074074074074,sample_count
+write-server,vertical,execution,RegionLib,1,108,0.9259259259259259,sample_count
+write-server,vertical,native,other,578,579,99.82728842832469,sample_count
+write-server,vertical,native,vanilla,1,579,0.17271157167530224,sample_count
+write-server,vertical,allocation,Riven,1250695784,1326142648,94.31080328245352,sample_weight_bytes
+write-server,vertical,allocation,vanilla,47291352,1326142648,3.5660833373635685,sample_weight_bytes
+write-server,vertical,allocation,CubicChunks,24072744,1326142648,1.815245444093432,sample_weight_bytes
+write-server,vertical,allocation,other,3745104,1326142648,0.2824058185330301,sample_weight_bytes
+write-server,vertical,allocation,RegionLib,337664,1326142648,0.02546211755645159,sample_weight_bytes
+write-client,full recording,execution,vanilla,1181,1467,80.50443081117928,sample_count
+write-client,full recording,execution,other,191,1467,13.019768234492162,sample_count
+write-client,full recording,execution,GregTech,69,1467,4.703476482617587,sample_count
+write-client,full recording,execution,CubicChunks,26,1467,1.7723244717109747,sample_count
+write-client,full recording,native,other,3167,3500,90.48571428571428,sample_count
+write-client,full recording,native,vanilla,329,3500,9.4,sample_count
+write-client,full recording,native,GregTech,4,3500,0.11428571428571428,sample_count
+write-client,full recording,allocation,vanilla,13441029664,16729506824,80.34325103186914,sample_weight_bytes
+write-client,full recording,allocation,other,2612665072,16729506824,15.617107542297028,sample_weight_bytes
+write-client,full recording,allocation,GregTech,586062440,16729506824,3.5031662688301135,sample_weight_bytes
+write-client,full recording,allocation,CubicChunks,89749648,16729506824,0.5364751570037077,sample_weight_bytes
+write-client,idle,execution,vanilla,18,25,72.0,sample_count
+write-client,idle,execution,other,6,25,24.0,sample_count
+write-client,idle,execution,CubicChunks,1,25,4.0,sample_count
+write-client,idle,native,other,233,243,95.88477366255144,sample_count
+write-client,idle,native,vanilla,10,243,4.11522633744856,sample_count
+write-client,idle,allocation,vanilla,33078016,59935368,55.18947677104443,sample_weight_bytes
+write-client,idle,allocation,other,18471112,59935368,30.818384230159396,sample_weight_bytes
+write-client,idle,allocation,CubicChunks,8386240,59935368,13.99213899879617,sample_weight_bytes
+write-client,generate,execution,vanilla,8,12,66.66666666666667,sample_count
+write-client,generate,execution,GregTech,2,12,16.666666666666668,sample_count
+write-client,generate,execution,CubicChunks,1,12,8.333333333333334,sample_count
+write-client,generate,execution,other,1,12,8.333333333333334,sample_count
+write-client,generate,native,other,297,311,95.49839228295819,sample_count
+write-client,generate,native,vanilla,14,311,4.501607717041801,sample_count
+write-client,generate,allocation,other,14809104,25334840,58.453513027909395,sample_weight_bytes
+write-client,generate,allocation,vanilla,9212056,25334840,36.36121641186603,sample_weight_bytes
+write-client,generate,allocation,CubicChunks,1313680,25334840,5.185270560224576,sample_weight_bytes
+write-client,resident,execution,vanilla,10,19,52.63157894736842,sample_count
+write-client,resident,execution,other,6,19,31.57894736842105,sample_count
+write-client,resident,execution,CubicChunks,3,19,15.789473684210526,sample_count
+write-client,resident,native,other,234,242,96.69421487603306,sample_count
+write-client,resident,native,vanilla,8,242,3.3057851239669422,sample_count
+write-client,resident,allocation,vanilla,12701544,30067712,42.24313442938392,sample_weight_bytes
+write-client,resident,allocation,other,11419576,30067712,37.97953099989783,sample_weight_bytes
+write-client,resident,allocation,CubicChunks,5946592,30067712,19.77733457071825,sample_weight_bytes
+write-client,save,execution,vanilla,11,17,64.70588235294117,sample_count
+write-client,save,execution,other,3,17,17.647058823529413,sample_count
+write-client,save,execution,GregTech,2,17,11.764705882352942,sample_count
+write-client,save,execution,CubicChunks,1,17,5.882352941176471,sample_count
+write-client,save,native,other,301,318,94.65408805031447,sample_count
+write-client,save,native,vanilla,17,318,5.345911949685535,sample_count
+write-client,save,allocation,other,14867704,29647152,50.14884397664909,sample_weight_bytes
+write-client,save,allocation,vanilla,11252352,29647152,37.954242619999384,sample_weight_bytes
+write-client,save,allocation,CubicChunks,3527096,29647152,11.896913403351526,sample_weight_bytes
+write-client,horizontal,execution,vanilla,91,105,86.66666666666667,sample_count
+write-client,horizontal,execution,CubicChunks,7,105,6.666666666666667,sample_count
+write-client,horizontal,execution,other,5,105,4.761904761904762,sample_count
+write-client,horizontal,execution,GregTech,2,105,1.9047619047619047,sample_count
+write-client,horizontal,native,other,556,581,95.69707401032703,sample_count
+write-client,horizontal,native,vanilla,25,581,4.3029259896729775,sample_count
+write-client,horizontal,allocation,vanilla,641798088,715630824,89.68284574617485,sample_weight_bytes
+write-client,horizontal,allocation,other,34296472,715630824,4.792481101959912,sample_weight_bytes
+write-client,horizontal,allocation,CubicChunks,29569272,715630824,4.1319170455407885,sample_weight_bytes
+write-client,horizontal,allocation,GregTech,9966992,715630824,1.3927561063244531,sample_weight_bytes
+write-client,vertical,execution,vanilla,62,75,82.66666666666667,sample_count
+write-client,vertical,execution,other,8,75,10.666666666666666,sample_count
+write-client,vertical,execution,CubicChunks,4,75,5.333333333333333,sample_count
+write-client,vertical,execution,GregTech,1,75,1.3333333333333333,sample_count
+write-client,vertical,native,other,557,583,95.54030874785592,sample_count
+write-client,vertical,native,vanilla,25,583,4.288164665523156,sample_count
+write-client,vertical,native,GregTech,1,583,0.17152658662092624,sample_count
+write-client,vertical,allocation,vanilla,568743408,640357160,88.8165922904649,sample_weight_bytes
+write-client,vertical,allocation,other,42929272,640357160,6.703957522704985,sample_weight_bytes
+write-client,vertical,allocation,GregTech,19834792,640357160,3.097457675026231,sample_weight_bytes
+write-client,vertical,allocation,CubicChunks,8849688,640357160,1.3819925118038814,sample_weight_bytes
+read-server,full recording,execution,vanilla,422,553,76.31103074141049,sample_count
+read-server,full recording,execution,other,67,553,12.115732368896927,sample_count
+read-server,full recording,execution,GregTech,47,553,8.499095840867993,sample_count
+read-server,full recording,execution,CubicChunks,17,553,3.0741410488245933,sample_count
+read-server,full recording,native,other,3172,3251,97.56997846816364,sample_count
+read-server,full recording,native,vanilla,71,3251,2.1839434020301445,sample_count
+read-server,full recording,native,GregTech,6,3251,0.1845585973546601,sample_count
+read-server,full recording,native,CubicChunks,2,3251,0.061519532451553366,sample_count
+read-server,full recording,allocation,vanilla,4964553376,7543733400,65.81029727270054,sample_weight_bytes
+read-server,full recording,allocation,other,2109700928,7543733400,27.966271024371036,sample_weight_bytes
+read-server,full recording,allocation,GregTech,406324584,7543733400,5.386253231059306,sample_weight_bytes
+read-server,full recording,allocation,CubicChunks,54976240,7543733400,0.7287670054723832,sample_weight_bytes
+read-server,full recording,allocation,Riven,6082920,7543733400,0.0806354052755894,sample_weight_bytes
+read-server,full recording,allocation,RegionLib,2095352,7543733400,0.027776061121141952,sample_weight_bytes
+read-server,idle,execution,vanilla,8,9,88.88888888888889,sample_count
+read-server,idle,execution,GregTech,1,9,11.11111111111111,sample_count
+read-server,idle,native,other,240,240,100.0,sample_count
+read-server,load-sync,execution,vanilla,7,8,87.5,sample_count
+read-server,load-sync,execution,CubicChunks,1,8,12.5,sample_count
+read-server,load-sync,native,other,152,152,100.0,sample_count
+read-server,load-async,execution,vanilla,4,5,80.0,sample_count
+read-server,load-async,execution,CubicChunks,1,5,20.0,sample_count
+read-server,load-async,native,other,116,116,100.0,sample_count
+read-server,load-async,allocation,vanilla,17413936,18150104,95.94400120241735,sample_weight_bytes
+read-server,load-async,allocation,CubicChunks,736168,18150104,4.055998797582648,sample_weight_bytes
+read-server,resident,execution,vanilla,5,6,83.33333333333333,sample_count
+read-server,resident,execution,CubicChunks,1,6,16.666666666666668,sample_count
+read-server,resident,native,other,241,241,100.0,sample_count
+read-client,full recording,execution,vanilla,1036,1266,81.83254344391786,sample_count
+read-client,full recording,execution,other,158,1266,12.480252764612954,sample_count
+read-client,full recording,execution,GregTech,62,1266,4.897314375987362,sample_count
+read-client,full recording,execution,CubicChunks,10,1266,0.7898894154818326,sample_count
+read-client,full recording,native,other,1535,1767,86.87040181097906,sample_count
+read-client,full recording,native,vanilla,228,1767,12.903225806451612,sample_count
+read-client,full recording,native,GregTech,4,1767,0.22637238256932654,sample_count
+read-client,full recording,allocation,vanilla,12228935880,15533905104,78.72415724266935,sample_weight_bytes
+read-client,full recording,allocation,other,2661517896,15533905104,17.133604706485915,sample_weight_bytes
+read-client,full recording,allocation,GregTech,606049960,15533905104,3.9014655744481237,sample_weight_bytes
+read-client,full recording,allocation,CubicChunks,37401368,15533905104,0.24077247639660873,sample_weight_bytes
+read-client,idle,execution,vanilla,14,28,50.0,sample_count
+read-client,idle,execution,other,9,28,32.142857142857146,sample_count
+read-client,idle,execution,CubicChunks,3,28,10.714285714285714,sample_count
+read-client,idle,execution,GregTech,2,28,7.142857142857143,sample_count
+read-client,idle,native,other,232,242,95.86776859504133,sample_count
+read-client,idle,native,vanilla,10,242,4.132231404958677,sample_count
+read-client,idle,allocation,vanilla,54324440,86945560,62.48098235263537,sample_weight_bytes
+read-client,idle,allocation,other,19081760,86945560,21.946790612424603,sample_weight_bytes
+read-client,idle,allocation,CubicChunks,13539360,86945560,15.572227034940024,sample_weight_bytes
+read-client,load-sync,execution,vanilla,7,9,77.77777777777777,sample_count
+read-client,load-sync,execution,other,2,9,22.22222222222222,sample_count
+read-client,load-sync,native,other,148,155,95.48387096774194,sample_count
+read-client,load-sync,native,vanilla,7,155,4.516129032258065,sample_count
+read-client,load-sync,allocation,vanilla,21885352,32200952,67.96492227931647,sample_weight_bytes
+read-client,load-sync,allocation,other,7435552,32200952,23.091093704310357,sample_weight_bytes
+read-client,load-sync,allocation,CubicChunks,2880048,32200952,8.94398401637318,sample_weight_bytes
+read-client,load-async,execution,vanilla,7,9,77.77777777777777,sample_count
+read-client,load-async,execution,other,2,9,22.22222222222222,sample_count
+read-client,load-async,native,other,112,118,94.91525423728814,sample_count
+read-client,load-async,native,vanilla,6,118,5.084745762711864,sample_count
+read-client,load-async,allocation,vanilla,14556304,23788000,61.19179418194047,sample_weight_bytes
+read-client,load-async,allocation,other,6175136,23788000,25.959038170506137,sample_weight_bytes
+read-client,load-async,allocation,CubicChunks,3056560,23788000,12.849167647553388,sample_weight_bytes
+read-client,resident,execution,vanilla,10,20,50.0,sample_count
+read-client,resident,execution,other,7,20,35.0,sample_count
+read-client,resident,execution,GregTech,2,20,10.0,sample_count
+read-client,resident,execution,CubicChunks,1,20,5.0,sample_count
+read-client,resident,native,other,233,242,96.28099173553719,sample_count
+read-client,resident,native,vanilla,9,242,3.71900826446281,sample_count
+read-client,resident,allocation,vanilla,28929048,46915744,61.661705716528765,sample_weight_bytes
+read-client,resident,allocation,other,12649152,46915744,26.961422587692525,sample_weight_bytes
+read-client,resident,allocation,CubicChunks,5153152,46915744,10.983843717793327,sample_weight_bytes
+read-client,resident,allocation,GregTech,184392,46915744,0.3930279779853859,sample_weight_bytes
