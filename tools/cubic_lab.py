@@ -72,6 +72,26 @@ def reviewed_release(tag):
     return {key: release[key] for key in ['tag_name', 'published_at', 'html_url', 'assets']}
 
 
+def runtime_assets(release, product_version, expected_hashes=None):
+    """Reject same-tag asset replacement before allocating an instance or running its installer."""
+    names = {'installer': f'cleanroom-{product_version}-installer.jar',
+             'universal': f'cleanroom-{product_version}-universal.jar', 'prism': f'cleanroom-{product_version}.zip'}
+    assets = {}
+    for kind, name in names.items():
+        matches = [asset for asset in release['assets'] if asset['name'] == name]
+        if len(matches) != 1 or not re.fullmatch(r'sha256:[0-9a-f]{64}', matches[0].get('digest') or ''):
+            raise RuntimeError('Review runtime asset naming/digest before preparing: ' + name)
+        asset = matches[0]
+        if expected_hashes is not None and asset['digest'] != 'sha256:' + expected_hashes.get(kind, ''):
+            raise RuntimeError('Runtime asset changed under the reviewed tag; review lab/runtime.properties: ' + name)
+        assets[kind] = asset
+    return assets
+
+
+def needs_070_compat(version):
+    return version in ('0.7.0', '0.7.0-alpha')
+
+
 def settings(root):
     sys.path.insert(0, str(root / 'tools'))
     return importlib.import_module('dev'), importlib.import_module('experiment_cubic')
@@ -203,9 +223,11 @@ def prepare_client(server, target, base_zip, root, java, release):
 def prepare(args):
     root = args.riven_workspace; dev, experiment = settings(root)
     client_profile = read_client_profile(args.client_profile)
-    runtime_config = (FORK / 'lab/runtime.properties').read_text()
-    pinned_tag = re.search(r'^release_tag=(.*)$', runtime_config, re.M)[1].strip()
-    product_version = re.search(r'^runtime_version=(.*)$', runtime_config, re.M)[1].strip()
+    runtime_config = dict(line.split('=', 1) for line in (FORK / 'lab/runtime.properties').read_text().splitlines()
+                          if line.strip() and not line.startswith('#'))
+    pinned_tag = runtime_config['release_tag'].strip()
+    product_version = runtime_config['runtime_version'].strip()
+    expected_hashes = None
     if args.runtime_release:
         if args.runtime_release != '0.6.13-alpha': raise RuntimeError('Only the reviewed 0.6.13-alpha compatibility runtime override is supported')
         release = reviewed_release(args.runtime_release); product_version = args.runtime_release
@@ -215,8 +237,10 @@ def prepare(args):
         if release['tag_name'] != pinned_tag:
             raise RuntimeError(f'Latest release is {release["tag_name"]}; review and update lab/runtime.properties before preparing')
         runtime_selection = 'Reviewed latest release'
+        expected_hashes = {kind: runtime_config[kind + '_sha256'].strip() for kind in ['installer', 'universal', 'prism']}
     version = release['tag_name']
-    installer_asset = next(a for a in release['assets'] if a['name'].endswith('-installer.jar'))
+    assets = runtime_assets(release, product_version, expected_hashes)
+    installer_asset = assets['installer']
     fetch(installer_asset['browser_download_url'], root / '.local/downloads' / installer_asset['name'], installer_asset['digest'].split(':')[1], 'sha256')
     # Only this lab process uses the selected release; the active Riven profile stays pinned.
     dev.CLEANROOM = product_version
@@ -261,14 +285,29 @@ def prepare(args):
     player_uuid = str(uuid.UUID(bytes=hashlib.md5(('OfflinePlayer:' + PLAYER).encode()).digest(), version=3))
     write_json(server / 'ops.json', [{'uuid': player_uuid, 'name': PLAYER, 'level': 2, 'bypassesPlayerLimit': False}])
     target.mkdir(parents=True)
-    zip_asset = next(a for a in release['assets'] if a['name'].endswith('.zip'))
+    zip_asset = assets['prism']
     base_zip = fetch(zip_asset['browser_download_url'], root / '.local/downloads' / zip_asset['name'],
                      zip_asset['digest'].split(':')[1], 'sha256')
     runtime = prepare_client(server, target / 'client', base_zip, root, dev.java('cleanroom'), release)
+    runtime_artifacts = {}
+    if needs_070_compat(product_version):
+        universal_name = 'cleanroom-' + product_version + '-universal.jar'
+        server_runtime = server / 'libraries/com/cleanroommc/cleanroom' / product_version / universal_name
+        client_runtime = next(library for library in runtime['libraries']
+                              if library['name'] == 'com.cleanroommc:cleanroom:' + product_version + ':universal')
+        for side, artifact in [('server', server_runtime), ('client', Path(client_runtime['path']))]:
+            digest = sha(artifact)
+            if 'sha256:' + digest != assets['universal']['digest']:
+                raise RuntimeError('Installed ' + side + ' runtime differs from the reviewed universal artifact; retain this failed preparation')
+            runtime_artifacts[side] = {'path': str(artifact), 'sha256': digest, 'version': product_version}
     for addon in client_profile['mods']:
         source = fetch(addon['url'], root / '.local/downloads/mods' / addon['filename'], addon['sha256'], 'sha256',
                        candidates=[root / '.local/cubic-lab/renderer-research' / addon['filename']])
         shutil.copy2(source, target / 'client/mods' / addon['filename'])
+    if args.vanilla_vertical_render_distance != 'default':
+        write_json(target / 'client/config/cubicchunks_mixin_config.json', [
+            {'VERT_RENDER_DISTANCE': args.vanilla_vertical_render_distance == 'on',
+             'description': 'Explicit lab diagnostic selection for CubicChunks vanilla vertical-render-distance hooks'}])
     export = target / 'CubicChunks-Lab-Prism.zip'
     manifest = {'schema': 1, 'name': args.name, 'server': str(server), 'client': str(target / 'client'),
         'port': args.port, 'release': release, 'runtimeVersion': product_version, 'releaseCheckedUtc': datetime.now(timezone.utc).isoformat(),
@@ -278,12 +317,13 @@ def prepare(args):
         'modHashes': {path.name: sha(path) for path in sorted((server / 'mods').glob('*.jar'))},
         'clientModHashes': {path.name: sha(path) for path in sorted((target / 'client/mods').glob('*.jar'))},
         'clientProfile': client_profile,
+        'vanillaVerticalRenderDistance': args.vanilla_vertical_render_distance,
         'generatedLibraryHashes': {'server': {}, 'client': {}},
         'height': {'minY': -128, 'maxYExclusive': 384, 'verticalCubesPerColumn': 32},
         'compatibility': (['Lab-only field-access ABI bridge forwards Fugue 0.24.4 calls to ImagineBreaker 3.2, preserving target class initialization.',
             'Lab-only independently authored BlockStateContainer.Builder restores the missing Forge fluid API class through the loader transformer API; existing runtime classes are preserved.',
-            'Lab-only ObjectHolderRef mixin initializes the declaring class before registry field injection, preventing later static initializers from clearing injected values.'] if product_version == '0.7.0' else []),
-        'clientRuntime': runtime, 'prismImport': str(export)}
+            'Lab-only ObjectHolderRef mixin initializes the declaring class before registry field injection, preventing later static initializers from clearing injected values.'] if needs_070_compat(product_version) else []),
+        'clientRuntime': runtime, 'runtimeArtifacts': runtime_artifacts, 'prismImport': str(export)}
     package_client(target, manifest, base_zip)
     write_json(target / 'lab.json', manifest)
     print(json.dumps({'lab': str(target), 'prismImport': str(export), 'release': version,
@@ -321,7 +361,7 @@ def package_client(target, manifest, base_zip):
         output.writestr('instance.cfg', 'InstanceType=OneSix\nname=CubicChunks Lab ' + manifest['name']
             + '\nOverrideJava=true\nJavaPath=' + manifest['java'].replace('\\', '/')
             + '\nOverrideMemory=true\nMinMemAlloc=1024\nMaxMemAlloc=6144\nOverrideJavaArgs=true\nJvmArgs='
-            + ('-Dcubiclab.cleanroom070=true' if manifest.get('runtimeVersion') == '0.7.0' else '') + '\n')
+            + ('-Dcubiclab.cleanroom070=true' if needs_070_compat(manifest.get('runtimeVersion')) else '') + '\n')
         for folder in ['mods', 'config', 'groovy', 'local', 'resources', 'resourcepacks']:
             for path in sorted((client / folder).rglob('*')):
                 if path.is_file(): output.write(path, 'minecraft/' + path.relative_to(client).as_posix())
@@ -375,7 +415,7 @@ def export_client(args):
     manifest['generatedLibraryHashes'] = record_generated_libraries(manifest)
     manifest['generatedInputsRecordedUtc'] = datetime.now(timezone.utc).isoformat()
     holder_note = 'Lab-only ObjectHolderRef mixin initializes the declaring class before registry field injection, preventing later static initializers from clearing injected values.'
-    if manifest.get('runtimeVersion') == '0.7.0' and holder_note not in manifest.get('compatibility', []):
+    if needs_070_compat(manifest.get('runtimeVersion')) and holder_note not in manifest.get('compatibility', []):
         manifest.setdefault('compatibility', []).append(holder_note)
     package_client(target, manifest, base_zip)
     write_json(target / 'lab.json', manifest)
@@ -385,6 +425,9 @@ def export_client(args):
 def load_lab(args):
     target = args.riven_workspace / '.local/cubic-lab' / args.name
     manifest = json.loads((target / 'lab.json').read_text())
+    for side, artifact in manifest.get('runtimeArtifacts', {}).items():
+        if sha(Path(artifact['path'])) != artifact['sha256']:
+            raise RuntimeError('Prepared ' + side + ' runtime changed; create a new reviewed lab revision')
     if 'modHashes' in manifest:
         for side in ['server', 'client']:
             actual = {path.name: sha(path) for path in Path(manifest[side]).joinpath('mods').glob('*.jar')}
@@ -516,7 +559,7 @@ def run(args):
         await_line(client_messages, 'CUBICLAB_CLIENT_VIEW screen=none', processes, 45)
         print('Real native client joined the loopback server.', flush=True)
         scenarios = args.scenarios.split(',') if args.scenarios else (
-            ['idle', 'generate', 'resident', 'save', 'horizontal', 'vertical'] if phase == 'write' else ['idle', 'load-sync', 'load-async', 'resident'])
+            ['idle', 'generate', 'lighting-snapshot', 'resident', 'save', 'horizontal', 'vertical'] if phase == 'write' else ['idle', 'load-sync', 'load-async', 'resident'])
         for scenario in scenarios:
             send(server, 'cubiclab run ' + scenario)
             started = await_line(server_messages, 'CUBICLAB_STARTED', processes, 10)
@@ -567,13 +610,15 @@ def main():
     parser.add_argument('--cubic-jar', type=Path)
     parser.add_argument('--client-profile', default='baseline', help='Optional client-only renderer profile: baseline, celeritas, celeritas-demonica')
     parser.add_argument('--runtime-release', help='Explicit compatibility runtime override: 0.6.13-alpha. Default preparation still verifies the reviewed latest release.')
+    parser.add_argument('--vanilla-vertical-render-distance', choices=['default', 'on', 'off'], default='default',
+                        help='Explicit client-only CubicChunks vanilla-hook diagnostic option; never implies external-renderer compatibility')
     parser.add_argument('--port', type=int, default=25590)
     parser.add_argument('--phase', choices=['write', 'read'], default='write')
     parser.add_argument('--scenarios', help='Comma-separated scenario override; prerequisites still apply')
     parser.add_argument('--jfr', action='store_true')
     args = parser.parse_args(); args.riven_workspace = args.riven_workspace.resolve()
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,63}', args.name): parser.error('Invalid lab name')
-    if args.scenarios and any(s not in ['idle', 'generate', 'resident', 'save', 'load-sync', 'load-async', 'horizontal', 'vertical'] for s in args.scenarios.split(',')):
+    if args.scenarios and any(s not in ['idle', 'generate', 'resident', 'save', 'load-sync', 'load-async', 'horizontal', 'vertical', 'lighting-snapshot'] for s in args.scenarios.split(',')):
         parser.error('Unknown scenario in --scenarios')
     if args.command == 'prepare': prepare(args); return
     if args.command == 'prime': prime(args); return

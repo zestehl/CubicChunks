@@ -2,6 +2,8 @@
 
 Checked October 13, 2026. Celeritas and Demonica are now pinned as **optional client-only lab inputs**, with reusable preparation profiles, separate client/server hash checks, attribution and dependency reasons. Native startup checks reveal existing compatibility blockers before any new optimization is applied. The configurations are installed and reproducible; **a joined/rendered CubicChunks world with this pair is not yet qualified**.
 
+Follow-up: the [first CubicChunks lighting/configuration batch](LIGHTING-FIRST-PASS.md) repairs the existing `VERT_RENDER_DISTANCE` option. A [Celeritas-only diagnostic with that option off](measurements/renderer-option-diagnostic/README.md) now joins and completes bounded streaming captures on matched product `0.7.0-alpha`. Both final captures show empty sky where the baseline has terrain/markers, despite the expected cube packet/load counts. Startup is improved; terrain rendering is still not qualified. The external mods remain unchanged, and the Demonica pair was not rerun in this follow-up.
+
 This work does not import renderer/shader code into CubicChunks, patch either project's source/JARs, or assume maintenance of their implementations. Reference checkouts stay separate under `E:\WorldGenOverhaul\research`; the default baseline and dedicated-server dependency closure are preserved.
 
 ## Exact inputs
@@ -10,7 +12,8 @@ This work does not import renderer/shader code into CubicChunks, patch either pr
 | --- | --- |
 | Demonica | Published `0.7.3`, release tag `v0.7.3`, source commit `705f596e7800d3dca20a61dd74753d7586beabc1`; SHA-256 `0b13f26d02d2b6081b8d6b7c913d207485052f3b39a182f9069e978e581c4b1d`, checked against the release `SHA256SUMS` and downloaded bytes |
 | Celeritas | Upstream commit `9b661b70ecaf84c39052e8fbc51c875ba37e739d`, Maven `2.5.0-autobuild.9b661b70`; SHA-256 `5bf123a6da6190f6e061cd3fd069a2bddcbf6ebf57894381b6c888c06a94f982`, matching Demonica's embedded runtime pin and its published pin record |
-| Default lab runtime | Cleanroom `0.7.0-alpha`, product `0.7.0`, Java 25; exact prior CubicChunks and optional lab artifacts reused |
+| Initial startup matrix runtime | Cleanroom release tag `0.7.0-alpha`, original product `0.7.0`, Java 25; exact prior CubicChunks and optional lab artifacts reused |
+| Current preparation pin | Same release tag, replacement product `0.7.0-alpha`; asset names/hashes reviewed after upstream replacement at 15:13 UTC. New preparations verify both installed universal JARs. Original environment receipts remain unchanged. |
 | Loader comparison | Separate Cleanroom `0.6.13-alpha` / Java 25 environment, explicitly selected because Demonica documents testing with 0.6.12/0.6.13 |
 
 [Demonica's release](https://github.com/ndellagrotte/Demonica/releases/tag/v0.7.3) provides the mod binary. Its [pin record](https://github.com/ndellagrotte/Demonica/blob/705f596e7800d3dca20a61dd74753d7586beabc1/docs/celeritas/PIN.md) names the accepted Celeritas build and both accepted artifact hashes. A different Celeritas SHA disables Demonica shaders, so choosing upstream HEAD would not be an equivalent combined test. Celeritas's [upstream README](https://git.taumc.org/embeddedt/celeritas/src/commit/9b661b70ecaf84c39052e8fbc51c875ba37e739d/README.md) distributes source rather than official mod binaries; the selected third-party auto-build is the one expressly consumed by Demonica. Its source origin remains upstream Celeritas, not a CubicChunks fork of that renderer.
@@ -25,7 +28,7 @@ The profile retains the binaries' bundled notices, including Demonica's S8TNLib 
 | `renderer-pair-0613-01` | Same exact mod pair, Cleanroom 0.6.13-alpha | Demonica's Celeritas hash guard accepts the binary and GL initialization progresses. Client then exits before join: CubicChunks' required `onGetRenderDistance` redirect in `client.vertviewdist.MixinRenderGlobal` finds no required target in `setupTerrain`. |
 | `renderer-celeritas-01` | Celeritas alone, Cleanroom 0.7.0 | Same CubicChunks redirect fails with `(0/1) succeeded`. This isolates the renderer/mixin conflict independently of Demonica's GLFW issue. |
 
-All dedicated servers reached readiness and were stopped by the owned runner's failure cleanup. Each failed client/server environment, bootstrap world, logs and available crash reports are retained. No write/read measurement suite began, and there are no qualified performance results or actual world captures from these combinations. Existing recipe/advancement/signature diagnostics remain distinguishable from the fatal exceptions above.
+All three initial dedicated servers reached readiness and were stopped by the owned runner's failure cleanup. Each failed client/server environment, bootstrap world, logs and available crash reports are retained. No write/read measurement suite began for these three environments, and they have no qualified performance results or actual world captures. Existing recipe/advancement/signature diagnostics remain distinguishable from the fatal exceptions above. The later option-off diagnostic has separate inputs/captures and failed terrain-rendering qualification as described above.
 
 The [evidence manifest](measurements/renderer-compatibility/observations.json) records input inventories, release/runtime selection, artifact hashes, log/crash hashes, preparation state and the separate failure classifications. Raw files are under `.local/cubic-lab/<name>/runs/prime` and each client's `crash-reports`. The corresponding server is `.local/instances/cubic-lab-<name>`. Initial unprimed Prism bundles exist for all three configurations; they carry the same startup limitations.
 
@@ -58,6 +61,8 @@ Relevant unmodified source is in `research/Celeritas-demonica-pin/forge122/src/m
 ```
 
 Use `--client-profile celeritas` to isolate the renderer and the default `baseline` for the retained conventional client path. Do not run measurement pairs simultaneously on this host. Separate client and server hash inventories prevent accidentally installing either addon on the server and preserve earlier baseline manifests. The mod set must remain immutable for a prepared revision.
+
+`--vanilla-vertical-render-distance off` now selects a working CubicChunks option, with the choice recorded in the manifest and client configuration. It skips these optional vanilla distance hooks through their existing configuration contract; required core injections remain enforced. It does not supply the cube-to-section data contract needed by the external renderer. The default remains enabled.
 
 The remaining startup work is an explicit compatibility requirement, not a new performance regression or a completed renderer integration. Do not suppress required injections, import another renderer's implementation, change a third-party JAR, or silently narrow height to turn these runs into PASS. Record the CubicChunks renderer-hook collision and the external GLFW/SDL loader boundary while choosing a supported interoperability path.
 

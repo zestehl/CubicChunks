@@ -1,0 +1,87 @@
+{
+  "schema": "cubiclab.lighting-validation.v1",
+  "candidateParentRevision": "a9da1da5d20fa4d8a6d85b2559bc7d4cc116e656",
+  "candidateState": "Uncommitted source batch at native preparation; source hashes identify the tested implementation.",
+  "source": {
+    "src/main/java/io/github/opencubicchunks/cubicchunks/core/lighting/LightingManager.java": "8eb9966c6d580fbfd7f3560ef9a9cbaedf3c3409430ac1344bd680cfd4e9dec6",
+    "src/main/java/io/github/opencubicchunks/cubicchunks/core/lighting/SurfaceHeightUpdates.java": "be5680ea664f2b5070c0cd1aacedc2b4f339868892af838dc9429f0513c021b3",
+    "src/main/java/io/github/opencubicchunks/cubicchunks/core/asm/CubicChunksMixinConfig.java": "ca699a9da4c5dbf604457b5b57535d10e360eb066ea5781cafeb0a0af3d9a64a",
+    "src/test/java/io/github/opencubicchunks/cubicchunks/core/lighting/TestSurfaceHeightUpdates.java": "c023acc02eadf67aa0b83aa344d57df971bbb84cc4fc75305c4352e4bf92cfbd",
+    "src/test/java/io/github/opencubicchunks/cubicchunks/core/asm/TestVerticalRenderDistanceOption.java": "bedb1b8970bfcaa77f3ef8f9feefd514ebd3e69c13ab3a7174550a344783cd43",
+    "lab/src/main/java/io/github/opencubicchunks/cubicchunks/core/server/chunkio/LabLightingSnapshotProbe.java": "ad1bff62557ace79973820a9202f558cf9f80d6981adf5ada1be819dd0f693ce",
+    "lab/src/main/java/io/github/opencubicchunks/cubicchunks/lab/LabJob.java": "bc29e92fe45d045f331609127bacd2d3c1d50041aeed7ffd527082cf201873a1",
+    "lab/src/main/java/io/github/opencubicchunks/cubicchunks/lab/CubicLab.java": "706d901a1e178313d2f1969a3bb804b356d769096bf97eb2d1a92e33e50d73c6",
+    "cleanroom/build.gradle": "91041df7dd4e960fe44a83289dd6ab3368097fd92977d049aa0a8f3be5b843b3"
+  },
+  "localBuilds": [
+    {
+      "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\lighting-batch-cleanroom-build.log",
+      "sha256": "c3e7535131cf1acda8aa5904d96e5a579f0df698cccfc42dd45720f926c5e763",
+      "bytes": 4185,
+      "passed": true
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\lighting-batch-forge-build.log",
+      "sha256": "1fe1ffcb9b3d02a0bfbe65164384b5d96d99a6e28cade9178d994d38dd3bdbf7",
+      "bytes": 8698,
+      "passed": true
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\lighting-batch-lab-cleanroom-build.log",
+      "sha256": "d83fac05d751d025177642f54c91ece5f7cd2f86b254fefdb9b75b657cfc1e3f",
+      "bytes": 7200,
+      "passed": true
+    },
+    {
+      "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\lighting-batch-lab-forge-build.log",
+      "sha256": "d4cdf3884d016460b20e7cb66110ade37233b0128c9569370c0549d1394fe509",
+      "bytes": 7872,
+      "passed": true
+    }
+  ],
+  "focusedValidation": "Both main/lab artifacts passed local build and checks. Resource-derived vertical option regression reran on Java 25 and Java 8; Python control checks passed.",
+  "nativeRuntimeArtifacts": {
+    "server": {
+      "path": "E:\\WorldGenOverhaul\\.local\\instances\\cubic-lab-lighting-pass-02\\libraries\\com\\cleanroommc\\cleanroom\\0.7.0-alpha\\cleanroom-0.7.0-alpha-universal.jar",
+      "sha256": "0a4c2c734895c6187342c11f513633e46143403496f7817d0c61db73853c4677",
+      "version": "0.7.0-alpha"
+    },
+    "client": {
+      "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\cleanroommc\\cleanroom\\0.7.0-alpha\\cleanroom-0.7.0-alpha-universal.jar",
+      "sha256": "0a4c2c734895c6187342c11f513633e46143403496f7817d0c61db73853c4677",
+      "version": "0.7.0-alpha"
+    }
+  },
+  "nativeLimits": [
+    "Matched Cleanroom 0.7.0-alpha client/server.",
+    "Riven artifact changed independently since the previous run; no controlled performance comparison."
+  ],
+  "previousArtifacts": [
+    {
+      "artifact": "dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\libs\\CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar",
+      "preserved": ".local\\cubic-lab\\lighting-batch-baseline\\cleanroom-CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar",
+      "sha256": "903e1cd3f3e2c3af07e9e50de4177b17b70a8e9581e9c41ac3bb14d8e9b15ae8"
+    },
+    {
+      "artifact": "dev\\CubicChunks-cleanroom\\lab\\build\\cleanroom\\libs\\cubicchunks-lab-0.1.0-cleanroom.jar",
+      "preserved": ".local\\cubic-lab\\lighting-batch-baseline\\lab-cubicchunks-lab-0.1.0-cleanroom.jar",
+      "sha256": "9390e96e6933accf613252d701c9ac8463cf92d6a06de0b67aebf0e3cc6e3f56"
+    },
+    {
+      "artifact": "dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\libs\\CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-forge.jar",
+      "preserved": ".local\\cubic-lab\\lighting-batch-baseline\\cleanroom-CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-forge.jar",
+      "sha256": "2184c1b3030f467eb4df5aadf74bf27a5a9544341ca5940e5b7d539d0a5d3e3f"
+    },
+    {
+      "artifact": "dev\\CubicChunks-cleanroom\\lab\\build\\forge\\libs\\cubicchunks-lab-0.1.0-forge.jar",
+      "preserved": ".local\\cubic-lab\\lighting-batch-baseline\\lab-cubicchunks-lab-0.1.0-forge.jar",
+      "sha256": "6dba07b28e2ccccd5ec18e1446f5239ecf11a8740528405b66cd54ddd82ee201"
+    }
+  ],
+  "preparedEnvironment": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\lighting-pass-02",
+  "riven": {
+    "artifact": "build\\cleanroom-cubic-experiment\\libs\\riven-0.1.0-dev-cleanroom.jar",
+    "sha256": "a51d288766795186e46a08e9ddf3e50a75d9d316fdebbba52bb7a262d89852ae"
+  },
+  "productionFixCommit": "db20b1a7cd6ecea7300cdab12ab8e2b070886025"
+}

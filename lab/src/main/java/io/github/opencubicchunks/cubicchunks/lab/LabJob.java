@@ -41,7 +41,7 @@ final class LabJob {
     boolean controlSent, done;
 
     LabJob(MinecraftServer server, String scenario) {
-        if (!Arrays.asList("idle", "generate", "resident", "save", "load-sync", "load-async", "horizontal", "vertical").contains(scenario))
+        if (!Arrays.asList("idle", "generate", "resident", "save", "load-sync", "load-async", "horizontal", "vertical", "lighting-snapshot").contains(scenario))
             throw new IllegalArgumentException("Unknown lab scenario");
         this.server = server; this.scenario = scenario; world = server.getWorld(0);
         ICubicWorld cubic = (ICubicWorld) world;
@@ -64,7 +64,7 @@ final class LabJob {
         if (scenario.startsWith("load-")) for (CubePos pos : targets) {
             if (provider.getLoadedCube(pos) != null) throw new IllegalArgumentException("Reload cohort already resident; restart and keep players at spawn");
         }
-        if (scenario.equals("resident") || scenario.equals("save")) for (CubePos pos : targets) {
+        if (scenario.equals("resident") || scenario.equals("save") || scenario.equals("lighting-snapshot")) for (CubePos pos : targets) {
             if (provider.getLoadedCube(pos) == null) throw new IllegalArgumentException("Generate the fixture first");
         }
     }
@@ -82,6 +82,13 @@ final class LabJob {
         elapsedTicks++;
         switch (scenario) {
             case "idle": done = elapsedTicks >= 100; break;
+            case "lighting-snapshot":
+                for (CubePos pos : Arrays.asList(targets.get(0), targets.get(targets.size() - 1))) {
+                    long snapshotStart = System.nanoTime();
+                    io.github.opencubicchunks.cubicchunks.core.server.chunkio.LabLightingSnapshotProbe.verify(provider.getLoadedCube(pos));
+                    operationCount++; operations.add(System.nanoTime() - snapshotStart);
+                }
+                done = true; break;
             case "resident":
                 long before = System.nanoTime();
                 for (int i = 0; i < 10000; i++) {

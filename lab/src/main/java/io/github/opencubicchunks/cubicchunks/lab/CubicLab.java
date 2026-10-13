@@ -72,7 +72,7 @@ public final class CubicLab {
     }
     private static final class LabCommand extends CommandBase {
         public String getName() { return "cubiclab"; }
-        public String getUsage(ICommandSender sender) { return "cubiclab run idle|generate|resident|save|load-sync|load-async|horizontal|vertical | status | release | cancel | quit"; }
+        public String getUsage(ICommandSender sender) { return "cubiclab run idle|generate|resident|save|load-sync|load-async|horizontal|vertical|lighting-snapshot | status | release | cancel | quit"; }
         public int getRequiredPermissionLevel() { return 2; }
         public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
             if (args.length == 2 && args[0].equals("run")) {

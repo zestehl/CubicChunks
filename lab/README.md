@@ -6,13 +6,13 @@ Agents can use the repository-owned [cubicchunks-lab skill](skill/cubicchunks-la
 
 The [preliminary Java 8–25 opportunity audit](../docs/JAVA25-OPPORTUNITY-AUDIT.md) includes a named-class diagnostic at `tools/probe_java_opportunities.py`. It observes collection, NBT and heightmap behavior in ordinary JVMs after both main builds; it does not launch Minecraft or replace native qualification. Its output directory must be new.
 
-The native runtime is **Cleanroom 0.7.0-alpha / Java 25**, verified against the [official latest release](https://github.com/CleanroomMC/Cleanroom/releases/tag/0.7.0-alpha). Preparation queries the release API and refuses to proceed if a newer release needs review. The development API remains Cleanroom **0.6.13-alpha**, whose Unimined userdev artifact is available; the 0.7.0 userdev artifact returned 404 on both official Maven endpoints when checked on October 13, 2026. The active Riven profile remains pinned to 0.6.13-alpha. Forge 14.23.5.2860 / Java 8 is separately built and checked; this environment's native performance run uses Cleanroom.
+The native runtime is **Cleanroom 0.7.0-alpha / Java 25**, verified against the [official latest release](https://github.com/CleanroomMC/Cleanroom/releases/tag/0.7.0-alpha). Preparation queries the release API and checks reviewed installer/universal/Prism asset names and SHA-256 pins before allocating an instance. A newer release or replaced assets require review. Upstream replaced product `0.7.0` assets with product `0.7.0-alpha` under this same tag on October 13, 2026 at 15:13 UTC. Retained runs keep their original runtime metadata and inputs; new preparation uses the updated product. The development API remains Cleanroom **0.6.13-alpha**, whose Unimined userdev artifact is available; the 0.7.0 userdev artifact returned 404 on both official Maven endpoints when checked on October 13, 2026. The active Riven profile remains pinned to 0.6.13-alpha. Forge 14.23.5.2860 / Java 8 is separately built and checked; this environment's native performance run uses Cleanroom.
 
 ## Build and prepare
 
 Use the Riven workspace at `E:\WorldGenOverhaul`, with its existing `.local/settings.json`, acquired/pinned kernel dependency closure, experimental Riven artifact, accepted development EULA and Python environment. This is a reusable lab within that workspace, not a standalone redistribution of the pack. The runner does not edit existing Prism instances or use a player's save. It reads launcher/Gradle caches only to reuse checksum-verified downloads.
 
-From the fork checkout, build the main artifact before the matching lab artifact:
+Build when Java code or dependencies change, batching related work. Documentation, configuration and commits reuse verified artifacts. GitHub workflows are manual; do not dispatch builds solely for a commit. From the fork checkout, build the main artifact before the matching lab artifact:
 
 ```powershell
 cd cleanroom
@@ -37,7 +37,7 @@ The first run automatically primes dependency-owned generated inputs in a separa
 
 Server files are under `.local/instances/cubic-lab-candidate-01`; the real client, manifest, import ZIP, process receipts, raw logs, JSON results and optional JFR recordings are under `.local/cubic-lab/candidate-01`. Both JVMs use the configured Java 25 and 6 GiB heap limits. The server binds only to `127.0.0.1`, with offline identity `CubicLab`, permission level 2 and a default port of 25590. The client opens a real 1280 × 720 window, uses the installed GPU and a 120 FPS cap. No account credentials are read.
 
-The manifest records loader release asset hashes, every mod hash, selected Java, height and client libraries. Modified/missing/extra JARs cause the runner to require a fresh lab. Startup-extracted nested library JARs must match bytes embedded in a retained mod; their owner and hash are recorded separately and checked after priming. Scalar's twelve Scala/Akka library JARs are such runtime inputs. Current generated configuration hashes are recorded with each new run and export. Asset hashes are checked before reuse. Changing the local CubicChunks JAR also changes the content-addressed remapping dependency, avoiding stale lab compilation.
+The manifest records loader release asset hashes, every mod hash, selected Java, height and client libraries. Current 0.7 preparations verify both installed universal JARs against the reviewed asset, record their hashes, and recheck them before launches. Modified/missing/extra mod JARs cause the runner to require a fresh lab. Startup-extracted nested library JARs must match bytes embedded in a retained mod; their owner and hash are recorded separately and checked after priming. Scalar's twelve Scala/Akka library JARs are such runtime inputs. Current generated configuration hashes are recorded with each new run and export. Asset hashes are checked before reuse. Changing the local CubicChunks JAR also changes the content-addressed remapping dependency, avoiding stale lab compilation.
 
 ## External renderer compatibility profiles
 
@@ -47,7 +47,7 @@ Demonica 0.7.3 accepts Celeritas commit `9b661b70` and checks its exact artifact
 
 Compatibility work covers CubicChunks' lighting data, section/height access and rebuild notifications at the interface to external meshing and shaders. Celeritas owns its renderer; Demonica owns its Iris/GLSM/shader pipeline. Do not copy their code into the format, patch their JARs, or take over their responsibilities. Native results must distinguish client startup, rendered ordinary-height terrain, negative/high-height coverage and shaders actually enabled.
 
-The [initial compatibility record](../docs/RENDERER-COMPATIBILITY.md) documents startup blockers in the current unchanged fork. These profiles are reproducible diagnostic environments, not qualified working renderer combinations. An explicit `--runtime-release 0.6.13-alpha` preparation override supports comparison with Demonica's documented loader; the default still checks the reviewed latest release. Retain the selected runtime in each manifest and do not compare different-loader timings as an isolated renderer speedup.
+The [compatibility record](../docs/RENDERER-COMPATIBILITY.md) preserves the initial startup blockers and subsequent option repair. `--vanilla-vertical-render-distance off` permits Celeritas startup/join in the current diagnostic, but its real streaming captures show empty sky without the baseline terrain/markers. These profiles remain diagnostic environments, not qualified working renderer combinations. An explicit `--runtime-release 0.6.13-alpha` preparation override supports comparison with Demonica's documented loader; the default still checks the reviewed latest release. Retain the selected and actual per-side runtime in evidence and do not compare different-loader timings as an isolated renderer speedup.
 
 ## Interactive use
 
@@ -58,6 +58,7 @@ Commands can be entered in chat with `/` or in the server console without it:
 ```text
 /cubiclab run idle
 /cubiclab run generate
+/cubiclab run lighting-snapshot
 /cubiclab run resident
 /cubiclab run save
 /cubiclab run horizontal
@@ -71,12 +72,13 @@ After save, stop both JVMs and start them again with the player at spawn. Run `l
 
 ## Workloads and measurements
 
-Every scenario has 40 warmup server ticks and waits for an unobstructed client world view before beginning. Work is bounded per tick; the explicitly measured final storage flush blocks. The default suite has six write scenarios and four read scenarios:
+Every scenario has 40 warmup server ticks and waits for an unobstructed client world view before beginning. Work is bounded per tick; the explicitly measured final storage flush blocks. The default suite has seven write scenarios and four read scenarios:
 
 | Scenario | Work |
 | --- | --- |
 | idle | 100 server ticks at spawn |
 | generate | 1,024 cubes in two separated 4 × 4 × 32 cohorts, eight synchronous generation requests per tick |
+| lighting-snapshot | After generation, exercise the actual cube-to-NBT writer at the lower/upper fixture ends; perturb and restore the live column height array and require the saved lighting metadata to remain independent. No save is queued during the perturbation. |
 | resident | One million loaded-cube lookups, in 100 batches of 10,000; coordinate checksum retained |
 | save | Gold marker at local (8,8,8) in every fixture cube; eight save submissions per tick, dirty-column submission and final blocking flush |
 | load-sync | 512 stored cubes from cohort A in a new JVM; eight requests per tick, every coordinate and marker checked |
@@ -90,6 +92,8 @@ Packet instrumentation measures CubicChunks encode/decode work, serialized `Pack
 
 Samples are bounded at 120,000 per timer, with dropped counts reported. Screenshots are taken after the measurement window. Client/server capture windows differ by control-message latency. Reload means fresh JVMs; the OS filesystem cache is not purged. One process pair and one host produce descriptive measurements, not a controlled speedup claim.
 
+The lighting snapshot diagnostic emits normal cube-data save events while creating NBT, so event counts do not by themselves prove disk writes or durability. Its two operation timings are diagnostic costs, not a standalone performance benchmark. An explicit preparation option `--vanilla-vertical-render-distance off` selects CubicChunks' supported client-only vanilla hook configuration for renderer investigation; the manifest records the choice. It does not establish replacement renderer height/data compatibility.
+
 Export graphs, tabular measurements and real screenshots, then independently inspect the stopped world:
 
 ```powershell
@@ -98,7 +102,7 @@ Export graphs, tabular measurements and real screenshots, then independently ins
 .local/venv/Scripts/python.exe -B dev/CubicChunks-cleanroom/tools/profile_cubic_lab.py --lab-directory .local/cubic-lab/candidate-01 --output dev/CubicChunks-cleanroom/docs/measurements/candidate-01/jfr
 ```
 
-The reporter requires both phases to pass, real rendered frames and zero GUI-covered frames. It exports CSV, complete result JSON, PNG/SVG timing and height graphs, and the horizontal/vertical screenshots. The independent reader uses `nbtlib`, checks RegionLib headers against serialized coordinates, and verifies all 1,024 markers against the world's own block registry. It rejects unsupported external overflow entries. Install `matplotlib` and `nbtlib` in the workspace Python environment if unavailable.
+The reporter requires both phases to pass, rendered frames and zero GUI-covered frames. It records observed loader versions from each side's logs, leaves missing optional timing observations null, and exports CSV, complete result JSON, PNG/SVG timing and height graphs, and the horizontal/vertical screenshots. These protocol checks cannot establish correct terrain rendering: inspect the captures and retain a separate rendering outcome, as the Celeritas option-off diagnostic demonstrates. The independent reader uses `nbtlib`, checks RegionLib headers against serialized coordinates, and verifies all 1,024 markers against the world's own block registry. It rejects unsupported external overflow entries. Install `matplotlib` and `nbtlib` in the workspace Python environment if unavailable.
 
 The profiling command reuses `analyze_cubic_profile.py`, exports all four JFR recordings and supplies each side's own scenario UTC windows. Startup/shutdown remains a separate full-recording scope. Execution sample counts are not CPU utilization; sampled allocation weights are not retained heap; recorded file-I/O events are subject to JFR thresholds. Raw event exports stay with the local instance, while the compact JSON/CSV analysis can be shared with the graphs.
 

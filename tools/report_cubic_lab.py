@@ -5,6 +5,7 @@ import csv
 import hashlib
 import json
 from pathlib import Path
+import re
 import shutil
 
 
@@ -35,7 +36,7 @@ def main():
                 'server_tick_p99_ms': server['serverTicks']['p99Ms'], 'server_tick_max_ms': server['serverTicks']['maxMs'],
                 'frame_count': client['frameIntervals']['count'], 'frame_mean_ms': client['frameIntervals']['meanMs'],
                 'frame_p95_ms': client['frameIntervals']['p95Ms'], 'frame_p99_ms': client['frameIntervals']['p99Ms'],
-                'render_work_mean_ms': client['renderEventWork']['meanMs'], 'client_tick_p95_ms': client['clientTicks']['p95Ms'],
+                'render_work_mean_ms': client['renderEventWork'].get('meanMs'), 'client_tick_p95_ms': client['clientTicks'].get('p95Ms'),
                 'received_cubes': client['packets']['cubeCount'], 'received_payload_bytes': client['packets']['serializedPayloadBytes'],
                 'packet_decode_ns': client['packets']['serializationNanos'], 'cube_apply_ns': client['packets']['applyNanos'],
                 'cube_load_events': client['cubeLoadEvents'], 'cube_unload_events': client['cubeUnloadEvents'],
@@ -48,7 +49,13 @@ def main():
             if scenario['scenario'] in ['horizontal', 'vertical']:
                 shutil.copy2(screenshot, output / (scenario['scenario'] + '-in-game.png'))
         files = [lab / 'runs' / phase / name for name in ['server.log', 'client.log', 'server.jfr', 'client.jfr']]
+        runtime_versions = {}
+        for side in ['server', 'client']:
+            log = lab / 'runs' / phase / (side + '.log')
+            match = re.search(r'Cleanroom version (\S+)', log.read_text(encoding='utf-8', errors='replace'))
+            runtime_versions[side] = match[1] if match else None
         runs.append({'phase': phase, 'result': data, 'input': fingerprint(path),
+                     'observedRuntimeVersions': runtime_versions,
                      'recordings_and_logs': [fingerprint(p) for p in files if p.exists()]})
     with (output / 'metrics.csv').open('w', newline='', encoding='utf-8') as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
@@ -60,6 +67,7 @@ def main():
             'Tick durations include the bounded test work. Async latency includes tick dispatch and queueing.',
             'Packet byte counts are uncompressed PacketCubes payloads, not wire traffic.',
             'Reload starts new JVMs; filesystem caches are not purged.',
+            'Lighting-snapshot is a two-operation correctness check; one server tick and a brief client capture are not a latency distribution. Missing optional client-tick observations remain null.',
             'The reduced content profile and lab-specific 0.7 compatibility overlays do not qualify the full Supersymmetry pack.']}
     (output / 'results.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     import matplotlib
@@ -68,7 +76,7 @@ def main():
     plt.rcParams.update({'font.family': 'DejaVu Sans', 'svg.fonttype': 'none', 'svg.hashsalt': 'cubiclab.v1', 'font.size': 10})
     fig, axes = plt.subplots(1, 2, figsize=(13, 8), layout='constrained')
     fig.get_layout_engine().set(rect=(0, .16, 1, .84))
-    labels = [row['phase'] + ' / ' + row['scenario'] for row in rows]
+    labels = [row['phase'] + ' / ' + row['scenario'] + (' (1 tick; check)' if row['server_tick_count'] == 1 else '') for row in rows]
     for axis, prefix, title, budget in [(axes[0], 'server_tick', 'Server tick duration', 50),
                                       (axes[1], 'frame', 'Client frame interval', 1000 / 120)]:
         p95 = [row[prefix + '_p95_ms'] for row in rows]; p99 = [row[prefix + '_p99_ms'] for row in rows]
@@ -79,7 +87,10 @@ def main():
         axis.set_title(title, loc='left'); axis.set_xlabel('Measured milliseconds'); axis.set_xlim(left=0)
         axis.spines[['top', 'right']].set_visible(False); axis.grid(axis='x', alpha=.2); axis.set_axisbelow(True)
         axis.legend(loc='upper center', bbox_to_anchor=(.5, -.08), ncols=3, frameon=False, fontsize=9)
-    fig.suptitle('CubicChunks in-game performance diagnostics\nCleanroom ' + manifest['runtimeVersion'] + '; real dedicated server and client', x=.01, ha='left')
+    versions = runs[0]['observedRuntimeVersions']
+    runtime_label = ('server ' + versions['server'] + '; client ' + versions['client']
+                     if all(versions.values()) and versions['server'] != versions['client'] else manifest['runtimeVersion'])
+    fig.suptitle('CubicChunks in-game performance diagnostics\nCleanroom ' + runtime_label + '; real dedicated server and client', x=.01, ha='left')
     fig.text(.01, .02, 'Riven height [-128, 384): 32 cubes per column. One host, JFR active, 40 warmup ticks per scenario.\n'
              + rows[0]['gl_renderer'] + '; 1280 x 720, 120 FPS cap, no GUI frames. Descriptive p95/p99; no controlled speedup claim.', fontsize=9)
     save(fig, output, 'frame-and-tick-durations'); plt.close(fig)

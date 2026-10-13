@@ -1,5 +1,7 @@
 """Control-plane regressions; these do not simulate Minecraft performance."""
 import queue
+import argparse
+import json
 from pathlib import Path
 import tempfile
 import unittest
@@ -7,6 +9,35 @@ import zipfile
 import cubic_lab as lab
 
 class LabControlTest(unittest.TestCase):
+    def test_changed_prepared_runtime_is_rejected_before_launch(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); directory = root / '.local/cubic-lab/check'
+            directory.mkdir(parents=True)
+            artifact = root / 'loader.jar'; artifact.write_bytes(b'reviewed loader bytes')
+            manifest = {'runtimeArtifacts': {'client': {'path': str(artifact), 'sha256': lab.sha(artifact)}}}
+            (directory / 'lab.json').write_text(json.dumps(manifest), encoding='utf-8')
+            args = argparse.Namespace(riven_workspace=root, name='check')
+            self.assertEqual(lab.load_lab(args)[1], manifest)
+            artifact.write_bytes(b'changed loader bytes')
+            with self.assertRaises(RuntimeError): lab.load_lab(args)
+
+    def test_same_tag_asset_replacement_requires_review_before_installation(self):
+        hashes = {'installer': 'a' * 64, 'universal': 'b' * 64, 'prism': 'c' * 64}
+        release = {'assets': [
+            {'name': 'cleanroom-0.7.0-alpha-installer.jar', 'digest': 'sha256:' + hashes['installer']},
+            {'name': 'cleanroom-0.7.0-alpha-universal.jar', 'digest': 'sha256:' + hashes['universal']},
+            {'name': 'cleanroom-0.7.0-alpha.zip', 'digest': 'sha256:' + hashes['prism']} ]}
+        self.assertEqual(set(lab.runtime_assets(release, '0.7.0-alpha', hashes)), set(hashes))
+        release['assets'][0]['digest'] = 'sha256:' + 'd' * 64
+        with self.assertRaises(RuntimeError): lab.runtime_assets(release, '0.7.0-alpha', hashes)
+        with self.assertRaises(RuntimeError): lab.runtime_assets(release, '0.7.0', hashes)
+
+    def test_current_and_retained_070_versions_keep_their_compatibility_bridge(self):
+        self.assertTrue(lab.needs_070_compat('0.7.0'))
+        self.assertTrue(lab.needs_070_compat('0.7.0-alpha'))
+        self.assertFalse(lab.needs_070_compat('0.6.13-alpha'))
+        self.assertFalse(lab.needs_070_compat('0.8.0'))
+
     def test_color_coded_join_is_detected(self):
         messages = queue.Queue(); messages.put('\x1b[0;33;1mCubicLab\x1b[m\x1b[0;33;1m joined the game\x1b[m')
         self.assertIn('CubicLab joined the game', lab.await_line(messages, 'CubicLab joined the game', [], 1))

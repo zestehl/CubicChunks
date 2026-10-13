@@ -1,0 +1,387 @@
+{
+  "schema": "cubiclab.world-inspection.v1",
+  "passed": true,
+  "world": "E:\\WorldGenOverhaul\\.local\\instances\\cubic-lab-lighting-pass-01\\riven-dev",
+  "generator": "riven_cubic",
+  "seed": 8675309,
+  "minY": -128,
+  "maxYExclusive": 384,
+  "storage": "cubicchunks:anvil3d",
+  "expectedMarkers": 1024,
+  "verifiedMarkers": 1024,
+  "savedCubes": 9416,
+  "savedCubeCountsByY": {
+    "-11": 49,
+    "-10": 49,
+    "-9": 49,
+    "-8": 65,
+    "-7": 65,
+    "-6": 65,
+    "-5": 65,
+    "-4": 65,
+    "-3": 65,
+    "-2": 114,
+    "-1": 356,
+    "0": 534,
+    "1": 788,
+    "2": 1074,
+    "3": 1074,
+    "4": 1074,
+    "5": 1060,
+    "6": 638,
+    "7": 359,
+    "8": 343,
+    "9": 65,
+    "10": 65,
+    "11": 65,
+    "12": 65,
+    "13": 65,
+    "14": 114,
+    "15": 114,
+    "16": 114,
+    "17": 114,
+    "18": 114,
+    "19": 114,
+    "20": 114,
+    "21": 65,
+    "22": 65,
+    "23": 65,
+    "24": 49,
+    "25": 49,
+    "26": 49
+  },
+  "regions": [
+    {
+      "name": "-1.-1.-3.3dr",
+      "bytes": 47104,
+      "sha256": "bef47b63b6abcd2c77858649f70e65f3884eb0cb7d6f32d9fdb097db79252173"
+    },
+    {
+      "name": "-1.-1.-4.3dr",
+      "bytes": 18432,
+      "sha256": "c764a47251d8dcffd59bbe7e5043cb0af6233548456ee9f43ad473a603332392"
+    },
+    {
+      "name": "-1.0.-1.3dr",
+      "bytes": 53760,
+      "sha256": "07025c73d03299a6b269631d463de6204a4efc0337c054034137d896fcf5fe51"
+    },
+    {
+      "name": "-1.0.-2.3dr",
+      "bytes": 19456,
+      "sha256": "10135b35d258d3140703a2c0896ea4635a08a1e08a2457d0688126fddba730d7"
+    },
+    {
+      "name": "-1.0.-3.3dr",
+      "bytes": 214016,
+      "sha256": "def1f437f44a99c4b32d29fef310a39bf60d470ad7754d1c4cc0e27b53c6a603"
+    },
+    {
+      "name": "-1.0.-4.3dr",
+      "bytes": 256512,
+      "sha256": "0ff6fab742d706c7542a2b3a3c20dbe05c85874d8d4ce8477cb95c9455fa1003"
+    },
+    {
+      "name": "-1.0.-5.3dr",
+      "bytes": 275456,
+      "sha256": "f34396b6d0816e6eb45b76dfb9958afc05e6fd4e135f1766e0a37ef47ac1d36f"
+    },
+    {
+      "name": "-1.0.0.3dr",
+      "bytes": 60416,
+      "sha256": "ae1770d746f2fa109552a1200fea38a3118bbc8a1fe857a26a6db426ba695294"
+    },
+    {
+      "name": "-2.-1.-3.3dr",
+      "bytes": 24576,
+      "sha256": "2d84de6a0816f50ef0a543343625182120e48cf65fbe6671347d23eb13bfe074"
+    },
+    {
+      "name": "-2.0.-3.3dr",
+      "bytes": 67072,
+      "sha256": "e58e64fa50d1c38c3f22ef21ec241be07eb5880d80a3f9adb1960a7dc7617ff1"
+    },
+    {
+      "name": "-2.0.-5.3dr",
+      "bytes": 22528,
+      "sha256": "b83c2db67cf885ad59388acb738b735fd75062ecafe817ef10db1c3510c48e88"
+    },
+    {
+      "name": "0.-1.-1.3dr",
+      "bytes": 21504,
+      "sha256": "d4e7893c843eb7d42b2fdc0c5c4bed82c949da621a30e469961062d3021f4b5c"
+    },
+    {
+      "name": "0.-1.-2.3dr",
+      "bytes": 35328,
+      "sha256": "492a958876a0af3c4195f03308e939e3e9ede41ed1c4dee3b39f433c1ff404f6"
+    },
+    {
+      "name": "0.-1.-3.3dr",
+      "bytes": 55808,
+      "sha256": "a101cb701328c2a5d0558ffecf26a310849d87ddd3cdfd864176d5dd0e0a356f"
+    },
+    {
+      "name": "0.-1.-4.3dr",
+      "bytes": 41984,
+      "sha256": "60d201f8bc5a818a9e38205d9da1569487e3d2ef1ea93baae7a92b1b18b4b9c9"
+    },
+    {
+      "name": "0.0.-1.3dr",
+      "bytes": 176128,
+      "sha256": "e7e574a3070e339192af101dc9d7567a09e04e40498573ab3882b747f4055a33"
+    },
+    {
+      "name": "0.0.-2.3dr",
+      "bytes": 157184,
+      "sha256": "d4061a7bc1d86069013217fc42156911d16ecaf16fbf54bb17b55bac0bf4bc61"
+    },
+    {
+      "name": "0.0.-3.3dr",
+      "bytes": 199168,
+      "sha256": "4c8e4935318adb230a3c3f74786a05127d19d23ebbb6c2a57335ea5ca6083092"
+    },
+    {
+      "name": "0.0.-4.3dr",
+      "bytes": 333312,
+      "sha256": "31ca0ea638df7c1a5b6acf4058ee7d7b271021035d8992dc2af8e5c022479062"
+    },
+    {
+      "name": "0.0.-5.3dr",
+      "bytes": 374784,
+      "sha256": "cb071c59c964a605ffbff435a5a58bcd4237a7a19ac1d822af06681d21460010"
+    },
+    {
+      "name": "0.0.-6.3dr",
+      "bytes": 111616,
+      "sha256": "b3126ff144d7b12bc898fab2d4be1d65c68ec69d12170cb18d6cfeec4e6631cf"
+    },
+    {
+      "name": "0.0.0.3dr",
+      "bytes": 75264,
+      "sha256": "560c99bc10146b3f405f4637780553d36f25fd3cf070728f7db355766d02f045"
+    },
+    {
+      "name": "0.1.-3.3dr",
+      "bytes": 88064,
+      "sha256": "0f4e03c2e46bfa9518712cf8429b63b815dd7ce369d058f9205a29ad73bac9a5"
+    },
+    {
+      "name": "0.1.-4.3dr",
+      "bytes": 70144,
+      "sha256": "9601da84d64466ff551439c53f1f92087c8371694932c50a48ad30118beb4e97"
+    },
+    {
+      "name": "1.-1.-1.3dr",
+      "bytes": 31744,
+      "sha256": "050b9c9d980edd96e652b102ff67ac2b395a48cb441198606c4633f49b25ba7a"
+    },
+    {
+      "name": "1.-1.-2.3dr",
+      "bytes": 30720,
+      "sha256": "1f4f28f40b152e8d8053b414bfa73cebb859c1685f91b524ba7af867a5db8659"
+    },
+    {
+      "name": "1.-1.-3.3dr",
+      "bytes": 29696,
+      "sha256": "35984d7e9f9ae0fe6e2b063a726a54ca9e2960b336a9d592e1ce4ce27b442386"
+    },
+    {
+      "name": "1.0.-1.3dr",
+      "bytes": 165888,
+      "sha256": "21b1721f2da472c624ad167f0456bfe2ebf58582dcd3ab77757b4c1df3341d24"
+    },
+    {
+      "name": "1.0.-2.3dr",
+      "bytes": 106496,
+      "sha256": "ca9ce7a12010f461a75d231cb89d234a221d4cdb0439695db39755b0f64a6a36"
+    },
+    {
+      "name": "1.0.-3.3dr",
+      "bytes": 110080,
+      "sha256": "45ab90111900cef7d4d46ccb372ca4c54722ee75231efb41e9b7b92a9c1116e0"
+    },
+    {
+      "name": "1.0.-5.3dr",
+      "bytes": 44544,
+      "sha256": "aafd8061f8933af81a3c697ba034a948453beb3379c4abb2d74b099d544dfaf8"
+    },
+    {
+      "name": "1.0.-6.3dr",
+      "bytes": 38400,
+      "sha256": "cb2ae35ee2255392ce97fd89ddea29cd0519384be4c70326f18c1a76361a0a77"
+    },
+    {
+      "name": "10.-1.8.3dr",
+      "bytes": 120832,
+      "sha256": "72e0c5bef0559d56a228e6869be8051c757b39e264868fdd092c2c5043977513"
+    },
+    {
+      "name": "10.0.7.3dr",
+      "bytes": 91648,
+      "sha256": "a10942135b57e7e1501e7938b94b4f567c9356ed29db26c17e0c8b10ed28ddb8"
+    },
+    {
+      "name": "10.0.8.3dr",
+      "bytes": 237568,
+      "sha256": "5e33ecc469839965ccc29370d1a4a45b71caa0564d576709bb5dd6d9990938f8"
+    },
+    {
+      "name": "10.1.8.3dr",
+      "bytes": 86016,
+      "sha256": "611f7869921443f4db7d7e324fca59c4baf54d95aae5bfb012ccb1e922589215"
+    },
+    {
+      "name": "11.0.7.3dr",
+      "bytes": 91648,
+      "sha256": "e0aef92dece079bdaa9dc26b3750b464f34f4d9f00542509b1e8e4d95a2939e1"
+    },
+    {
+      "name": "11.0.8.3dr",
+      "bytes": 116736,
+      "sha256": "c6c50507d23699b4bac2e1e96a7009578cad030c21a01d1da6943ad8971acbe5"
+    },
+    {
+      "name": "12.0.7.3dr",
+      "bytes": 91648,
+      "sha256": "797690f3070b1abba86d252ca265d754594beba05b148a63ca3fb7086d58e953"
+    },
+    {
+      "name": "12.0.8.3dr",
+      "bytes": 116736,
+      "sha256": "0efec27b57ca14674c7892b45df03ae9d7eb361d460cd2bee43387fc1b215cfb"
+    },
+    {
+      "name": "13.0.7.3dr",
+      "bytes": 59392,
+      "sha256": "71d12bf72b0657db2255c4afabd3eeaacfa9570bbbab36952a43f9bc453b3ee5"
+    },
+    {
+      "name": "13.0.8.3dr",
+      "bytes": 73728,
+      "sha256": "51db57297927b2a87af266b7efc6fa98be37e5b6bc669133b927cf66234399c5"
+    },
+    {
+      "name": "2.-1.-1.3dr",
+      "bytes": 17408,
+      "sha256": "a28acdb216e5276446b418aa4cd53b5de067e0759777a0b0ae0f86f233a536bc"
+    },
+    {
+      "name": "2.0.-1.3dr",
+      "bytes": 23040,
+      "sha256": "71af2014a471122cd4513791b570e2a1a379349f08a083dba2c70e237f3cce5a"
+    },
+    {
+      "name": "7.-1.7.3dr",
+      "bytes": 67072,
+      "sha256": "eb35945211e6659eb44289cc8c988dc1c124bbd81f697a4f6e5203bdde3afa5c"
+    },
+    {
+      "name": "7.-1.8.3dr",
+      "bytes": 87040,
+      "sha256": "705ebcc4722e67508bf0447138a79a531fbcec5edd56efac3b412959b4a4d990"
+    },
+    {
+      "name": "7.0.7.3dr",
+      "bytes": 90112,
+      "sha256": "d81c2da99430ba5399e392f131fd8aaf6d37c66234e30567dbe7f15b479cc57b"
+    },
+    {
+      "name": "7.0.8.3dr",
+      "bytes": 114688,
+      "sha256": "37acb8dfa0d974a527a34e2841b951114680e6daaaeb37e5bfc24a385572ac87"
+    },
+    {
+      "name": "7.1.7.3dr",
+      "bytes": 67072,
+      "sha256": "0bc07d4dba7fba4110d40d199ef97e5299be32f7028c2f9a8876e77e49dcb4f6"
+    },
+    {
+      "name": "7.1.8.3dr",
+      "bytes": 83968,
+      "sha256": "592565fa2d2da1de71ccc668da69ef92df78f853d3aec6a992709e15ccdc7acd"
+    },
+    {
+      "name": "8.-1.7.3dr",
+      "bytes": 86528,
+      "sha256": "b96b022f3239de14be5e0a3237788b716ea4c34bb3667ab2f52f82c2cc79540c"
+    },
+    {
+      "name": "8.-1.8.3dr",
+      "bytes": 155136,
+      "sha256": "7d908d510234db09d1fa257073d6c3a9900d0b19e60cf09218eddb00a8ab31d3"
+    },
+    {
+      "name": "8.0.7.3dr",
+      "bytes": 146944,
+      "sha256": "464a628405ab7b84f5da2333ca940e17d5b67535b1f836063d6134136c080723"
+    },
+    {
+      "name": "8.0.8.3dr",
+      "bytes": 278528,
+      "sha256": "c6852eefabd0df5ad05da1a798146cef2d86c94867f85520e5322e5e8dfe4371"
+    },
+    {
+      "name": "8.1.7.3dr",
+      "bytes": 83968,
+      "sha256": "d1baf116fc23bcc9a0174fba3e7486b2c5bc995b88aa96ec4235e860df12b0c8"
+    },
+    {
+      "name": "8.1.8.3dr",
+      "bytes": 147456,
+      "sha256": "8f51843ed68e9c622a2b76f15659bf78738878e9ae038a0b47c2b6e70a587bcb"
+    },
+    {
+      "name": "9.0.7.3dr",
+      "bytes": 91648,
+      "sha256": "4ac19059cdbc652c01b1e3b0f5b0f8a935eacaf07dac0b59b74ac2df95591317"
+    },
+    {
+      "name": "9.0.8.3dr",
+      "bytes": 116736,
+      "sha256": "becff50958233bb4717d1ea9faf4281038b0188fff0488a143b5a5829061da66"
+    }
+  ],
+  "registeredSusyDeposits": true,
+  "registeredSusyHostRock": true,
+  "loadedModIds": [
+    "FML",
+    "appliedenergistics2",
+    "athenaeum",
+    "baubles",
+    "cleanmix",
+    "cleanroom",
+    "codechickenlib",
+    "configanytime",
+    "cubicchunks",
+    "cubicchunkscore",
+    "cubiclab",
+    "dropt",
+    "forge",
+    "ftblib",
+    "fugue",
+    "gcym",
+    "geckolib3",
+    "gregtech",
+    "gregtechfoodoption",
+    "groovyscript",
+    "immersiverailroading",
+    "mcp",
+    "minecraft",
+    "mixinbooter",
+    "modularui",
+    "opencomputers",
+    "opencomputers|core",
+    "placeholdername",
+    "pyrotech",
+    "riven",
+    "riven_cubic_probe",
+    "scalar",
+    "supercritical",
+    "sussypatches",
+    "susy",
+    "trackapi",
+    "universalmodcore"
+  ],
+  "limits": "Stopped-world inspection. Verifies RegionLib coordinates and every lab gold marker; not terrain parity, biome correctness or progression balance."
+}
