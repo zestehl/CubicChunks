@@ -89,7 +89,7 @@ def runtime_assets(release, product_version, expected_hashes=None):
 
 
 def needs_070_compat(version):
-    return version in ('0.7.0', '0.7.0-alpha')
+    return version in ('0.7.0', '0.7.0-alpha', '0.7.1-alpha')
 
 
 def settings(root):
@@ -618,7 +618,7 @@ def main():
     parser.add_argument('--jfr', action='store_true')
     args = parser.parse_args(); args.riven_workspace = args.riven_workspace.resolve()
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,63}', args.name): parser.error('Invalid lab name')
-    if args.scenarios and any(s not in ['idle', 'generate', 'resident', 'save', 'load-sync', 'load-async', 'horizontal', 'vertical', 'lighting-snapshot'] for s in args.scenarios.split(',')):
+    if args.scenarios and any(s not in ['idle', 'generate', 'resident', 'save', 'load-sync', 'load-async', 'horizontal', 'vertical', 'lighting-snapshot', 'scheduled-ticks'] for s in args.scenarios.split(',')):
         parser.error('Unknown scenario in --scenarios')
     if args.command == 'prepare': prepare(args); return
     if args.command == 'prime': prime(args); return

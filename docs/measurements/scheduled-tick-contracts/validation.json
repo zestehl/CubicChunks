@@ -1,0 +1,145 @@
+{
+  "schema": "cubiclab.scheduled-validation.v1",
+  "parentSourceRevision": "e0ba3137de71d381b2e2080593e5c523c047ea79",
+  "sourceStateAtPreparation": "Uncommitted tested batch; source byte hashes retained.",
+  "source": {
+    "src/main/java/io/github/opencubicchunks/cubicchunks/core/util/world/CubeSplitTickSet.java": "177a775a567ff6914d78181fe5809685cfb5e91c5e07d992526d54fed76eac32",
+    "src/main/java/io/github/opencubicchunks/cubicchunks/core/util/world/CubeSplitTickList.java": "6fe88e1a07518f521a5365c6e9bd5f5dbc3177ad330faa49bb02f6bfcc2efbf4",
+    "src/test/java/io/github/opencubicchunks/cubicchunks/core/util/world/TestCubeSplitTicks.java": "2107ed91b0f06779a6ed53b179a95f2dd71c26c9934ad6c21672ce16c2f3d80b",
+    "lab/src/main/java/io/github/opencubicchunks/cubicchunks/lab/LabScheduledTicks.java": "931ddf9f50a107b07590060d58bc98c568a0bb1ac945aedd5dfe89e7c114ceb8",
+    "lab/src/main/java/io/github/opencubicchunks/cubicchunks/core/server/chunkio/LabScheduledTickProbe.java": "361bc28f27edaffab7e8a7ec812705a7ddf6dccd7f35918d986fa37038f0ce46",
+    "lab/src/main/java/io/github/opencubicchunks/cubicchunks/lab/LabJob.java": "02d7ee6179b8c65c90d301fb41666a16ca0efbf2bd3e536bd1d7a07784ca557c",
+    "cleanroom/build.gradle": "1ca78eb2bbc6d7245ec9c2a1e7452a6b062517aecc096e5c3899ad942885bdf4"
+  },
+  "localChecks": [
+    {
+      "owner": "cleanroom",
+      "loader": "cleanroom",
+      "tests": 57,
+      "failures": 0,
+      "artifact": {
+        "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\libs\\CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar",
+        "sha256": "37c4af83417c7ea1f69a1d5e0407e968fd5b02371ad1d55e6083fc56022d3c2b",
+        "bytes": 922868
+      },
+      "log": {
+        "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\scheduled-batch-cleanroom-build.log",
+        "sha256": "d270ac41f6b5c6c3fc8b3672908c0d1d0cf4c511087e7a9cb5c4b79945af31bc",
+        "bytes": 7540
+      }
+    },
+    {
+      "owner": "cleanroom",
+      "loader": "forge",
+      "tests": 57,
+      "failures": 0,
+      "artifact": {
+        "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\libs\\CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-forge.jar",
+        "sha256": "d9bb79feb70835c85aad69c95370ebc8d731d684811bfd191ecfe553545543b9",
+        "bytes": 921829
+      },
+      "log": {
+        "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\scheduled-batch-forge-build.log",
+        "sha256": "ce4a68698f7acf51cd1c87fc8087e04d9ac6a1fb8d5a024663bd54a6cc8c55a7",
+        "bytes": 8698
+      }
+    },
+    {
+      "owner": "lab",
+      "loader": "cleanroom",
+      "tests": 6,
+      "failures": 0,
+      "artifact": {
+        "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\lab\\build\\cleanroom\\libs\\cubicchunks-lab-0.1.0-cleanroom.jar",
+        "sha256": "d1797897b671952eb85a2f82d293cd1b35975540d9c78018b0d9f7f9c4a8a72a",
+        "bytes": 54747
+      },
+      "log": {
+        "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\scheduled-batch-lab-cleanroom-build.log",
+        "sha256": "c8e51a33859447362c596c9add77e52efda87226f16f1d698fa8de0a13ea5936",
+        "bytes": 7200
+      }
+    },
+    {
+      "owner": "lab",
+      "loader": "forge",
+      "tests": 4,
+      "failures": 0,
+      "artifact": {
+        "path": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\lab\\build\\forge\\libs\\cubicchunks-lab-0.1.0-forge.jar",
+        "sha256": "8c0886f6d0021057b6a4af5e5b632ec3879fcf6b683fa4f55ed6d139e15bfe22",
+        "bytes": 50290
+      },
+      "log": {
+        "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\scheduled-batch-lab-forge-build.log",
+        "sha256": "52c2c9e3950fa132a7f9af0d0c0bf89185c0e6274a47f90e09f4c0ae6bb5c9b0",
+        "bytes": 7872
+      }
+    }
+  ],
+  "native": [
+    {
+      "phase": "write",
+      "input": {
+        "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\scheduled-pass-01\\runs\\write\\result.json",
+        "sha256": "87a5544bacfc10e848fc43b13d4678bfe053a30861e9235f6667bb05fcfe75cf",
+        "bytes": 61873
+      },
+      "scenarios": 3,
+      "clientExitCode": 0,
+      "serverExitCode": 0
+    },
+    {
+      "phase": "read",
+      "input": {
+        "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\scheduled-pass-01\\runs\\read\\result.json",
+        "sha256": "f6bba8a6c2d345053987d5e56ea3944ad9ead18069675a3848cd53569ee5fc89",
+        "bytes": 56278
+      },
+      "scenarios": 2,
+      "clientExitCode": 0,
+      "serverExitCode": 0
+    }
+  ],
+  "previousArtifacts": {
+    "recordedUtc": "2026-10-13T17:20:07.071101+00:00",
+    "parent": "e0ba3137de71d381b2e2080593e5c523c047ea79",
+    "artifacts": [
+      {
+        "owner": "cleanroom",
+        "loader": "cleanroom",
+        "source": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\cleanroom\\libs\\CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar",
+        "retained": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\scheduled-batch-baseline\\cleanroom-CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar",
+        "sha256": "969c2521a1db44a3aaa1cbb83ed47ea03c8d2810ac9246dc51642b2361de27b6"
+      },
+      {
+        "owner": "cleanroom",
+        "loader": "forge",
+        "source": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\cleanroom\\build\\forge\\libs\\CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-forge.jar",
+        "retained": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\scheduled-batch-baseline\\cleanroom-CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-forge.jar",
+        "sha256": "47a8004d31a518b5c358ac1fb696d16df5e4e973d7874873d9fe3f7c864124a2"
+      },
+      {
+        "owner": "lab",
+        "loader": "cleanroom",
+        "source": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\lab\\build\\cleanroom\\libs\\cubicchunks-lab-0.1.0-cleanroom.jar",
+        "retained": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\scheduled-batch-baseline\\lab-cubicchunks-lab-0.1.0-cleanroom.jar",
+        "sha256": "2f01ffa68e75f5cd44aef3e248f9c1bd841decbed514dd49ae092986f1396535"
+      },
+      {
+        "owner": "lab",
+        "loader": "forge",
+        "source": "E:\\WorldGenOverhaul\\dev\\CubicChunks-cleanroom\\lab\\build\\forge\\libs\\cubicchunks-lab-0.1.0-forge.jar",
+        "retained": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\scheduled-batch-baseline\\lab-cubicchunks-lab-0.1.0-forge.jar",
+        "sha256": "0157ce5ca793883e9920cfd73afa2772ba8345d32c91206cc70cac6dbc217da3"
+      }
+    ]
+  },
+  "limits": [
+    "Native fixture uses Cleanroom 0.7.1-alpha; Forge has local artifact/regression coverage.",
+    "No JFR recording or controlled speedup comparison.",
+    "Pending-tick serialization checked, not delayed-tick disk-restart durability.",
+    "Riven artifact changed independently from earlier measurements."
+  ],
+  "productionFixCommit": "6244e8b8b4333ca7cdb088b55660e6267f32e38c"
+}

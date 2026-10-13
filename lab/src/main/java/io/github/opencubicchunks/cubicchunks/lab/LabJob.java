@@ -39,9 +39,10 @@ final class LabJob {
     String startUtc, failure;
     int warmup = 40, progress, elapsedTicks, outstanding, completedAsync;
     boolean controlSent, done;
+    LabScheduledTicks scheduledFixture;
 
     LabJob(MinecraftServer server, String scenario) {
-        if (!Arrays.asList("idle", "generate", "resident", "save", "load-sync", "load-async", "horizontal", "vertical", "lighting-snapshot").contains(scenario))
+        if (!Arrays.asList("idle", "generate", "resident", "save", "load-sync", "load-async", "horizontal", "vertical", "lighting-snapshot", "scheduled-ticks").contains(scenario))
             throw new IllegalArgumentException("Unknown lab scenario");
         this.server = server; this.scenario = scenario; world = server.getWorld(0);
         ICubicWorld cubic = (ICubicWorld) world;
@@ -64,7 +65,7 @@ final class LabJob {
         if (scenario.startsWith("load-")) for (CubePos pos : targets) {
             if (provider.getLoadedCube(pos) != null) throw new IllegalArgumentException("Reload cohort already resident; restart and keep players at spawn");
         }
-        if (scenario.equals("resident") || scenario.equals("save") || scenario.equals("lighting-snapshot")) for (CubePos pos : targets) {
+        if (scenario.equals("resident") || scenario.equals("save") || scenario.equals("lighting-snapshot") || scenario.equals("scheduled-ticks")) for (CubePos pos : targets) {
             if (provider.getLoadedCube(pos) == null) throw new IllegalArgumentException("Generate the fixture first");
         }
     }
@@ -82,6 +83,14 @@ final class LabJob {
         elapsedTicks++;
         switch (scenario) {
             case "idle": done = elapsedTicks >= 100; break;
+            case "scheduled-ticks":
+                if (scheduledFixture == null) {
+                    scheduledFixture = new LabScheduledTicks(world);
+                    scheduledFixture.prepare(this);
+                }
+                done = scheduledFixture.observe(this);
+                if (!done && elapsedTicks >= 80) throw new IllegalStateException("Scheduled vanilla updates did not finish: " + scheduledFixture.summary());
+                break;
             case "lighting-snapshot":
                 for (CubePos pos : Arrays.asList(targets.get(0), targets.get(targets.size() - 1))) {
                     long snapshotStart = System.nanoTime();
@@ -184,6 +193,9 @@ final class LabJob {
         data.put("retainedFixtureCubes", held.size()); data.put("serverTicks", ticks.summary()); data.put("operationDurations", operations.summary());
         data.put("saveSubmissionNanos", submissionNanos); data.put("blockingFlushNanos", flushNanos);
         data.put("lookupChecksum", lookupChecksum); data.put("cubeLoadEvents", cubeLoads); data.put("cubeUnloadEvents", cubeUnloads);
+        if (scheduledFixture != null) {
+            data.put("scheduledTickChecks", scheduledFixture.summary()); scheduledFixture.restore();
+        }
         data.put("cubeDataLoadEvents", dataLoads); data.put("cubeDataSaveEvents", dataSaves); data.put("packets", packets.summary());
         data.put("participants", peers); data.put("horizontalViewDistance", server.getPlayerList().getViewDistance());
         data.put("verticalViewDistance", ((io.github.opencubicchunks.cubicchunks.core.server.ICubicPlayerList) server.getPlayerList()).getVerticalViewDistance());

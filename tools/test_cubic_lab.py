@@ -32,9 +32,10 @@ class LabControlTest(unittest.TestCase):
         with self.assertRaises(RuntimeError): lab.runtime_assets(release, '0.7.0-alpha', hashes)
         with self.assertRaises(RuntimeError): lab.runtime_assets(release, '0.7.0', hashes)
 
-    def test_current_and_retained_070_versions_keep_their_compatibility_bridge(self):
+    def test_reviewed_07_versions_keep_their_compatibility_bridge(self):
         self.assertTrue(lab.needs_070_compat('0.7.0'))
         self.assertTrue(lab.needs_070_compat('0.7.0-alpha'))
+        self.assertTrue(lab.needs_070_compat('0.7.1-alpha'))
         self.assertFalse(lab.needs_070_compat('0.6.13-alpha'))
         self.assertFalse(lab.needs_070_compat('0.8.0'))
 

@@ -68,6 +68,7 @@ def main():
             'Packet byte counts are uncompressed PacketCubes payloads, not wire traffic.',
             'Reload starts new JVMs; filesystem caches are not purged.',
             'Lighting-snapshot is a two-operation correctness check; one server tick and a brief client capture are not a latency distribution. Missing optional client-tick observations remain null.',
+            'Scheduled-ticks is a correctness fixture; observed state-transition timings include fixture preparation and tick dispatch.',
             'The reduced content profile and lab-specific 0.7 compatibility overlays do not qualify the full Supersymmetry pack.']}
     (output / 'results.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     import matplotlib
@@ -91,10 +92,14 @@ def main():
     runtime_label = ('server ' + versions['server'] + '; client ' + versions['client']
                      if all(versions.values()) and versions['server'] != versions['client'] else manifest['runtimeVersion'])
     fig.suptitle('CubicChunks in-game performance diagnostics\nCleanroom ' + runtime_label + '; real dedicated server and client', x=.01, ha='left')
-    fig.text(.01, .02, 'Riven height [-128, 384): 32 cubes per column. One host, JFR active, 40 warmup ticks per scenario.\n'
+    jfr_count = sum((lab / 'runs' / phase / (side + '.jfr')).is_file() for phase in ['write', 'read'] for side in ['server', 'client'])
+    fig.text(.01, .02, 'Riven height [-128, 384): 32 cubes per column. One host, ' + str(jfr_count) + '/4 JFRs retained, 40 warmup ticks per scenario.\n'
              + rows[0]['gl_renderer'] + '; 1280 x 720, 120 FPS cap, no GUI frames. Descriptive p95/p99; no controlled speedup claim.', fontsize=9)
     save(fig, output, 'frame-and-tick-durations'); plt.close(fig)
     streaming = [scenario for run in runs for scenario in run['result']['scenarios'] if scenario['scenario'] in ['horizontal', 'vertical']]
+    if not streaming:
+        print(json.dumps({'scenarios': len(rows), 'output': str(output), 'heightChart': 'No streaming route selected'}))
+        return
     fig, axis = plt.subplots(figsize=(11, 5.5), layout='constrained')
     for scenario, color, style in zip(streaming, ['#2f6690', '#c89225'], ['-', '--']):
         counts = scenario['client']['observedLoadsByCubeY']; ys = sorted(map(int, counts))

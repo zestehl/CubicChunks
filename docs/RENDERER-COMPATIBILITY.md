@@ -1,5 +1,7 @@
 # External renderer and shader compatibility environment
 
+Status: renderer/shader compatibility work is deferred at the user's request. Preserve these inputs and failed checks as evidence; use the baseline renderer for ongoing CubicChunks/Riven improvements. No Celeritas or Demonica patch was made during the preliminary compatibility investigation.
+
 Checked October 13, 2026. Celeritas and Demonica are now pinned as **optional client-only lab inputs**, with reusable preparation profiles, separate client/server hash checks, attribution and dependency reasons. Native startup checks reveal existing compatibility blockers before any new optimization is applied. The configurations are installed and reproducible; **a joined/rendered CubicChunks world with this pair is not yet qualified**.
 
 Follow-up: the [first CubicChunks lighting/configuration batch](LIGHTING-FIRST-PASS.md) repairs the existing `VERT_RENDER_DISTANCE` option. A [Celeritas-only diagnostic with that option off](measurements/renderer-option-diagnostic/README.md) now joins and completes bounded streaming captures on matched product `0.7.0-alpha`. Both final captures show empty sky where the baseline has terrain/markers, despite the expected cube packet/load counts. Startup is improved; terrain rendering is still not qualified. The external mods remain unchanged, and the Demonica pair was not rerun in this follow-up.

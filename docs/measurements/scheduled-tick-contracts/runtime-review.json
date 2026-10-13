@@ -1,0 +1,24 @@
+{
+  "tag_name": "0.7.1-alpha",
+  "published_at": "2026-10-13T16:27:04Z",
+  "html_url": "https://github.com/CleanroomMC/Cleanroom/releases/tag/0.7.1-alpha",
+  "body": "\n\n## Bug Fix\n\n- **sas**: Keep TextureOffset on the server *[commit by @Rongmario in 3889529]*\n- **sdl**: Bring up SDL video before the game settings load *[commit by @Rongmario in c8c9df2]*\n- **sdl**: Reapply the mouse grab on macOS when the cursor escapes *[commit by @Rongmario in c4f735e]*\n- **sdl**: Keep the splash thread from pumping events on macOS *[commit by @Rongmario in 86568f6]*\n\n## Build and Dependencies\n\n- **deps**: Update lwjgly to 1.0.2 *[commit by @Rongmario in 930c8e8]*\n    *[Fixes issue #659 by @MCTian-mi]*\n- **deps**: Update Conventions to 1.4.1 *[commit by @Rongmario in 1d2d592]*\n- **deps**: Update CleanroomGradle to 0.21.1 *[commit by @Rongmario in 6010e54]*\n- **deps**: Update lwjgly to 1.0.1 *[commit by @Rongmario in 63847b5]*\n\n## CI\n\n- Remove the manual publish workflow *[commit by @Rongmario in 314cfa4]*\n\n**Full Changelog**: https://github.com/CleanroomMC/Cleanroom/compare/0.7.0-alpha...0.7.1-alpha\n\n",
+  "assets": [
+    {
+      "name": "cleanroom-0.7.1-alpha-installer.jar",
+      "digest": "sha256:882cea268a1d83dbc0ec09a5f74a1261fd44fa31ba65ea19e1c3c416032cbbca",
+      "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.1-alpha/cleanroom-0.7.1-alpha-installer.jar"
+    },
+    {
+      "name": "cleanroom-0.7.1-alpha-universal.jar",
+      "digest": "sha256:97434a09a69341f4d9389713df935630c33524a75bf4bcf97c68d42528c05608",
+      "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.1-alpha/cleanroom-0.7.1-alpha-universal.jar"
+    },
+    {
+      "name": "cleanroom-0.7.1-alpha.zip",
+      "digest": "sha256:2c88a57d0acd93c0f7e318d87315c1b6229e5f344c714cfb95134a91e2a771d2",
+      "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.1-alpha/cleanroom-0.7.1-alpha.zip"
+    }
+  ],
+  "scope": "Native lab only; active Riven and development API pins unchanged."
+}
