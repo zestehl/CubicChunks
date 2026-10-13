@@ -1,0 +1,1625 @@
+{
+  "report": "dev\\CubicChunks-cleanroom\\docs\\measurements\\storage-pacing\\results.json",
+  "reportSha256": "6831ecff56ed3cc0e646eeb63610707bd5ae3e18ad153d93ba9be3858b0776f3",
+  "environment": {
+    "schema": 1,
+    "name": "storage-pass-01",
+    "server": "E:\\WorldGenOverhaul\\.local\\instances\\cubic-lab-storage-pass-01",
+    "client": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\storage-pass-01\\client",
+    "port": 25594,
+    "release": {
+      "tag_name": "0.7.1-alpha",
+      "published_at": "2026-10-13T16:27:04Z",
+      "html_url": "https://github.com/CleanroomMC/Cleanroom/releases/tag/0.7.1-alpha",
+      "assets": [
+        {
+          "url": "https://api.github.com/repos/CleanroomMC/Cleanroom/releases/assets/637594207",
+          "id": 637594207,
+          "node_id": "RA_kwDOI-HmMc4mAOpf",
+          "name": "cleanroom-0.7.1-alpha-installer.jar",
+          "label": "",
+          "uploader": {
+            "login": "github-actions[bot]",
+            "id": 41898282,
+            "node_id": "MDM6Qm90NDE4OTgyODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+            "html_url": "https://github.com/apps/github-actions",
+            "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "content_type": "application/java-archive",
+          "state": "uploaded",
+          "size": 54772221,
+          "digest": "sha256:882cea268a1d83dbc0ec09a5f74a1261fd44fa31ba65ea19e1c3c416032cbbca",
+          "download_count": 19,
+          "created_at": "2026-10-13T16:27:00Z",
+          "updated_at": "2026-10-13T16:27:03Z",
+          "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.1-alpha/cleanroom-0.7.1-alpha-installer.jar"
+        },
+        {
+          "url": "https://api.github.com/repos/CleanroomMC/Cleanroom/releases/assets/637594210",
+          "id": 637594210,
+          "node_id": "RA_kwDOI-HmMc4mAOpi",
+          "name": "cleanroom-0.7.1-alpha-universal.jar",
+          "label": "",
+          "uploader": {
+            "login": "github-actions[bot]",
+            "id": 41898282,
+            "node_id": "MDM6Qm90NDE4OTgyODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+            "html_url": "https://github.com/apps/github-actions",
+            "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "content_type": "application/java-archive",
+          "state": "uploaded",
+          "size": 52236492,
+          "digest": "sha256:97434a09a69341f4d9389713df935630c33524a75bf4bcf97c68d42528c05608",
+          "download_count": 5,
+          "created_at": "2026-10-13T16:27:01Z",
+          "updated_at": "2026-10-13T16:27:03Z",
+          "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.1-alpha/cleanroom-0.7.1-alpha-universal.jar"
+        },
+        {
+          "url": "https://api.github.com/repos/CleanroomMC/Cleanroom/releases/assets/637594209",
+          "id": 637594209,
+          "node_id": "RA_kwDOI-HmMc4mAOph",
+          "name": "cleanroom-0.7.1-alpha.zip",
+          "label": "",
+          "uploader": {
+            "login": "github-actions[bot]",
+            "id": 41898282,
+            "node_id": "MDM6Qm90NDE4OTgyODI=",
+            "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+            "html_url": "https://github.com/apps/github-actions",
+            "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "content_type": "application/zip",
+          "state": "uploaded",
+          "size": 13204,
+          "digest": "sha256:2c88a57d0acd93c0f7e318d87315c1b6229e5f344c714cfb95134a91e2a771d2",
+          "download_count": 80,
+          "created_at": "2026-10-13T16:27:00Z",
+          "updated_at": "2026-10-13T16:27:01Z",
+          "browser_download_url": "https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.1-alpha/cleanroom-0.7.1-alpha.zip"
+        }
+      ]
+    },
+    "runtimeVersion": "0.7.1-alpha",
+    "releaseCheckedUtc": "2026-10-13T18:22:51.054239+00:00",
+    "runtimeSelection": "Reviewed latest release",
+    "java": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\java.exe",
+    "cubicJar": {
+      "filename": "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar",
+      "sha256": "a1af3e5b53c3a54fdcadd3bb1e52d136ecdadf4bbf6377665e3c1ba53ad8aa28"
+    },
+    "labJar": {
+      "filename": "cubicchunks-lab-0.1.0-cleanroom.jar",
+      "sha256": "0b03070c689e1b269f925e73bac67f96af6e73c38bb7183b2768b4d57a113b2d"
+    },
+    "riven": {
+      "artifact": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\storage-pass-inputs\\riven.jar",
+      "sha256": "f2fc8f705b835107d36af5adeb8b4fb67c938d65794f3a6b52d815d2f4fbbd86",
+      "selection": "Explicit frozen lab input; active Riven build artifact unchanged"
+    },
+    "modHashes": {
+      "+Fugue-0.24.4.jar": "438248925eb38d16b6b4bcbe6247339b2a745cfe586d4917985f7d925a5d8630",
+      "ae2-uel-v0.56.6.jar": "57e68134a5caead143856659aca8d711845ff90b3ffbcf48071f0a409d09f6a7",
+      "athenaeum-1.12.2-1.19.6.jar": "2aea9497d5414bfaefa05cc7c0162850f01dbb96b72ee3db36b5924573336271",
+      "Bubbles-2.4.10.jar": "8a54cb9abafb14ce66bbc61fbfe5846fdeb3a4cf6ca6ff3bbd6bfe7b16f595f2",
+      "CodeChickenLib-1.12.2-3.2.3.358-universal.jar": "5f8499f7ee2590e45110bbf296b2bf101aec15897e28d5e9759cf8f2387d8a74",
+      "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar": "a1af3e5b53c3a54fdcadd3bb1e52d136ecdadf4bbf6377665e3c1ba53ad8aa28",
+      "cubicchunks-lab-0.1.0-cleanroom.jar": "0b03070c689e1b269f925e73bac67f96af6e73c38bb7183b2768b4d57a113b2d",
+      "dropt-1.12.2-1.19.4.jar": "21837ce855ad3304fa2aa2cc4d29fe5989cd61f09fa8fc1f9f4e53dedbacfd04",
+      "FTBLib-5.4.7.2.jar": "623fc574f0227fec6cc9e26c3879a605f9b4499c0078ff085291901a5495a6ac",
+      "geckolib-forge-1.12.2-3.0.31.jar": "b00bc9de4e3e94cea0455f8d58b295c1464272135e842bdf3170c2c955c871a5",
+      "GregicalityMultiblocks-1.2.11.jar": "dc250750b86c4d95bb68fe1681d48ce912efa1472ec0355c30e625d41a0591da",
+      "gregtech-1.12.2-2.8.10-beta.jar": "54744bb11ea4679df4b55846d8073e9bb2ef8c1c53aae8aee41cda3fc22d927e",
+      "gregtechfoodoption-1.12.2-1.12.10.jar": "2d57d4313f02bf05ef411f063b5ab93c988cdda2dfef1f0ff6789ae68aaa72ba",
+      "groovyscript-1.4.3.jar": "07617b7ce9170a857199bd61d730a0db3af2685cf83d31734a2d4b628fda7533",
+      "ImmersiveRailroading-1.12.2-forge-1.10.0.jar": "de5483f7d06642ca8de38bbb56852559cafe5bcbebe38f680c391fd766d36022",
+      "modularui-3.1.6.jar": "4c16829c70b322aab735e73f53608fcabbf1d14956d5365c0c2b911c4d4dca54",
+      "OpenComputers-MC1.12.2-1.8.9a+8ca336f.jar": "a5d0fc97a809314529b55cac5ef5484b960cb364fc7f944148bcc0ac8694238f",
+      "pyrotech-1.12.2-1.6.19.jar": "7ed4b889a8ae912e51726d5d20d4893486b8b02fd21cedadd92c204b898ad920",
+      "riven.jar": "f2fc8f705b835107d36af5adeb8b4fb67c938d65794f3a6b52d815d2f4fbbd86",
+      "Scalar Legacy-1.0.1.jar": "350d1c378f3b0ac8e7b3df0432482bbb5341c79d07df843c747be1d5fdc23cfe",
+      "Supercritical-0.2.7.jar": "a75383ebb268d561864abc81d5bef8000363ec059fb7d3f348364c4e56fc2559",
+      "SussyPatches-1.11.10.jar": "0f821e696b5d3d0f55ef9c3b2b6442c10ad22503155a2c7cdff8ba93f1cbc9c0",
+      "Susy-Core-0.2.1.jar": "6ed74994835b176d35e4cf215106d5f6d1864c4c24fe81faa94c16eea39991b8",
+      "TrackAPI-1.2.jar": "5fd930eb6afb769f3c806a5356fb09f842fd6679a5a04c53d3be934152c482bc",
+      "UniversalModCore-1.12.2-forge-1.2.2-3d12767.jar": "c2f71ad972320457cc37bacc999a46900964597df00ecc922f7649628560d823"
+    },
+    "clientModHashes": {
+      "+Fugue-0.24.4.jar": "438248925eb38d16b6b4bcbe6247339b2a745cfe586d4917985f7d925a5d8630",
+      "ae2-uel-v0.56.6.jar": "57e68134a5caead143856659aca8d711845ff90b3ffbcf48071f0a409d09f6a7",
+      "athenaeum-1.12.2-1.19.6.jar": "2aea9497d5414bfaefa05cc7c0162850f01dbb96b72ee3db36b5924573336271",
+      "Bubbles-2.4.10.jar": "8a54cb9abafb14ce66bbc61fbfe5846fdeb3a4cf6ca6ff3bbd6bfe7b16f595f2",
+      "CodeChickenLib-1.12.2-3.2.3.358-universal.jar": "5f8499f7ee2590e45110bbf296b2bf101aec15897e28d5e9759cf8f2387d8a74",
+      "CubicChunks-1.12.2-0.0.1301.0-riven.1-SNAPSHOT-cleanroom.jar": "a1af3e5b53c3a54fdcadd3bb1e52d136ecdadf4bbf6377665e3c1ba53ad8aa28",
+      "cubicchunks-lab-0.1.0-cleanroom.jar": "0b03070c689e1b269f925e73bac67f96af6e73c38bb7183b2768b4d57a113b2d",
+      "dropt-1.12.2-1.19.4.jar": "21837ce855ad3304fa2aa2cc4d29fe5989cd61f09fa8fc1f9f4e53dedbacfd04",
+      "FTBLib-5.4.7.2.jar": "623fc574f0227fec6cc9e26c3879a605f9b4499c0078ff085291901a5495a6ac",
+      "geckolib-forge-1.12.2-3.0.31.jar": "b00bc9de4e3e94cea0455f8d58b295c1464272135e842bdf3170c2c955c871a5",
+      "GregicalityMultiblocks-1.2.11.jar": "dc250750b86c4d95bb68fe1681d48ce912efa1472ec0355c30e625d41a0591da",
+      "gregtech-1.12.2-2.8.10-beta.jar": "54744bb11ea4679df4b55846d8073e9bb2ef8c1c53aae8aee41cda3fc22d927e",
+      "gregtechfoodoption-1.12.2-1.12.10.jar": "2d57d4313f02bf05ef411f063b5ab93c988cdda2dfef1f0ff6789ae68aaa72ba",
+      "groovyscript-1.4.3.jar": "07617b7ce9170a857199bd61d730a0db3af2685cf83d31734a2d4b628fda7533",
+      "ImmersiveRailroading-1.12.2-forge-1.10.0.jar": "de5483f7d06642ca8de38bbb56852559cafe5bcbebe38f680c391fd766d36022",
+      "modularui-3.1.6.jar": "4c16829c70b322aab735e73f53608fcabbf1d14956d5365c0c2b911c4d4dca54",
+      "OpenComputers-MC1.12.2-1.8.9a+8ca336f.jar": "a5d0fc97a809314529b55cac5ef5484b960cb364fc7f944148bcc0ac8694238f",
+      "pyrotech-1.12.2-1.6.19.jar": "7ed4b889a8ae912e51726d5d20d4893486b8b02fd21cedadd92c204b898ad920",
+      "riven.jar": "f2fc8f705b835107d36af5adeb8b4fb67c938d65794f3a6b52d815d2f4fbbd86",
+      "Scalar Legacy-1.0.1.jar": "350d1c378f3b0ac8e7b3df0432482bbb5341c79d07df843c747be1d5fdc23cfe",
+      "Supercritical-0.2.7.jar": "a75383ebb268d561864abc81d5bef8000363ec059fb7d3f348364c4e56fc2559",
+      "SussyPatches-1.11.10.jar": "0f821e696b5d3d0f55ef9c3b2b6442c10ad22503155a2c7cdff8ba93f1cbc9c0",
+      "Susy-Core-0.2.1.jar": "6ed74994835b176d35e4cf215106d5f6d1864c4c24fe81faa94c16eea39991b8",
+      "TrackAPI-1.2.jar": "5fd930eb6afb769f3c806a5356fb09f842fd6679a5a04c53d3be934152c482bc",
+      "UniversalModCore-1.12.2-forge-1.2.2-3d12767.jar": "c2f71ad972320457cc37bacc999a46900964597df00ecc922f7649628560d823"
+    },
+    "clientProfile": {
+      "name": "baseline",
+      "definitionSha256": "c15a928ab242ace846d70c2e4b16f02f00d5e41b7344a23f2ce97c923adb2a71",
+      "mods": [],
+      "ownership": "External unmodified runtime compatibility inputs; no source or responsibilities embedded into CubicChunks"
+    },
+    "vanillaVerticalRenderDistance": "default",
+    "generatedLibraryHashes": {
+      "server": {
+        "1.12.2/akka-actor_2.11-2.3.3.jar": {
+          "sha256": "4ccbc821a417f0174c9734fc721f078177cacef94ded09c3775ebf40c6a7bdfd",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "akka-actor_2.11-2.3.3.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/config-1.2.1.jar": {
+          "sha256": "c160fbd78f51a0c2375a794e435ce2112524a6871f64d0331895e9e26ee8b9ee",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "config-1.2.1.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-actors-2.11.0.jar": {
+          "sha256": "fa33c031c291ef618e33398aa193ddf4d4c6859d805c9fb3cd4b7c4fbc9acbc6",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-actors-2.11.0.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-actors-migration_2.11-1.1.0.jar": {
+          "sha256": "b89d0beb76df20c7b2c2bee59ba53b802cc48566bc3e89ac96ce6361c5c2ee38",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-actors-migration_2.11-1.1.0.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-compiler-2.11.1.jar": {
+          "sha256": "3aa616f5c56d2052fc5e3231f3e8cf1736f876caff0142a66096fc5b4dc87ae5",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-compiler-2.11.1.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-continuations-library_2.11-1.0.2_mc.jar": {
+          "sha256": "8dd0a4941f4564117cc991734ca36aa53dff6bb0be329f39eab46d8819f60d1a",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-continuations-library_2.11-1.0.2_mc.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-continuations-plugin_2.11.1-1.0.2_mc.jar": {
+          "sha256": "79329971a31ede7b6823f21a6ab765506b4093d9276debdc9dbe17b996884f2b",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-continuations-plugin_2.11.1-1.0.2_mc.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-library-2.11.1.jar": {
+          "sha256": "088bcb80f71b6e6a2a31d2fe7288c1fd64f19663ce281b924cdfab3fb105f4f3",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-library-2.11.1.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-parser-combinators_2.11-1.0.1.jar": {
+          "sha256": "19495ce701fd9ba3c499c137e3ad5364acee8f87a01ef99e912f995a23fd4cb1",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-parser-combinators_2.11-1.0.1.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-reflect-2.11.1.jar": {
+          "sha256": "41938d1e89670979dd783102777a8b879999f4fb00a5b811b51c105b02a9d4f8",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-reflect-2.11.1.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-swing_2.11-1.0.1.jar": {
+          "sha256": "4a7c757d4d87dd37382bd777ad611b5875748aef148277cf25bb39eebb496d07",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-swing_2.11-1.0.1.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-xml_2.11-1.0.2.jar": {
+          "sha256": "13c0d8d442bde14b73af3ed60e8d53452f9e1ad62ffbe3d944cb918df652db6f",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-xml_2.11-1.0.2.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        }
+      },
+      "client": {
+        "1.12.2/akka-actor_2.11-2.3.3.jar": {
+          "sha256": "4ccbc821a417f0174c9734fc721f078177cacef94ded09c3775ebf40c6a7bdfd",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "akka-actor_2.11-2.3.3.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/config-1.2.1.jar": {
+          "sha256": "c160fbd78f51a0c2375a794e435ce2112524a6871f64d0331895e9e26ee8b9ee",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "config-1.2.1.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-actors-2.11.0.jar": {
+          "sha256": "fa33c031c291ef618e33398aa193ddf4d4c6859d805c9fb3cd4b7c4fbc9acbc6",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-actors-2.11.0.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-actors-migration_2.11-1.1.0.jar": {
+          "sha256": "b89d0beb76df20c7b2c2bee59ba53b802cc48566bc3e89ac96ce6361c5c2ee38",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-actors-migration_2.11-1.1.0.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-compiler-2.11.1.jar": {
+          "sha256": "3aa616f5c56d2052fc5e3231f3e8cf1736f876caff0142a66096fc5b4dc87ae5",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-compiler-2.11.1.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-continuations-library_2.11-1.0.2_mc.jar": {
+          "sha256": "8dd0a4941f4564117cc991734ca36aa53dff6bb0be329f39eab46d8819f60d1a",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-continuations-library_2.11-1.0.2_mc.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-continuations-plugin_2.11.1-1.0.2_mc.jar": {
+          "sha256": "79329971a31ede7b6823f21a6ab765506b4093d9276debdc9dbe17b996884f2b",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-continuations-plugin_2.11.1-1.0.2_mc.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-library-2.11.1.jar": {
+          "sha256": "088bcb80f71b6e6a2a31d2fe7288c1fd64f19663ce281b924cdfab3fb105f4f3",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-library-2.11.1.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-parser-combinators_2.11-1.0.1.jar": {
+          "sha256": "19495ce701fd9ba3c499c137e3ad5364acee8f87a01ef99e912f995a23fd4cb1",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-parser-combinators_2.11-1.0.1.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-reflect-2.11.1.jar": {
+          "sha256": "41938d1e89670979dd783102777a8b879999f4fb00a5b811b51c105b02a9d4f8",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-reflect-2.11.1.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-swing_2.11-1.0.1.jar": {
+          "sha256": "4a7c757d4d87dd37382bd777ad611b5875748aef148277cf25bb39eebb496d07",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-swing_2.11-1.0.1.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        },
+        "1.12.2/scala-xml_2.11-1.0.2.jar": {
+          "sha256": "13c0d8d442bde14b73af3ed60e8d53452f9e1ad62ffbe3d944cb918df652db6f",
+          "owners": [
+            {
+              "mod": "Scalar Legacy-1.0.1.jar",
+              "embeddedEntry": "scala-xml_2.11-1.0.2.jar"
+            }
+          ],
+          "reason": "Required library extracted unchanged by a retained startup integration"
+        }
+      }
+    },
+    "height": {
+      "minY": -128,
+      "maxYExclusive": 384,
+      "verticalCubesPerColumn": 32
+    },
+    "compatibility": [
+      "Lab-only field-access ABI bridge forwards Fugue 0.24.4 calls to ImagineBreaker 3.2, preserving target class initialization.",
+      "Lab-only independently authored BlockStateContainer.Builder restores the missing Forge fluid API class through the loader transformer API; existing runtime classes are preserved.",
+      "Lab-only ObjectHolderRef mixin initializes the declaring class before registry field injection, preventing later static initializers from clearing injected values."
+    ],
+    "clientRuntime": {
+      "schema": 1,
+      "java": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot\\bin\\java.exe",
+      "release": "0.7.1-alpha",
+      "libraries": [
+        {
+          "name": "org.lwjgl:lwjgl-freetype:3.4.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl-freetype\\3.4.3\\lwjgl-freetype-3.4.3.jar",
+          "sha1": "d2b12961d44f92860fb1ab501f9c69b7a2975236"
+        },
+        {
+          "name": "org.lwjgl:lwjgl-freetype:3.4.3:natives-windows",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl-freetype\\3.4.3\\lwjgl-freetype-3.4.3-natives-windows.jar",
+          "sha1": "0c01f319d5eeebaa143feb143cc746687c88075a"
+        },
+        {
+          "name": "org.lwjgl:lwjgl-jemalloc:3.4.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl-jemalloc\\3.4.3\\lwjgl-jemalloc-3.4.3.jar",
+          "sha1": "350f317eaf5295b1e53f6664ef5fdeeaaa7dcbf0"
+        },
+        {
+          "name": "org.lwjgl:lwjgl-jemalloc:3.4.3:natives-windows",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl-jemalloc\\3.4.3\\lwjgl-jemalloc-3.4.3-natives-windows.jar",
+          "sha1": "d329f1d23bdb18e504f2f5900a93d24b2454bd05"
+        },
+        {
+          "name": "org.lwjgl:lwjgl-openal:3.4.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl-openal\\3.4.3\\lwjgl-openal-3.4.3.jar",
+          "sha1": "32b52cda5af6937a4e4bd321bdb83082025cb332"
+        },
+        {
+          "name": "org.lwjgl:lwjgl-openal:3.4.3:natives-windows",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl-openal\\3.4.3\\lwjgl-openal-3.4.3-natives-windows.jar",
+          "sha1": "097c14cc0c264d64e4200fc319d86f559f8a6931"
+        },
+        {
+          "name": "org.lwjgl:lwjgl-opengl:3.4.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl-opengl\\3.4.3\\lwjgl-opengl-3.4.3.jar",
+          "sha1": "b81769ee48050f8c71e70839505f350bf9219d90"
+        },
+        {
+          "name": "org.lwjgl:lwjgl-opengl:3.4.3:natives-windows",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl-opengl\\3.4.3\\lwjgl-opengl-3.4.3-natives-windows.jar",
+          "sha1": "8f46f873190aa1d89f0f59818afcf125bd88adde"
+        },
+        {
+          "name": "org.lwjgl:lwjgl-sdl:3.4.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl-sdl\\3.4.3\\lwjgl-sdl-3.4.3.jar",
+          "sha1": "c02146735d6ff70d070c73532b435e5c893a346b"
+        },
+        {
+          "name": "org.lwjgl:lwjgl-sdl:3.4.3:natives-windows",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl-sdl\\3.4.3\\lwjgl-sdl-3.4.3-natives-windows.jar",
+          "sha1": "b91110fdb7a3c09feaac07ee06e0757a8ac33d03"
+        },
+        {
+          "name": "org.lwjgl:lwjgl-stb:3.4.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl-stb\\3.4.3\\lwjgl-stb-3.4.3.jar",
+          "sha1": "cdce54785bd3758e44a81f345d6260774d921c78"
+        },
+        {
+          "name": "org.lwjgl:lwjgl-stb:3.4.3:natives-windows",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl-stb\\3.4.3\\lwjgl-stb-3.4.3-natives-windows.jar",
+          "sha1": "0ada47b3ce6917bd113759f5caad20f2cca06d4c"
+        },
+        {
+          "name": "org.lwjgl:lwjgl:3.4.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl\\3.4.3\\lwjgl-3.4.3.jar",
+          "sha1": "7ab5265a73d8a959ed62332d546536ae6be2f0d5"
+        },
+        {
+          "name": "org.lwjgl:lwjgl:3.4.3:natives-windows",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl\\3.4.3\\lwjgl-3.4.3-natives-windows.jar",
+          "sha1": "27e3d2f08b2bcf4fb56a58b836d9437419b980d7"
+        },
+        {
+          "name": "com.mojang:patchy:999999.0-empty",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\mojang\\patchy\\999999.0-empty\\patchy-999999.0-empty.jar",
+          "sha1": "b04f3ee8f5e43fa3b162981b50bb72fe1acabb33"
+        },
+        {
+          "name": "net.java.dev.jna:jna:5.19.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\net\\java\\dev\\jna\\jna\\5.19.1\\jna-5.19.1.jar",
+          "sha1": "ca303052cd617c1af2e2c8d344c98a706fb63143"
+        },
+        {
+          "name": "com.ibm.icu:icu4j-core-mojang:999999.0-empty",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\ibm\\icu\\icu4j-core-mojang\\999999.0-empty\\icu4j-core-mojang-999999.0-empty.jar",
+          "sha1": "b04f3ee8f5e43fa3b162981b50bb72fe1acabb33"
+        },
+        {
+          "name": "net.sf.jopt-simple:jopt-simple:5.0.4",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\net\\sf\\jopt-simple\\jopt-simple\\5.0.4\\jopt-simple-5.0.4.jar",
+          "sha1": "4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c"
+        },
+        {
+          "name": "io.netty:netty-all:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-all\\4.2.16.Final\\netty-all-4.2.16.Final.jar",
+          "sha1": "65ecfa91f2e50f156f89ab999c20473d6bbc1052"
+        },
+        {
+          "name": "com.google.guava:guava:33.6.0-jre",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\google\\guava\\guava\\33.6.0-jre\\guava-33.6.0-jre.jar",
+          "sha1": "c376b13067cc99a5774403530953f7b05a91e218"
+        },
+        {
+          "name": "org.apache.commons:commons-lang3:3.20.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\apache\\commons\\commons-lang3\\3.20.0\\commons-lang3-3.20.0.jar",
+          "sha1": "65897b3e5731220962e659e001904af3c3cbeba9"
+        },
+        {
+          "name": "commons-io:commons-io:2.22.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\commons-io\\commons-io\\2.22.0\\commons-io-2.22.0.jar",
+          "sha1": "5b1e18bc0ad651ed878029d83f88d9c8189fd51e"
+        },
+        {
+          "name": "commons-codec:commons-codec:1.22.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\commons-codec\\commons-codec\\1.22.0\\commons-codec-1.22.0.jar",
+          "sha1": "6b3eb4beb7058c2a638f5f17bcb388649fd339dd"
+        },
+        {
+          "name": "com.google.code.gson:gson:2.14.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\google\\code\\gson\\gson\\2.14.0\\gson-2.14.0.jar",
+          "sha1": "efc0e34ede4e3204eaefb84a00e55e8c86634382"
+        },
+        {
+          "name": "org.apache.commons:commons-compress:1.28.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\apache\\commons\\commons-compress\\1.28.0\\commons-compress-1.28.0.jar",
+          "sha1": "e482f2c7a88dac3c497e96aa420b6a769f59c8d7"
+        },
+        {
+          "name": "org.apache.httpcomponents:httpclient:4.5.14",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\apache\\httpcomponents\\httpclient\\4.5.14\\httpclient-4.5.14.jar",
+          "sha1": "1194890e6f56ec29177673f2f12d0b8e627dec98"
+        },
+        {
+          "name": "commons-logging:commons-logging:1.4.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\commons-logging\\commons-logging\\1.4.0\\commons-logging-1.4.0.jar",
+          "sha1": "e8f6313365dfa0580e49c58837afc8caa9b4ce05"
+        },
+        {
+          "name": "org.apache.httpcomponents:httpcore:4.4.16",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\apache\\httpcomponents\\httpcore\\4.4.16\\httpcore-4.4.16.jar",
+          "sha1": "51cf043c87253c9f58b539c9f7e44c8894223850"
+        },
+        {
+          "name": "it.unimi.dsi:fastutil:8.5.18",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\it\\unimi\\dsi\\fastutil\\8.5.18\\fastutil-8.5.18.jar",
+          "sha1": "a6cff377eecc19c2037bf31568a6d7106b50ba1f"
+        },
+        {
+          "name": "org.apache.logging.log4j:log4j-api:2.26.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\apache\\logging\\log4j\\log4j-api\\2.26.0\\log4j-api-2.26.0.jar",
+          "sha1": "ad52af0ecf054a7e3f275a2e180ee06d9c490951"
+        },
+        {
+          "name": "org.apache.logging.log4j:log4j-core:2.26.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\apache\\logging\\log4j\\log4j-core\\2.26.0\\log4j-core-2.26.0.jar",
+          "sha1": "d267ca60b27ddb075e0b4e75e7875859717bf85f"
+        },
+        {
+          "name": "ca.weblite:java-objc-bridge:1.2",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\ca\\weblite\\java-objc-bridge\\1.2\\java-objc-bridge-1.2.jar",
+          "sha1": "af8ba4c82a8979d07319f74278312af6c1cd61a5"
+        },
+        {
+          "name": "com.cleanroommc:cleanmix:0.7.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\cleanroommc\\cleanmix\\0.7.3\\cleanmix-0.7.3.jar",
+          "sha1": "f96955063ebc16a73cecb067444c7e153ff125ca"
+        },
+        {
+          "name": "com.cleanroommc:cleanroom:0.7.1-alpha:universal",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\cleanroommc\\cleanroom\\0.7.1-alpha\\cleanroom-0.7.1-alpha-universal.jar",
+          "sha1": "8c2218ed1fe2dcc1015494c7da8a57a9a8417bbd"
+        },
+        {
+          "name": "com.cleanroommc:lwjgly:1.0.2",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\cleanroommc\\lwjgly\\1.0.2\\lwjgly-1.0.2.jar",
+          "sha1": "e116ed56398eee64a4c081716b2abc229d74178d"
+        },
+        {
+          "name": "com.cleanroommc:mcttf:0.1.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\cleanroommc\\mcttf\\0.1.0\\mcttf-0.1.0.jar",
+          "sha1": "107b4dda1298358ccab9f5d44c4cb9538ecfab81"
+        },
+        {
+          "name": "com.cleanroommc:mixinextras-common:0.5.5",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\cleanroommc\\mixinextras-common\\0.5.5\\mixinextras-common-0.5.5.jar",
+          "sha1": "05a822b77f347f39bd821c2c4759a22686800e05"
+        },
+        {
+          "name": "com.github.oshi:oshi-common:7.3.2",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\github\\oshi\\oshi-common\\7.3.2\\oshi-common-7.3.2.jar",
+          "sha1": "52c1631d1e2aff7a78c582622dd05a2b8e78d472"
+        },
+        {
+          "name": "com.github.oshi:oshi-core-ffm:7.3.2",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\github\\oshi\\oshi-core-ffm\\7.3.2\\oshi-core-ffm-7.3.2.jar",
+          "sha1": "65733998074514d3300bfb189a0c3bd0d7a46a61"
+        },
+        {
+          "name": "com.google.code.findbugs:jsr305:2.0.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\google\\code\\findbugs\\jsr305\\2.0.1\\jsr305-2.0.1.jar",
+          "sha1": "516c03b21d50a644d538de0f0369c620989cd8f0"
+        },
+        {
+          "name": "com.google.errorprone:error_prone_annotations:2.48.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\google\\errorprone\\error_prone_annotations\\2.48.0\\error_prone_annotations-2.48.0.jar",
+          "sha1": "bbe30942a31d1778c74cb272321267eca82dc708"
+        },
+        {
+          "name": "com.google.guava:failureaccess:1.0.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\google\\guava\\failureaccess\\1.0.3\\failureaccess-1.0.3.jar",
+          "sha1": "aeaffd00d57023a2c947393ed251f0354f0985fc"
+        },
+        {
+          "name": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\google\\guava\\listenablefuture\\9999.0-empty-to-avoid-conflict-with-guava\\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+          "sha1": "b421526c5f297295adef1c886e5246c39d4ac629"
+        },
+        {
+          "name": "com.google.j2objc:j2objc-annotations:3.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\google\\j2objc\\j2objc-annotations\\3.1\\j2objc-annotations-3.1.jar",
+          "sha1": "a892ca9507839bbdb900d64310ac98256cab992f"
+        },
+        {
+          "name": "com.ibm.icu:icu4j:78.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\ibm\\icu\\icu4j\\78.3\\icu4j-78.3.jar",
+          "sha1": "6a851a53bb1f25689fc418dcc8935b0d93580adf"
+        },
+        {
+          "name": "com.sun.istack:istack-commons-runtime:4.2.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\sun\\istack\\istack-commons-runtime\\4.2.0\\istack-commons-runtime-4.2.0.jar",
+          "sha1": "131351109ff27c4aa0958a988bb273e879687232"
+        },
+        {
+          "name": "io.github.classgraph:classgraph:4.8.184",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\github\\classgraph\\classgraph\\4.8.184\\classgraph-4.8.184.jar",
+          "sha1": "a4f7ddec0f831dcf7ec3db32ae2c7e628c89f1a6"
+        },
+        {
+          "name": "io.netty:netty-buffer:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-buffer\\4.2.16.Final\\netty-buffer-4.2.16.Final.jar",
+          "sha1": "05397ef65dcb60670e0e0dba4854522873af3070"
+        },
+        {
+          "name": "io.netty:netty-codec-base:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-base\\4.2.16.Final\\netty-codec-base-4.2.16.Final.jar",
+          "sha1": "01a01d45a9efc228c6d747525848b065e0656b5f"
+        },
+        {
+          "name": "io.netty:netty-codec-classes-quic:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-classes-quic\\4.2.16.Final\\netty-codec-classes-quic-4.2.16.Final.jar",
+          "sha1": "29e04d2f81b70c0b9e2646030dddc878786015be"
+        },
+        {
+          "name": "io.netty:netty-codec-compression:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-compression\\4.2.16.Final\\netty-codec-compression-4.2.16.Final.jar",
+          "sha1": "bdbbcfcdbe217b95c14a04df4fc5d31213d5c27c"
+        },
+        {
+          "name": "io.netty:netty-codec-dns:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-dns\\4.2.16.Final\\netty-codec-dns-4.2.16.Final.jar",
+          "sha1": "07533d77b74323f20848e5d8051b1dcec0336bb8"
+        },
+        {
+          "name": "io.netty:netty-codec-haproxy:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-haproxy\\4.2.16.Final\\netty-codec-haproxy-4.2.16.Final.jar",
+          "sha1": "42afb55a64b8bad73fe2580927724c4068394b39"
+        },
+        {
+          "name": "io.netty:netty-codec-http2:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-http2\\4.2.16.Final\\netty-codec-http2-4.2.16.Final.jar",
+          "sha1": "7af476eb447afe6e933938f09a5097823cf6c46c"
+        },
+        {
+          "name": "io.netty:netty-codec-http3:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-http3\\4.2.16.Final\\netty-codec-http3-4.2.16.Final.jar",
+          "sha1": "506ab30d26e401aeb52922b9baf000d17f355957"
+        },
+        {
+          "name": "io.netty:netty-codec-http:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-http\\4.2.16.Final\\netty-codec-http-4.2.16.Final.jar",
+          "sha1": "b5e0715df90047ee5a0138c8f704f43c751009e4"
+        },
+        {
+          "name": "io.netty:netty-codec-marshalling:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-marshalling\\4.2.16.Final\\netty-codec-marshalling-4.2.16.Final.jar",
+          "sha1": "8fa72501beb27e474e339a4259f4de8e2f628dad"
+        },
+        {
+          "name": "io.netty:netty-codec-memcache:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-memcache\\4.2.16.Final\\netty-codec-memcache-4.2.16.Final.jar",
+          "sha1": "4be33e7be80222dbbb00f3fbd6f1b2d7f956b14d"
+        },
+        {
+          "name": "io.netty:netty-codec-mqtt:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-mqtt\\4.2.16.Final\\netty-codec-mqtt-4.2.16.Final.jar",
+          "sha1": "fca239eea71abeede7a27a851045ba407ddff21f"
+        },
+        {
+          "name": "io.netty:netty-codec-native-quic:4.2.16.Final:linux-aarch_64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-native-quic\\4.2.16.Final\\netty-codec-native-quic-4.2.16.Final-linux-aarch_64.jar",
+          "sha1": "19a23720a19f3d37038ad98d9d096e10a269e42d"
+        },
+        {
+          "name": "io.netty:netty-codec-native-quic:4.2.16.Final:linux-x86_64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-native-quic\\4.2.16.Final\\netty-codec-native-quic-4.2.16.Final-linux-x86_64.jar",
+          "sha1": "d2508e60272931ae0fa56e4b4db9430f880f34b7"
+        },
+        {
+          "name": "io.netty:netty-codec-native-quic:4.2.16.Final:osx-aarch_64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-native-quic\\4.2.16.Final\\netty-codec-native-quic-4.2.16.Final-osx-aarch_64.jar",
+          "sha1": "4f08dddd953f49291d9a43bcde0f8d96cf8c2dcf"
+        },
+        {
+          "name": "io.netty:netty-codec-native-quic:4.2.16.Final:osx-x86_64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-native-quic\\4.2.16.Final\\netty-codec-native-quic-4.2.16.Final-osx-x86_64.jar",
+          "sha1": "db28f6e4771837c0d7b14c691a03d73e1ee42f42"
+        },
+        {
+          "name": "io.netty:netty-codec-native-quic:4.2.16.Final:windows-x86_64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-native-quic\\4.2.16.Final\\netty-codec-native-quic-4.2.16.Final-windows-x86_64.jar",
+          "sha1": "6f4fa17b350d63f6e8d7043a0f3e944fc97bc49f"
+        },
+        {
+          "name": "io.netty:netty-codec-protobuf:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-protobuf\\4.2.16.Final\\netty-codec-protobuf-4.2.16.Final.jar",
+          "sha1": "bbd61e19ebbad9a3da1856da418316b2a3fbdbde"
+        },
+        {
+          "name": "io.netty:netty-codec-redis:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-redis\\4.2.16.Final\\netty-codec-redis-4.2.16.Final.jar",
+          "sha1": "4d27efa32f8631baa97f1ed3e63c9febd400c3f5"
+        },
+        {
+          "name": "io.netty:netty-codec-smtp:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-smtp\\4.2.16.Final\\netty-codec-smtp-4.2.16.Final.jar",
+          "sha1": "d25fa1d1f6d6735ded9d1160e66643307b8b274e"
+        },
+        {
+          "name": "io.netty:netty-codec-socks:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-socks\\4.2.16.Final\\netty-codec-socks-4.2.16.Final.jar",
+          "sha1": "0d227dd8807b28382ade355eaae4678d4a7cd13c"
+        },
+        {
+          "name": "io.netty:netty-codec-stomp:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-stomp\\4.2.16.Final\\netty-codec-stomp-4.2.16.Final.jar",
+          "sha1": "0e3678d58509546d54c1cb2fcac566115727ddc0"
+        },
+        {
+          "name": "io.netty:netty-codec-xml:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec-xml\\4.2.16.Final\\netty-codec-xml-4.2.16.Final.jar",
+          "sha1": "2975be7e9fc48ec00dba7b01638dd0f8f34ba9be"
+        },
+        {
+          "name": "io.netty:netty-codec:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-codec\\4.2.16.Final\\netty-codec-4.2.16.Final.jar",
+          "sha1": "5ff5de5c29d6aa51bd4a52dac6abef7a6c2a8aae"
+        },
+        {
+          "name": "io.netty:netty-common:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-common\\4.2.16.Final\\netty-common-4.2.16.Final.jar",
+          "sha1": "c2bc7fa5acfa2afc777e944d84f0aa65559cc81e"
+        },
+        {
+          "name": "io.netty:netty-handler-proxy:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-handler-proxy\\4.2.16.Final\\netty-handler-proxy-4.2.16.Final.jar",
+          "sha1": "df9f359db740a1dd2d3a02608cb8b43daf63c9d2"
+        },
+        {
+          "name": "io.netty:netty-handler-ssl-ocsp:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-handler-ssl-ocsp\\4.2.16.Final\\netty-handler-ssl-ocsp-4.2.16.Final.jar",
+          "sha1": "eac493d90d4213f271585c607f2f4aa2045d2c22"
+        },
+        {
+          "name": "io.netty:netty-handler:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-handler\\4.2.16.Final\\netty-handler-4.2.16.Final.jar",
+          "sha1": "cc82873ae4b6d14effe480740ad838de09add70d"
+        },
+        {
+          "name": "io.netty:netty-resolver-dns-classes-macos:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-resolver-dns-classes-macos\\4.2.16.Final\\netty-resolver-dns-classes-macos-4.2.16.Final.jar",
+          "sha1": "d0acd35178a860b0e1832fdd748137968e44feb6"
+        },
+        {
+          "name": "io.netty:netty-resolver-dns-native-macos:4.2.16.Final:osx-aarch_64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-resolver-dns-native-macos\\4.2.16.Final\\netty-resolver-dns-native-macos-4.2.16.Final-osx-aarch_64.jar",
+          "sha1": "22daeb917287455801fa4a123110bd513514246e"
+        },
+        {
+          "name": "io.netty:netty-resolver-dns-native-macos:4.2.16.Final:osx-x86_64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-resolver-dns-native-macos\\4.2.16.Final\\netty-resolver-dns-native-macos-4.2.16.Final-osx-x86_64.jar",
+          "sha1": "0398f969a870b666bb6fbc92ed1ce974608dc61c"
+        },
+        {
+          "name": "io.netty:netty-resolver-dns:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-resolver-dns\\4.2.16.Final\\netty-resolver-dns-4.2.16.Final.jar",
+          "sha1": "efbe0a1f5bf910c3d9a4ebef53fd3c982543dde6"
+        },
+        {
+          "name": "io.netty:netty-resolver:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-resolver\\4.2.16.Final\\netty-resolver-4.2.16.Final.jar",
+          "sha1": "fcea6d64273b59ab9127b68c16ae98af34642139"
+        },
+        {
+          "name": "io.netty:netty-transport-classes-epoll:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-classes-epoll\\4.2.16.Final\\netty-transport-classes-epoll-4.2.16.Final.jar",
+          "sha1": "cf90c7b892e284ba9f1545dce170168369b3b9d6"
+        },
+        {
+          "name": "io.netty:netty-transport-classes-io_uring:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-classes-io_uring\\4.2.16.Final\\netty-transport-classes-io_uring-4.2.16.Final.jar",
+          "sha1": "d4788328f8a2145e26d6e80f2f3ddc2f73bc24a4"
+        },
+        {
+          "name": "io.netty:netty-transport-classes-kqueue:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-classes-kqueue\\4.2.16.Final\\netty-transport-classes-kqueue-4.2.16.Final.jar",
+          "sha1": "0fa2bcf8c71626510f6fae173f78182117b70f7a"
+        },
+        {
+          "name": "io.netty:netty-transport-native-epoll:4.2.16.Final:linux-aarch_64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-native-epoll\\4.2.16.Final\\netty-transport-native-epoll-4.2.16.Final-linux-aarch_64.jar",
+          "sha1": "eed34f3b37b4c46a0cbb49456ccc4e3bd7195e4c"
+        },
+        {
+          "name": "io.netty:netty-transport-native-epoll:4.2.16.Final:linux-riscv64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-native-epoll\\4.2.16.Final\\netty-transport-native-epoll-4.2.16.Final-linux-riscv64.jar",
+          "sha1": "3fbb6d9aa97f86b5c2868b7e7149ada325f57daa"
+        },
+        {
+          "name": "io.netty:netty-transport-native-epoll:4.2.16.Final:linux-x86_64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-native-epoll\\4.2.16.Final\\netty-transport-native-epoll-4.2.16.Final-linux-x86_64.jar",
+          "sha1": "439c24f5c27c220deb042b42e4048d606edeb78d"
+        },
+        {
+          "name": "io.netty:netty-transport-native-io_uring:4.2.16.Final:linux-aarch_64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-native-io_uring\\4.2.16.Final\\netty-transport-native-io_uring-4.2.16.Final-linux-aarch_64.jar",
+          "sha1": "077402a81d80186301463e0be5f2425f1b43cf4c"
+        },
+        {
+          "name": "io.netty:netty-transport-native-io_uring:4.2.16.Final:linux-riscv64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-native-io_uring\\4.2.16.Final\\netty-transport-native-io_uring-4.2.16.Final-linux-riscv64.jar",
+          "sha1": "b3fbc3b04eed8e89f284484e45989f718f58a085"
+        },
+        {
+          "name": "io.netty:netty-transport-native-io_uring:4.2.16.Final:linux-x86_64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-native-io_uring\\4.2.16.Final\\netty-transport-native-io_uring-4.2.16.Final-linux-x86_64.jar",
+          "sha1": "cd2900ef8eedf232ac9dbc1b6140267d720d4272"
+        },
+        {
+          "name": "io.netty:netty-transport-native-kqueue:4.2.16.Final:osx-aarch_64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-native-kqueue\\4.2.16.Final\\netty-transport-native-kqueue-4.2.16.Final-osx-aarch_64.jar",
+          "sha1": "ddb942cad6c0e978caa2215757512b36c5ffacec"
+        },
+        {
+          "name": "io.netty:netty-transport-native-kqueue:4.2.16.Final:osx-x86_64",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-native-kqueue\\4.2.16.Final\\netty-transport-native-kqueue-4.2.16.Final-osx-x86_64.jar",
+          "sha1": "dd9d41b06355a6a1815d902ee087a693aab83755"
+        },
+        {
+          "name": "io.netty:netty-transport-native-unix-common:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-native-unix-common\\4.2.16.Final\\netty-transport-native-unix-common-4.2.16.Final.jar",
+          "sha1": "3cf32390f1b80af890ac44aa0698c2ff58c2a4d7"
+        },
+        {
+          "name": "io.netty:netty-transport-rxtx:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-rxtx\\4.2.16.Final\\netty-transport-rxtx-4.2.16.Final.jar",
+          "sha1": "9c2a92b1a066a73f958f4584972a142bd4e54dbc"
+        },
+        {
+          "name": "io.netty:netty-transport-sctp:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-sctp\\4.2.16.Final\\netty-transport-sctp-4.2.16.Final.jar",
+          "sha1": "72bb9808fddd75854c23d7b165bec6b6e2fa3010"
+        },
+        {
+          "name": "io.netty:netty-transport-udt:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport-udt\\4.2.16.Final\\netty-transport-udt-4.2.16.Final.jar",
+          "sha1": "dfa9958dd9fdbfee45622475b017835122457e37"
+        },
+        {
+          "name": "io.netty:netty-transport:4.2.16.Final",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\io\\netty\\netty-transport\\4.2.16.Final\\netty-transport-4.2.16.Final.jar",
+          "sha1": "ae87a3bec51d503475a19fbd718bf777f2fc06c6"
+        },
+        {
+          "name": "jakarta.activation:jakarta.activation-api:2.1.4",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\jakarta\\activation\\jakarta.activation-api\\2.1.4\\jakarta.activation-api-2.1.4.jar",
+          "sha1": "9e5c2a0d75dde71a0bedc4dbdbe47b78a5dc50f8"
+        },
+        {
+          "name": "jakarta.annotation:jakarta.annotation-api:3.0.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\jakarta\\annotation\\jakarta.annotation-api\\3.0.0\\jakarta.annotation-api-3.0.0.jar",
+          "sha1": "54f928fadec906a99d558536756d171917b9d936"
+        },
+        {
+          "name": "jakarta.inject:jakarta.inject-api:2.0.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\jakarta\\inject\\jakarta.inject-api\\2.0.1\\jakarta.inject-api-2.0.1.jar",
+          "sha1": "4c28afe1991a941d7702fe1362c365f0a8641d1e"
+        },
+        {
+          "name": "jakarta.xml.bind:jakarta.xml.bind-api:4.0.5",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\jakarta\\xml\\bind\\jakarta.xml.bind-api\\4.0.5\\jakarta.xml.bind-api-4.0.5.jar",
+          "sha1": "161811f36cad3c65991502e80317f2f6703361df"
+        },
+        {
+          "name": "jakarta.xml.soap:jakarta.xml.soap-api:3.0.2",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\jakarta\\xml\\soap\\jakarta.xml.soap-api\\3.0.2\\jakarta.xml.soap-api-3.0.2.jar",
+          "sha1": "0445830286faf84fe40a3f47ccd7537d69cd58c4"
+        },
+        {
+          "name": "jakarta.xml.ws:jakarta.xml.ws-api:4.0.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\jakarta\\xml\\ws\\jakarta.xml.ws-api\\4.0.3\\jakarta.xml.ws-api-4.0.3.jar",
+          "sha1": "30b8a7abd7b3958461d8256db31816dd2ae6eb85"
+        },
+        {
+          "name": "java3d:vecmath:1.5.2",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\java3d\\vecmath\\1.5.2\\vecmath-1.5.2.jar",
+          "sha1": "79846ba34cbd89e2422d74d53752f993dcc2ccaf"
+        },
+        {
+          "name": "lzma:lzma:0.0.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\lzma\\lzma\\0.0.1\\lzma-0.0.1.jar",
+          "sha1": "521616dc7487b42bef0e803bd2fa3faf668101d7"
+        },
+        {
+          "name": "net.java.dev.jna:jna-platform:5.19.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\net\\java\\dev\\jna\\jna-platform\\5.19.1\\jna-platform-5.19.1.jar",
+          "sha1": "d1e54d9231da5ca3fa730d52960deaa555475468"
+        },
+        {
+          "name": "net.java.jinput:jinput:2.0.10",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\net\\java\\jinput\\jinput\\2.0.10\\jinput-2.0.10.jar",
+          "sha1": "d0a9613a26328720f8055d7b9921e1e5fa6db557"
+        },
+        {
+          "name": "net.sf.trove4j:core:3.1.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\net\\sf\\trove4j\\core\\3.1.0\\core-3.1.0.jar",
+          "sha1": "5fd0207b685536b29dd65c86f4b3bf89befb885c"
+        },
+        {
+          "name": "net.sf.trove4j:experimental:3.1.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\net\\sf\\trove4j\\experimental\\3.1.0\\experimental-3.1.0.jar",
+          "sha1": "7ae04bc42178c53a30d602d0bbd77571cef4ceac"
+        },
+        {
+          "name": "org.apache.commons:commons-text:1.15.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\apache\\commons\\commons-text\\1.15.0\\commons-text-1.15.0.jar",
+          "sha1": "9899093aa40f0199d6c39b131b8f087cdb37e399"
+        },
+        {
+          "name": "org.apache.httpcomponents.client5:httpclient5:5.6.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\apache\\httpcomponents\\client5\\httpclient5\\5.6.1\\httpclient5-5.6.1.jar",
+          "sha1": "b418ba210ace28adf920f1decf64d673953d07cf"
+        },
+        {
+          "name": "org.apache.httpcomponents.core5:httpcore5-h2:5.4.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\apache\\httpcomponents\\core5\\httpcore5-h2\\5.4.3\\httpcore5-h2-5.4.3.jar",
+          "sha1": "33bcd37d645539d27c65e17420843fd7f6c0ebf4"
+        },
+        {
+          "name": "org.apache.httpcomponents.core5:httpcore5:5.4.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\apache\\httpcomponents\\core5\\httpcore5\\5.4.3\\httpcore5-5.4.3.jar",
+          "sha1": "32a0699fbcb103f5621c00983ee8f5aac080e4a6"
+        },
+        {
+          "name": "org.apache.logging.log4j:log4j-slf4j2-impl:2.26.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\apache\\logging\\log4j\\log4j-slf4j2-impl\\2.26.0\\log4j-slf4j2-impl-2.26.0.jar",
+          "sha1": "668c0f0e813d83f00a7182533aa658ec7e7a0a0d"
+        },
+        {
+          "name": "org.apache.maven:maven-artifact:3.9.16",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\apache\\maven\\maven-artifact\\3.9.16\\maven-artifact-3.9.16.jar",
+          "sha1": "1176c6579a8a68508c3479ef72d514e71c98ddca"
+        },
+        {
+          "name": "org.codehaus.plexus:plexus-utils:3.6.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\codehaus\\plexus\\plexus-utils\\3.6.1\\plexus-utils-3.6.1.jar",
+          "sha1": "9dce1b9c69b197f453223e45a2cb9fa0cd48b424"
+        },
+        {
+          "name": "org.eclipse.angus:angus-activation:2.0.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\eclipse\\angus\\angus-activation\\2.0.3\\angus-activation-2.0.3.jar",
+          "sha1": "7f80607ea5014fef0b1779e6c33d63a88a45a563"
+        },
+        {
+          "name": "org.glassfish.corba:glassfish-corba-omgapi:5.0.2",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\glassfish\\corba\\glassfish-corba-omgapi\\5.0.2\\glassfish-corba-omgapi-5.0.2.jar",
+          "sha1": "5707c4c83d8ec7cf417ef2708fa539ff9204a1f4"
+        },
+        {
+          "name": "org.glassfish.jaxb:jaxb-core:4.0.9",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\glassfish\\jaxb\\jaxb-core\\4.0.9\\jaxb-core-4.0.9.jar",
+          "sha1": "3f32ec949d109d666fa30994223d1c25a47b105f"
+        },
+        {
+          "name": "org.glassfish.jaxb:jaxb-runtime:4.0.9",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\glassfish\\jaxb\\jaxb-runtime\\4.0.9\\jaxb-runtime-4.0.9.jar",
+          "sha1": "500c199572538675d2819c938fbafe34935d8d6b"
+        },
+        {
+          "name": "org.glassfish.jaxb:txw2:4.0.9",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\glassfish\\jaxb\\txw2\\4.0.9\\txw2-4.0.9.jar",
+          "sha1": "70325ebdebca3e7aae1dfa395fd41fc25d8a6f4e"
+        },
+        {
+          "name": "org.javassist:javassist:3.32.0-GA",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\javassist\\javassist\\3.32.0-GA\\javassist-3.32.0-GA.jar",
+          "sha1": "b408b56e952eadb5b30f29b197856b23a35766a0"
+        },
+        {
+          "name": "org.jctools:jctools-core:4.0.6",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\jctools\\jctools-core\\4.0.6\\jctools-core-4.0.6.jar",
+          "sha1": "2467452e7631e485b062d5d507ff73cdb04e3f11"
+        },
+        {
+          "name": "org.jline:jline-native:4.1.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\jline\\jline-native\\4.1.3\\jline-native-4.1.3.jar",
+          "sha1": "f8449379e67e4970efcdfdca7de648b71add4279"
+        },
+        {
+          "name": "org.jline:jline:4.1.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\jline\\jline\\4.1.3\\jline-4.1.3.jar",
+          "sha1": "82988d8680e9f2360c7a876273279026a50b5834"
+        },
+        {
+          "name": "org.joml:joml:1.10.9",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\joml\\joml\\1.10.9\\joml-1.10.9.jar",
+          "sha1": "438e036486bad66b189bff385dd07dea4f74a146"
+        },
+        {
+          "name": "org.jspecify:jspecify:1.0.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\jspecify\\jspecify\\1.0.0\\jspecify-1.0.0.jar",
+          "sha1": "7425a601c1c7ec76645a78d22b8c6a627edee507"
+        },
+        {
+          "name": "org.openjdk.nashorn:nashorn-core:15.7",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\openjdk\\nashorn\\nashorn-core\\15.7\\nashorn-core-15.7.jar",
+          "sha1": "f959627b97cb21316906d3634fecf4ec04016bcd"
+        },
+        {
+          "name": "org.ow2.asm:asm-analysis:9.10.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\ow2\\asm\\asm-analysis\\9.10.1\\asm-analysis-9.10.1.jar",
+          "sha1": "8d49f14d51f632cb1d87c88d1ceaf50db0d8af1b"
+        },
+        {
+          "name": "org.ow2.asm:asm-commons:9.10.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\ow2\\asm\\asm-commons\\9.10.1\\asm-commons-9.10.1.jar",
+          "sha1": "4229e4c55fd8e01c23f9fe9884075cc628aacc50"
+        },
+        {
+          "name": "org.ow2.asm:asm-deprecated:7.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\ow2\\asm\\asm-deprecated\\7.1\\asm-deprecated-7.1.jar",
+          "sha1": "004ad3a41a931f2ef0aa8f8dc5d7c82090d744c1"
+        },
+        {
+          "name": "org.ow2.asm:asm-tree:9.10.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\ow2\\asm\\asm-tree\\9.10.1\\asm-tree-9.10.1.jar",
+          "sha1": "e244332a17564c1d1572449399a842de35881be2"
+        },
+        {
+          "name": "org.ow2.asm:asm-util:9.10.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\ow2\\asm\\asm-util\\9.10.1\\asm-util-9.10.1.jar",
+          "sha1": "7bb9d450e8d4cbf9f9e04096c44bbfe7fba80b15"
+        },
+        {
+          "name": "org.ow2.asm:asm:9.10.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\ow2\\asm\\asm\\9.10.1\\asm-9.10.1.jar",
+          "sha1": "ada2141c0cc52ee8f5c48cd5fa4ce0e794f22236"
+        },
+        {
+          "name": "org.slf4j:slf4j-api:2.0.18",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\slf4j\\slf4j-api\\2.0.18\\slf4j-api-2.0.18.jar",
+          "sha1": "78a9e7a37cd6360e0b818e86341b24123d28d4df"
+        },
+        {
+          "name": "org.tukaani:xz:1.12",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\tukaani\\xz\\1.12\\xz-1.12.jar",
+          "sha1": "bb9703ba3753ab8665f65e6a25b3ddc7b09b1caf"
+        },
+        {
+          "name": "top.outlands:foundation:0.22.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\top\\outlands\\foundation\\0.22.0\\foundation-0.22.0.jar",
+          "sha1": "64767e65f56808cbb934497bc1c4248b33853550"
+        },
+        {
+          "name": "zone.rong:imaginebreaker:3.2",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\zone\\rong\\imaginebreaker\\3.2\\imaginebreaker-3.2.jar",
+          "sha1": "62f6cebd08993947749c86ea30b319b60bc0992c"
+        },
+        {
+          "name": "org.lwjgl.lwjgl:lwjgl:999999.0-empty",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl\\lwjgl\\999999.0-empty\\lwjgl-999999.0-empty.jar",
+          "sha1": "b04f3ee8f5e43fa3b162981b50bb72fe1acabb33"
+        },
+        {
+          "name": "org.lwjgl.lwjgl:lwjgl-platform:999999.0-empty",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl\\lwjgl-platform\\999999.0-empty\\lwjgl-platform-999999.0-empty.jar",
+          "sha1": "b04f3ee8f5e43fa3b162981b50bb72fe1acabb33"
+        },
+        {
+          "name": "org.lwjgl.lwjgl:lwjgl_util:999999.0-empty",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\org\\lwjgl\\lwjgl\\lwjgl_util\\999999.0-empty\\lwjgl_util-999999.0-empty.jar",
+          "sha1": "b04f3ee8f5e43fa3b162981b50bb72fe1acabb33"
+        },
+        {
+          "name": "oshi-project:oshi-core:1.1",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\oshi-project\\oshi-core\\1.1\\oshi-core-1.1.jar",
+          "sha1": "9ddf7b048a8d701be231c0f4f95fd986198fd2d8"
+        },
+        {
+          "name": "net.java.dev.jna:platform:3.4.0",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\net\\java\\dev\\jna\\platform\\3.4.0\\platform-3.4.0.jar",
+          "sha1": "e3f70017be8100d3d6923f50b3d2ee17714e9c13"
+        },
+        {
+          "name": "com.paulscode:codecjorbis:20101023",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\paulscode\\codecjorbis\\20101023\\codecjorbis-20101023.jar",
+          "sha1": "c73b5636faf089d9f00e8732a829577de25237ee"
+        },
+        {
+          "name": "com.paulscode:codecwav:20101023",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\paulscode\\codecwav\\20101023\\codecwav-20101023.jar",
+          "sha1": "12f031cfe88fef5c1dd36c563c0a3a69bd7261da"
+        },
+        {
+          "name": "com.paulscode:libraryjavasound:20101123",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\paulscode\\libraryjavasound\\20101123\\libraryjavasound-20101123.jar",
+          "sha1": "5c5e304366f75f9eaa2e8cca546a1fb6109348b3"
+        },
+        {
+          "name": "com.paulscode:librarylwjglopenal:20100824",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\paulscode\\librarylwjglopenal\\20100824\\librarylwjglopenal-20100824.jar",
+          "sha1": "73e80d0794c39665aec3f62eee88ca91676674ef"
+        },
+        {
+          "name": "com.paulscode:soundsystem:20120107",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\paulscode\\soundsystem\\20120107\\soundsystem-20120107.jar",
+          "sha1": "419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6"
+        },
+        {
+          "name": "com.mojang:authlib:1.5.25",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\mojang\\authlib\\1.5.25\\authlib-1.5.25.jar",
+          "sha1": "9834cdf236c22e84b946bba989e2f94ef5897c3c"
+        },
+        {
+          "name": "com.mojang:realms:1.10.22",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\mojang\\realms\\1.10.22\\realms-1.10.22.jar",
+          "sha1": "bd0dccebdf3744c75f1ca20063f16e8f7d5e663f"
+        },
+        {
+          "name": "com.mojang:text2speech:1.10.3",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\mojang\\text2speech\\1.10.3\\text2speech-1.10.3.jar",
+          "sha1": "48fd510879dff266c3815947de66e3d4809f8668"
+        },
+        {
+          "name": "com.mojang:text2speech:1.10.3:natives-windows",
+          "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\mojang\\text2speech\\1.10.3\\text2speech-1.10.3-natives-windows.jar",
+          "sha1": "84a4b856389cc4f485275b1f63497a95a857a443"
+        }
+      ],
+      "minecraft": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\minecraft-client-1.12.2.jar",
+      "minecraft_sha1": "0f275bc1547d01fa5f56ba34bdc87d981ee12daf",
+      "assets": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\assets",
+      "assetIndex": "1.12",
+      "natives": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\storage-pass-01\\client\\natives",
+      "system": "windows",
+      "architecture": "x86_64",
+      "assetObjects": 1305,
+      "mainClass": "top.outlands.foundation.boot.Foundation",
+      "authMode": "offline local diagnostic; no account credentials used"
+    },
+    "runtimeArtifacts": {
+      "server": {
+        "path": "E:\\WorldGenOverhaul\\.local\\instances\\cubic-lab-storage-pass-01\\libraries\\com\\cleanroommc\\cleanroom\\0.7.1-alpha\\cleanroom-0.7.1-alpha-universal.jar",
+        "sha256": "97434a09a69341f4d9389713df935630c33524a75bf4bcf97c68d42528c05608",
+        "version": "0.7.1-alpha"
+      },
+      "client": {
+        "path": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\cache\\libraries\\com\\cleanroommc\\cleanroom\\0.7.1-alpha\\cleanroom-0.7.1-alpha-universal.jar",
+        "sha256": "97434a09a69341f4d9389713df935630c33524a75bf4bcf97c68d42528c05608",
+        "version": "0.7.1-alpha"
+      }
+    },
+    "prismImport": "E:\\WorldGenOverhaul\\.local\\cubic-lab\\storage-pass-01\\CubicChunks-Lab-Prism.zip",
+    "prismImportSha256": "528f2337c7278867f8e2c0512ff551f7a2a40fbf999daae7befceed4a70c798e",
+    "prismImportPrimed": true,
+    "primed": true,
+    "generatedInputHashes": {
+      "server": {
+        "config/AppliedEnergistics2/AppliedEnergistics2.cfg": "fb6ba55f7fae907efd0b73dd9f1b2d179092bc84a08f88627d31c951db28c24a",
+        "config/AppliedEnergistics2/CustomRecipes.cfg": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "config/AppliedEnergistics2/Facades.cfg": "661cd844fe44c188c95368174e115681b69d63f5b6f62a676bb9331860599ebb",
+        "config/AppliedEnergistics2/VersionChecker.cfg": "b5e7e9b0c9be07b724c24fa227a9a377c445d06c3960d68422d5805fa73541f3",
+        "config/athenaeum/athenaeum.cfg": "44419fcac139c9287024c782da7bedaf01a15e1a57e6b7d489e33a072d245eea",
+        "config/baubles.cfg": "ccd9ac409fd318ce8a97bf0a1711e1063c4551c40bd9cb70c57b207260515bfa",
+        "config/codechickenlib.cfg": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "config/cubicchunks.cfg": "1b70a8077c198727d959d8312d372a4425736587fc2863d69605e6aa1758066f",
+        "config/cubicchunks_mixin_config.json": "4caa3354d14ba25d01fef32fa00b6cd09e17e11625c463ec56ca33d8a11a381b",
+        "config/dropt.module.Dropt.cfg": "247236cd80a78fa244fe6054cbe5fbda95c806573d7c4777c6e034e4f866ab93",
+        "config/forge.cfg": "1f64fe2d2a1d51e2d5e7424621111538d510e093ad8b41c8c6a2e459478f6b2c",
+        "config/forge_early.cfg": "e05029c29404ca85c938754e9b72d60b66a58234a7640f6d59d63256f3fceaa1",
+        "config/forgeChunkLoading.cfg": "024fa81bcf71ea5d0fae0343da5098e175491052a305ccc8890ee622079368db",
+        "config/ftblib.cfg": "0c2a28be1dcc0fd1823e88430b8038de265c153b3441d9f972860e1df5c9d025",
+        "config/fugue.cfg": "0e9304de984040be770f8f9234d522c2c295d703cf4fa359613e158f21dffbca",
+        "config/gcym.cfg": "1b3671f762ec0f228bbb5d5eb0c7466c71f3f98e775271c3d8349807802edcfe",
+        "config/gregtech/dimensions.json": "3e59fda649b3f2953ac73458d9dce6b93da64c8415794ca2bfd0dbf12dbbc65c",
+        "config/gregtech/forestry_integration.cfg": "09891bc5a3c4a7469571fc12b54fe47b8d94dd096edc218a40144db1aa093966",
+        "config/gregtech/gregtech.cfg": "75090786e7c6a8e6b25aeb4a5f8d224177495ece2203b9fd6fb856c6a5ff4520",
+        "config/gregtech/modules.cfg": "0ec9dbec4e455193f6d354219b0d6fb819790f1f792d09522c0e9a697fa214ae",
+        "config/gregtech/persistent_data.dat": "1e19e99d9d651d4e09065d344897b8063075bdc7aaf26598be7d628c95be5f2a",
+        "config/gregtech/worldgen/fluid/nether/lava_deposit.json": "91c9ab44eea57aa95f77421c2f61661bbfce6bdd4a15dbb8c8af5cb6267a6893",
+        "config/gregtech/worldgen/fluid/nether/natural_gas_deposit.json": "15879d5eb0c0ed8c5fe739d430b946be97c01d9ff345c92b1df7b0584571bd2d",
+        "config/gregtech/worldgen/fluid/overworld/heavy_oil_deposit.json": "044fc4eb14db1624bf7ab8388052b95bd4e0bbbce72595097a47a51626be553e",
+        "config/gregtech/worldgen/fluid/overworld/light_oil_deposit.json": "2be6f41f9b9405cdc241c45d08f45cbfe73720308728f9a20f2a8051b2962bef",
+        "config/gregtech/worldgen/fluid/overworld/natural_gas_deposit.json": "45ce5242111be3718c1ca07265d234ed84064b8b157789a6279189699887708f",
+        "config/gregtech/worldgen/fluid/overworld/oil_deposit.json": "7e7ae9f8a0ddff5df642c40005a2caceaccde93fed4dba68c7419dbd9e2b5db7",
+        "config/gregtech/worldgen/fluid/overworld/raw_oil_deposit.json": "069f9a65cee1d290b812dfea55a80d4e7e755624ea38e5e8b8ecdc0b4395b7d7",
+        "config/gregtech/worldgen/fluid/overworld/salt_water_deposit.json": "026a211ff2da6fd150118379bf8d5d48ea1188b3e84f2350faeed9344f925781",
+        "config/gregtech/worldgen/vein/end/bauxite_vein.json": "7c5932f9b3338f17a41c37d264f0932f71a6a5224624e6dae2fb2c68c4d0770e",
+        "config/gregtech/worldgen/vein/end/magnetite_vein.json": "63a2afbb6b726bda7e609d8ab8e4eb010c08cd83048e7349ff0bd97e8a71bb8b",
+        "config/gregtech/worldgen/vein/end/naquadah_vein.json": "3db5fa6ff3228f18f324d39b98978282bb6637e7c44e486802d874a9e53f529d",
+        "config/gregtech/worldgen/vein/end/pitchblende_vein.json": "da16c37efba57d52508fbba16b2a70fe51a9f99e526d491e5203c8bfb837a1e1",
+        "config/gregtech/worldgen/vein/end/scheelite_vein.json": "36fc98a3c2156c4d39698712e4dd5a8b9cd8c60539e7e6f68aff00ac40b8dca5",
+        "config/gregtech/worldgen/vein/end/sheldonite_vein.json": "f2573f10022915e40d1b51723e1c5a63ef90baa6ea39735e1e2b9380d84aa7bc",
+        "config/gregtech/worldgen/vein/nether/banded_iron_vein.json": "5927a78d663f123d78d4bc5b1ed969e2755ee1f4dae76a74964b0984e0791277",
+        "config/gregtech/worldgen/vein/nether/beryllium_vein.json": "44e756b5681e17299b6e367eed01e89aff76fd865d89f784bae6962e9e04a685",
+        "config/gregtech/worldgen/vein/nether/certus_quartz_vein.json": "3f4168062a9112b23c5b2f2a17192b1aefeb7c61bc40b37db99935e49abc89ef",
+        "config/gregtech/worldgen/vein/nether/manganese_vein.json": "cf31de5a0f64e9ba536d6bcb5db5bda8c9189f447d1ada443034d74ee09cb169",
+        "config/gregtech/worldgen/vein/nether/molybdenum_vein.json": "24ad945d91960ae82070bfc5c39ea34a465e57c640277a5ef832b4f06e08e7d3",
+        "config/gregtech/worldgen/vein/nether/monazite_vein.json": "451487b8816939f50c015aa45da25d93faa36699179e9438e77f3dd607985c14",
+        "config/gregtech/worldgen/vein/nether/nether_quartz_vein.json": "69e214139b58238a6be9421ae93125fc1ad0fbfc93068171ea49e0b0fe283f30",
+        "config/gregtech/worldgen/vein/nether/redstone_vein.json": "9b77ab60cfe2551157fb0182e53e919a8374b68a5c5f38333d1c414bc56bdc5b",
+        "config/gregtech/worldgen/vein/nether/saltpeter_vein.json": "fcfd9a3f935115652684713f2174aac828c9fbcd1dd722fe942817070df7b7d7",
+        "config/gregtech/worldgen/vein/nether/sulfur_vein.json": "6b23d4d35fa639ef2819c29d6b87bff6cc74fa5971ca4c4a028543ffbc18bbbb",
+        "config/gregtech/worldgen/vein/nether/tetrahedrite_vein.json": "d65a33ce8cc04647ab97b8830cc09a7fe2964d88dde0a0e8ddc9ddc0dbd6fbfc",
+        "config/gregtech/worldgen/vein/nether/topaz_vein.json": "624ea2f3f191d4fe9f2b790099209421f93b2029ec6337daff2b6a4014151c60",
+        "config/gregtech/worldgen/vein/overworld/apatite_vein.json": "4291f491cea621ec969e7e67b1c738bfc9d73821e008ee579a78731d1842a087",
+        "config/gregtech/worldgen/vein/overworld/basalt_sphere.json": "25f992fbd7554c9f621fe3a08267aa4d3cac4ef74c0eabbdee539d9f543b6a2b",
+        "config/gregtech/worldgen/vein/overworld/black_granite_sphere.json": "8dbe4ce99a2d8bbfa9bc78b8a5b19619f8d92d612ec451a796890ab60e248867",
+        "config/gregtech/worldgen/vein/overworld/cassiterite_vein.json": "3845ed56db90d2ab6070b2ed2d814e2e77962a8bbdd3083849d20d9c3f3e5caa",
+        "config/gregtech/worldgen/vein/overworld/coal_vein.json": "79df923fe4a95164988d416c3db564adf4cedc1411adda44c45817d844f68700",
+        "config/gregtech/worldgen/vein/overworld/copper_tin_vein.json": "5f1b0a9325dee4a18d6043fc7ae8f05b2e5748e186848e85a0b5a187ed98bab0",
+        "config/gregtech/worldgen/vein/overworld/copper_vein.json": "b583e54543964663a4d4c5a41b9e69f8bf8c328d29ffceee2443c00b6342e03b",
+        "config/gregtech/worldgen/vein/overworld/diamond_vein.json": "28cdb3a5f6df0b4fe613c4bf249edb0900d4a1a9b26605f98db8333069a149c2",
+        "config/gregtech/worldgen/vein/overworld/galena_vein.json": "e127011f046dc7ee7968fd819421db0b89ab5d981c3080a3e340c461afe947c2",
+        "config/gregtech/worldgen/vein/overworld/garnet_tin_vein.json": "91c01cd1cb7097650aa1a894b269fa7c044bfbb94a09e87fbf1136d4deddff06",
+        "config/gregtech/worldgen/vein/overworld/garnet_vein.json": "2ec62fe763f8ef0f791aeebac2c5dfba0d96de814fa5ea50a087475a47147756",
+        "config/gregtech/worldgen/vein/overworld/iron_vein.json": "6db3d8f9d042886bc3278c5136fb60e0687bc61e75e0143d54860ffe50728c45",
+        "config/gregtech/worldgen/vein/overworld/lapis_vein.json": "aa768dd28071c4f30df807891db98159b357a798c6106aed25e1e27a0555fc0d",
+        "config/gregtech/worldgen/vein/overworld/lubricant_vein.json": "4bce1bf3b651e9c8b32457a9a430fe87bbba03ee6b7fff4af79da8c3bf1b2696",
+        "config/gregtech/worldgen/vein/overworld/magnetite_vein.json": "41329b07429165c2186df2139b3cdaa19bc71777453fbbb49a2c3c00305dcaa4",
+        "config/gregtech/worldgen/vein/overworld/manganese_vein.json": "716511d61e9c30f5cd0a05fae068fe9ad538e2718e4f4e8602c822e30d33b101",
+        "config/gregtech/worldgen/vein/overworld/marble_sphere.json": "affb50b6252e8a474215d9ee3fae3ad0bace726a1301ed1f93cde332fd7a9555",
+        "config/gregtech/worldgen/vein/overworld/mica_vein.json": "8656e51f17e7be35860d1bdf8e56e90d255806a5345b30061ed60a74c17b8c79",
+        "config/gregtech/worldgen/vein/overworld/mineral_sand_vein.json": "76cdb1f10d056ebb8ddf836ce5f2c8740e008516c87a95017e854689ba8cf895",
+        "config/gregtech/worldgen/vein/overworld/nickel_vein.json": "dcccd05c13c7855c7157c5fb4714672ac179d545f016844d76389e87c9aa397a",
+        "config/gregtech/worldgen/vein/overworld/oilsands_vein.json": "3503ed5958134b0c0f8aaba0ec4ec12ebf95d6e4a5126268453cc5cbb5326a46",
+        "config/gregtech/worldgen/vein/overworld/olivine_vein.json": "bf1b0fb2ae09da00fb4d428ed94b4adaccc78d7eac1f846da1544ea99f052092",
+        "config/gregtech/worldgen/vein/overworld/raw_oil_sphere.json": "6809a845496d1dd6d803161bbe865eedc83d45aaf8ec58079ed22066c2824d29",
+        "config/gregtech/worldgen/vein/overworld/red_granite_sphere.json": "d9d199ac6e1b0f233d64504929e0343f202b01a2c1db7d6a0d05fabf7c7e5d28",
+        "config/gregtech/worldgen/vein/overworld/redstone_vein.json": "63ccf4f7899657d50e2181dcc56681e161f82888f77d0ee5239418f2a33617f1",
+        "config/gregtech/worldgen/vein/overworld/salts_vein.json": "6416e2426a43afeb1769e1cf9076e63b107c79bcdb7ecce05d9b44a604e0b620",
+        "config/gregtech/worldgen/vein/overworld/sapphire_vein.json": "88b5c86377e5dce140fad8bb5692c461e01471bd59a5a0d5ac41d461e34ba9ea",
+        "config/gregtech/worldgen_extracted.json": "6c66739cadefe6e73a1cb0c23fbda336670a9e52c5e35d00e23a4696d26b79ed",
+        "config/gregtechfoodoption.cfg": "127f7be37aa82466125615f6d161c4fbf26173149356ea56d1dde1c070c001c4",
+        "config/groovyscript.cfg": "acf81d6ebf7282f3ca3848ef82aa2da812c00125587773bd4639292d382473f0",
+        "config/immersiverailroading.cfg": "921148aa30218333db3b2a34eca262ce0e06cc91093481a7b95fe8e5f08dc46a",
+        "config/immersiverailroading_graphics.cfg": "99bfabbf5659c811e692f2bacd47b446379bddfb6b9cfefb4d50279e93eb2aea",
+        "config/immersiverailroading_permissions.cfg": "46a579c263c95df2ab57bbabad32fc92c508c31b21154d9f5d9068633be42276",
+        "config/immersiverailroading_sound.cfg": "800835e850e5bc7bc0aef360bcb1f56f4ecaf5b8e886fa6435e9da3a25567de9",
+        "config/kirino_engine.cfg": "50520e3448bbbabcfe7fe30269f565cf886a2b1d423b6faf7f10ce3823f0034e",
+        "config/modularui.cfg": "c2b19d76e59ddb104fbca2e44c303d46dd24f31352268af0b7a700e822785e48",
+        "config/opencomputers/default.recipes": "83e92db8906351e470d13907bab0516febfdba6abf9de6f7abe3970cdc64302a",
+        "config/opencomputers/gregtech.recipes": "2c791acd28f72d75de0747f6fa95c197cc3abd0938a1929933c3926974462995",
+        "config/opencomputers/hardmode.recipes": "07e0e81eab77fbebefa84eb25078e672b6f847ba7a88cc5e205593975fa6886b",
+        "config/opencomputers/peaceful.recipes": "d7bc152b73a63abff66084d96c8ba19af9e35f459054f21a8dd08308c4a1f8c3",
+        "config/opencomputers/settings.conf": "e5ad303036cbc86a5e5ed73e72987b7fab0e40a6df1dc92aeea6ec5bcfb2bc42",
+        "config/opencomputers/user.recipes": "50ea2cc418070e18c4a7919a18266db536c7ccca24af328c6076915293d95d84",
+        "config/pyrotech/core.cfg": "06d8cfbf202c617ef08042d947ce0b445d3ce5c52e00bc9aa01aca869a3bbae8",
+        "config/pyrotech/core.compat.Ore-Custom.json": "5b58aa67f86d85bb177ed37cc98864b1fff59e8f108931f5cd410f74b0d2a89a",
+        "config/pyrotech/core.compat.Ore-Generated.json": "5b58aa67f86d85bb177ed37cc98864b1fff59e8f108931f5cd410f74b0d2a89a",
+        "config/pyrotech/core.compat.Wood-Custom.json": "904cf641c8d9e2fd4e9c449910fff8a9ddefb97534adde4dfe8acce8cbd09c2d",
+        "config/pyrotech/core.compat.Wood-Generated.json": "904cf641c8d9e2fd4e9c449910fff8a9ddefb97534adde4dfe8acce8cbd09c2d",
+        "config/pyrotech/core.OreDict-Custom.json": "954535357266426fd10f8d880c8b02d54e03591d07b3d0fb05ecf80455e60527",
+        "config/pyrotech/core.OreDict-Generated.json": "954535357266426fd10f8d880c8b02d54e03591d07b3d0fb05ecf80455e60527",
+        "config/pyrotech/module.Bucket.cfg": "aaf12d202fec5a9e1da567ca67906b53a41f4630715fd5e02bcfc682c09c3035",
+        "config/pyrotech/module.Hunting.cfg": "f770c63aa1f756225298626b5ac933f37e3e5e477f5dbda26ae2fa783d57ecaf",
+        "config/pyrotech/module.Ignition.cfg": "0eeb99f6f74a957465415a18276b5bafb09fca772691261cc0bb45e49d1e4af8",
+        "config/pyrotech/module.Storage.cfg": "2b48fc0f065f3783f2b2d75d4c137802c9890af034a1d63bc9c34d5d0140435b",
+        "config/pyrotech/module.tech.Basic.cfg": "26b06fe8638f02e886fbf9e2a83e81cdf1cf931b16d1141fc8d190b00b28e975",
+        "config/pyrotech/module.tech.Bloomery.cfg": "e77519d6b88aafebe5464c30d32be9041cb6c89cabc42daafee248b666ed8bad",
+        "config/pyrotech/module.tech.Bloomery.Slag-Custom.json": "7a1f14b84916dadb5f56591a154803d7716e382ab369e56d2e90d8b8e225a35c",
+        "config/pyrotech/module.tech.Bloomery.Slag-Generated.json": "7a1f14b84916dadb5f56591a154803d7716e382ab369e56d2e90d8b8e225a35c",
+        "config/pyrotech/module.tech.Machine.cfg": "08fd972f8c82fa793d202b0f63192b491e5fe315a3b50e73609f4eae3db1e861",
+        "config/pyrotech/module.tech.Refractory.cfg": "a067caac14d89a56528f46e281c1da372dcfb75781d34d1a2986b354f61cecc6",
+        "config/pyrotech/module.Tool.cfg": "007e9da931dfca0c06ffa40ceba11ba6f4eb88ab7b8a886c9c6a038db9dab21b",
+        "config/pyrotech/module.WorldGen.cfg": "0aac19d409bad9a7e1907efa6f2746ccfb69d73919794619aef479b1adb7fecb",
+        "config/pyrotech/modules.cfg": "175d5c48ec6cf81494e228f822175b7740fb1975af06cf244ebde32fc77cd559",
+        "config/pyrotech/patreon.cfg": "dc00ee14d1e1dc576380aff45b7fecf507fe542ac82c552e7931ea5fc1e11b99",
+        "config/pyrotech/plugin.Dropt.cfg": "6c1875263ebc656e53a22657a239614c9120cb720b3acde3cb432e6cf063ca77",
+        "config/pyrotech/plugin.Patchouli.cfg": "cac20a45f2ee9dc029d082899310e12b2ac4291d1e4c080de234e2718c510bb8",
+        "config/riven/habitats.json": "4ad7d147462f9188a89bf083055a94388369822b502687de9adcf0f08d0e3505",
+        "config/supercritical.cfg": "05c534cf2e7578fa2307e87e619557b04f4f3c1f63946463c552aa238c1971a5",
+        "config/sussypatches.cfg": "e95d226038ac44153e19d7e3f6068246829327195741e4b6b9bbdc5a79646448",
+        "config/susy/susy.cfg": "117656c38826231a1d8fc27908daa9770f2e34c5f103cd66a4b433abfd07cd2c",
+        "config/universalmodcore.cfg": "c47073fee79ceb638b9a10782432255fdbf6bf390bdacd887ea04d88234cd9ca",
+        "groovy/postInit/main.groovy": "46af25033f8c18e40bd7c0314c7113028907a75e40a1cf5089aa4a1ef05c08de",
+        "groovy/runConfig.json": "9f5c28c0433a874ee3c415e4faf4cfa83bfead27a68456f6f67750c88b177083",
+        "groovy/sideOnlyGenerated.json": "dc5de837d1c3db66c05bebf593b47a70f0307d7d57532c3390d854c6b91f3ec5",
+        "server.properties": "edbbc977bb4008ff0adafaa1cffb34d31bd9b98f0bb42d8cea231dc360079f7c"
+      },
+      "client": {
+        "config/AppliedEnergistics2/AppliedEnergistics2.cfg": "d56195c0a35583753c07ad02b1e237123befc064001601afa885194025c2f46a",
+        "config/AppliedEnergistics2/CustomRecipes.cfg": "174e6189242c94bec81217a633ba9f9236b8a3c586e7f20ab4435fafb83d8292",
+        "config/AppliedEnergistics2/Facades.cfg": "661cd844fe44c188c95368174e115681b69d63f5b6f62a676bb9331860599ebb",
+        "config/AppliedEnergistics2/items.csv": "4f4c0991861c6dc37dbe8bdcd3a0ad19d77cd2cc229387258cedecaeb9ca7cae",
+        "config/AppliedEnergistics2/VersionChecker.cfg": "9d627c5ca95f90665dbbce7d77908663e05c36a645f6850fd2ea899b9a24a746",
+        "config/athenaeum/athenaeum.cfg": "44419fcac139c9287024c782da7bedaf01a15e1a57e6b7d489e33a072d245eea",
+        "config/baubles.cfg": "ccd9ac409fd318ce8a97bf0a1711e1063c4551c40bd9cb70c57b207260515bfa",
+        "config/catalogue.cfg": "f49b7ce640c11458472078f134285f38c16bf645b247c65d803e7ee8e007fda9",
+        "config/cleanroom_load_timings.dat": "4ea27c2be8b2dab212c0980fe67ed27bf8c411e81240d6629f1cac56eeadedd9",
+        "config/codechickenlib.cfg": "1aa05b9dac4c5718764e3e0a4e23addce945ca283dd21959088520160b34a66e",
+        "config/cubicchunks.cfg": "1b70a8077c198727d959d8312d372a4425736587fc2863d69605e6aa1758066f",
+        "config/cubicchunks_mixin_config.json": "4caa3354d14ba25d01fef32fa00b6cd09e17e11625c463ec56ca33d8a11a381b",
+        "config/dropt.module.Dropt.cfg": "247236cd80a78fa244fe6054cbe5fbda95c806573d7c4777c6e034e4f866ab93",
+        "config/forge.cfg": "1f64fe2d2a1d51e2d5e7424621111538d510e093ad8b41c8c6a2e459478f6b2c",
+        "config/forge_early.cfg": "e05029c29404ca85c938754e9b72d60b66a58234a7640f6d59d63256f3fceaa1",
+        "config/forgeChunkLoading.cfg": "024fa81bcf71ea5d0fae0343da5098e175491052a305ccc8890ee622079368db",
+        "config/ftblib.cfg": "0c2a28be1dcc0fd1823e88430b8038de265c153b3441d9f972860e1df5c9d025",
+        "config/fugue.cfg": "0e9304de984040be770f8f9234d522c2c295d703cf4fa359613e158f21dffbca",
+        "config/gcym.cfg": "1b3671f762ec0f228bbb5d5eb0c7466c71f3f98e775271c3d8349807802edcfe",
+        "config/gregtech/dimensions.json": "3e59fda649b3f2953ac73458d9dce6b93da64c8415794ca2bfd0dbf12dbbc65c",
+        "config/gregtech/forestry_integration.cfg": "09891bc5a3c4a7469571fc12b54fe47b8d94dd096edc218a40144db1aa093966",
+        "config/gregtech/gregtech.cfg": "75090786e7c6a8e6b25aeb4a5f8d224177495ece2203b9fd6fb856c6a5ff4520",
+        "config/gregtech/modules.cfg": "0ec9dbec4e455193f6d354219b0d6fb819790f1f792d09522c0e9a697fa214ae",
+        "config/gregtech/persistent_data.dat": "1e19e99d9d651d4e09065d344897b8063075bdc7aaf26598be7d628c95be5f2a",
+        "config/gregtech/terminal/config/theme.json": "d65edd1c8bba9b9bbc46c36ef3b6cd4aaa4be85493939181786ea84cabd6ffef",
+        "config/gregtech/terminal/guide/items/en_us/covers/activity_detector.json": "4d4170b7bdf3a24c1a0449bb007149d7dfcbe08059594d3edee026d151f7bb7f",
+        "config/gregtech/terminal/guide/items/en_us/covers/advanced_activity_detector.json": "1fc866d284c9cf6c514ac547fd11c76145f96b25d9b9135d1894ac6c840abbbc",
+        "config/gregtech/terminal/guide/items/en_us/covers/computer_monitor.json": "b888f75406ee35cca3aedbb0ffbadb36c4d221cdc30d2558485e9b162603823a",
+        "config/gregtech/terminal/guide/items/en_us/covers/conveyor.json": "f6de298f6d6b1ecd76d84d881b905b366cffd1896733a40b77742bab6425e1f0",
+        "config/gregtech/terminal/guide/items/en_us/covers/crafting_table.json": "7b538324f373c62ac889da53398ae88003239f135f59c13d7477323bdd895e64",
+        "config/gregtech/terminal/guide/items/en_us/covers/digital_interface_cover.json": "86455809b1e63957a93e6722dfe9119e1f5d31260e6f63ca4188119e9f4083c8",
+        "config/gregtech/terminal/guide/items/en_us/covers/ender_fluid_link.json": "1941e0069205623cad218c744b6ea20545448bf42d4ce674bcd7ff44e3f4815b",
+        "config/gregtech/terminal/guide/items/en_us/covers/energy_detector.json": "60c6dfdb79a34eb232fe8faef9e8ab07c99836db82111f115af2af19fefbe26d",
+        "config/gregtech/terminal/guide/items/en_us/covers/fluid_detector.json": "bc1838f76f1108abd07f0311d595d64443655e52d14e991ea24f7c4db4f5262e",
+        "config/gregtech/terminal/guide/items/en_us/covers/fluid_filter.json": "2bd5c96ef1e72357724e9762309fb6a6f31dd36f43159046c6c456d0d524ed84",
+        "config/gregtech/terminal/guide/items/en_us/covers/fluid_regulator.json": "2fa3566d58a34a02495105e9c05ef3c363dac237765e4656dc8b35550dab8c5c",
+        "config/gregtech/terminal/guide/items/en_us/covers/infinite_water.json": "7179ea77d278675c006cf4354f69af67fe4cb421a06a26c20448f6e3cef58c34",
+        "config/gregtech/terminal/guide/items/en_us/covers/item_detector.json": "3206b1970054ce1991c28f2c35330f0bf29748f980d8cb5308ce40a766a4a3f4",
+        "config/gregtech/terminal/guide/items/en_us/covers/item_filter.json": "1092db981c0546ae7a64faffb325e883f66a9dc7656a328bb35ff6b8d7716895",
+        "config/gregtech/terminal/guide/items/en_us/covers/machine_controller.json": "9e13c6aed0004ea3c7c8477dd635a5b56fe4b739523c194e163e4bacc2aa3c95",
+        "config/gregtech/terminal/guide/items/en_us/covers/ore_dictionary_filter.json": "42a2db789d43b466cf9b61d3cb0ef22e65e364335633ac44acee38fdf42ebb82",
+        "config/gregtech/terminal/guide/items/en_us/covers/pump.json": "d328ffd934557929f4fb8b414617d741c2fb77e9f64f1471fd5b9e376228cbf4",
+        "config/gregtech/terminal/guide/items/en_us/covers/robot_arm.json": "c1c0a731cef82addde307b2ff9575bb619a596b50f1ea90c318af45f08701137",
+        "config/gregtech/terminal/guide/items/en_us/covers/shutter_module.json": "7fdac96558580f2d68d0bb5d6617b89350e458e63406115bb4d351dd2cc3e140",
+        "config/gregtech/terminal/guide/items/en_us/covers/smart_item_filter.json": "4af4247aab471c898311fcc34b81334b6baa29d8f369ed0eb6cdb9233e886e3c",
+        "config/gregtech/terminal/guide/items/en_us/tools/axe.json": "5322c430e0decc836858b51991fa4b2f03e004416694282a45b665305ee206ce",
+        "config/gregtech/terminal/guide/items/en_us/tools/buzzsaw.json": "3abf157e74389b6ce016f640e70f4c223fff115cdf6aa6016a72c8b090240bb8",
+        "config/gregtech/terminal/guide/items/en_us/tools/drill.json": "734ec37c24a490f7fdf99e730b331b279be7e2f25db30f19226daff7e059f9ed",
+        "config/gregtech/terminal/guide/items/en_us/tools/file.json": "8ed0eb6d1fe81947bd9d8857750e17edbeab848b100898408a2bbc6bd4672b7b",
+        "config/gregtech/terminal/guide/items/en_us/tools/hammer.json": "646811f9c4450efa09a440fbc9ef8a251fb5e99c9892060e9d10ab3493c48a0e",
+        "config/gregtech/terminal/guide/items/en_us/tools/mining_hammer.json": "242d5df856668eea2a5fae3baa29b50092f86fedf9c99570f9f637755f80ecee",
+        "config/gregtech/terminal/guide/items/en_us/tools/saw.json": "bb17d82cfc879e61243e9598da8ccdcbfea4fbdc8e37564e00b9d1d1714d6a7b",
+        "config/gregtech/terminal/guide/items/en_us/tools/screwdriver.json": "4fb9aebd1da58ab9acfb777f5be820cf77f274e2932912b11e8ab5d47296995a",
+        "config/gregtech/terminal/guide/items/en_us/tools/sense.json": "695201026acc0d8208a007e6926e956d6ef73f3a1379d7666cac2ef5e7cb8a4c",
+        "config/gregtech/terminal/guide/items/en_us/tools/wrench.json": "ced0b303b49d1d11958a67d5e2fd1d0c2c8b1709b4eed1eeb3809f990a43d21d",
+        "config/gregtech/terminal/guide/items/zh_cn/covers/digital_interface_cover.json": "3ec1ff5333dadfa4705a9a0445f48559b3731e137decd6c9f1fb76a9acd45c17",
+        "config/gregtech/terminal/guide/items/zh_cn/tools/wrench.json": "6b4fcef2405dc65e54a1bb97a4e4fdf79d22a37ae8e8b623be8c612f7a1899f3",
+        "config/gregtech/terminal/guide/machines/en_us/steam/steam_boiler_coal_bronze.json": "7d2d49610b00ac6214a4636fbf2dc0a94a832e3ec8d8c827d6069258b9a9378e",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/advanced_fluid_drilling_plant.json": "121b63c2b12967068667caf2eda5f970cd776d0e5e0fa7efafe86ecd6b8f9f16",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/advanced_processing_array.json": "83705c2a3b6d5e6e01726b927dcb29047172520a08e9239fd4c5f8340fae8de4",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/assembly_line.json": "4e5bb43e6bc7f6ab9e6d224b7d9421e976c6368a40dc99b2f4ac64f127dc2752",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/basic_fluid_drilling_rig.json": "f1af2e8f1db3e92ab0d3853887d3a2d9762c371b3728009c4c2b87ccd24f6baa",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/basic_ore_drilling_plant.json": "282913665db58c7fa0e157364c059a6dec2a95cc04d30b43caf6ded4c2c1219b",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/central_monitor.json": "2be43f6d9a4affb066f92211fb95f680b62e756848e17d78a3faaef1bc4a48c1",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/distillation_tower.json": "4e06a391b62e9bdac0121659aa0d5a8de2341102da6f6dc65e25ec1d57b06206",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/electric_blast_furnace.json": "d6df91977e0093a0675dccffe247c6210bf6ffde9c63d9773bf76bda04c8b1e4",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/fusion_reactor_1.json": "e19a3633b665951b0e0d6b36d39b62e0ef0fe26428a012b0dec462c79a923f4c",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/fusion_reactor_2.json": "76a9311f342c6c360d86065cc0a070620538e96497ae95b9081cc73bd722fa2c",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/fusion_reactor_3.json": "d84e9ccc68194ff65d2b056ba7493e92ab634cb4d5471efd772ce563d3e1e9e0",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/implosion_compressor.json": "d509974fbb66488afcb95fe66d4a025062bcd909244fa2c5e571b824bd576e4e",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/large_chemical_reactor.json": "bd47473db9c558e64be59b774ded3edb058c149e4fbdb28356ea8153e240a1b2",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/multi_smelter.json": "e2a995249fbbfd1a90552923ae8da95d853a3ad77812eebd28bee44942dee1aa",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/oil_cracking_unit.json": "7893c4665b257cdad803d95b2334a52850df10d7ae8551755a33c776da6d7a9f",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/processing_array.json": "7d61fd7562173a22056b0695b58076010272f6e1c9c86e215d5f964f5aefbeb7",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/pyrolyse_oven.json": "6a74945b10356f0697d986dcb46fbcb1fe8b7af8eee1a390d67aaa719306a128",
+        "config/gregtech/terminal/guide/multiblocks/en_us/electric/vacuum_freezer.json": "5a371df21d96a7e680ad3d2aa4e8d36cd5027f11696f88ecf730d2e9d4ec7a78",
+        "config/gregtech/terminal/guide/multiblocks/en_us/generator/extreme_combustion_engine.json": "9b4e3decd65e5eb12d3acba62427fc26ab038e9c5d9bba8a581678460b4a562f",
+        "config/gregtech/terminal/guide/multiblocks/en_us/generator/large_bronze_boiler.json": "65f5812ed208ad427e509f984e5234a93fd574333c3cd94d3e0b38e6dc996a1a",
+        "config/gregtech/terminal/guide/multiblocks/en_us/generator/large_combustion_engine.json": "842c029ff4fb15324c740f2005240bad5799e34bad7237c0b8a7f97772717827",
+        "config/gregtech/terminal/guide/multiblocks/en_us/generator/large_gas_turbine.json": "30fd42684b7ed156b025f976fe000dc40c236190096d910bd8276bfe1a53d86b",
+        "config/gregtech/terminal/guide/multiblocks/en_us/generator/large_plasma_turbine.json": "71a698aa1437e8fef9fce04dc00d0874a431a4e89f65d1eeab6e324737aaad90",
+        "config/gregtech/terminal/guide/multiblocks/en_us/generator/large_steam_turbine.json": "30b7f8fecad40f89f7d7f3f3258f10f126dc8470747232616f51fece976309a0",
+        "config/gregtech/terminal/guide/multiblocks/en_us/generator/large_steel_boiler.json": "6ae00ac52ca3d13edb41f676b62edbc5e2ad17b569ff3fc3c3b6989a6d03a2a4",
+        "config/gregtech/terminal/guide/multiblocks/en_us/hatches/advanced_maintenance.json": "12f64daed2b537a5e6a6b458d8a3173dff7a47c646330511e71936b4e7c0736f",
+        "config/gregtech/terminal/guide/multiblocks/en_us/hatches/energy_hatch.json": "2c9c84f4499f742bd344d8b55064177201869625d59e69c5bf5362f65208d53f",
+        "config/gregtech/terminal/guide/multiblocks/en_us/hatches/maintenance_hatch.json": "89902afddcf7ec2961ac77deecbe06fc79c15dc4807d4c069d7a06e3d0632c26",
+        "config/gregtech/terminal/guide/multiblocks/en_us/hatches/muffler_hatch.json": "c64e6dc57db5ae305d073b329f36842ec8f14fd4439c11ed28a3abac7eab6ae5",
+        "config/gregtech/terminal/guide/multiblocks/en_us/hatches/multiblock_input_output.json": "36ae95924175af4652be3cce0bf983b8ba5e5190a2fcf2c4aac0f269a04527d4",
+        "config/gregtech/terminal/guide/multiblocks/en_us/primitive/coke_oven.json": "d27b76b11b234b5a0b0265a01c84ea88a128df87a6d608819bfffff242104060",
+        "config/gregtech/terminal/guide/multiblocks/en_us/primitive/multiblock_steel_tank.json": "f322b23440c5af9ad68ccbb656f4495c804a89b9a4306f94a4c62b550d97d531",
+        "config/gregtech/terminal/guide/multiblocks/en_us/primitive/multiblock_wooden_tank.json": "14fce0b17eaeb64989b45d9f11efd399081d07621d100c84885865d0858d12d0",
+        "config/gregtech/terminal/guide/multiblocks/en_us/primitive/primitive_blast_furnace.json": "50344a6e3b030af1e7693b8fd613e655b3424c9d2c260a814c4e4a4d439c3288",
+        "config/gregtech/terminal/guide/multiblocks/en_us/primitive/primitive_water_pump.json": "0dbc4e32e863d54099486ad9498b4a6de6205640b48ef61e23d5353910024aa3",
+        "config/gregtech/terminal/guide/multiblocks/en_us/primitive/steam_grinder.json": "b8e26192841ba523267497110534cd43f0944b3626fe05b96ef9c1f840c4fa23",
+        "config/gregtech/terminal/guide/multiblocks/en_us/primitive/steam_oven.json": "4f19495e77eef3b7609a64b0136af52e473cb47ca56a171bf985c6731be5c136",
+        "config/gregtech/terminal/guide/multiblocks/zh_cn/electric/central_monitor.json": "98fa851dfc45583c64da00419af5d513555ff122937534e0eafc45a7e8a5c4e4",
+        "config/gregtech/terminal/guide/tutorials/en_us/crafttweaker/material/01_definition.json": "088cb5845abc01776dc55c7fd097a39b47c2dc416aa6cf7c932af5af121ad019",
+        "config/gregtech/terminal/guide/tutorials/en_us/crafttweaker/material/02_element.json": "524514d7c1e0d1a9feee5e30c462e8d887ddd4ee8927b33cf9ae62f29097c89f",
+        "config/gregtech/terminal/guide/tutorials/en_us/crafttweaker/material/03_flag.json": "49d1193c7f630fc23e3099a6ff2762f126375d73f993248e5e9637667066f0a7",
+        "config/gregtech/terminal/guide/tutorials/en_us/crafttweaker/material/04_icon_set.json": "7c66873cfdebccc9df42e799e5c6faf7e51bc24c65b4b60662a5495eb53c2b52",
+        "config/gregtech/terminal/guide/tutorials/en_us/crafttweaker/material/05_create.json": "0f6c010d85dd48d2387f23f1f15a8b6f6c4ce4a2b7bd3369f6f74275708b8304",
+        "config/gregtech/terminal/guide/tutorials/en_us/crafttweaker/material/06_modify.json": "a386f5917bd743ed146d04df89de5ee495f437830ad63212cc7e52837701a925",
+        "config/gregtech/terminal/guide/tutorials/en_us/crafttweaker/terminal/ct_terminal_01.json": "cbdd36a386a1c33c40d103dc5adb7b11258575c923ff8f0051dcc7f766012859",
+        "config/gregtech/terminal/guide/tutorials/en_us/guide_widget_api/api_0_guidepage.json": "fa0db7c6b26921b3e5ee15b4a702825149383f22bbbcbd76e5b44d1e718aa2cb",
+        "config/gregtech/terminal/guide/tutorials/en_us/guide_widget_api/api_1_widget.json": "d7cb96aafb11ea3e45349f46e22745c38c5527aab3621bc1cd4aac2b1d4cd8f7",
+        "config/gregtech/terminal/guide/tutorials/en_us/guide_widget_api/api_2_textbox.json": "0e8d53bbb9f973904349244045463a6dd69b8f71f118d85aea10ebd8534e5a58",
+        "config/gregtech/terminal/guide/tutorials/en_us/guide_widget_api/api_3_image.json": "61fbf2bcf741dc580ecdb14a0358cb7eaa2d071a5f394af19d2408c76f7430d0",
+        "config/gregtech/terminal/guide/tutorials/en_us/important_concepts/machine_grid.json": "7c7bd7bdfe0c1703846cdb83a62019c82056e5dacb0cf66c07d3b32d6c0cc048",
+        "config/gregtech/terminal/guide/tutorials/en_us/multiblocks/forming_multiblocks.json": "2530df71dfd629188c5dcccaa4034bdcabc524153df3144823677c1870f1513b",
+        "config/gregtech/terminal/guide/tutorials/en_us/multiblocks/large_turbine_mechanics.json": "3a83544a154faf5691ec8ffaa5b3057a5bcb19a4927f507b2e324045f5c8f344",
+        "config/gregtech/terminal/guide/tutorials/en_us/multiblocks/multibock_troubleshooting.json": "bf95baf62638d9ae0df7a69acc317ba4c7d0bd9561ac16becdf3f49b1957c18c",
+        "config/gregtech/terminal/guide/tutorials/en_us/resource_pack/emissive_texture.json": "9432853a7de1d7420b6ebc59c94e4dabcc86b926331281bd01830565d7b7c810",
+        "config/gregtech/terminal/guide/tutorials/en_us/terminal/terminal_hardware.json": "f9356355665a7ba05aa8559dc6ee5b57061824a9cd7c3b8024a6142b5b113c92",
+        "config/gregtech/terminal/guide/tutorials/zh_cn/crafttweaker/terminal/ct_terminal_01.json": "1a004142fa078f681e6ea8d39d4f1a57be6c9014ba6c9ab468124b477b29ffd6",
+        "config/gregtech/terminal/guide/tutorials/zh_cn/guide_widget_api/api_0_guidepage.json": "2f53e68cd50f6415ae00226dd488b043fe3bc2e81a9d379b64f63dc555426b5c",
+        "config/gregtech/terminal/guide/tutorials/zh_cn/guide_widget_api/api_1_widget.json": "a84fb37fd2172d294ef79efeca14f82a0ea7dcb00b1a2df5fd46e7c1a843cb5c",
+        "config/gregtech/terminal/guide/tutorials/zh_cn/guide_widget_api/api_2_textbox.json": "633c9daabfca009f5f422bc01a5759ec4fe796d203a3abe2e7e24fe93f52bffc",
+        "config/gregtech/terminal/guide/tutorials/zh_cn/guide_widget_api/api_3_image.json": "8b16a4afcec064c1b50d2389a97857f92701fa6cdca6b4f3f1875bc318d9ed5d",
+        "config/gregtech/terminal/guide/tutorials/zh_cn/resource_pack/emissive_texture.json": "1ffc7a26d4883fb95be7ef2d3a94eb0eab84303aeaf7521e3beb38f46edb63b2",
+        "config/gregtech/terminal/guide/tutorials/zh_cn/terminal/terminal_hardware.json": "b325395794abeadb5a39d3650b94e235ebfabd5c5df64630bf13ebb8f33053c9",
+        "config/gregtech/terminal/image/wallpaper_celeryman.png": "b8f530b47f6504fd5f6485676aabcb2547c3e2bc959c660026fbc2dcf4909746",
+        "config/gregtech/terminal/image/wallpaper_Kumquat.png": "48ad4d4f48001317287c6b6dc80716c151213e6d88de9afec5fea376006a68ac",
+        "config/gregtech/terminal/image/wallpaper_moth.png": "aac34491d198820644fcaef0274289cdfa600d39ce65569af1ed4082f70c0965",
+        "config/gregtech/terminal/image/wallpaper_Zalgo.png": "2abed263345dd5a4723102e9556137b6bdce69adc8cbaf861b1739c49b121d7d",
+        "config/gregtech/worldgen/fluid/nether/lava_deposit.json": "91c9ab44eea57aa95f77421c2f61661bbfce6bdd4a15dbb8c8af5cb6267a6893",
+        "config/gregtech/worldgen/fluid/nether/natural_gas_deposit.json": "15879d5eb0c0ed8c5fe739d430b946be97c01d9ff345c92b1df7b0584571bd2d",
+        "config/gregtech/worldgen/fluid/overworld/heavy_oil_deposit.json": "044fc4eb14db1624bf7ab8388052b95bd4e0bbbce72595097a47a51626be553e",
+        "config/gregtech/worldgen/fluid/overworld/light_oil_deposit.json": "2be6f41f9b9405cdc241c45d08f45cbfe73720308728f9a20f2a8051b2962bef",
+        "config/gregtech/worldgen/fluid/overworld/natural_gas_deposit.json": "45ce5242111be3718c1ca07265d234ed84064b8b157789a6279189699887708f",
+        "config/gregtech/worldgen/fluid/overworld/oil_deposit.json": "7e7ae9f8a0ddff5df642c40005a2caceaccde93fed4dba68c7419dbd9e2b5db7",
+        "config/gregtech/worldgen/fluid/overworld/raw_oil_deposit.json": "069f9a65cee1d290b812dfea55a80d4e7e755624ea38e5e8b8ecdc0b4395b7d7",
+        "config/gregtech/worldgen/fluid/overworld/salt_water_deposit.json": "026a211ff2da6fd150118379bf8d5d48ea1188b3e84f2350faeed9344f925781",
+        "config/gregtech/worldgen/vein/end/bauxite_vein.json": "7c5932f9b3338f17a41c37d264f0932f71a6a5224624e6dae2fb2c68c4d0770e",
+        "config/gregtech/worldgen/vein/end/magnetite_vein.json": "63a2afbb6b726bda7e609d8ab8e4eb010c08cd83048e7349ff0bd97e8a71bb8b",
+        "config/gregtech/worldgen/vein/end/naquadah_vein.json": "3db5fa6ff3228f18f324d39b98978282bb6637e7c44e486802d874a9e53f529d",
+        "config/gregtech/worldgen/vein/end/pitchblende_vein.json": "da16c37efba57d52508fbba16b2a70fe51a9f99e526d491e5203c8bfb837a1e1",
+        "config/gregtech/worldgen/vein/end/scheelite_vein.json": "36fc98a3c2156c4d39698712e4dd5a8b9cd8c60539e7e6f68aff00ac40b8dca5",
+        "config/gregtech/worldgen/vein/end/sheldonite_vein.json": "f2573f10022915e40d1b51723e1c5a63ef90baa6ea39735e1e2b9380d84aa7bc",
+        "config/gregtech/worldgen/vein/nether/banded_iron_vein.json": "5927a78d663f123d78d4bc5b1ed969e2755ee1f4dae76a74964b0984e0791277",
+        "config/gregtech/worldgen/vein/nether/beryllium_vein.json": "44e756b5681e17299b6e367eed01e89aff76fd865d89f784bae6962e9e04a685",
+        "config/gregtech/worldgen/vein/nether/certus_quartz_vein.json": "3f4168062a9112b23c5b2f2a17192b1aefeb7c61bc40b37db99935e49abc89ef",
+        "config/gregtech/worldgen/vein/nether/manganese_vein.json": "cf31de5a0f64e9ba536d6bcb5db5bda8c9189f447d1ada443034d74ee09cb169",
+        "config/gregtech/worldgen/vein/nether/molybdenum_vein.json": "24ad945d91960ae82070bfc5c39ea34a465e57c640277a5ef832b4f06e08e7d3",
+        "config/gregtech/worldgen/vein/nether/monazite_vein.json": "451487b8816939f50c015aa45da25d93faa36699179e9438e77f3dd607985c14",
+        "config/gregtech/worldgen/vein/nether/nether_quartz_vein.json": "69e214139b58238a6be9421ae93125fc1ad0fbfc93068171ea49e0b0fe283f30",
+        "config/gregtech/worldgen/vein/nether/redstone_vein.json": "9b77ab60cfe2551157fb0182e53e919a8374b68a5c5f38333d1c414bc56bdc5b",
+        "config/gregtech/worldgen/vein/nether/saltpeter_vein.json": "fcfd9a3f935115652684713f2174aac828c9fbcd1dd722fe942817070df7b7d7",
+        "config/gregtech/worldgen/vein/nether/sulfur_vein.json": "6b23d4d35fa639ef2819c29d6b87bff6cc74fa5971ca4c4a028543ffbc18bbbb",
+        "config/gregtech/worldgen/vein/nether/tetrahedrite_vein.json": "d65a33ce8cc04647ab97b8830cc09a7fe2964d88dde0a0e8ddc9ddc0dbd6fbfc",
+        "config/gregtech/worldgen/vein/nether/topaz_vein.json": "624ea2f3f191d4fe9f2b790099209421f93b2029ec6337daff2b6a4014151c60",
+        "config/gregtech/worldgen/vein/overworld/apatite_vein.json": "4291f491cea621ec969e7e67b1c738bfc9d73821e008ee579a78731d1842a087",
+        "config/gregtech/worldgen/vein/overworld/basalt_sphere.json": "25f992fbd7554c9f621fe3a08267aa4d3cac4ef74c0eabbdee539d9f543b6a2b",
+        "config/gregtech/worldgen/vein/overworld/black_granite_sphere.json": "8dbe4ce99a2d8bbfa9bc78b8a5b19619f8d92d612ec451a796890ab60e248867",
+        "config/gregtech/worldgen/vein/overworld/cassiterite_vein.json": "3845ed56db90d2ab6070b2ed2d814e2e77962a8bbdd3083849d20d9c3f3e5caa",
+        "config/gregtech/worldgen/vein/overworld/coal_vein.json": "79df923fe4a95164988d416c3db564adf4cedc1411adda44c45817d844f68700",
+        "config/gregtech/worldgen/vein/overworld/copper_tin_vein.json": "5f1b0a9325dee4a18d6043fc7ae8f05b2e5748e186848e85a0b5a187ed98bab0",
+        "config/gregtech/worldgen/vein/overworld/copper_vein.json": "b583e54543964663a4d4c5a41b9e69f8bf8c328d29ffceee2443c00b6342e03b",
+        "config/gregtech/worldgen/vein/overworld/diamond_vein.json": "28cdb3a5f6df0b4fe613c4bf249edb0900d4a1a9b26605f98db8333069a149c2",
+        "config/gregtech/worldgen/vein/overworld/galena_vein.json": "e127011f046dc7ee7968fd819421db0b89ab5d981c3080a3e340c461afe947c2",
+        "config/gregtech/worldgen/vein/overworld/garnet_tin_vein.json": "91c01cd1cb7097650aa1a894b269fa7c044bfbb94a09e87fbf1136d4deddff06",
+        "config/gregtech/worldgen/vein/overworld/garnet_vein.json": "2ec62fe763f8ef0f791aeebac2c5dfba0d96de814fa5ea50a087475a47147756",
+        "config/gregtech/worldgen/vein/overworld/iron_vein.json": "6db3d8f9d042886bc3278c5136fb60e0687bc61e75e0143d54860ffe50728c45",
+        "config/gregtech/worldgen/vein/overworld/lapis_vein.json": "aa768dd28071c4f30df807891db98159b357a798c6106aed25e1e27a0555fc0d",
+        "config/gregtech/worldgen/vein/overworld/lubricant_vein.json": "4bce1bf3b651e9c8b32457a9a430fe87bbba03ee6b7fff4af79da8c3bf1b2696",
+        "config/gregtech/worldgen/vein/overworld/magnetite_vein.json": "41329b07429165c2186df2139b3cdaa19bc71777453fbbb49a2c3c00305dcaa4",
+        "config/gregtech/worldgen/vein/overworld/manganese_vein.json": "716511d61e9c30f5cd0a05fae068fe9ad538e2718e4f4e8602c822e30d33b101",
+        "config/gregtech/worldgen/vein/overworld/marble_sphere.json": "affb50b6252e8a474215d9ee3fae3ad0bace726a1301ed1f93cde332fd7a9555",
+        "config/gregtech/worldgen/vein/overworld/mica_vein.json": "8656e51f17e7be35860d1bdf8e56e90d255806a5345b30061ed60a74c17b8c79",
+        "config/gregtech/worldgen/vein/overworld/mineral_sand_vein.json": "76cdb1f10d056ebb8ddf836ce5f2c8740e008516c87a95017e854689ba8cf895",
+        "config/gregtech/worldgen/vein/overworld/nickel_vein.json": "dcccd05c13c7855c7157c5fb4714672ac179d545f016844d76389e87c9aa397a",
+        "config/gregtech/worldgen/vein/overworld/oilsands_vein.json": "3503ed5958134b0c0f8aaba0ec4ec12ebf95d6e4a5126268453cc5cbb5326a46",
+        "config/gregtech/worldgen/vein/overworld/olivine_vein.json": "bf1b0fb2ae09da00fb4d428ed94b4adaccc78d7eac1f846da1544ea99f052092",
+        "config/gregtech/worldgen/vein/overworld/raw_oil_sphere.json": "6809a845496d1dd6d803161bbe865eedc83d45aaf8ec58079ed22066c2824d29",
+        "config/gregtech/worldgen/vein/overworld/red_granite_sphere.json": "d9d199ac6e1b0f233d64504929e0343f202b01a2c1db7d6a0d05fabf7c7e5d28",
+        "config/gregtech/worldgen/vein/overworld/redstone_vein.json": "63ccf4f7899657d50e2181dcc56681e161f82888f77d0ee5239418f2a33617f1",
+        "config/gregtech/worldgen/vein/overworld/salts_vein.json": "6416e2426a43afeb1769e1cf9076e63b107c79bcdb7ecce05d9b44a604e0b620",
+        "config/gregtech/worldgen/vein/overworld/sapphire_vein.json": "88b5c86377e5dce140fad8bb5692c461e01471bd59a5a0d5ac41d461e34ba9ea",
+        "config/gregtech/worldgen_extracted.json": "6c66739cadefe6e73a1cb0c23fbda336670a9e52c5e35d00e23a4696d26b79ed",
+        "config/gregtechfoodoption.cfg": "127f7be37aa82466125615f6d161c4fbf26173149356ea56d1dde1c070c001c4",
+        "config/groovyscript.cfg": "acf81d6ebf7282f3ca3848ef82aa2da812c00125587773bd4639292d382473f0",
+        "config/immersiverailroading.cfg": "921148aa30218333db3b2a34eca262ce0e06cc91093481a7b95fe8e5f08dc46a",
+        "config/immersiverailroading_graphics.cfg": "99bfabbf5659c811e692f2bacd47b446379bddfb6b9cfefb4d50279e93eb2aea",
+        "config/immersiverailroading_permissions.cfg": "46a579c263c95df2ab57bbabad32fc92c508c31b21154d9f5d9068633be42276",
+        "config/immersiverailroading_sound.cfg": "800835e850e5bc7bc0aef360bcb1f56f4ecaf5b8e886fa6435e9da3a25567de9",
+        "config/kirino_engine.cfg": "50520e3448bbbabcfe7fe30269f565cf886a2b1d423b6faf7f10ce3823f0034e",
+        "config/modularui.cfg": "c2b19d76e59ddb104fbca2e44c303d46dd24f31352268af0b7a700e822785e48",
+        "config/opencomputers/default.recipes": "83e92db8906351e470d13907bab0516febfdba6abf9de6f7abe3970cdc64302a",
+        "config/opencomputers/gregtech.recipes": "2c791acd28f72d75de0747f6fa95c197cc3abd0938a1929933c3926974462995",
+        "config/opencomputers/hardmode.recipes": "07e0e81eab77fbebefa84eb25078e672b6f847ba7a88cc5e205593975fa6886b",
+        "config/opencomputers/peaceful.recipes": "d7bc152b73a63abff66084d96c8ba19af9e35f459054f21a8dd08308c4a1f8c3",
+        "config/opencomputers/settings.conf": "e5ad303036cbc86a5e5ed73e72987b7fab0e40a6df1dc92aeea6ec5bcfb2bc42",
+        "config/opencomputers/user.recipes": "50ea2cc418070e18c4a7919a18266db536c7ccca24af328c6076915293d95d84",
+        "config/pyrotech/core.cfg": "06d8cfbf202c617ef08042d947ce0b445d3ce5c52e00bc9aa01aca869a3bbae8",
+        "config/pyrotech/core.compat.Ore-Custom.json": "5b58aa67f86d85bb177ed37cc98864b1fff59e8f108931f5cd410f74b0d2a89a",
+        "config/pyrotech/core.compat.Ore-Generated.json": "5b58aa67f86d85bb177ed37cc98864b1fff59e8f108931f5cd410f74b0d2a89a",
+        "config/pyrotech/core.compat.Wood-Custom.json": "904cf641c8d9e2fd4e9c449910fff8a9ddefb97534adde4dfe8acce8cbd09c2d",
+        "config/pyrotech/core.compat.Wood-Generated.json": "904cf641c8d9e2fd4e9c449910fff8a9ddefb97534adde4dfe8acce8cbd09c2d",
+        "config/pyrotech/core.OreDict-Custom.json": "954535357266426fd10f8d880c8b02d54e03591d07b3d0fb05ecf80455e60527",
+        "config/pyrotech/core.OreDict-Generated.json": "954535357266426fd10f8d880c8b02d54e03591d07b3d0fb05ecf80455e60527",
+        "config/pyrotech/module.Bucket.cfg": "aaf12d202fec5a9e1da567ca67906b53a41f4630715fd5e02bcfc682c09c3035",
+        "config/pyrotech/module.Hunting.cfg": "f770c63aa1f756225298626b5ac933f37e3e5e477f5dbda26ae2fa783d57ecaf",
+        "config/pyrotech/module.Ignition.cfg": "0eeb99f6f74a957465415a18276b5bafb09fca772691261cc0bb45e49d1e4af8",
+        "config/pyrotech/module.Storage.cfg": "2b48fc0f065f3783f2b2d75d4c137802c9890af034a1d63bc9c34d5d0140435b",
+        "config/pyrotech/module.tech.Basic.cfg": "26b06fe8638f02e886fbf9e2a83e81cdf1cf931b16d1141fc8d190b00b28e975",
+        "config/pyrotech/module.tech.Bloomery.cfg": "e77519d6b88aafebe5464c30d32be9041cb6c89cabc42daafee248b666ed8bad",
+        "config/pyrotech/module.tech.Bloomery.Slag-Custom.json": "7a1f14b84916dadb5f56591a154803d7716e382ab369e56d2e90d8b8e225a35c",
+        "config/pyrotech/module.tech.Bloomery.Slag-Generated.json": "7a1f14b84916dadb5f56591a154803d7716e382ab369e56d2e90d8b8e225a35c",
+        "config/pyrotech/module.tech.Machine.cfg": "08fd972f8c82fa793d202b0f63192b491e5fe315a3b50e73609f4eae3db1e861",
+        "config/pyrotech/module.tech.Refractory.cfg": "a067caac14d89a56528f46e281c1da372dcfb75781d34d1a2986b354f61cecc6",
+        "config/pyrotech/module.Tool.cfg": "007e9da931dfca0c06ffa40ceba11ba6f4eb88ab7b8a886c9c6a038db9dab21b",
+        "config/pyrotech/module.WorldGen.cfg": "0aac19d409bad9a7e1907efa6f2746ccfb69d73919794619aef479b1adb7fecb",
+        "config/pyrotech/modules.cfg": "175d5c48ec6cf81494e228f822175b7740fb1975af06cf244ebde32fc77cd559",
+        "config/pyrotech/patreon.cfg": "dc00ee14d1e1dc576380aff45b7fecf507fe542ac82c552e7931ea5fc1e11b99",
+        "config/pyrotech/plugin.Dropt.cfg": "6c1875263ebc656e53a22657a239614c9120cb720b3acde3cb432e6cf063ca77",
+        "config/pyrotech/plugin.Patchouli.cfg": "cac20a45f2ee9dc029d082899310e12b2ac4291d1e4c080de234e2718c510bb8",
+        "config/riven/habitats.json": "4ad7d147462f9188a89bf083055a94388369822b502687de9adcf0f08d0e3505",
+        "config/splash.properties": "311804e3d4daf2bd79ce0affd34b55f04aa94ba10bfa8984069d576bc0fa38db",
+        "config/supercritical.cfg": "05c534cf2e7578fa2307e87e619557b04f4f3c1f63946463c552aa238c1971a5",
+        "config/sussypatches.cfg": "e95d226038ac44153e19d7e3f6068246829327195741e4b6b9bbdc5a79646448",
+        "config/susy/susy.cfg": "117656c38826231a1d8fc27908daa9770f2e34c5f103cd66a4b433abfd07cd2c",
+        "config/universalmodcore.cfg": "1e00304ae1d8a8914b4024f1481b23ee7e4bc9c328acb7cd828370ab871a3908",
+        "groovy/postInit/main.groovy": "46af25033f8c18e40bd7c0314c7113028907a75e40a1cf5089aa4a1ef05c08de",
+        "groovy/runConfig.json": "9f5c28c0433a874ee3c415e4faf4cfa83bfead27a68456f6f67750c88b177083",
+        "groovy/sideOnlyGenerated.json": "dc5de837d1c3db66c05bebf593b47a70f0307d7d57532c3390d854c6b91f3ec5",
+        "local/client/ftblib.cfg": "54f56c7239c748712baa64c1ea099af6588692c454e3cd5e01efede29836ea08",
+        "local/client/sidebar_buttons.json": "75eab1034d7b0ba5e1ab58ea7239294026b98c08d30e6b0d8dec870a78b3594d",
+        "options.txt": "8182e4d4795b7eee024f36f204c2ca0fe96308897a3a05970016db70f2d2fa07"
+      }
+    },
+    "generatedInputsRecordedUtc": "2026-10-13T18:24:49.727746+00:00"
+  },
+  "metrics": [
+    {
+      "scenario": "save-burst",
+      "measured_ticks": 1,
+      "max_server_tick_ms": 316.6757,
+      "initial_submission_ms": 39.6106,
+      "final_flush_ms": 275.3874,
+      "elapsed_seconds": 0.3158934
+    },
+    {
+      "scenario": "autosave",
+      "measured_ticks": 34,
+      "max_server_tick_ms": 99.8771,
+      "initial_submission_ms": 3.1023,
+      "final_flush_ms": 98.6302,
+      "elapsed_seconds": 1.638886
+    }
+  ],
+  "limits": [
+    "Same candidate, one host and run, unequal tick sample counts, different completion latency.",
+    "Soft snapshot budget; full scan and explicit flush may exceed it."
+  ]
+}
