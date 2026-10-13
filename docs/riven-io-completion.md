@@ -57,6 +57,11 @@ stopped. The resulting daemon-disappeared messages reflect that cancellation;
 they are not evidence of a spontaneous build crash. The full upstream build
 and test task have not passed.
 
+A subsequent retry used the verified official universal JAR already present
+in the local Gradle cache. It advanced to downloading Forge's sources JAR,
+which was not cached, and was stopped at that dependency boundary. No
+upstream JAR contents or build configuration were changed.
+
 This branch has not been installed into Riven's runtime. Its pinned
 CubicChunks binary remains unchanged. Native world load, save/restart,
 mod-event compatibility, and performance acceptance remain pending.
