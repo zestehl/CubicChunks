@@ -27,16 +27,23 @@ package io.github.opencubicchunks.cubicchunks.core.asm.mixin.core.common;
 import io.github.opencubicchunks.cubicchunks.api.world.ICubicWorld;
 import io.github.opencubicchunks.cubicchunks.core.asm.mixin.ICubicWorldInternal;
 import io.github.opencubicchunks.cubicchunks.core.server.SpawnCubes;
+import io.github.opencubicchunks.cubicchunks.core.server.AutosaveScope;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
 import net.minecraftforge.common.DimensionManager;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(MinecraftServer.class)
 public class MixinMinecraftServer {
+
+    @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/MinecraftServer;saveAllWorlds(Z)V"))
+    private void cubicchunks$periodicSave(MinecraftServer server, boolean silent) {
+        AutosaveScope.run(() -> server.saveAllWorlds(silent));
+    }
 
     @Inject(method = "initialWorldChunkLoad", at = @At("HEAD"), cancellable = true)
     private void onInitialSpawnLoad(CallbackInfo ci) {

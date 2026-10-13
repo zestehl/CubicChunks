@@ -34,6 +34,9 @@ sourceSets {
         java.include 'io/github/opencubicchunks/cubicchunks/core/lighting/TestSurfaceHeightUpdates.java'
         java.include 'io/github/opencubicchunks/cubicchunks/core/asm/TestVerticalRenderDistanceOption.java'
         java.include 'io/github/opencubicchunks/cubicchunks/core/util/world/TestCubeSplitTicks.java'
+        java.include 'io/github/opencubicchunks/cubicchunks/core/server/chunkio/TestPendingCubeWrites.java'
+        java.include 'io/github/opencubicchunks/cubicchunks/core/server/TestPacedAutosave.java'
+        java.include 'io/github/opencubicchunks/cubicchunks/core/server/chunkio/TestRegionCubeStorage.java'
     }
 }
 repositories {

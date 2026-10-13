@@ -30,7 +30,7 @@ When testing changed **Riven** code, build its experimental artifact from the wo
 .\gradlew.bat -PrivenLoader=cleanroom -PrivenCubicExperiment=true build --console=plain
 ```
 
-`prepare` copies the prebuilt `build/cleanroom-cubic-experiment/libs/riven-*-cleanroom.jar`; it does not rebuild Riven. Match the prepared artifact hash to the candidate build before reporting its behavior. If root build conventions change, consult `build.gradle` and `tools/experiment_cubic.py`.
+`prepare` copies the prebuilt `build/cleanroom-cubic-experiment/libs/riven-*-cleanroom.jar`; it does not rebuild Riven. Match the prepared artifact hash to the candidate build before reporting its behavior. For isolated CubicChunks comparisons, `prepare --riven-jar <frozen.jar>` selects a retained Riven input only inside the new lab instance and records its path/hash; keep the same frozen input across comparisons. If root build conventions change, consult `build.gradle` and `tools/experiment_cubic.py`.
 
 ## Choose an operation
 
@@ -42,6 +42,8 @@ Paths below are relative to the fork. Invoke tools with the workspace interprete
 | Prepare isolated native inputs | `tools/cubic_lab.py prepare --name <new-name> --riven-workspace <root> [--port <unused-port>]` |
 | Generate first-use inputs | `prime --name <name>`; automated `run` primes a new environment itself using a separate bootstrap world |
 | Measure the default workload | `run --name <name> --phase write --jfr`, then `run --name <name> --phase read --jfr` |
+| Check storage reliability and pacing | Opt-in write `--scenarios generate,save-burst,autosave,storage-failure`, then fresh-JVM read `--scenarios load-sync,load-async`; interpret the guide's backlog/flush/fault boundaries |
+| Export storage pacing figures | `tools/plot_storage_pacing.py --report <validated-results.json> --output <new-directory>`; PNG/SVG, metrics/provenance and ZIP; inspect figures and verify shared links |
 | Operate an interactive client/server | `server --name <name>` and `client --name <name>` in separately owned sessions; `/cubiclab` commands are listed in the current lab guide |
 | Export current client inputs | `export --name <name>`; produces the Prism ZIP without worlds, accounts or measurement outputs |
 | Export measurements and real captures | `tools/report_cubic_lab.py --lab-directory <lab> --output <new-output>` |

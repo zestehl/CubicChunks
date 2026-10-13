@@ -34,6 +34,7 @@ import java.io.Flushable;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.util.Map;
+import java.util.HashMap;
 import java.util.Objects;
 import java.util.Set;
 import java.util.function.Consumer;
@@ -124,26 +125,12 @@ public interface ICubicStorage extends Flushable, AutoCloseable {
      */
     @Nonnull
     default NBTBatch readBatch(PosBatch positions) throws IOException {
-        //default implementation: issue reads individually, but in parallel
-        try {
-            return new NBTBatch(
-                    positions.columns.parallelStream().collect(Collectors.toConcurrentMap(pos -> pos, pos -> {
-                        try {
-                            return this.readColumn(pos);
-                        } catch (IOException e) {
-                            throw new UncheckedIOException(e);
-                        }
-                    })),
-                    positions.cubes.parallelStream().collect(Collectors.toConcurrentMap(pos -> pos, pos -> {
-                        try {
-                            return this.readCube(pos);
-                        } catch (IOException e) {
-                            throw new UncheckedIOException(e);
-                        }
-                    })));
-        } catch (UncheckedIOException e) {
-            throw e.getCause(); //rethrow original exception
-        }
+        // Missing entries are represented by null; ConcurrentHashMap collectors reject them.
+        Map<ChunkPos, NBTTagCompound> columns = new HashMap<>();
+        Map<CubePos, NBTTagCompound> cubes = new HashMap<>();
+        for (ChunkPos pos : positions.columns) columns.put(pos, readColumn(pos));
+        for (CubePos pos : positions.cubes) cubes.put(pos, readCube(pos));
+        return new NBTBatch(columns, cubes);
     }
 
     /**

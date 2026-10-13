@@ -329,21 +329,25 @@ public class AsyncWorldIOExecutor {
         List<AsyncCubeIOProvider> stoppingCubeTasks = new ArrayList<>(cubeTasks.values());
         List<Runnable> neverStartedCubes = cubeThreadPool.shutdownNow();
         cubeTasks.clear();
+        boolean interrupted = false;
         try {
             cubeThreadPool.awaitTermination(10, TimeUnit.SECONDS);
         } catch (InterruptedException ignored) {
+            interrupted = true;
         }
         columnThreadPool.shutdownNow();
         columnTasks.clear();
         try {
             columnThreadPool.awaitTermination(10, TimeUnit.SECONDS);
         } catch (InterruptedException ignored) {
+            interrupted = true;
         }
         AsyncTaskCompletion.cleanupStoppedTasks(stoppingCubeTasks, neverStartedCubes);
         // Executors still span worlds. A reader that outlives this best-effort shutdown keeps
         // its column pin; eventual cleanup and world-scoped shutdown remain separate work.
         // initialize for next use
         initExecutors();
+        if (interrupted) Thread.currentThread().interrupt();
     }
 
     /**

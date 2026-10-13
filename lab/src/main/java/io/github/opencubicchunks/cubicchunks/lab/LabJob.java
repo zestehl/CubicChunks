@@ -40,9 +40,11 @@ final class LabJob {
     int warmup = 40, progress, elapsedTicks, outstanding, completedAsync;
     boolean controlSent, done;
     LabScheduledTicks scheduledFixture;
+    LabSavePacing savePacingFixture;
+    io.github.opencubicchunks.cubicchunks.core.server.chunkio.LabStorageFailureProbe storageFailureFixture;
 
     LabJob(MinecraftServer server, String scenario) {
-        if (!Arrays.asList("idle", "generate", "resident", "save", "load-sync", "load-async", "horizontal", "vertical", "lighting-snapshot", "scheduled-ticks").contains(scenario))
+        if (!Arrays.asList("idle", "generate", "resident", "save", "load-sync", "load-async", "horizontal", "vertical", "lighting-snapshot", "scheduled-ticks", "save-burst", "autosave", "storage-failure").contains(scenario))
             throw new IllegalArgumentException("Unknown lab scenario");
         this.server = server; this.scenario = scenario; world = server.getWorld(0);
         ICubicWorld cubic = (ICubicWorld) world;
@@ -65,7 +67,7 @@ final class LabJob {
         if (scenario.startsWith("load-")) for (CubePos pos : targets) {
             if (provider.getLoadedCube(pos) != null) throw new IllegalArgumentException("Reload cohort already resident; restart and keep players at spawn");
         }
-        if (scenario.equals("resident") || scenario.equals("save") || scenario.equals("lighting-snapshot") || scenario.equals("scheduled-ticks")) for (CubePos pos : targets) {
+        if (Arrays.asList("resident", "save", "lighting-snapshot", "scheduled-ticks", "save-burst", "autosave", "storage-failure").contains(scenario)) for (CubePos pos : targets) {
             if (provider.getLoadedCube(pos) == null) throw new IllegalArgumentException("Generate the fixture first");
         }
     }
@@ -73,6 +75,9 @@ final class LabJob {
         if (done) return;
         if (System.nanoTime() - created > 180_000_000_000L) { failure = "Scenario timed out"; done = true; return; }
         if (warmup-- > 0) return;
+        if ((scenario.equals("autosave") || scenario.equals("save-burst")) && savePacingFixture == null) {
+            savePacingFixture = new LabSavePacing(); savePacingFixture.prepare(this);
+        }
         if (!controlSent) {
             for (EntityPlayerMP player : server.getPlayerList().getPlayers()) if (peers.contains(player.getUniqueID()))
                 Network.CHANNEL.sendTo(new Network.ClientMessage(CubicLab.control("start", id, scenario)), player);
@@ -83,6 +88,14 @@ final class LabJob {
         elapsedTicks++;
         switch (scenario) {
             case "idle": done = elapsedTicks >= 100; break;
+            case "save-burst": case "autosave":
+                done = savePacingFixture.tick(this); break;
+            case "storage-failure":
+                if (storageFailureFixture == null) storageFailureFixture = new io.github.opencubicchunks.cubicchunks.core.server.chunkio.LabStorageFailureProbe(
+                    output.resolve("fault-storage"), provider.getLoadedCube(targets.get(0)));
+                done = storageFailureFixture.observe();
+                if (done) operationCount = 2;
+                break;
             case "scheduled-ticks":
                 if (scheduledFixture == null) {
                     scheduledFixture = new LabScheduledTicks(world);
@@ -197,6 +210,12 @@ final class LabJob {
             data.put("scheduledTickChecks", scheduledFixture.summary()); scheduledFixture.restore();
         }
         data.put("cubeDataLoadEvents", dataLoads); data.put("cubeDataSaveEvents", dataSaves); data.put("packets", packets.summary());
+        if (savePacingFixture != null) data.put("savePacingChecks", savePacingFixture.summary());
+        if (storageFailureFixture != null) {
+            data.put("storageFailureChecks", storageFailureFixture.summary());
+            try { storageFailureFixture.close(); }
+            catch (java.io.IOException error) { data.put("passed", false); data.put("failure", error.toString()); failure = error.toString(); }
+        }
         data.put("participants", peers); data.put("horizontalViewDistance", server.getPlayerList().getViewDistance());
         data.put("verticalViewDistance", ((io.github.opencubicchunks.cubicchunks.core.server.ICubicPlayerList) server.getPlayerList()).getVerticalViewDistance());
         data.put("configuredClientVerticalViewDistance", CubicChunksConfig.verticalCubeLoadDistance);

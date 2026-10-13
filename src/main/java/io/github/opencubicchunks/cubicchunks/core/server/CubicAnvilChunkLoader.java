@@ -116,7 +116,7 @@ public class CubicAnvilChunkLoader extends AnvilChunkLoader {
         try {
             getCubeIO().flush();
         } catch (IOException e) {
-            CubicChunks.LOGGER.catching(e);
+            throw new java.io.UncheckedIOException("Could not flush cubic world storage", e);
         }
     }
 

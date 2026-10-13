@@ -262,6 +262,7 @@ def prepare(args):
     if target.exists() or dev.instance(base_name).exists():
         raise RuntimeError('Lab name already exists; preserve worlds/results and choose a new name')
     cubic = args.cubic_jar or next((FORK / 'cleanroom/build/cleanroom/libs').glob('*-cleanroom.jar'))
+    if args.riven_jar and not args.riven_jar.is_file(): raise RuntimeError('Frozen Riven artifact does not exist')
     lab = FORK / 'lab/build/cleanroom/libs/cubicchunks-lab-0.1.0-cleanroom.jar'
     if not lab.exists(): raise RuntimeError('Build the optional lab mod first')
     preparation = argparse.Namespace(name=base_name, loader='cleanroom', scope='kernel', generator='riven-cubic',
@@ -270,6 +271,10 @@ def prepare(args):
     server = dev.instance(base_name)
     shutil.copy2(lab, server / 'mods' / lab.name)
     receipt_path = server / 'riven-instance.json'; receipt = json.loads(receipt_path.read_text())
+    if args.riven_jar:
+        shutil.copy2(args.riven_jar, server / 'mods/riven.jar')
+        receipt['riven'] = {'artifact': str(args.riven_jar.resolve()), 'sha256': sha(args.riven_jar),
+            'selection': 'Explicit frozen lab input; active Riven build artifact unchanged'}
     receipt['mods'].append({'slug': 'cubiclab', 'reason': 'Optional in-game loading/storage performance instrumentation',
         'sha256': sha(lab), 'metadata': {'filename': lab.name}})
     dev.write_json(receipt_path, receipt)
@@ -608,6 +613,7 @@ def main():
     parser.add_argument('--riven-workspace', type=Path, default=FORK.parents[1])
     parser.add_argument('--name', required=True)
     parser.add_argument('--cubic-jar', type=Path)
+    parser.add_argument('--riven-jar', type=Path, help='Frozen Riven input for repeatable lab runs; does not modify the active build')
     parser.add_argument('--client-profile', default='baseline', help='Optional client-only renderer profile: baseline, celeritas, celeritas-demonica')
     parser.add_argument('--runtime-release', help='Explicit compatibility runtime override: 0.6.13-alpha. Default preparation still verifies the reviewed latest release.')
     parser.add_argument('--vanilla-vertical-render-distance', choices=['default', 'on', 'off'], default='default',
@@ -618,7 +624,7 @@ def main():
     parser.add_argument('--jfr', action='store_true')
     args = parser.parse_args(); args.riven_workspace = args.riven_workspace.resolve()
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,63}', args.name): parser.error('Invalid lab name')
-    if args.scenarios and any(s not in ['idle', 'generate', 'resident', 'save', 'load-sync', 'load-async', 'horizontal', 'vertical', 'lighting-snapshot', 'scheduled-ticks'] for s in args.scenarios.split(',')):
+    if args.scenarios and any(s not in ['idle', 'generate', 'resident', 'save', 'load-sync', 'load-async', 'horizontal', 'vertical', 'lighting-snapshot', 'scheduled-ticks', 'save-burst', 'autosave', 'storage-failure'] for s in args.scenarios.split(',')):
         parser.error('Unknown scenario in --scenarios')
     if args.command == 'prepare': prepare(args); return
     if args.command == 'prime': prime(args); return

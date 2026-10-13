@@ -98,6 +98,9 @@ public interface ICubeIO extends Flushable, AutoCloseable, IThreadedFileIO {
 
     int getPendingCubeCount();
 
+    /** Routine autosaves may defer snapshots while the writer is unhealthy or backlogged. */
+    default boolean canAutoSave() { return true; }
+
     /**
 	 * Stores partially read cube, before sync read but after async read
 	 */

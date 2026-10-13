@@ -74,6 +74,28 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @Config(modid = CubicChunks.MODID, category = "general")
 public class CubicChunksConfig {
 
+    @Config.RangeInt(min = 1, max = 4096)
+    @Config.Comment("Maximum cube+column coordinates processed per periodic autosave tick, per dimension. Explicit saves remain complete.")
+    public static int autosaveSnapshotsPerTick = 32;
+
+    @Config.RangeInt(min = 1, max = 50)
+    @Config.Comment("Soft owner-thread autosave budget in milliseconds. A single snapshot can exceed this budget.")
+    public static int autosaveTimeMillis = 2;
+
+    @Config.RangeInt(min = 1)
+    @Config.Comment("Pause routine autosave snapshots at this pending cube+column count. Explicit saves and unloads retain their data.")
+    public static int autosavePendingThreshold = 1024;
+
+    @Config.RangeInt(min = 1, max = 4096)
+    @Config.RequiresWorldRestart
+    @Config.Comment("Maximum cube entries in one storage write batch.")
+    public static int storageBatchCubes = 64;
+
+    @Config.RangeInt(min = 1, max = 1024)
+    @Config.RequiresWorldRestart
+    @Config.Comment("Maximum column entries in one storage write batch.")
+    public static int storageBatchColumns = 16;
+
     @Config.Comment("Chunk garbage collector update interval. Lower value will increase CPU usage, but can reduce memory usage.")
     @Config.LangKey("cubicchunks.config.chunk_gc_interval")
     public static int chunkGCInterval = 20 * 10;

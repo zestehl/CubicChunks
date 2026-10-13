@@ -47,12 +47,12 @@ import net.minecraft.util.math.ChunkPos;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.UncheckedIOException;
 import java.nio.ByteBuffer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Collections;
 import java.util.Map;
+import java.util.LinkedHashMap;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Consumer;
@@ -155,11 +155,8 @@ public class RegionCubeStorage implements ICubicStorage {
 
     @Override
     public void writeColumn(ChunkPos pos, NBTTagCompound nbt) throws IOException {
-        ByteBuf compressedBuf = UnpooledByteBufAllocator.DEFAULT.ioBuffer();
+        ByteBuf compressedBuf = compressNBT(nbt);
         try {
-            //compress NBT data
-            CompressedStreamTools.writeCompressed(nbt, new ByteBufOutputStream(compressedBuf));
-
             //write compressed data to disk
             this.save.save2d(new EntryLocation2D(pos.x, pos.z), compressedBuf.nioBuffer());
         } finally {
@@ -169,11 +166,8 @@ public class RegionCubeStorage implements ICubicStorage {
 
     @Override
     public void writeCube(CubePos pos, NBTTagCompound nbt) throws IOException {
-        ByteBuf compressedBuf = UnpooledByteBufAllocator.DEFAULT.ioBuffer();
+        ByteBuf compressedBuf = compressNBT(nbt);
         try {
-            //compress NBT data
-            CompressedStreamTools.writeCompressed(nbt, new ByteBufOutputStream(compressedBuf));
-
             //write compressed data to disk
             this.save.save3d(new EntryLocation3D(pos.getX(), pos.getY(), pos.getZ()), compressedBuf.nioBuffer());
         } finally {
@@ -204,32 +198,36 @@ public class RegionCubeStorage implements ICubicStorage {
         }
     }
 
-    private <KI, KO> Map<KO, ByteBuf> compressNBTForBatchWrite(Map<KI, NBTTagCompound> nbt, Function<KI, KO> keyMappingFunction) throws IOException {
-        if (nbt.isEmpty()) { //avoid somewhat expensive stream creation if there are no entries
+    protected <KI, KO> Map<KO, ByteBuf> compressNBTForBatchWrite(Map<KI, NBTTagCompound> nbt, Function<KI, KO> keyMappingFunction) throws IOException {
+        if (nbt.isEmpty()) {
             return Collections.emptyMap();
         }
-
+        Map<KO, ByteBuf> compressed = new LinkedHashMap<>();
         try {
-            //if the following code throws an exception, something is VERY wrong, so i won't bother with needlessly complex code to ensure that any
-            //  previously allocated buffers get released in the event of an exception being thrown
+            // The per-world writer already bounds batches. A single compression owner avoids
+            // unbounded common-pool competition and gives every native buffer a clear lifetime.
+            for (Map.Entry<KI, NBTTagCompound> entry : nbt.entrySet()) {
+                KO key = keyMappingFunction.apply(entry.getKey());
+                if (compressed.containsKey(key)) throw new IllegalArgumentException("Duplicate mapped storage position");
+                compressed.put(key, compressNBT(entry.getValue()));
+            }
+            return compressed;
+        } catch (IOException | RuntimeException | Error e) {
+            compressed.values().forEach(ByteBuf::release);
+            throw e;
+        }
+    }
 
-            return nbt.entrySet().parallelStream().collect(Collectors.toMap(entry -> keyMappingFunction.apply(entry.getKey()), entry -> {
-                ByteBuf compressedBuf = UnpooledByteBufAllocator.DEFAULT.ioBuffer();
-                try {
-                    //encode and compress nbt data
-                    CompressedStreamTools.writeCompressed(entry.getValue(), new ByteBufOutputStream(compressedBuf));
-
-                    return compressedBuf.retain();
-                } catch (IOException e) {
-                    //wrap exception so that we can throw it from inside the lambda
-                    throw new UncheckedIOException(e);
-                } finally {
-                    compressedBuf.release();
-                }
-            }));
-        } catch (UncheckedIOException e) {
-            //rethrow original exception
-            throw e.getCause();
+    /** Transfers one buffer reference to the caller on success, releases it on failure. */
+    protected ByteBuf compressNBT(NBTTagCompound nbt) throws IOException {
+        ByteBuf compressed = UnpooledByteBufAllocator.DEFAULT.ioBuffer();
+        boolean success = false;
+        try {
+            CompressedStreamTools.writeCompressed(nbt, new ByteBufOutputStream(compressed));
+            success = true;
+            return compressed;
+        } finally {
+            if (!success) compressed.release();
         }
     }
 

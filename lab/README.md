@@ -39,6 +39,8 @@ Server files are under `.local/instances/cubic-lab-candidate-01`; the real clien
 
 The manifest records loader release asset hashes, every mod hash, selected Java, height and client libraries. Current 0.7 preparations verify both installed universal JARs against the reviewed asset, record their hashes, and recheck them before launches. Modified/missing/extra mod JARs cause the runner to require a fresh lab. Startup-extracted nested library JARs must match bytes embedded in a retained mod; their owner and hash are recorded separately and checked after priming. Scalar's twelve Scala/Akka library JARs are such runtime inputs. Current generated configuration hashes are recorded with each new run and export. Asset hashes are checked before reuse. Changing the local CubicChunks JAR also changes the content-addressed remapping dependency, avoiding stale lab compilation.
 
+For controlled CubicChunks comparisons, `prepare --riven-jar <frozen.jar>` replaces only the new lab instance's Riven input before copying client mods. Its source path, SHA-256 and selection reason are recorded. The active Riven build stays unchanged. Omit the option when qualifying newly built Riven code; the ordinary prebuilt experimental artifact is then selected.
+
 ## External renderer compatibility profiles
 
 Compatibility investigation is deferred. Keep the retained failed profiles as evidence and use `baseline` for current Riven/core work; do not repeat renderer/shader checks merely for a new core commit.
@@ -72,6 +74,14 @@ Commands can be entered in chat with `/` or in the server console without it:
 
 After save, stop both JVMs and start them again with the player at spawn. Run `load-sync`, then `load-async`, then `resident`. The two load scenarios use separate cohorts and reject already resident targets. `release` removes only fixture tickets owned by this lab, using normal CubicChunks ticket APIs. `quit` releases the fixture tickets and closes connected lab clients; stop the server normally afterward. No force-unload mutation is used.
 
+## Storage reliability and pacing checks
+
+Use opt-in `run --phase write --scenarios generate,save-burst,autosave,storage-failure`, followed by a fresh-JVM `run --phase read --scenarios load-sync,load-async`. Default scenarios remain unchanged. Preparation of the dirty marker fixture finishes before the client start message and server measurement window. `savePacingChecks` retains the backlog trace, coordinate quota and soft time budget; the quota includes skipped/clean coordinates. `storageFailureChecks` retains failure/recovery counts and revision checks. The fault directory is under that scenario's result directory and never replaces the world's regions.
+
+The burst and paced scenarios use the same candidate and fixture, with different save latency semantics. Compare the maximum tick stall and backlog completion time; do not call this an old-versus-new storage throughput benchmark. An individual snapshot, initial dirty-coordinate scan or final flush can exceed the soft time budget. The fixture explicitly enters the periodic-save scope; it does not wait for Minecraft's natural 6,000-tick autosave interval. Injected pre-write errors do not qualify physical disk failures, partial backend writes, power-loss durability or multiworld shutdown.
+
+After exporting the validated report, `tools/plot_storage_pacing.py --report <results.json> --output <new-directory>` writes standalone PNG/SVG charts, pacing CSV, exact report/input provenance and a ZIP. Inspect both figures before sharing and verify HTTPS delivery independently from their local hashes.
+
 ## Workloads and measurements
 
 Every scenario has 40 warmup server ticks and waits for an unobstructed client world view before beginning. Work is bounded per tick; the explicitly measured final storage flush blocks. The default suite has seven write scenarios and four read scenarios:
@@ -83,6 +93,9 @@ Every scenario has 40 warmup server ticks and waits for an unobstructed client w
 | lighting-snapshot | After generation, exercise the actual cube-to-NBT writer at the lower/upper fixture ends; perturb and restore the live column height array and require the saved lighting metadata to remain independent. No save is queued during the perturbation. |
 | scheduled-ticks | After generation, schedule a redstone-torch and contained-water update at each of the 32 allocated cube levels, check duplicate suppression and the actual pending `TileTicks` NBT, then require all 64 state transitions and absence of consumed entries. Restore the original fixture blocks on completion/cancellation. |
 | resident | One million loaded-cube lookups, in 100 batches of 10,000; coordinate checksum retained |
+| save-burst | After generation, clean and flush previous work before capture, then dirty all 1,024 marker cubes. Measure explicit full-save snapshot submission and its final flush in one tick. |
+| autosave | Prepare the same dirty fixture before capture, queue a periodic save, observe pending coordinates across provider ticks, enforce the configured per-tick coordinate limit, then flush. |
+| storage-failure | Use real cube/column NBT with the actual bounded writer and RegionLib in a new lab-owned directory. Inject two pre-write IOExceptions, verify retained read copies and reported flush failure, replace snapshots, then recover and check the latest bytes. |
 | save | Gold marker at local (8,8,8) in every fixture cube; eight save submissions per tick, dirty-column submission and final blocking flush |
 | load-sync | 512 stored cubes from cohort A in a new JVM; eight requests per tick, every coordinate and marker checked |
 | load-async | 512 stored cubes from cohort B; up to 16 outstanding requests, every callback coordinate and marker checked |
